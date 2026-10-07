@@ -1,0 +1,61 @@
+# v2 Sigma5 (310)[001] BCC Li -- stage 4: final 0 K minimization
+# Initial run:
+#   -var input_restart outputs/stage3_quenched.restart
+# Resume after interruption:
+#   -var input_restart outputs/stage4_checkpoint.restart
+
+units metal
+atom_style atomic
+boundary p p p
+
+read_restart ${input_restart}
+pair_style kim ${kim_model}
+pair_coeff * * Li
+
+neighbor 2.0 bin
+neigh_modify delay 0 every 1 check yes
+
+reset_timestep 0
+velocity all set 0.0 0.0 0.0
+
+# Preserve the zero-pressure bulk/CSL periods in the GB plane (y,z).
+# Relax only x, the GB-normal direction, to zero normal pressure.
+fix 1 all box/relax x 0.0
+
+min_style cg
+thermo 100
+thermo_style custom step pe etotal press pxx pyy pzz pxy pxz pyz lx ly lz
+
+# Tight final minimization in restartable 500-iteration chunks.
+variable fmax_chunk equal fmax
+variable fnorm_chunk equal fnorm
+variable pxx_chunk equal pxx
+variable chunk loop 20
+
+label stage4_chunk
+minimize 0.0 1.0e-6 500 5000
+
+# Freeze minimizer values before writing checkpoint files.
+variable fmax_saved string ${fmax_chunk}
+variable fnorm_saved string ${fnorm_chunk}
+variable pxx_saved string ${pxx_chunk}
+
+print "STAGE4_CHECKPOINT chunk=${chunk} fmax=${fmax_saved} fnorm=${fnorm_saved} pxx=${pxx_saved}"
+
+if "(${fmax_saved} < 1.0e-6) && (${pxx_saved} < 1.0) && (${pxx_saved} > -1.0)" then "jump SELF stage4_finish"
+
+write_data ${outdir}/stage4_checkpoint.data
+write_restart ${outdir}/stage4_checkpoint.restart
+
+next chunk
+jump SELF stage4_chunk
+
+label stage4_finish
+unfix 1
+
+print "STAGE4_FINAL fmax=${fmax_saved} fnorm=${fnorm_saved} pxx=${pxx_saved}"
+
+write_data ${outdir}/stage4_final.data
+write_restart ${outdir}/stage4_final.restart
+
+print "STAGE4_FINAL_DONE"

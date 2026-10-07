@@ -1,0 +1,60 @@
+==========================================================================
+CNA-lite v2 report -- symmetric GB sampling (reviewer P1 fix)
+==========================================================================
+calibration : initial.data  r_nn = 3.0364 A  a_BCC = 3.5062 A
+criteria    : CN(r < 3.28) == 8  AND  CN(r < 3.86) == 14
+GB sampling : periodic distance to GB plane, half-width 8.0 A, both GBs
+
+--- initial   (0 K built GB reference) (initial.data) ---
+    N = 14400   total BCC =  86.67%
+    GB region  x ~ 0    (|d| < 8 A): BCC =  73.3%  [3600 atoms]
+    GB region  x ~ Lx/2 (|d| < 8 A): BCC =  73.3%  [3600 atoms]
+    grain interior              : BCC = 100.0%  [7200 atoms]
+    Q_BCC plateau (d>12 A) = 100.0%, GB core min = 0.0%, half-depth threshold = 50.0%
+    w_GB (half-depth, last bin below threshold) = 2.5 A
+
+--- p1_min0   (0K all-dim zero-stress relaxed) (p1_min0_sel.data) ---
+    N = 14400   total BCC =  80.00%
+    GB region  x ~ 0    (|d| < 8 A): BCC =  60.0%  [3600 atoms]
+    GB region  x ~ Lx/2 (|d| < 8 A): BCC =  60.0%  [3600 atoms]
+    grain interior              : BCC = 100.0%  [7200 atoms]
+    Q_BCC plateau (d>12 A) = 100.0%, GB core min = 0.0%, half-depth threshold = 50.0%
+    w_GB (half-depth, last bin below threshold) = 4.5 A
+
+--- casecheck (363K anneal 25ps -> 0K) (p1_casecheck_0K.data) ---
+    N = 14400   total BCC =  71.56%
+    GB region  x ~ 0    (|d| < 8 A): BCC =  43.7%  [3600 atoms]
+    GB region  x ~ Lx/2 (|d| < 8 A): BCC =  42.8%  [3600 atoms]
+    grain interior              : BCC =  99.9%  [7200 atoms]
+    Q_BCC plateau (d>12 A) = 100.0%, GB core min = 6.3%, half-depth threshold = 53.1%
+    w_GB (half-depth, last bin below threshold) = 4.5 A
+
+--- p1_final   (10K hold -> 0K force-minimized) (p1_held_0K.data) ---
+    N = 14400   total BCC =  68.38%
+    GB region  x ~ 0    (|d| < 8 A): BCC =  38.1%  [3600 atoms]
+    GB region  x ~ Lx/2 (|d| < 8 A): BCC =  38.0%  [3600 atoms]
+    grain interior              : BCC =  98.7%  [7200 atoms]
+    Q_BCC plateau (d>12 A) = 100.0%, GB core min = 9.5%, half-depth threshold = 54.8%
+    w_GB (half-depth, last bin below threshold) = 6.5 A
+
+==========================================================================
+Q_BCC profile vs distance-to-GB (folded, 1 A bins) -- BCC fraction [%]
+==========================================================================
+d_to_GB[A]    initial    p1_min0  casecheck   p1_final
+       0.5      100.0      100.0        6.3        9.9
+       1.5        0.0        0.0        8.6        9.5
+       2.5        0.0        0.0       11.5       11.8
+       3.5      100.0      100.0       28.8       18.7
+       4.5      100.0        0.0       34.0       31.3
+       5.5      100.0      100.0       75.4       61.7
+       6.5      100.0      100.0       66.6       54.4
+       7.5      100.0      100.0       98.6       95.0
+       8.5      100.0      100.0       99.1       90.8
+       9.5      100.0      100.0      100.0      100.0
+      10.5         --      100.0      100.0       99.2
+      11.5      100.0         --      100.0      100.0
+      12.5      100.0      100.0      100.0      100.0
+      13.5      100.0      100.0      100.0      100.0
+      14.5      100.0      100.0      100.0      100.0
+      15.5      100.0      100.0      100.0      100.0
+      16.5      100.0      100.0      100.0      100.0

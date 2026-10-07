@@ -1,0 +1,24 @@
+# Li Sigma5 (310)[001] 2x2 -- stage 4: 10 K / 0 bar stability hold
+# Minimum criterion > 1 ps; planned 5 ps.
+# Usage: lmp -in in.4_10K_hold -var outdir stage4_10K_hold \
+#            -var kim_model SNAP_ZuoChenLi_2019_Li__MO_732106099012_000
+units metal
+atom_style atomic
+boundary p p p
+read_restart ${outdir}/../stage3_quench/stage3_quenched.restart
+pair_style kim ${kim_model}
+pair_coeff * * Li
+timestep 0.001
+reset_timestep 0
+fix 1 all npt temp 10.0 10.0 0.1 x 0.0 0.0 1000.0
+thermo 1000
+thermo_style custom step temp pe ke etotal press pxx pyy pzz pxy pxz pyz lx ly lz vol
+dump 1 all custom 1000 ${outdir}/stage4_10K.dump id type x y z vx vy vz
+dump_modify 1 sort id
+restart 1000 ${outdir}/stage4_10K.checkpoint
+run 5000
+unfix 1
+undump 1
+write_data ${outdir}/stage4_10K_final.data
+write_restart ${outdir}/stage4_10K_final.restart
+print "STAGE4_10K_HOLD_DONE"

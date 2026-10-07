@@ -1,0 +1,28 @@
+# v2 bulk BCC Li reference energy with the same SNAP potential
+# Build the reference cell first:
+#   python -m generator.bulk --outdir ../outputs/bulk
+# Usage:
+#   lmp -in in.bulk_energy -var outdir ../outputs \
+#       -var kim_model SNAP_ZuoChenLi_2019_Li__MO_732106099012_000
+units metal
+atom_style atomic
+boundary p p p
+read_data ${outdir}/bulk/bulk_Li.data
+pair_style kim ${kim_model}
+pair_coeff * *
+neighbor 2.0 bin
+neigh_modify delay 0 every 1 check yes
+# bulk: all three directions are true lattice directions -> relax all at P=0
+fix 1 all box/relax x 0.0 y 0.0 z 0.0
+min_style cg
+thermo 100
+thermo_style custom step pe etotal press pxx pyy pzz pxy pxz pyz
+minimize 0.0 1.0e-6 10000 100000
+unfix 1
+variable peatom equal pe/count(all)
+variable fmax_v equal fmax
+variable fnorm_v equal fnorm
+print "BULK_REFERENCE pe_per_atom=${peatom} fmax=${fmax_v} fnorm=${fnorm_v}"
+write_data ${outdir}/bulk/bulk_Li_minimized.data
+write_restart ${outdir}/bulk/bulk_Li_minimized.restart
+print "BULK_DONE"

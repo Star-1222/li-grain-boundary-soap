@@ -1,0 +1,164 @@
+# ──────────────────────────────────────────────────────────────────────
+#  Bicrystal relaxation workflow  —  Li-SNAP + OpenKIM
+# ──────────────────────────────────────────────────────────────────────
+#  Input:    Sigma5_310.lmp   (from the bicrystal generator)
+#  Output:   Sigma5_310_relaxed.data
+#  Potential: Li-SNAP via OpenKIM
+#
+#  Optimization notes:
+#    - First minimize uses etol/ftol = 1e-6 (not 1e-8), enough for
+#      initial relaxation.  The final minimize before output still
+#      uses 1e-8 for precision.
+#    - Added dump for OVITO trajectory visualization.
+#    - thermo_style includes extra diagnostics to catch convergence
+#      issues early.
+# ──────────────────────────────────────────────────────────────────────
+
+# ═══════════════════════════════════════════════════════════════════════
+#  1.  Simulation settings
+# ═══════════════════════════════════════════════════════════════════════
+
+units           metal
+dimension       3
+boundary        p p p
+atom_style      atomic
+
+box             tilt large
+#   Suppresses the "Triclinic box skew is large" warning.
+#   The (3,1,0) oriented cell is naturally triclinic; this is
+#   expected and does not affect results for 3224 atoms.
+
+# ═══════════════════════════════════════════════════════════════════════
+#  2.  Read bicrystal structure
+# ═══════════════════════════════════════════════════════════════════════
+
+read_data       Sigma5_310.lmp
+
+mass            1 6.941
+
+# ═══════════════════════════════════════════════════════════════════════
+#  3.  Neighbor list
+# ═══════════════════════════════════════════════════════════════════════
+
+neighbor        0.3 bin
+neigh_modify    every 1 delay 0 check yes
+
+# ═══════════════════════════════════════════════════════════════════════
+#  4.  Li-SNAP potential via OpenKIM
+# ═══════════════════════════════════════════════════════════════════════
+
+pair_style      kim SNAP_ZuoChenLi_2019_Li__MO_732106099012_000
+pair_coeff      * * Li
+
+# ═══════════════════════════════════════════════════════════════════════
+#  5.  Energy minimization (first pass — coarse)
+# ═══════════════════════════════════════════════════════════════════════
+#  Why 1e-6 instead of 1e-8:
+#    1e-8 is very tight for a ~3000-atom SNAP system.  The minimizer
+#    spends many iterations shaving the last 1e-8 eV off the energy
+#    with negligible structural change.  1e-6 (or even 1e-5) is
+#    sufficient to remove bad atomic contacts from the GB interface.
+#    The final minimisation (step 8) uses 1e-8 when the structure is
+#    already close to equilibrium.
+#
+#  Why not box/relax in x:
+#    The x-direction is periodic (boundary p p p), creating two GBs.
+#    We keep x fixed to maintain separation between the two GBs.
+#    Only y and z (in-plane) are relaxed to zero stress.
+
+thermo          50
+thermo_style    custom step temp pe ke etotal press lx ly lz vol
+thermo_modify   norm no
+
+fix             box_fix all box/relax y 0.0 z 0.0
+minimize        1.0e-6 1.0e-6 10000 100000
+unfix           box_fix
+
+print "First minimization complete: energy = $(pe) eV, pressure = $(press) bar"
+
+# ═══════════════════════════════════════════════════════════════════════
+#  6.  Save checkpoint after first minimization
+# ═══════════════════════════════════════════════════════════════════════
+
+write_data      Sigma5_310_minimized.data
+write_restart   Sigma5_310_minimized.restart
+
+# ═══════════════════════════════════════════════════════════════════════
+#  7.  NVT anneal (heat to 300 K)
+# ═══════════════════════════════════════════════════════════════════════
+#  Why:
+#    Finite-temperature annealing lets the GB explore configurations
+#    that are inaccessible at 0 K (cross small energy barriers).
+#    After anneal + quench, the GB typically finds a deeper minimum.
+
+velocity        all create 300.0 12345
+timestep        0.001
+
+# ── dump for OVITO trajectory ──
+dump            dmp all custom 1000 traj_anneal.dump id type x y z
+dump_modify     dmp sort id
+
+fix             nvt_all all nvt temp 300.0 300.0 0.1
+
+thermo          500
+run             20000
+#   20 ps at 300 K.  The dump writes every 1000 steps (= 1 ps).
+
+unfix           nvt_all
+undump          dmp
+
+print "Annealing complete: energy = $(pe) eV, temperature = $(temp) K"
+
+# ═══════════════════════════════════════════════════════════════════════
+#  8.  Quench (slow cool to 0 K)
+# ═══════════════════════════════════════════════════════════════════════
+#  Why:
+#    Slow cooling lets the system settle into a stable minimum.
+#    Rate = 300 K / 50 ps = 6 K/ps.
+
+dump            dmp all custom 1000 traj_quench.dump id type x y z
+dump_modify     dmp sort id
+
+fix             nvt_all all nvt temp 300.0 0.0 1.0
+
+thermo          500
+run             50000
+#   50 ps, cooling from 300 K to 0 K.
+
+unfix           nvt_all
+undump          dmp
+
+print "Quench complete: energy = $(pe) eV, temperature = $(temp) K"
+
+# ═══════════════════════════════════════════════════════════════════════
+#  9.  Final minimization (tight convergence)
+# ═══════════════════════════════════════════════════════════════════════
+#  Why 1e-8 now:
+#    After NVT + quench, the system is close to equilibrium.
+#    A tight minimisation removes the last thermal noise and gives
+#    a clean 0 K GB structure for SOAP analysis.
+
+thermo          50
+thermo_style    custom step temp pe ke etotal press lx ly lz vol
+thermo_modify   norm no
+
+fix             box_fix all box/relax y 0.0 z 0.0
+minimize        1.0e-8 1.0e-8 10000 100000
+unfix           box_fix
+
+print "Final minimization complete: energy = $(pe) eV, pressure = $(press) bar"
+
+# ═══════════════════════════════════════════════════════════════════════
+#  10.  Final output
+# ═══════════════════════════════════════════════════════════════════════
+
+write_data      Sigma5_310_relaxed.data
+write_restart   Sigma5_310_relaxed.restart
+
+print ""
+print "================================================"
+print "  Bicrystal relaxation complete"
+print "================================================"
+print "  Final energy    = $(pe) eV"
+print "  Final pressure  = $(press) bar"
+print "================================================"

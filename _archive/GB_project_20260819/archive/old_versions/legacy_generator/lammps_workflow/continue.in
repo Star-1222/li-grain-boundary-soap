@@ -1,0 +1,33 @@
+units metal
+dimension 3
+boundary p p p
+atom_style atomic
+
+read_restart Sigma5_310_minimized.restart
+
+neighbor 0.3 bin
+neigh_modify every 1 delay 0 check yes
+
+pair_style kim SNAP_ZuoChenLi_2019_Li__MO_732106099012_000
+pair_coeff * * Li
+
+thermo 1000
+thermo_style custom step temp pe ke etotal press lx ly lz vol
+
+fix nvt_all all nvt temp 300.0 300.0 0.1
+run 20000
+
+unfix nvt_all
+
+fix nvt_all all nvt temp 300.0 0.0 1.0
+run 50000
+
+unfix nvt_all
+
+fix box_fix all box/relax y 0.0 z 0.0
+minimize 1.0e-8 1.0e-8 10000 100000
+unfix box_fix
+
+write_data Sigma5_310_relaxed.data
+write_restart Sigma5_310_relaxed.restart
+

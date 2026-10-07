@@ -1,0 +1,42 @@
+# v2 Sigma5 (310)[001] BCC Li -- stage 1: initial energy minimization
+# Usage: lmp -in in.1_minimize -var outdir ../outputs -var kim_model SNAP_ZuoChenLi_2019_Li__MO_732106099012_000
+units metal
+atom_style atomic
+boundary p p p
+read_data ${input_data}
+pair_style kim ${kim_model}
+pair_coeff * * Li
+neighbor 2.0 bin
+neigh_modify delay 0 every 1 check yes
+#
+# ---- cell relaxation policy ----
+# y, z (GB plane): FIXED at the zero-pressure bulk lattice/CSL periods.
+# This preserves the intended in-plane bicrystal periodicity.
+# x (GB normal): RELAXED at zero target pressure so the two periodic GBs
+# can accommodate their excess volume without imposing normal stress.
+fix 1 all box/relax x 0.0
+min_style cg
+thermo 100
+thermo_style custom step pe etotal press pxx pyy pzz pxy pxz pyz lx ly lz
+# Pre-anneal convergence with restartable 500-iteration chunks.
+variable fmax_chunk equal fmax
+variable fnorm_chunk equal fnorm
+variable chunk loop 20
+
+label stage1_chunk
+minimize 0.0 1.0e-4 500 5000
+variable fmax_saved string ${fmax_chunk}
+variable fnorm_saved string ${fnorm_chunk}
+print "STAGE1_CHECKPOINT chunk=${chunk} fmax=${fmax_saved} fnorm=${fnorm_saved}"
+if "${fmax_saved} < 1.0e-4" then "jump SELF stage1_finish"
+write_data ${outdir}/stage1_checkpoint.data
+write_restart ${outdir}/stage1_checkpoint.restart
+next chunk
+jump SELF stage1_chunk
+
+label stage1_finish
+unfix 1
+print "STAGE1_MINIMIZE fmax=${fmax_saved} fnorm=${fnorm_saved}"
+write_data ${outdir}/stage1_minimized.data
+write_restart ${outdir}/stage1_minimized.restart
+print "STAGE1_DONE"

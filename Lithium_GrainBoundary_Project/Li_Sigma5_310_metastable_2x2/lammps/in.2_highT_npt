@@ -1,0 +1,26 @@
+# Li Sigma5 (310)[001] 2x2 -- stage 2: high-T NPT reconstruction
+# 363 K, 0 bar (x, GB normal), 2 ps
+# Usage: lmp -in in.2_highT_npt -var outdir stage2_highT_NPT -var seed 12345 \
+#            -var kim_model SNAP_ZuoChenLi_2019_Li__MO_732106099012_000
+units metal
+atom_style atomic
+boundary p p p
+read_restart ${outdir}/../stage1_relax/stage1_minimized.restart
+pair_style kim ${kim_model}
+pair_coeff * * Li
+timestep 0.001
+reset_timestep 0
+velocity all create 363.0 ${seed} dist gaussian
+# NPT: T=363 K, P=0 bar on x (GB normal); y/z fixed to preserve CSL periods.
+fix 1 all npt temp 363.0 363.0 0.1 x 0.0 0.0 1000.0
+thermo 100
+thermo_style custom step temp pe ke etotal press pxx pyy pzz pxy pxz pyz lx ly lz vol
+dump 1 all custom 100 ${outdir}/stage2_highT.dump id type x y z vx vy vz
+dump_modify 1 sort id
+restart 1000 ${outdir}/stage2_highT.checkpoint
+run 2000
+unfix 1
+undump 1
+write_data ${outdir}/stage2_highT.data
+write_restart ${outdir}/stage2_highT.restart
+print "STAGE2_HIGHT_NPT_DONE"

@@ -1,0 +1,5 @@
+n_max,l_max,feature_dimension,linalg_warning,warning_count,vectors_finite,spearman_raw_distance_vs_12_12
+6,6,147,False,0,True,0.9231674326039838
+8,8,324,False,0,True,0.9319962284122583
+10,10,605,False,0,True,0.9790017520958791
+12,12,1014,True,2,True,1.0

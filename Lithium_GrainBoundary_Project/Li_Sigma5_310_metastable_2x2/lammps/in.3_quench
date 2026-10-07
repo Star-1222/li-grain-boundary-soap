@@ -1,0 +1,25 @@
+# Li Sigma5 (310)[001] 2x2 -- stage 3: controlled NPT quench
+# 363 K -> 10 K at 10 K/ps, 35.3 ps
+# Usage: lmp -in in.3_quench -var outdir stage3_quench \
+#            -var kim_model SNAP_ZuoChenLi_2019_Li__MO_732106099012_000
+units metal
+atom_style atomic
+boundary p p p
+read_restart ${outdir}/../stage2_highT_NPT/stage2_highT.restart
+pair_style kim ${kim_model}
+pair_coeff * * Li
+timestep 0.001
+reset_timestep 0
+# NPT linear temperature ramp 363 -> 10 K over 35300 steps (35.3 ps).
+fix 1 all npt temp 363.0 10.0 0.1 x 0.0 0.0 1000.0
+thermo 1000
+thermo_style custom step temp pe ke etotal press pxx pyy pzz pxy pxz pyz lx ly lz vol
+dump 1 all custom 1000 ${outdir}/stage3_quench.dump id type x y z vx vy vz
+dump_modify 1 sort id
+restart 5000 ${outdir}/stage3_quench.checkpoint
+run 35300 start 0 stop 35300
+unfix 1
+undump 1
+write_data ${outdir}/stage3_quenched.data
+write_restart ${outdir}/stage3_quenched.restart
+print "STAGE3_QUENCH_DONE"

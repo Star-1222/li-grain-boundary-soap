@@ -1,0 +1,6 @@
+epsilon,role,source,rationale
+6.790452,epsilon_below,Stage 3A sweep,Nearest sweep value below the candidate interval that still shows 6 median classes
+7.224,epsilon_low,Stage 3A candidate interval,Lower endpoint of the Stage 3A candidate interval
+7.7665,epsilon_mid,Stage 3A candidate interval,Midpoint of the Stage 3A candidate interval
+8.309,epsilon_high,Stage 3A candidate interval,Upper endpoint of the Stage 3A candidate interval
+8.525591,epsilon_above,Stage 3A sweep,Nearest sweep value above the candidate interval with 4 median classes

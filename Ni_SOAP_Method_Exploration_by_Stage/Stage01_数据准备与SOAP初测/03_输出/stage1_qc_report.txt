@@ -1,0 +1,123 @@
+Stage 1 — Ni Input & SOAP QC
+
+[stable]
+CFG integrity: PASS (header=47120, parsed=47120, elements=['Ni'], entry_count=11)
+numerical integrity: PASS (scaled finite=True, Cartesian finite=True, auxiliary finite=True)
+coordinate convention used for ASE Atoms: scaled
+scaled-coordinate sanity check: PASS (scaled ranges [0.00000256, 0.00000004, 0.00079266] .. [0.99999900, 1.00000000, 0.99846000]; this is a coordinate representation sanity check, not a PBC check)
+cell finite: True
+cell lengths positive: True
+cell non-degenerate: True (det=5.085409e+05)
+cell (H0 rows, Angstrom):
+  [101.068000, 0.000000, 0.000000]
+  [0.000000, 17.539900, 0.000000]
+  [0.000000, 0.000000, 286.870000]
+cell lengths (Angstrom): [101.068000, 17.539900, 286.870000]
+scaled + cell -> Cartesian consistency: PASS (max |Atoms.positions - scaled @ cell| = 5.684e-14)
+PBC consistency: PASS (ASE pbc = [True, True, True])
+PBC-neighbor sanity test details:
+  interior atom (CFG id=25228, array index=35927): selected as the atom farthest from all cell faces; minimum face clearance 8.769950 A > 4.5 A.
+  interior neighbors: count=12, non-zero periodic shifts=0
+  boundary atom (CFG id=4841, array index=20952): selected as the closest-to-face atom that had at least one non-zero periodic-image neighbor.
+  boundary minimum face clearance=0.000000 A; clearance per axis=[44.318520, 0.000000, 61.140029]
+  boundary neighbors: total=12, periodic-image neighbors=7
+  boundary scaled position=[0.561498, 1.000000, 0.213128], Cartesian position=[56.749480, 17.539900, 61.140029]
+
+[metastable]
+CFG integrity: PASS (header=47120, parsed=47120, elements=['Ni'], entry_count=11)
+numerical integrity: PASS (scaled finite=True, Cartesian finite=True, auxiliary finite=True)
+coordinate convention used for ASE Atoms: scaled
+scaled-coordinate sanity check: PASS (scaled ranges [0.00015411, 0.00000110, 0.00045059] .. [0.99977400, 1.00000000, 0.99929700]; this is a coordinate representation sanity check, not a PBC check)
+cell finite: True
+cell lengths positive: True
+cell non-degenerate: True (det=5.085230e+05)
+cell (H0 rows, Angstrom):
+  [101.067000, 0.000000, 0.000000]
+  [0.000000, 17.539700, 0.000000]
+  [0.000000, 0.000000, 286.866000]
+cell lengths (Angstrom): [101.067000, 17.539700, 286.866000]
+scaled + cell -> Cartesian consistency: PASS (max |Atoms.positions - scaled @ cell| = 5.684e-14)
+PBC consistency: PASS (ASE pbc = [True, True, True])
+PBC-neighbor sanity test details:
+  interior atom (CFG id=22209, array index=15968): selected as the atom farthest from all cell faces; minimum face clearance 8.769850 A > 4.5 A.
+  interior neighbors: count=12, non-zero periodic shifts=0
+  boundary atom (CFG id=41044, array index=15890): selected as the closest-to-face atom that had at least one non-zero periodic-image neighbor.
+  boundary minimum face clearance=0.000000 A; clearance per axis=[36.534306, 0.000000, 92.254958]
+  boundary neighbors: total=12, periodic-image neighbors=4
+  boundary scaled position=[0.361486, 1.000000, 0.678404], Cartesian position=[36.534306, 17.539700, 194.611042]
+
+[1A CFG integrity]
+stable: PASS
+metastable: PASS
+
+[1B Numerical integrity]
+stable: PASS
+metastable: PASS
+
+[1C Coordinate + cell integrity]
+stable: PASS
+  cell finite: True
+  cell lengths positive: True
+  cell non-degenerate: True (det=5.085409e+05)
+  scaled + cell -> Cartesian consistency: PASS (max |Atoms.positions - scaled @ cell| = 5.684e-14)
+metastable: PASS
+  cell finite: True
+  cell lengths positive: True
+  cell non-degenerate: True (det=5.085230e+05)
+  scaled + cell -> Cartesian consistency: PASS (max |Atoms.positions - scaled @ cell| = 5.684e-14)
+
+coordinate convention:
+  stable: scaled
+  metastable: scaled
+
+scaled-coordinate sanity:
+  stable: PASS
+  metastable: PASS
+
+[1D PBC consistency]
+ASE pbc:
+  stable: PASS
+  metastable: PASS
+SOAP periodic setting: PASS (periodic=True)
+
+[1E SOAP smoke test]
+  existing soap_test_summary.txt: reused (no rerun)
+    stable: shape=(5, 1014), all finite=True, reproducible=True
+    metastable: shape=(5, 1014), all finite=True, reproducible=True
+    recorded DScribe construction warnings: 2 ill-conditioned matrix message(s); vectors finite
+  stable: PASS (existing 5-atom DScribe result)
+  metastable: PASS (existing 5-atom DScribe result)
+
+[1F PBC-neighbor sanity test]
+stable: PASS (interior atom saw direct neighbors only; boundary-near atom saw at least one periodic-image neighbor with a non-zero shift)
+  method: ASE ase.neighborlist.neighbor_list('ijdDS', atoms, cutoff=3.25) with pbc=[True, True, True]
+  PBC-neighbor sanity test details:
+  interior atom (CFG id=25228, array index=35927): selected as the atom farthest from all cell faces; minimum face clearance 8.769950 A > 4.5 A.
+  interior neighbors: count=12, non-zero periodic shifts=0
+  boundary atom (CFG id=4841, array index=20952): selected as the closest-to-face atom that had at least one non-zero periodic-image neighbor.
+  boundary minimum face clearance=0.000000 A; clearance per axis=[44.318520, 0.000000, 61.140029]
+  boundary neighbors: total=12, periodic-image neighbors=7
+  boundary scaled position=[0.561498, 1.000000, 0.213128], Cartesian position=[56.749480, 17.539900, 61.140029]
+metastable: PASS (interior atom saw direct neighbors only; boundary-near atom saw at least one periodic-image neighbor with a non-zero shift)
+  method: ASE ase.neighborlist.neighbor_list('ijdDS', atoms, cutoff=3.25) with pbc=[True, True, True]
+  PBC-neighbor sanity test details:
+  interior atom (CFG id=22209, array index=15968): selected as the atom farthest from all cell faces; minimum face clearance 8.769850 A > 4.5 A.
+  interior neighbors: count=12, non-zero periodic shifts=0
+  boundary atom (CFG id=41044, array index=15890): selected as the closest-to-face atom that had at least one non-zero periodic-image neighbor.
+  boundary minimum face clearance=0.000000 A; clearance per axis=[36.534306, 0.000000, 92.254958]
+  boundary neighbors: total=12, periodic-image neighbors=4
+  boundary scaled position=[0.361486, 1.000000, 0.678404], Cartesian position=[36.534306, 17.539700, 194.611042]
+independent synthetic mechanism check: PASS (n_periodic_pairs=2, min_periodic_distance=0.400000 A, distance_vector_consistency=True, unwrapped_formula_consistency=True)
+
+[Overall]
+  stable: PASS
+  metastable: PASS
+  overall: PASS
+
+[Notes]
+- 'scaled-coordinate sanity check' checks only whether coordinates identified as scaled lie in [0, 1]; it is not a PBC validation.
+- PBC consistency here means ASE pbc=[True, True, True] and SOAP periodic=True; these are configuration checks.
+- The PBC-neighbor sanity test verifies that ASE's periodic-aware neighbor search reports non-zero shifts for boundary-near atoms and direct neighbors only for an interior reference atom.
+- Existing CFG and SOAP results were reused where possible; no full-population SOAP was recomputed.
+- The scaled-to-Cartesian consistency check uses unwrapped scaled coordinates (ASE wrap=False). ASE's default wrap=True maps an atom on the +y boundary to y=0, which is periodic-equivalent but differs from the raw CFG coordinate by one cell translation.
+- NOTE/recommendation: cfg_reader currently uses 'auto' convention detection. Both structures were detected as 'scaled' and the scaled+cell -> Cartesian consistency passed. A future hardening option is to require an explicit coordinate_convention instead of relying on the [0,1] heuristic; no parser change was made in this QC pass.

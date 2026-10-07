@@ -1,0 +1,21 @@
+# ============================================================
+# Convert dump frame to LAMMPS data
+# ============================================================
+
+units           metal
+dimension       3
+boundary        p p p
+atom_style      atomic
+
+region          box block 0 100 0 100 0 100
+
+create_box      1 box
+
+read_dump       traj_anneal.dump 20000 x y z box yes replace yes
+
+mass            1 6.941
+
+write_data      annealed.data
+
+print "Converted traj_anneal.dump -> annealed.data"
+

@@ -1,0 +1,2 @@
+interval_id,epsilon_min,epsilon_max,n_grid_points,n_classes_median_min,n_classes_median_max,n_classes_std_max,ari_mean_min,singleton_fraction_max,bulk_largest_fraction_min
+1,7.224236663717766,8.308698240299984,6,5.0,5.0,0.6260623155792927,0.6289113083749022,0.0,0.9886666666666667

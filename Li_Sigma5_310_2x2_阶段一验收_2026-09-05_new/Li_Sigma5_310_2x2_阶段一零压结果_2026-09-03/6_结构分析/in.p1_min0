@@ -1,0 +1,41 @@
+# Phase-1 Step 2: 0 K FULL-dimensional zero-stress relaxation of ordered CSL box
+# Replaces old stage1 (which only relaxed x, leaving Pyy/Pzz ~ -1000 bar).
+# Usage: lmp -in in.p1_min0 -var kim_model SNAP_ZuoChenLi_2019_Li__MO_732106099012_000
+units           metal
+atom_style      atomic
+boundary        p p p
+read_data       stage0_build_validate/Sigma5_310_K6_J6_L20.data
+pair_style      kim ${kim_model}
+pair_coeff      * * Li
+neighbor        2.0 bin
+neigh_modify    delay 0 every 1 check yes
+
+thermo          100
+thermo_style    custom step pe pxx pyy pzz pxy pxz pyz press lx ly lz
+
+# full anisotropic relaxation to zero stress in all directions
+fix             1 all box/relax aniso 0.0
+min_style       cg
+
+variable        fmax_chunk equal fmax
+variable        fnorm_chunk equal fnorm
+variable        chunk loop 40
+
+label           p1_min0_loop
+minimize        0.0 1.0e-4 500 5000
+variable        fmax_saved string ${fmax_chunk}
+variable        fnorm_saved string ${fnorm_chunk}
+print           "P1MIN0_CHECKPOINT chunk=${chunk} fmax=${fmax_saved} fnorm=${fnorm_saved}"
+if              "${fmax_saved} < 1.0e-4" then "jump SELF p1_min0_finish"
+write_data      phase1/p1_min0_checkpoint.data
+write_restart   phase1/p1_min0_checkpoint.restart
+next            chunk
+jump            SELF p1_min0_loop
+
+label           p1_min0_finish
+unfix           1
+print           "P1_MIN0 fmax=${fmax_saved} fnorm=${fnorm_saved}"
+print           "P1_MIN0 finalP Pxx=$(pxx) Pyy=$(pyy) Pzz=$(pzz)"
+write_data      phase1/p1_min0.data
+write_restart   phase1/p1_min0.restart
+print           "P1_MIN0_DONE"

@@ -1,0 +1,34 @@
+# 行尾策略
+#
+# 本项目在 Windows 上编辑、在 WSL/Linux 下运行计算。
+# 规则的最后一条匹配生效，因此具体规则必须写在通配规则之后。
+
+# 默认：文本文件在仓库内统一存为 LF
+* text=auto eol=lf
+
+# 必须在 Linux/WSL 下执行 —— 绝不能变成 CRLF，否则 sh 会报
+# "\r': command not found"
+*.sh text eol=lf
+*.lammps text eol=lf
+*.in text eol=lf
+
+# 必须在 Windows 下执行
+*.cmd text eol=crlf
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+
+# 数据与结构文件：按二进制处理，禁止任何行尾转换
+*.data -text
+*.dump -text
+*.restart -text
+*.npy -text
+*.npz -text
+*.xyz -text
+*.cif -text
+*.cfg -text
+*.grain_map -text
+
+# 二进制文档
+*.pdf -text
+*.pptx -text
+*.png -text

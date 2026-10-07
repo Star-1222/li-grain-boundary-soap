@@ -1,0 +1,200 @@
+LAMMPS (10 Dec 2025)
+# Phase-1 Step 6: 10 K hold under true zero-pressure iso NPT (5 ps)
+# Acceptance-critical: time-averaged P must be ~0 at 10 K.
+# Usage: lmp -in in.p1_hold -var kim_model ...
+units           metal
+atom_style      atomic
+boundary        p p p
+read_restart    phase1/p1_quenched.restart
+Reading restart file ...
+  restart file = 10 Dec 2025, LAMMPS = 10 Dec 2025
+  restoring atom style atomic from restart
+  orthogonal box = (0.176412 0.20977229 0.23223588) to (66.348799 66.315439 69.891494)
+  2 by 2 by 3 MPI processor grid
+  pair style kim stores no restart info
+  14400 atoms
+  read_restart CPU = 0.004 seconds
+pair_style      kim ${kim_model}
+pair_style      kim SNAP_ZuoChenLi_2019_Li__MO_732106099012_000
+pair_coeff      * * Li
+neighbor        2.0 bin
+neigh_modify    delay 0 every 1 check yes
+
+timestep        0.001
+reset_timestep  0
+
+fix             1 all npt temp 10.0 10.0 0.1 iso 0.0 0.0 1.0
+
+thermo          100
+thermo_style    custom step temp pe etotal pxx pyy pzz press vol lx ly lz
+
+restart         2500 phase1/p1_hold.checkpoint.*
+
+dump            1 all custom 500 phase1/p1_hold.dump id type x y z
+dump_modify     1 sort id
+
+# running pressure averages for acceptance (windows every 2500 steps)
+variable        vpxx  equal pxx
+variable        vpyy  equal pyy
+variable        vpzz  equal pzz
+variable        vpress equal press
+variable        vvol  equal vol
+fix             2 all ave/time 100 25 2500 v_vpxx v_vpyy v_vpzz v_vpress v_vvol file phase1/p1_hold_pressure.stats
+
+run             5000
+
+CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE
+
+Your simulation uses code contributions which should be cited:
+
+- OpenKIM Project: https://doi.org/10.1007/s11837-011-0102-6
+
+@Article{tadmor:elliott:2011,
+ author = {E. B. Tadmor and R. S. Elliott and J. P. Sethna and R. E. Miller and C. A. Becker},
+ title = {The potential of atomistic simulations and the {K}nowledgebase of {I}nteratomic {M}odels},
+ journal = {{JOM}},
+ year =    2011,
+ volume =  63,
+ number =  17,
+ pages =   {17},
+ doi =     {10.1007/s11837-011-0102-6}
+}
+
+- OpenKIM potential: https://openkim.org/cite/MO_732106099012_000#item-citation
+
+QENvbW1lbnQKewpcZG9jdW1lbnRjbGFzc3thcnRpY2xlfQpcdXNlcGFja2FnZXt1cmx9ClxiZWdpbntkb2N1bWVudH0KVGhpcyBNb2RlbCBvcmlnaW5hbGx5IHB1Ymxpc2hlZCBpbiBcY2l0ZXtNT183MzIxMDYwOTkwMTJfMDAwYX0gaXMgYXJjaGl2ZWQgaW4gT3BlbktJTX5cY2l0ZXtNT183MzIxMDYwOTkwMTJfMDAwLCBNRF81MzY3NTAzMTA3MzVfMDAwLCB0YWRtb3I6ZWxsaW90dDoyMDExLCBlbGxpb3R0OnRhZG1vcjoyMDExfS4KXGJpYmxpb2dyYXBoeXN0eWxle3ZhbmNvdXZlcn0KXGJpYmxpb2dyYXBoeXtraW1jaXRlLU1PXzczMjEwNjA5OTAxMl8wMDAuYmlifQpcZW5ke2RvY3VtZW50fQp9CgpATWlzY3tNT183MzIxMDYwOTkwMTJfMDAwLAogIGF1dGhvciAgICAgICA9IHtZdW54aW5nIFp1b30sCiAgdGl0bGUgICAgICAgID0ge3tBfSBzcGVjdHJhbCBuZWlnaGJvciBhbmFseXNpcyBwb3RlbnRpYWwgZm9yIHtMfWkgZGV2ZWxvcGVkIGJ5IHtZfXVueGluZyB7Wn11byB2MDAwfSwKICBkb2kgICAgICAgICAgPSB7MTAuMjU5NTAvNzg4ZDQ3ZDV9LAogIGhvd3B1Ymxpc2hlZCA9IHtPcGVuS0lNLCBcdXJse2h0dHBzOi8vZG9pLm9yZy8xMC4yNTk1MC83ODhkNDdkNX19LAogIGtleXdvcmRzICAgICA9IHtPcGVuS0lNLCBNb2RlbCwgTU9fNzMyMTA2MDk5MDEyXzAwMH0sCiAgcHVibGlzaGVyICAgID0ge09wZW5LSU19LAogIHllYXIgICAgICAgICA9IDIwMjAsCn0KCkBNaXNje01EXzUzNjc1MDMxMDczNV8wMDAsCiAgYXV0aG9yICAgICAgID0ge1lhc2VyIEFmc2hhcn0sCiAgdGl0bGUgICAgICAgID0ge3tTfXBlY3RyYWwgbmVpZ2hib3IgYW5hbHlzaXMgcG90ZW50aWFsICh7U05BUH0pIG1vZGVsIGRyaXZlciB2MDAwfSwKICBkb2kgICAgICAgICAgPSB7MTAuMjU5NTAvZjRmYWU0OTN9LAogIGhvd3B1Ymxpc2hlZCA9IHtPcGVuS0lNLCBcdXJse2h0dHBzOi8vZG9pLm9yZy8xMC4yNTk1MC83ODhkNDdkNX19LAogIGtleXdvcmRzICAgICA9IHtPcGVuS0lNLCBNb2RlbCBEcml2ZXIsIE1EXzUzNjc1MDMxMDczNV8wMDB9LAogIHB1Ymxpc2hlciAgICA9IHtPcGVuS0lNfSwKICB5ZWFyICAgICAgICAgPSAyMDE5LAp9CgpAQXJ0aWNsZXt0YWRtb3I6ZWxsaW90dDoyMDExLAogIGF1dGhvciAgICA9IHtFLiBCLiBUYWRtb3IgYW5kIFIuIFMuIEVsbGlvdHQgYW5kIEouIFAuIFNldGhuYSBhbmQgUi4gRS4gTWlsbGVyIGFuZCBDLiBBLiBCZWNrZXJ9LAogIHRpdGxlICAgICA9IHtUaGUgcG90ZW50aWFsIG9mIGF0b21pc3RpYyBzaW11bGF0aW9ucyBhbmQgdGhlIHtLfW5vd2xlZGdlYmFzZSBvZiB7SX1udGVyYXRvbWljIHtNfW9kZWxzfSwKICBqb3VybmFsICAgPSB7e0pPTX19LAogIHllYXIgICAgICA9IHsyMDExfSwKICB2b2x1bWUgICAgPSB7NjN9LAogIG51bWJlciAgICA9IHs3fSwKICBwYWdlcyAgICAgPSB7MTd9LAogIGRvaSAgICAgICA9IHsxMC4xMDA3L3MxMTgzNy0wMTEtMDEwMi02fSwKfQoKQE1pc2N7ZWxsaW90dDp0YWRtb3I6MjAxMSwKICBhdXRob3IgICAgICAgPSB7UnlhbiBTLiBFbGxpb3R0IGFuZCBFbGxhZCBCLiBUYWRtb3J9LAogIHRpdGxlICAgICAgICA9IHt7S31ub3dsZWRnZWJhc2Ugb2Yge0l9bnRlcmF0b21pYyB7TX1vZGVscyAoe0tJTX0pIEFwcGxpY2F0aW9uIFByb2dyYW1taW5nIEludGVyZmFjZSAoe0FQSX0pfSwKICBob3dwdWJsaXNoZWQgPSB7XHVybHtodHRwczovL29wZW5raW0ub3JnL2tpbS1hcGl9fSwKICBwdWJsaXNoZXIgICAgPSB7T3BlbktJTX0sCiAgeWVhciAgICAgICAgID0gMjAxMSwKICBkb2kgICAgICAgICAgPSB7MTAuMjU5NTAvZmY4ZjU2M2F9LAp9CgpAQXJ0aWNsZXtNT183MzIxMDYwOTkwMTJfMDAwYSwKICBhdXRob3IgPSB7WnVvLCBZdW54aW5nIGFuZCBDaGVuLCBDaGkgYW5kIExpLCBYaWFuZ2d1byBhbmQgRGVuZywgWmhpIGFuZCBDaGVuLCBZaW1pbmcgYW5kIEJlaGxlciwgSntcIm99cmcgYW5kIENze1wnYX1ueWksIEd7XCdhfWJvciBhbmQgU2hhcGVldiwgQWxleGFuZGVyIFYuIGFuZCBUaG9tcHNvbiwgQWlkYW4gUC4gYW5kIFdvb2QsIE1pdGNoZWxsIEEuIGFuZCBPbmcsIFNoeXVlIFBpbmd9LAogIGRvaSA9IHsxMC4xMDIxL2Fjcy5qcGNhLjliMDg3MjN9LAogIGpvdXJuYWwgPSB7VGhlIEpvdXJuYWwgb2YgUGh5c2ljYWwgQ2hlbWlzdHJ5IEF9LAogIG51bWJlciA9IHs0fSwKICBwYWdlcyA9IHs3MzEtLTc0NX0sCiAgdGl0bGUgPSB7UGVyZm9ybWFuY2UgYW5kIENvc3QgQXNzZXNzbWVudCBvZiBNYWNoaW5lIExlYXJuaW5nIEludGVyYXRvbWljIFBvdGVudGlhbHN9LAogIHZvbHVtZSA9IHsxMjR9LAogIHllYXIgPSB7MjAyMH0sCn0KCITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE
+
+Generated 0 of 0 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7.1
+  ghost atom cutoff = 7.1
+  binsize = 3.55, bins = 19 19 20
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair kim, perpetual
+      attributes: full, newton off
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 3.322 | 3.327 | 3.33 Mbytes
+   Step          Temp          PotEng         TotEng          Pxx            Pyy            Pzz           Press          Volume           Lx             Ly             Lz      
+         0   12.268739     -27244.611     -27221.776     -184.18253      376.67816     -210.22782     -5.9107298      304715.35      66.172387      66.105666      69.659258    
+       100   11.810907     -27245.322     -27223.34      -186.32725      393.04852     -214.89412     -2.7242827      304675.64      66.169512      66.102794      69.656231    
+       200   11.274877     -27246.294     -27225.309     -193.58508      393.41686     -192.19485      2.5456443      304704.68      66.171614      66.104895      69.658445    
+       300   10.844787     -27247.298     -27227.114     -185.45173      380.00882     -188.92868      1.876135       304682.51      66.17001       66.103292      69.656755    
+       400   10.360912     -27247.92      -27228.636     -167.8971       356.98176     -211.21669     -7.3773433      304739.94      66.174167      66.107445      69.661132    
+       500   10.054229     -27248.496     -27229.783     -166.96648      353.36861     -215.35012     -9.6493319      304810.62      66.179282      66.112555      69.666517    
+       600   9.8425057     -27248.822     -27230.503     -192.53882      361.79064     -189.7863      -6.844828       304828.94      66.180608      66.113879      69.667912    
+       700   9.8456838     -27249.034     -27230.709     -161.21765      392.00913     -189.31279      13.826231      304695.91      66.17098       66.104261      69.657776    
+       800   9.9049313     -27248.812     -27230.377     -168.5111       402.21387     -184.6385       16.354758      304732.39      66.173621      66.106899      69.660556    
+       900   10.022655     -27248.499     -27229.844     -161.91544      384.77983     -180.61152      14.084288      304713.14      66.172227      66.105507      69.659089    
+      1000   10.165934     -27248.459     -27229.538     -193.99234      387.55817     -185.27174      2.7646966      304730.64      66.173494      66.106772      69.660423    
+      1100   10.118996     -27248.567     -27229.733     -189.29349      381.36626     -218.71808     -8.8817694      304747.59      66.174721      66.107998      69.661714    
+      1200   9.9693274     -27248.72      -27230.164     -212.60876      360.71438     -224.67748     -25.523954      304855.2       66.182509      66.115778      69.669913    
+      1300   9.8871298     -27248.869     -27230.467     -235.15379      366.77965     -220.13616     -29.503435      304825.16      66.180335      66.113606      69.667624    
+      1400   10.028452     -27249.087     -27230.422     -211.73241      373.89226     -227.46119     -21.767109      304837.35      66.181217      66.114488      69.668553    
+      1500   10.019521     -27248.717     -27230.068     -210.96312      387.83508     -202.71306     -8.613703       304819.37      66.179916      66.113188      69.667184    
+      1600   10.051879     -27248.434     -27229.725     -187.43251      398.83348     -189.98652      7.138147       304784.51      66.177393      66.110667      69.664528    
+      1700   10.044704     -27248.455     -27229.759     -157.64408      413.15263     -167.15271      29.451946      304631.69      66.166331      66.099616      69.652882    
+      1800   9.9998547     -27248.646     -27230.034     -139.45267      420.88547     -170.27915      37.051217      304603.07      66.164258      66.097546      69.650701    
+      1900   9.9069911     -27248.768     -27230.329     -151.23777      418.1046      -157.27628      36.530184      304628.05      66.166067      66.099353      69.652605    
+      2000   9.8757104     -27248.763     -27230.383     -163.04601      406.6468      -175.78354      22.605747      304715.03      66.172364      66.105643      69.659233    
+      2100   9.9046729     -27248.606     -27230.171     -188.13308      386.95593     -195.8308       0.9973504      304772         66.176487      66.109762      69.663574    
+      2200   10.110267     -27248.682     -27229.864     -204.98354      348.94774     -229.20429     -28.413364      304839.76      66.181391      66.114662      69.668737    
+      2300   10.036385     -27248.426     -27229.746     -219.218        333.798       -258.03379     -47.817929      304827.19      66.180482      66.113753      69.667779    
+      2400   10.056319     -27248.591     -27229.874     -222.44852      328.54146     -253.63491     -49.180657      304898.6       66.185649      66.118915      69.673219    
+      2500   9.9800635     -27248.753     -27230.178     -213.73827      350.55285     -213.72636     -25.63726       304850.01      66.182134      66.115403      69.669518    
+      2600   9.9515136     -27248.896     -27230.374     -186.23822      392.9697      -196.42341      3.4360214      304721.6       66.172839      66.106118      69.659734    
+      2700   10.013723     -27248.929     -27230.291     -163.13136      413.03602     -178.18669      23.905989      304663.77      66.168653      66.101936      69.655327    
+      2800   9.9175327     -27248.49      -27230.031     -152.91318      429.63438     -164.42007      37.433709      304623.88      66.165765      66.099051      69.652287    
+      2900   10.171232     -27248.735     -27229.804     -156.71638      418.59596     -144.64888      39.0769        304653.87      66.167937      66.101221      69.654573    
+      3000   10.161252     -27248.716     -27229.804     -165.59057      393.91862     -170.16578      19.387421      304749.59      66.174865      66.108142      69.661867    
+      3100   10.065588     -27248.782     -27230.048     -198.17225      376.73412     -212.52895     -11.322362      304763.62      66.175881      66.109157      69.662936    
+      3200   9.9380026     -27248.77      -27230.273     -228.96637      356.06069     -236.11808     -36.341253      304800.5       66.17855       66.111823      69.665746    
+      3300   9.9362086     -27248.838     -27230.345     -247.45314      340.82268     -238.33817     -48.322878      304890.82      66.185086      66.118353      69.672626    
+      3400   10.024603     -27248.839     -27230.181     -234.0643       349.2865      -227.68122     -37.486341      304834.72      66.181027      66.114298      69.668353    
+      3500   10.043557     -27248.644     -27229.951     -202.5087       368.82255     -222.43624     -18.707463      304748.41      66.17478       66.108057      69.661777    
+      3600   9.9742299     -27248.372     -27229.808     -180.78792      393.96842     -205.8059       2.4581977      304710.35      66.172025      66.105305      69.658877    
+      3700   10.079434     -27248.666     -27229.906     -150.25221      407.25674     -170.57599      28.809515      304665.58      66.168784      66.102067      69.655465    
+      3800   10.064037     -27248.864     -27230.132     -147.20105      403.67173     -156.00299      33.48923       304652.66      66.167848      66.101132      69.65448     
+      3900   10.003724     -27248.878     -27230.258     -151.78945      393.07785     -167.71496      24.52448       304696.77      66.171042      66.104323      69.657842    
+      4000   9.8871766     -27248.642     -27230.24      -181.50716      381.01079     -174.49859      8.3350132      304800.76      66.178569      66.111843      69.665766    
+      4100   9.9788904     -27248.662     -27230.089     -194.73746      364.16775     -198.15223     -9.5739803      304770.25      66.176361      66.109636      69.663441    
+      4200   10.070451     -27248.655     -27229.911     -207.04175      373.52462     -225.97322     -19.830117      304754.93      66.175252      66.108529      69.662274    
+      4300   10.087327     -27248.649     -27229.874     -203.32435      359.90661     -224.11261     -22.510114      304761.99      66.175763      66.109039      69.662812    
+      4400   10.056201     -27248.765     -27230.048     -217.64562      371.28579     -222.01662     -22.792153      304810.06      66.179242      66.112515      69.666474    
+      4500   9.9239916     -27248.717     -27230.247     -207.22715      379.10165     -213.51304     -13.879514      304809.72      66.179217      66.11249       69.666448    
+      4600   9.9977222     -27248.845     -27230.237     -197.94154      387.20571     -194.61439     -1.7834046      304799.54      66.178481      66.111754      69.665672    
+      4700   9.9769822     -27248.573     -27230.004     -168.92502      401.65113     -191.0966       13.876502      304668.46      66.168992      66.102275      69.655684    
+      4800   10.086364     -27248.518     -27229.745     -170.73841      406.62564     -186.85022      16.34567       304702.6       66.171464      66.104745      69.658286    
+      4900   10.029624     -27248.595     -27229.927     -174.84951      408.45234     -175.82427      19.259519      304696.49      66.171022      66.104303      69.657821    
+      5000   9.9293812     -27248.602     -27230.121     -166.69513      406.49304     -193.72249      15.358475      304683.13      66.170055      66.103337      69.656803    
+Loop time of 1565.96 on 12 procs for 5000 steps with 14400 atoms
+
+Performance: 0.276 ns/day, 86.998 hours/ns, 3.193 timesteps/s, 45.978 katom-step/s
+100.0% CPU use with 12 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 1239.1     | 1311.7     | 1353.5     |  89.3 | 83.76
+Neigh   | 0.0043165  | 0.0049357  | 0.0054124  |   0.5 |  0.00
+Comm    | 211.78     | 253.62     | 326.2      | 203.1 | 16.20
+Output  | 0.022997   | 0.025175   | 0.028359   |   0.9 |  0.00
+Modify  | 0.49923    | 0.50812    | 0.51356    |   0.6 |  0.03
+Other   |            | 0.1338     |            |       |  0.01
+
+Nlocal:           1200 ave        1232 max        1164 min
+Histogram: 1 2 1 1 0 1 2 0 3 1
+Nghost:        2756.08 ave        2827 max        2663 min
+Histogram: 3 1 0 0 0 0 1 3 3 1
+Neighs:              0 ave           0 max           0 min
+Histogram: 12 0 0 0 0 0 0 0 0 0
+FullNghs:      76999.2 ave       78742 max       74779 min
+Histogram: 1 2 0 1 1 1 1 2 0 3
+
+Total # of neighbors = 923990
+Ave neighs/atom = 64.165972
+Neighbor list builds = 2
+Dangerous builds = 0
+
+unfix           1
+unfix           2
+undump          1
+
+write_data      phase1/p1_held.data
+System init for write_data ...
+Generated 0 of 0 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7.1
+  ghost atom cutoff = 7.1
+  binsize = 3.55, bins = 19 19 20
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair kim, perpetual
+      attributes: full, newton off
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+write_restart   phase1/p1_held.restart
+System init for write_restart ...
+Generated 0 of 0 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7.1
+  ghost atom cutoff = 7.1
+  binsize = 3.55, bins = 19 19 20
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair kim, perpetual
+      attributes: full, newton off
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+print           "P1_HOLD finalT=$(temp) Pxx=$(pxx) Pyy=$(pyy) Pzz=$(pzz)"
+P1_HOLD finalT=9.9293811638117333018 Pxx=-166.69512764776760605 Pyy=406.4930444556118232 Pzz=-193.72249035905784353
+print           "P1_HOLD_DONE"
+P1_HOLD_DONE
+Total wall time: 0:26:06

@@ -1,0 +1,32 @@
+# v2 Sigma5 (310)[001] BCC Li -- stage 1: initial energy minimization
+# Usage: lmp -in in.1_minimize -var outdir ../outputs -var kim_model SNAP_ZuoChenLi_2019_Li__MO_732106099012_000
+units metal
+atom_style atomic
+boundary p p p
+read_data ${outdir}/Sigma5_310.data
+pair_style kim ${kim_model}
+pair_coeff * *
+neighbor 2.0 bin
+neigh_modify delay 0 every 1 check yes
+#
+# ---- cell relaxation policy (see v2/README.md for the full rationale) ----
+# x (GB normal): FIXED.  The box contains two GBs at a chosen separation
+#   Lx/2; relaxing x would arbitrarily change the distance between the two
+#   GB planes, which is not a physical degree of freedom of this model.
+# y, z (in-plane): RELAXED at zero target pressure.  The in-plane CSL
+#   periods sqrt(10)*a and a are lattice degrees of freedom; relaxing them
+#   lets in-plane stress relax to ~0 (physically meaningful).
+fix 1 all box/relax y 0.0 z 0.0
+min_style cg
+thermo 100
+thermo_style custom step pe etotal press pxx pyy pzz pxy pxz pyz
+# force-based convergence: etol=0 (never stop on energy), ftol=1e-6 eV/A
+minimize 0.0 1.0e-6 10000 100000
+unfix 1
+variable fmax_v equal fmax
+variable fnorm_v equal fnorm
+variable vmax_v equal max(vx)
+print "STAGE1_MINIMIZE fmax=${fmax_v} fnorm=${fnorm_v} vmax=${vmax_v}"
+write_data ${outdir}/stage1_minimized.data
+write_restart ${outdir}/stage1_minimized.restart
+print "STAGE1_DONE"

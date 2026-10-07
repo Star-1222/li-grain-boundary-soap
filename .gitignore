@@ -1,0 +1,43 @@
+# ---------------------------------------------------------------------------
+# 研究仓库忽略规则
+#
+# 原则：代码、输入、文档、可追溯记录进版本控制；
+#       体积大且可重算的中间产物不进，改由 ARTIFACT_LEDGER 记录其清单与校验和。
+# ---------------------------------------------------------------------------
+
+# --- 台账是派生文件，但故意纳入版本控制，形成项目的活索引 ---
+# 如需排除，取消下面两行注释：
+# ARTIFACT_LEDGER.md
+# ARTIFACT_LEDGER.csv
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# --- 大体积、可重算的中间产物 ---
+*.dump
+*.npy
+*.npz
+*.restart
+*.log.lammps
+
+# --- 单体超大数据表（结论由同目录的汇总表承载）---
+stage2_75_pairwise_sample.csv
+stage2_75_soap_vectors.npy
+stage5b_matched_direction_energy_pairs.csv
+
+# --- 第三方文献：体积大且有版权，不入库 ---
+00_Literature/
+05_文献/
+*.pdf
+
+# --- 系统与编辑器杂项 ---
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/

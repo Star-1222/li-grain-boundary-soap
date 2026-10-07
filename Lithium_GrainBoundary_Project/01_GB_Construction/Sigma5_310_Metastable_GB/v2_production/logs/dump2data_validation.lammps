@@ -1,0 +1,49 @@
+LAMMPS (10 Dec 2025)
+  using 1 OpenMP thread(s) per MPI task
+# Reconstruct a data file from a native LAMMPS dump snapshot.
+# A template data file supplies the existing box, masses and atom types.
+#
+# Usage:
+# lmp -in in.dump2data \
+#   -var template ../outputs/stage1_minimized.data \
+#   -var dump ../outputs/stage2_anneal.dump \
+#   -var timestep 20000 \
+#   -var out ../outputs/rebuilt.data
+
+units metal
+atom_style atomic
+boundary p p p
+
+read_data ${template}
+read_data outputs/stage1_minimized.data
+Reading data file ...
+  orthogonal box = (0.28932551 0 0) to (66.235885 33.262605 35.061865)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  3600 atoms
+  reading velocities ...
+  3600 velocities
+  read_data CPU = 0.014 seconds
+
+read_dump ${dump} ${timestep} x y z vx vy vz   box yes replace yes trim yes add keep format native
+read_dump outputs/stage2_anneal.dump ${timestep} x y z vx vy vz   box yes replace yes trim yes add keep format native
+read_dump outputs/stage2_anneal.dump 20000 x y z vx vy vz   box yes replace yes trim yes add keep format native
+Adding 'type' field to requested per-atom fields
+Scanning dump file ...
+Reading snapshot from dump file ...
+  orthogonal box = (0.28932551 0 0) to (66.235885 33.262605 35.061865)
+  3600 atoms before read
+  3600 atoms in snapshot
+  0 atoms purged
+  3600 atoms replaced
+  0 atoms trimmed
+  0 atoms added
+  3600 atoms after read
+
+write_data ${out}
+write_data outputs/dump2data_validation/rebuilt_stage2.data
+System init for write_data ...
+WARNING: Communication cutoff is 0.0. No ghost atoms will be generated. Energies and forces may be wrong and atoms may get lost. (src/comm_brick.cpp:188)
+print "DUMP2DATA_DONE"
+DUMP2DATA_DONE
+Total wall time: 0:00:00

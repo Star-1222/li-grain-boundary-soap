@@ -1,0 +1,26 @@
+# v2 Sigma5 (310)[001] BCC Li -- stage 3: controlled MD quench 300 K -> 1 K, 50 ps
+# Continues from stage 2 restart.  NOTE: the NVT target is 1.0 K, never
+# 0.0 K (a 0 K NVT target is forbidden by this workflow).
+# Usage: lmp -in in.3_quench -var outdir ../outputs \
+#            -var kim_model SNAP_ZuoChenLi_2019_Li__MO_732106099012_000
+units metal
+atom_style atomic
+boundary p p p
+read_restart ${outdir}/stage2_annealed.restart
+pair_style kim ${kim_model}
+pair_coeff * * Li
+timestep 0.001
+reset_timestep 0
+fix 1 all nvt temp 300.0 1.0 0.1
+thermo 1000
+thermo_style custom step temp pe ke etotal press pxx pyy pzz pxy pxz pyz
+dump 1 all custom 1000 ${outdir}/stage3_quench.dump id type x y z vx vy vz
+dump_modify 1 sort id
+restart 1000 ${outdir}/stage3_quench.checkpoint
+run 50000 start 0 stop 50000
+unfix 1
+undump 1
+velocity all set 0.0 0.0 0.0
+write_data ${outdir}/stage3_quenched.data
+write_restart ${outdir}/stage3_quenched.restart
+print "STAGE3_QUENCH_DONE"

@@ -1,0 +1,34 @@
+# Phase-1 Step 4: 0 K Case-B diagnostic check on the 363 K end frame
+# Force-converged minimization at FIXED box (same cell as production frame).
+# 0 K is diagnostic only, not part of the production trajectory.
+# Usage: lmp -in in.p1_casecheck -var kim_model ...
+units           metal
+atom_style      atomic
+boundary        p p p
+read_data       phase1/p1_held.data
+pair_style      kim ${kim_model}
+pair_coeff      * * Li
+neighbor        2.0 bin
+neigh_modify    delay 0 every 1 check yes
+
+thermo          100
+thermo_style    custom step pe pxx pyy pzz press lx ly lz
+
+min_style       cg
+
+variable        fmax_chunk equal fmax
+variable        fnorm_chunk equal fnorm
+variable        chunk loop 40
+
+label           p1_fc_loop
+minimize        0.0 1.0e-4 500 5000
+variable        fmax_saved string ${fmax_chunk}
+print           "P1FC_CHECKPOINT chunk=${chunk} fmax=${fmax_saved}"
+if              "${fmax_saved} < 1.0e-4" then "jump SELF p1_fc_finish"
+next            chunk
+jump            SELF p1_fc_loop
+
+label           p1_fc_finish
+print           "P1_FINALCK fmax=${fmax_saved}"
+write_data      phase1/p1_held_0K.data
+print           "P1_FINALCK_DONE"

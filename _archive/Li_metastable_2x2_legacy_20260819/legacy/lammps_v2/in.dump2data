@@ -1,0 +1,21 @@
+# Reconstruct a data file from a native LAMMPS dump snapshot.
+# A template data file supplies the existing box, masses and atom types.
+#
+# Usage:
+# lmp -in in.dump2data \
+#   -var template ../outputs/stage1_minimized.data \
+#   -var dump ../outputs/stage2_anneal.dump \
+#   -var timestep 20000 \
+#   -var out ../outputs/rebuilt.data
+
+units metal
+atom_style atomic
+boundary p p p
+
+read_data ${template}
+
+read_dump ${dump} ${timestep} x y z vx vy vz &
+  box yes replace yes trim yes add keep format native
+
+write_data ${out}
+print "DUMP2DATA_DONE"

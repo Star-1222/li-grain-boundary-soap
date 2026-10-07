@@ -1,0 +1,43 @@
+# Phase-1 Step 6: 10 K hold under true zero-pressure iso NPT (5 ps)
+# Acceptance-critical: time-averaged P must be ~0 at 10 K.
+# Usage: lmp -in in.p1_hold -var kim_model ...
+units           metal
+atom_style      atomic
+boundary        p p p
+read_restart    phase1/p1_quenched.restart
+pair_style      kim ${kim_model}
+pair_coeff      * * Li
+neighbor        2.0 bin
+neigh_modify    delay 0 every 1 check yes
+
+timestep        0.001
+reset_timestep  0
+
+fix             1 all npt temp 10.0 10.0 0.1 iso 0.0 0.0 1.0
+
+thermo          100
+thermo_style    custom step temp pe etotal pxx pyy pzz press vol lx ly lz
+
+restart         2500 phase1/p1_hold.checkpoint.*
+
+dump            1 all custom 500 phase1/p1_hold.dump id type x y z
+dump_modify     1 sort id
+
+# running pressure averages for acceptance (windows every 2500 steps)
+variable        vpxx  equal pxx
+variable        vpyy  equal pyy
+variable        vpzz  equal pzz
+variable        vpress equal press
+variable        vvol  equal vol
+fix             2 all ave/time 100 25 2500 v_vpxx v_vpyy v_vpzz v_vpress v_vvol file phase1/p1_hold_pressure.stats
+
+run             5000
+
+unfix           1
+unfix           2
+undump          1
+
+write_data      phase1/p1_held.data
+write_restart   phase1/p1_held.restart
+print           "P1_HOLD finalT=$(temp) Pxx=$(pxx) Pyy=$(pyy) Pzz=$(pzz)"
+print           "P1_HOLD_DONE"

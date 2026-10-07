@@ -1,0 +1,4 @@
+# Time-averaged data for fix 2
+# TimeStep v_vpxx v_vpyy v_vpzz v_vpress v_vvol
+2500 -187.42 379.287 -202.273 -3.46834 304758
+5000 -186.257 387.091 -195.657 1.72588 304737

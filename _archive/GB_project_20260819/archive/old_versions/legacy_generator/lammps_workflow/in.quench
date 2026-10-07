@@ -1,0 +1,39 @@
+# Li bicrystal quench
+
+units           metal
+dimension       3
+boundary        p p p
+atom_style      atomic
+
+read_data       annealed.data
+
+mass            1 6.941
+
+neighbor        0.3 bin
+neigh_modify    every 1 delay 0 check yes
+
+pair_style      kim SNAP_ZuoChenLi_2019_Li__MO_732106099012_000
+pair_coeff      * * Li
+
+timestep        0.001
+
+dump            quench_dmp all custom 1000 traj_quench.dump id type x y z
+dump_modify     quench_dmp sort id
+
+thermo          500
+thermo_style    custom step temp pe ke etotal press
+
+velocity        all create 300.0 12345
+
+fix             cool_nvt all nvt temp 300.0 10.0 0.1
+
+run             50000
+
+unfix           cool_nvt
+
+minimize        1.0e-8 1.0e-8 10000 100000
+
+undump          quench_dmp
+
+write_data      final_gb.data
+write_restart   final_gb.restart

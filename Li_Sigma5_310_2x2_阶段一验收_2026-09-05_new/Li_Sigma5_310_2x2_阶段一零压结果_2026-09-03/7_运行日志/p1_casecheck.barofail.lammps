@@ -1,0 +1,204 @@
+LAMMPS (10 Dec 2025)
+# Phase-1 Step 4: 0 K Case-B diagnostic check on the 363 K end frame
+# Force-converged minimization at FIXED box (same cell as production frame).
+# 0 K is diagnostic only, not part of the production trajectory.
+# Usage: lmp -in in.p1_casecheck -var kim_model ...
+units           metal
+atom_style      atomic
+boundary        p p p
+read_data       phase1/p1_annealed.data
+Reading data file ...
+  orthogonal box = (0.13599856 0.1693996 0.18969291) to (66.389212 66.355811 69.934037)
+  2 by 2 by 3 MPI processor grid
+  reading atoms ...
+  14400 atoms
+  reading velocities ...
+  14400 velocities
+  read_data CPU = 0.070 seconds
+pair_style      kim ${kim_model}
+pair_style      kim SNAP_ZuoChenLi_2019_Li__MO_732106099012_000
+pair_coeff      * * Li
+neighbor        2.0 bin
+neigh_modify    delay 0 every 1 check yes
+
+thermo          100
+thermo_style    custom step pe pxx pyy pzz press lx ly lz
+
+min_style       cg
+
+variable        fmax_chunk equal fmax
+variable        fnorm_chunk equal fnorm
+variable        chunk loop 40
+
+label           p1_cc_loop
+minimize        0.0 1.0e-4 500 5000
+
+CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE
+
+Your simulation uses code contributions which should be cited:
+
+- OpenKIM Project: https://doi.org/10.1007/s11837-011-0102-6
+
+@Article{tadmor:elliott:2011,
+ author = {E. B. Tadmor and R. S. Elliott and J. P. Sethna and R. E. Miller and C. A. Becker},
+ title = {The potential of atomistic simulations and the {K}nowledgebase of {I}nteratomic {M}odels},
+ journal = {{JOM}},
+ year =    2011,
+ volume =  63,
+ number =  17,
+ pages =   {17},
+ doi =     {10.1007/s11837-011-0102-6}
+}
+
+- OpenKIM potential: https://openkim.org/cite/MO_732106099012_000#item-citation
+
+QENvbW1lbnQKewpcZG9jdW1lbnRjbGFzc3thcnRpY2xlfQpcdXNlcGFja2FnZXt1cmx9ClxiZWdpbntkb2N1bWVudH0KVGhpcyBNb2RlbCBvcmlnaW5hbGx5IHB1Ymxpc2hlZCBpbiBcY2l0ZXtNT183MzIxMDYwOTkwMTJfMDAwYX0gaXMgYXJjaGl2ZWQgaW4gT3BlbktJTX5cY2l0ZXtNT183MzIxMDYwOTkwMTJfMDAwLCBNRF81MzY3NTAzMTA3MzVfMDAwLCB0YWRtb3I6ZWxsaW90dDoyMDExLCBlbGxpb3R0OnRhZG1vcjoyMDExfS4KXGJpYmxpb2dyYXBoeXN0eWxle3ZhbmNvdXZlcn0KXGJpYmxpb2dyYXBoeXtraW1jaXRlLU1PXzczMjEwNjA5OTAxMl8wMDAuYmlifQpcZW5ke2RvY3VtZW50fQp9CgpATWlzY3tNT183MzIxMDYwOTkwMTJfMDAwLAogIGF1dGhvciAgICAgICA9IHtZdW54aW5nIFp1b30sCiAgdGl0bGUgICAgICAgID0ge3tBfSBzcGVjdHJhbCBuZWlnaGJvciBhbmFseXNpcyBwb3RlbnRpYWwgZm9yIHtMfWkgZGV2ZWxvcGVkIGJ5IHtZfXVueGluZyB7Wn11byB2MDAwfSwKICBkb2kgICAgICAgICAgPSB7MTAuMjU5NTAvNzg4ZDQ3ZDV9LAogIGhvd3B1Ymxpc2hlZCA9IHtPcGVuS0lNLCBcdXJse2h0dHBzOi8vZG9pLm9yZy8xMC4yNTk1MC83ODhkNDdkNX19LAogIGtleXdvcmRzICAgICA9IHtPcGVuS0lNLCBNb2RlbCwgTU9fNzMyMTA2MDk5MDEyXzAwMH0sCiAgcHVibGlzaGVyICAgID0ge09wZW5LSU19LAogIHllYXIgICAgICAgICA9IDIwMjAsCn0KCkBNaXNje01EXzUzNjc1MDMxMDczNV8wMDAsCiAgYXV0aG9yICAgICAgID0ge1lhc2VyIEFmc2hhcn0sCiAgdGl0bGUgICAgICAgID0ge3tTfXBlY3RyYWwgbmVpZ2hib3IgYW5hbHlzaXMgcG90ZW50aWFsICh7U05BUH0pIG1vZGVsIGRyaXZlciB2MDAwfSwKICBkb2kgICAgICAgICAgPSB7MTAuMjU5NTAvZjRmYWU0OTN9LAogIGhvd3B1Ymxpc2hlZCA9IHtPcGVuS0lNLCBcdXJse2h0dHBzOi8vZG9pLm9yZy8xMC4yNTk1MC83ODhkNDdkNX19LAogIGtleXdvcmRzICAgICA9IHtPcGVuS0lNLCBNb2RlbCBEcml2ZXIsIE1EXzUzNjc1MDMxMDczNV8wMDB9LAogIHB1Ymxpc2hlciAgICA9IHtPcGVuS0lNfSwKICB5ZWFyICAgICAgICAgPSAyMDE5LAp9CgpAQXJ0aWNsZXt0YWRtb3I6ZWxsaW90dDoyMDExLAogIGF1dGhvciAgICA9IHtFLiBCLiBUYWRtb3IgYW5kIFIuIFMuIEVsbGlvdHQgYW5kIEouIFAuIFNldGhuYSBhbmQgUi4gRS4gTWlsbGVyIGFuZCBDLiBBLiBCZWNrZXJ9LAogIHRpdGxlICAgICA9IHtUaGUgcG90ZW50aWFsIG9mIGF0b21pc3RpYyBzaW11bGF0aW9ucyBhbmQgdGhlIHtLfW5vd2xlZGdlYmFzZSBvZiB7SX1udGVyYXRvbWljIHtNfW9kZWxzfSwKICBqb3VybmFsICAgPSB7e0pPTX19LAogIHllYXIgICAgICA9IHsyMDExfSwKICB2b2x1bWUgICAgPSB7NjN9LAogIG51bWJlciAgICA9IHs3fSwKICBwYWdlcyAgICAgPSB7MTd9LAogIGRvaSAgICAgICA9IHsxMC4xMDA3L3MxMTgzNy0wMTEtMDEwMi02fSwKfQoKQE1pc2N7ZWxsaW90dDp0YWRtb3I6MjAxMSwKICBhdXRob3IgICAgICAgPSB7UnlhbiBTLiBFbGxpb3R0IGFuZCBFbGxhZCBCLiBUYWRtb3J9LAogIHRpdGxlICAgICAgICA9IHt7S31ub3dsZWRnZWJhc2Ugb2Yge0l9bnRlcmF0b21pYyB7TX1vZGVscyAoe0tJTX0pIEFwcGxpY2F0aW9uIFByb2dyYW1taW5nIEludGVyZmFjZSAoe0FQSX0pfSwKICBob3dwdWJsaXNoZWQgPSB7XHVybHtodHRwczovL29wZW5raW0ub3JnL2tpbS1hcGl9fSwKICBwdWJsaXNoZXIgICAgPSB7T3BlbktJTX0sCiAgeWVhciAgICAgICAgID0gMjAxMSwKICBkb2kgICAgICAgICAgPSB7MTAuMjU5NTAvZmY4ZjU2M2F9LAp9CgpAQXJ0aWNsZXtNT183MzIxMDYwOTkwMTJfMDAwYSwKICBhdXRob3IgPSB7WnVvLCBZdW54aW5nIGFuZCBDaGVuLCBDaGkgYW5kIExpLCBYaWFuZ2d1byBhbmQgRGVuZywgWmhpIGFuZCBDaGVuLCBZaW1pbmcgYW5kIEJlaGxlciwgSntcIm99cmcgYW5kIENze1wnYX1ueWksIEd7XCdhfWJvciBhbmQgU2hhcGVldiwgQWxleGFuZGVyIFYuIGFuZCBUaG9tcHNvbiwgQWlkYW4gUC4gYW5kIFdvb2QsIE1pdGNoZWxsIEEuIGFuZCBPbmcsIFNoeXVlIFBpbmd9LAogIGRvaSA9IHsxMC4xMDIxL2Fjcy5qcGNhLjliMDg3MjN9LAogIGpvdXJuYWwgPSB7VGhlIEpvdXJuYWwgb2YgUGh5c2ljYWwgQ2hlbWlzdHJ5IEF9LAogIG51bWJlciA9IHs0fSwKICBwYWdlcyA9IHs3MzEtLTc0NX0sCiAgdGl0bGUgPSB7UGVyZm9ybWFuY2UgYW5kIENvc3QgQXNzZXNzbWVudCBvZiBNYWNoaW5lIExlYXJuaW5nIEludGVyYXRvbWljIFBvdGVudGlhbHN9LAogIHZvbHVtZSA9IHsxMjR9LAogIHllYXIgPSB7MjAyMH0sCn0KCITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE
+
+Generated 0 of 0 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7.1
+  ghost atom cutoff = 7.1
+  binsize = 3.55, bins = 19 19 20
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair kim, perpetual
+      attributes: full, newton off
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 4.432 | 4.434 | 4.436 Mbytes
+   Step         PotEng          Pxx            Pyy            Pzz           Press            Lx             Ly             Lz      
+         0  -26552.342      1344.9016      1125.6441      912.33316      1127.6263      66.253214      66.186412      69.744344    
+       100  -27265.449      1802.8749      2442.7545      1952.4675      2066.0323      66.253214      66.186412      69.744344    
+       200  -27265.806      1816.0098      2444.5973      1933.1949      2064.6007      66.253214      66.186412      69.744344    
+       300  -27265.863      1815.0414      2446.8735      1933.6212      2065.1787      66.253214      66.186412      69.744344    
+       400  -27265.91       1807.8978      2443.9099      1926.9199      2059.5759      66.253214      66.186412      69.744344    
+       500  -27265.931      1806.7609      2443.8847      1924.5348      2058.3935      66.253214      66.186412      69.744344    
+Loop time of 228.383 on 12 procs for 500 steps with 14400 atoms
+
+100.0% CPU use with 12 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = max iterations
+  Energy initial, next-to-last, final = 
+     -26552.3416847653  -27265.9306089834  -27265.9312109684
+  Force two-norm initial, final = 42.077444 0.016871309
+  Force max component initial, final = 1.0132052 0.0054426098
+  Final line search alpha, max atom move = 1 0.0054426098
+  Iterations, force evaluations = 500 500
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 178.44     | 193.72     | 208.67     |  58.3 | 84.82
+Neigh   | 0.025208   | 0.02645    | 0.027655   |   0.5 |  0.01
+Comm    | 19.621     | 34.577     | 49.849     | 138.1 | 15.14
+Output  | 0.00043629 | 0.00050013 | 0.00084427 |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.06403    |            |       |  0.03
+
+Nlocal:           1200 ave        1262 max        1163 min
+Histogram: 6 2 0 0 0 0 0 0 0 4
+Nghost:        2741.83 ave        2812 max        2699 min
+Histogram: 4 3 1 0 0 0 0 0 2 2
+Neighs:              0 ave           0 max           0 min
+Histogram: 12 0 0 0 0 0 0 0 0 0
+FullNghs:      77220.3 ave       81236 max       74843 min
+Histogram: 6 2 0 0 0 0 0 0 0 4
+
+Total # of neighbors = 926644
+Ave neighs/atom = 64.350278
+Neighbor list builds = 10
+Dangerous builds = 0
+variable        fmax_saved string ${fmax_chunk}
+variable        fmax_saved string 0.00544260976860957
+print           "P1CC_CHECKPOINT chunk=${chunk} fmax=${fmax_saved}"
+P1CC_CHECKPOINT chunk=1 fmax=0.00544260976860957
+if              "${fmax_saved} < 1.0e-4" then "jump SELF p1_cc_finish"
+next            chunk
+jump            SELF p1_cc_loop
+minimize        0.0 1.0e-4 500 5000
+Generated 0 of 0 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7.1
+  ghost atom cutoff = 7.1
+  binsize = 3.55, bins = 19 19 20
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair kim, perpetual
+      attributes: full, newton off
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 4.432 | 4.434 | 4.436 Mbytes
+   Step         PotEng          Pxx            Pyy            Pzz           Press            Lx             Ly             Lz      
+       500  -27265.931      1806.7609      2443.8847      1924.5348      2058.3935      66.253214      66.186412      69.744344    
+       600  -27265.97       1808.0795      2443.9697      1922.2035      2058.0842      66.253214      66.186412      69.744344    
+       700  -27265.97       1808.6183      2444.1116      1922.0668      2058.2656      66.253214      66.186412      69.744344    
+       800  -27265.97       1809.496       2444.2401      1921.9623      2058.5661      66.253214      66.186412      69.744344    
+       900  -27265.975      1812.3899      2442.6952      1920.1204      2058.4018      66.253214      66.186412      69.744344    
+      1000  -27265.977      1811.6536      2441.336       1918.858       2057.2825      66.253214      66.186412      69.744344    
+Loop time of 234.176 on 12 procs for 500 steps with 14400 atoms
+
+100.0% CPU use with 12 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = max iterations
+  Energy initial, next-to-last, final = 
+     -27265.9312109684  -27265.9765956811  -27265.9765957856
+  Force two-norm initial, final = 0.016871309 0.00021185602
+  Force max component initial, final = 0.0054426098 5.8032705e-05
+  Final line search alpha, max atom move = 1 5.8032705e-05
+  Iterations, force evaluations = 500 507
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 182.76     | 197.74     | 215.4      |  67.0 | 84.44
+Neigh   | 0.0020867  | 0.0024902  | 0.0027706  |   0.5 |  0.00
+Comm    | 18.713     | 36.373     | 51.35      | 156.3 | 15.53
+Output  | 0.00052899 | 0.00056173 | 0.00077633 |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.06349    |            |       |  0.03
+
+Nlocal:           1200 ave        1262 max        1165 min
+Histogram: 6 2 0 0 0 0 0 0 0 4
+Nghost:        2741.17 ave        2809 max        2701 min
+Histogram: 5 2 1 0 0 0 0 0 2 2
+Neighs:              0 ave           0 max           0 min
+Histogram: 12 0 0 0 0 0 0 0 0 0
+FullNghs:      77219.3 ave       81241 max       74783 min
+Histogram: 5 3 0 0 0 0 0 0 0 4
+
+Total # of neighbors = 926632
+Ave neighs/atom = 64.349444
+Neighbor list builds = 1
+Dangerous builds = 0
+variable        fmax_saved string ${fmax_chunk}
+variable        fmax_saved string 5.80327045899554e-05
+print           "P1CC_CHECKPOINT chunk=${chunk} fmax=${fmax_saved}"
+P1CC_CHECKPOINT chunk=2 fmax=5.80327045899554e-05
+if              "${fmax_saved} < 1.0e-4" then "jump SELF p1_cc_finish"
+jump SELF p1_cc_finish
+print           "P1_CASECHECK fmax=${fmax_saved}"
+P1_CASECHECK fmax=5.80327045899554e-05
+write_data      phase1/p1_casecheck_0K.data
+System init for write_data ...
+Generated 0 of 0 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7.1
+  ghost atom cutoff = 7.1
+  binsize = 3.55, bins = 19 19 20
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair kim, perpetual
+      attributes: full, newton off
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+print           "P1_CASECHECK_DONE"
+P1_CASECHECK_DONE
+Total wall time: 0:07:43

@@ -1,0 +1,2 @@
+observed_spearman,null_mean,null_std,null_p5,null_p95,n_permutations,seed,label
+0.8316909661215529,0.08744345779873605,0.013985878948014483,0.06328733006517678,0.10741069629065533,100,20260817,atom-level permutation diagnostic

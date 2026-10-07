@@ -1,0 +1,52 @@
+=== stable: ni_stable.cfg ===
+header atom count: 47120
+parsed atom count: 47120
+elements: ['Ni']
+source: C:\Users\1\Documents\Codex\2026-08-14\work-in-this-existing-wsl-project\soap_ni_practice\ni_stable.cfg
+entry_count: 11 (3 coordinates + auxiliary fields)
+coordinate convention used for ASE Atoms: scaled
+cell (H0 rows, Angstrom):
+  [101.068000, 0.000000, 0.000000]
+  [0.000000, 17.539900, 0.000000]
+  [0.000000, 0.000000, 286.870000]
+cell lengths (Angstrom): 101.068000, 17.539900, 286.870000
+scaled coordinate ranges: 0=[2.55525e-06, 0.999999], 1=[0, 0.999999], 2=[0.000792658, 0.99846]
+cartesian coordinate ranges (Angstrom): 0=[0.000258, 101.067899], 1=[0.000001, 17.539900], 2=[0.227390, 286.428220]
+coordinate bounds check: PASS (all scaled coordinates in [0, 1] within 1e-8)
+auxiliary field names (8): id, type, c_PTM_1, c_CNA, c_ENT1, c_ENT2, c_ENT3, c_PEATOM
+auxiliary field summaries:
+  id: integer field; unique 47120 unique values; first 12: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12; min=1, max=47120
+  type: integer field; unique 1, 2; min=1, max=2
+  c_PTM_1: integer field; unique 0, 1; min=0, max=1
+  c_CNA: integer field; unique 1, 5; min=1, max=5
+  c_ENT1: numeric field; min=-2.75653, max=-2.04408, unique=4722
+  c_ENT2: numeric field; min=-4.85014, max=-2.98665, unique=5480
+  c_ENT3: numeric field; min=-4.49743, max=-2.43963, unique=7194
+  c_PEATOM: numeric field; min=-4.51975, max=-4.06537, unique=3248
+
+=== metastable: ni_metastable.cfg ===
+header atom count: 47120
+parsed atom count: 47120
+elements: ['Ni']
+source: C:\Users\1\Documents\Codex\2026-08-14\work-in-this-existing-wsl-project\soap_ni_practice\ni_metastable.cfg
+entry_count: 11 (3 coordinates + auxiliary fields)
+coordinate convention used for ASE Atoms: scaled
+cell (H0 rows, Angstrom):
+  [101.067000, 0.000000, 0.000000]
+  [0.000000, 17.539700, 0.000000]
+  [0.000000, 0.000000, 286.866000]
+cell lengths (Angstrom): 101.067000, 17.539700, 286.866000
+scaled coordinate ranges: 0=[0.000154112, 0.999774], 1=[0, 0.999999], 2=[0.000450586, 0.999297]
+cartesian coordinate ranges (Angstrom): 0=[0.015576, 101.044159], 1=[0.000019, 17.539700], 2=[0.129258, 286.664333]
+coordinate bounds check: PASS (all scaled coordinates in [0, 1] within 1e-8)
+auxiliary field names (8): id, type, c_PTM_1, c_CNA, c_ENT1, c_ENT2, c_ENT3, c_PEATOM
+auxiliary field summaries:
+  id: integer field; unique 47120 unique values; first 12: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12; min=1, max=47120
+  type: integer field; unique 1, 2; min=1, max=2
+  c_PTM_1: integer field; unique 0, 1, 2; min=0, max=2
+  c_CNA: integer field; unique 1, 2, 5; min=1, max=5
+  c_ENT1: numeric field; min=-2.76941, max=-1.68752, unique=5532
+  c_ENT2: numeric field; min=-5.00503, max=-1.99889, unique=6772
+  c_ENT3: numeric field; min=-4.46554, max=-2.10208, unique=7850
+  c_PEATOM: numeric field; min=-4.54664, max=-3.95735, unique=4199
+

@@ -1,0 +1,31 @@
+# v2 Sigma5 (310)[001] BCC Li -- stage 4: final 0 K minimization
+# Continues from stage 3 restart; velocities are zeroed first, then a
+# force-converged minimization runs (etol=0, ftol=1e-6 eV/A).
+# Usage: lmp -in in.4_final -var outdir ../outputs \
+#            -var kim_model SNAP_ZuoChenLi_2019_Li__MO_732106099012_000
+units metal
+atom_style atomic
+boundary p p p
+read_restart ${outdir}/stage3_quenched.restart
+pair_style kim ${kim_model}
+pair_coeff * *
+neighbor 2.0 bin
+neigh_modify delay 0 every 1 check yes
+velocity all set 0.0 0.0 0.0
+# same cell policy as stage 1: x fixed (GB normal), y/z relaxed at P=0
+fix 1 all box/relax y 0.0 z 0.0
+min_style cg
+thermo 100
+thermo_style custom step pe etotal press pxx pyy pzz pxy pxz pyz
+minimize 0.0 1.0e-6 10000 100000
+unfix 1
+variable fmax_v equal fmax
+variable fnorm_v equal fnorm
+variable vmax_v equal max(vx)
+print "STAGE4_FINAL fmax=${fmax_v} fnorm=${fnorm_v} vmax=${vmax_v}"
+dump 1 all custom 100 ${outdir}/stage4_final.dump id type x y z vx vy vz
+run 0
+undump 1
+write_data ${outdir}/stage4_final.data
+write_restart ${outdir}/stage4_final.restart
+print "STAGE4_FINAL_DONE"

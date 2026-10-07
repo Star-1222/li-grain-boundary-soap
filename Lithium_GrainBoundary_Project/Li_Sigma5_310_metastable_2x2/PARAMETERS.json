@@ -1,0 +1,70 @@
+{
+  "experiment": "Li_Sigma5_310_metastable_2x2",
+  "created": "2026-08-29",
+  "material": "BCC Li",
+  "gb": "Sigma5 [001](310)",
+  "gb_plane_label": "310",
+  "misorientation_deg": 36.86989764584402,
+  "potential": "SNAP_ZuoChenLi_2019_Li__MO_732106099012_000",
+  "lattice_constant_A": 3.506186475312,
+  "supercell": {
+    "K": 6,
+    "J": 6,
+    "L": 20,
+    "K_meaning": "GB-normal x periods, unchanged from v2",
+    "J_meaning": "in-plane y periods, doubled from 3 to 6",
+    "L_meaning": "in-plane z periods, doubled from 10 to 20"
+  },
+  "old_supercell": {
+    "K": 6,
+    "J": 3,
+    "L": 10,
+    "atoms": 3600,
+    "box_A": [66.525211, 33.262605, 35.061865]
+  },
+  "expected_atoms": 14400,
+  "actual_atoms": 14400,
+  "grain_atoms": {"grain1": 7200, "grain2": 7200},
+  "box_A": [66.52521097958189, 66.52521097958189, 70.12372950624],
+  "two_gb_positions_x_A": [0.0, 33.26260548979094],
+  "minimum_interatomic_distance_A": 2.217507,
+  "timestep_ps": 0.001,
+  "seed": 12345,
+  "stage1": {
+    "method": "CG minimization, box/relax x 0 bar",
+    "cell_policy": "x free (GB normal), y/z fixed at CSL periods"
+  },
+  "stage2": {
+    "ensemble": "NPT",
+    "T_K": 363.0,
+    "P_bar": 0.0,
+    "duration_ps": 2.0,
+    "steps": 2000,
+    "note": "Li melting point reference 454 K; 0.8*Tm = 363 K",
+    "inspection_times_ps": [0.0, 0.5, 1.0, 1.5, 2.0]
+  },
+  "stage3": {
+    "ensemble": "NPT",
+    "T_start_K": 363.0,
+    "T_end_K": 10.0,
+    "cooling_rate_K_per_ps": 10.0,
+    "duration_ps": 35.3,
+    "steps": 35300
+  },
+  "stage4": {
+    "ensemble": "NPT",
+    "T_K": 10.0,
+    "P_bar": 0.0,
+    "minimum_survival_ps": 1.0,
+    "planned_hold_ps": 5.0,
+    "steps": 5000
+  },
+  "success_criteria": [
+    "macroscopic Sigma5 [001](310) preserved",
+    "GB disordered/reconstructed at high T",
+    "bulk grains remain BCC",
+    "quench at 10 K/ps",
+    "10 K and 0 bar",
+    "GB disorder persists > 1 ps"
+  ]
+}

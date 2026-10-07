@@ -1,0 +1,24 @@
+# v2 Sigma5 (310)[001] BCC Li -- stage 2: NVT anneal 300 K, 20 ps
+# Continues from stage 1 restart (true restart-based continuation).
+# Usage: lmp -in in.2_anneal -var outdir ../outputs -var seed 12345 \
+#            -var kim_model SNAP_ZuoChenLi_2019_Li__MO_732106099012_000
+units metal
+atom_style atomic
+boundary p p p
+read_restart ${outdir}/stage1_minimized.restart
+pair_style kim ${kim_model}
+pair_coeff * *
+timestep 0.001
+velocity all create 300.0 ${seed} dist gaussian
+fix 1 all nvt temp 300.0 300.0 0.1
+thermo 500
+thermo_style custom step temp pe ke etotal press pxx pyy pzz pxy pxz pyz
+dump 1 all custom 500 ${outdir}/stage2_anneal.dump id type x y z vx vy vz
+# periodic checkpoint restart every 10000 steps (10 ps) for safe interruption
+restart 10000 ${outdir}/stage2_anneal.checkpoint
+run 20000
+unfix 1
+undump 1
+write_data ${outdir}/stage2_annealed.data
+write_restart ${outdir}/stage2_annealed.restart
+print "STAGE2_ANNEAL_DONE"

@@ -1,0 +1,37 @@
+# Phase-1 Step 3: 363 K anneal under TRUE zero-pressure isotropic NPT
+# (old stage2 used "x 0.0 0.0" only; here iso 0.0 0.0 as per guide)
+# 25 ps total: several ps to stabilize pressure, remaining >> 2 ps effective hold.
+# Usage: lmp -in in.p1_anneal -var kim_model ... -var seed 12345
+units           metal
+atom_style      atomic
+boundary        p p p
+read_data       phase1/p1_min0.data
+pair_style      kim ${kim_model}
+pair_coeff      * * Li
+neighbor        2.0 bin
+neigh_modify    delay 0 every 1 check yes
+
+timestep        0.001
+reset_timestep  0
+
+velocity        all create 363.0 ${seed} mom yes rot yes dist gaussian
+
+fix             1 all npt temp 363.0 363.0 0.1 iso 0.0 0.0 1.0
+
+thermo          250
+thermo_style    custom step temp pe etotal pxx pyy pzz press vol lx ly lz
+
+restart         5000 phase1/p1_anneal.checkpoint.*
+
+dump            1 all custom 1000 phase1/p1_anneal.dump id type x y z
+dump_modify     1 sort id
+
+run             25000
+
+unfix           1
+undump          1
+
+write_data      phase1/p1_annealed.data
+write_restart   phase1/p1_annealed.restart
+print           "P1_ANNEAL finalT=$(temp) Pxx=$(pxx) Pyy=$(pyy) Pzz=$(pzz)"
+print           "P1_ANNEAL_DONE"

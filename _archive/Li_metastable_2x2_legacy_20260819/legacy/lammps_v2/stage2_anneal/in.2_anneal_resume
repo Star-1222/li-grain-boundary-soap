@@ -1,0 +1,39 @@
+# Resume Stage 2 annealing from the latest periodic restart.
+# Usage:
+#   lmp -in lammps/in.2_anneal_resume #       -var restart 'outputs/stage2_anneal.checkpoint.*' #       -var outdir outputs #       -var kim_model SNAP_ZuoChenLi_2019_Li__MO_732106099012_000
+
+units metal
+atom_style atomic
+boundary p p p
+
+# LAMMPS expands * and selects the restart with the largest timestep.
+read_restart ${restart}
+
+pair_style kim ${kim_model}
+pair_coeff * * Li
+timestep 0.001
+
+neighbor 2.0 bin
+neigh_modify delay 0 every 1 check yes
+
+thermo 500
+thermo_style custom step temp pe ke etotal press pxx pyy pzz pxy pxz pyz
+
+# Same fix ID/style as the interrupted run restores the NVT state.
+fix 1 all nvt temp 300.0 300.0 0.1
+
+dump 1 all custom 500 ${outdir}/stage2_anneal.dump id type x y z vx vy vz
+dump_modify 1 append yes sort id
+
+restart 1000 ${outdir}/stage2_anneal.checkpoint
+
+# Continue only until the original Stage 2 target timestep.
+run 20000 upto
+
+unfix 1
+undump 1
+restart 0
+
+write_data ${outdir}/stage2_annealed.data
+write_restart ${outdir}/stage2_annealed.restart
+print "STAGE2_ANNEAL_RESUME_DONE"

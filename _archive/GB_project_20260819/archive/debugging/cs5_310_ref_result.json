@@ -1,0 +1,1724 @@
+{
+  "schema": "bcc-li-sigma5-310-ref-v1",
+  "description": "Reference results of the corrected Sigma5 (310)[001] symmetric tilt GB construction (mirror method), computed independently with Node before writing the v2 Python pipeline.",
+  "parameters": {
+    "a_A": 3.51,
+    "d_A": 1.109959458719101,
+    "theta_deg": 36.86989764584402,
+    "theta_rad": 0.6435011087932844,
+    "tilt_axis": [
+      0,
+      0,
+      1
+    ],
+    "gb_plane": "{310}",
+    "K": 6,
+    "J": 3,
+    "L": 10,
+    "box_A": {
+      "Lx": 66.59756752314607,
+      "Ly": 33.298783761573034,
+      "Lz": 35.099999999999994
+    },
+    "in_plane_periods_A": {
+      "y": 11.099594587191012,
+      "z": 3.51
+    }
+  },
+  "orientation": {
+    "M1_rows_lab": [
+      [
+        0.9486832980505138,
+        -0.31622776601683794,
+        0
+      ],
+      [
+        0.31622776601683794,
+        0.9486832980505138,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "M2_rows_lab": [
+      [
+        0.9486832980505138,
+        0.31622776601683794,
+        0
+      ],
+      [
+        -0.31622776601683794,
+        0.9486832980505138,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "M1_rows_exact": [
+      [
+        3,
+        -1,
+        0
+      ],
+      [
+        1,
+        3,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "M2_rows_exact": [
+      [
+        3,
+        1,
+        0
+      ],
+      [
+        -1,
+        3,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "misorientation_angle_deg": 36.86989764584404,
+    "rotation_axis": [
+      0,
+      0,
+      -1
+    ],
+    "cubic_symmetry_min_angle_deg": 36.86989764584401,
+    "gb_normal_crystal1": [
+      0.9486832980505138,
+      -0.31622776601683794,
+      0
+    ],
+    "gb_normal_crystal2": [
+      0.9486832980505138,
+      0.31622776601683794,
+      0
+    ],
+    "gb_normal_crystal1_miller": "[3,-1,0]",
+    "gb_normal_crystal2_miller": "[3,1,0]"
+  },
+  "counts": {
+    "atoms_per_grain_before_removal": 1860,
+    "total_before_removal": 3720,
+    "planes_per_grain": 31,
+    "atoms_per_plane": 60,
+    "coincident_pairs_total": 120,
+    "coincident_pairs_gb1": 60,
+    "coincident_pairs_gb2": 60,
+    "removed_total": 120,
+    "removed_grain1": 60,
+    "removed_grain2": 60,
+    "final_total": 3600,
+    "final_grain1": 1800,
+    "final_grain2": 1800,
+    "removal_fraction_pct": 3.225806451612903,
+    "density_atoms_per_A3": 0.0462496708468738,
+    "density_target_2_over_a3": 0.0462496708468738
+  },
+  "distances": {
+    "global_min_A": 2.219918917438207,
+    "analytic_2d_A": 2.219918917438202,
+    "nn_bcc_A": 3.039749167283379,
+    "nnn_bcc_A": 3.51,
+    "close_pair_histogram": {
+      "3": 14160,
+      "3.5": 10560,
+      "2.2": 120,
+      "4.2": 240,
+      "4.4": 600
+    }
+  },
+  "gb_equivalence": {
+    "cross_gb_pairs_below_4p5A_gb1": 900,
+    "cross_gb_pairs_below_4p5A_gb2": 900,
+    "spectra_identical": true,
+    "min_gb1_A": 2.219919,
+    "min_gb2_A": 2.219919,
+    "pairs_at_2p22A_gb1": 60,
+    "pairs_at_2p22A_gb2": 60
+  },
+  "bulk_bcc": {
+    "margin_A": 5,
+    "sampled": 2520,
+    "perfect": 2520,
+    "failed": 0
+  },
+  "periodicity": {
+    "grain1_misses": 0,
+    "grain2_misses": 0,
+    "y_period_A": 11.099594587191012,
+    "z_period_A": 3.51
+  },
+  "voids": {
+    "max_empty_gap_A": 0.5,
+    "x_density_profile_1A_bins": [
+      {
+        "xlo": 0,
+        "xhi": 1,
+        "n": 30
+      },
+      {
+        "xlo": 1,
+        "xhi": 2,
+        "n": 60
+      },
+      {
+        "xlo": 2,
+        "xhi": 3,
+        "n": 60
+      },
+      {
+        "xlo": 3,
+        "xhi": 4,
+        "n": 60
+      },
+      {
+        "xlo": 4,
+        "xhi": 5,
+        "n": 60
+      },
+      {
+        "xlo": 5,
+        "xhi": 6,
+        "n": 60
+      },
+      {
+        "xlo": 6,
+        "xhi": 7,
+        "n": 60
+      },
+      {
+        "xlo": 7,
+        "xhi": 8,
+        "n": 60
+      },
+      {
+        "xlo": 8,
+        "xhi": 9,
+        "n": 60
+      },
+      {
+        "xlo": 9,
+        "xhi": 10,
+        "n": 60
+      },
+      {
+        "xlo": 10,
+        "xhi": 11,
+        "n": 0
+      },
+      {
+        "xlo": 11,
+        "xhi": 12,
+        "n": 60
+      },
+      {
+        "xlo": 12,
+        "xhi": 13,
+        "n": 60
+      },
+      {
+        "xlo": 13,
+        "xhi": 14,
+        "n": 60
+      },
+      {
+        "xlo": 14,
+        "xhi": 15,
+        "n": 60
+      },
+      {
+        "xlo": 15,
+        "xhi": 16,
+        "n": 60
+      },
+      {
+        "xlo": 16,
+        "xhi": 17,
+        "n": 60
+      },
+      {
+        "xlo": 17,
+        "xhi": 18,
+        "n": 60
+      },
+      {
+        "xlo": 18,
+        "xhi": 19,
+        "n": 60
+      },
+      {
+        "xlo": 19,
+        "xhi": 20,
+        "n": 60
+      },
+      {
+        "xlo": 20,
+        "xhi": 21,
+        "n": 0
+      },
+      {
+        "xlo": 21,
+        "xhi": 22,
+        "n": 60
+      },
+      {
+        "xlo": 22,
+        "xhi": 23,
+        "n": 60
+      },
+      {
+        "xlo": 23,
+        "xhi": 24,
+        "n": 60
+      },
+      {
+        "xlo": 24,
+        "xhi": 25,
+        "n": 60
+      },
+      {
+        "xlo": 25,
+        "xhi": 26,
+        "n": 60
+      },
+      {
+        "xlo": 26,
+        "xhi": 27,
+        "n": 60
+      },
+      {
+        "xlo": 27,
+        "xhi": 28,
+        "n": 60
+      },
+      {
+        "xlo": 28,
+        "xhi": 29,
+        "n": 60
+      },
+      {
+        "xlo": 29,
+        "xhi": 30,
+        "n": 60
+      },
+      {
+        "xlo": 30,
+        "xhi": 31,
+        "n": 0
+      },
+      {
+        "xlo": 31,
+        "xhi": 32,
+        "n": 60
+      },
+      {
+        "xlo": 32,
+        "xhi": 33,
+        "n": 60
+      },
+      {
+        "xlo": 33,
+        "xhi": 34,
+        "n": 60
+      },
+      {
+        "xlo": 34,
+        "xhi": 35,
+        "n": 60
+      },
+      {
+        "xlo": 35,
+        "xhi": 36,
+        "n": 60
+      },
+      {
+        "xlo": 36,
+        "xhi": 37,
+        "n": 60
+      },
+      {
+        "xlo": 37,
+        "xhi": 38,
+        "n": 60
+      },
+      {
+        "xlo": 38,
+        "xhi": 39,
+        "n": 60
+      },
+      {
+        "xlo": 39,
+        "xhi": 40,
+        "n": 60
+      },
+      {
+        "xlo": 40,
+        "xhi": 41,
+        "n": 0
+      },
+      {
+        "xlo": 41,
+        "xhi": 42,
+        "n": 60
+      },
+      {
+        "xlo": 42,
+        "xhi": 43,
+        "n": 60
+      },
+      {
+        "xlo": 43,
+        "xhi": 44,
+        "n": 60
+      },
+      {
+        "xlo": 44,
+        "xhi": 45,
+        "n": 60
+      },
+      {
+        "xlo": 45,
+        "xhi": 46,
+        "n": 60
+      },
+      {
+        "xlo": 46,
+        "xhi": 47,
+        "n": 60
+      },
+      {
+        "xlo": 47,
+        "xhi": 48,
+        "n": 60
+      },
+      {
+        "xlo": 48,
+        "xhi": 49,
+        "n": 60
+      },
+      {
+        "xlo": 49,
+        "xhi": 50,
+        "n": 60
+      },
+      {
+        "xlo": 50,
+        "xhi": 51,
+        "n": 0
+      },
+      {
+        "xlo": 51,
+        "xhi": 52,
+        "n": 60
+      },
+      {
+        "xlo": 52,
+        "xhi": 53,
+        "n": 60
+      },
+      {
+        "xlo": 53,
+        "xhi": 54,
+        "n": 60
+      },
+      {
+        "xlo": 54,
+        "xhi": 55,
+        "n": 60
+      },
+      {
+        "xlo": 55,
+        "xhi": 56,
+        "n": 60
+      },
+      {
+        "xlo": 56,
+        "xhi": 57,
+        "n": 60
+      },
+      {
+        "xlo": 57,
+        "xhi": 58,
+        "n": 60
+      },
+      {
+        "xlo": 58,
+        "xhi": 59,
+        "n": 60
+      },
+      {
+        "xlo": 59,
+        "xhi": 60,
+        "n": 60
+      },
+      {
+        "xlo": 60,
+        "xhi": 61,
+        "n": 0
+      },
+      {
+        "xlo": 61,
+        "xhi": 62,
+        "n": 60
+      },
+      {
+        "xlo": 62,
+        "xhi": 63,
+        "n": 60
+      },
+      {
+        "xlo": 63,
+        "xhi": 64,
+        "n": 60
+      },
+      {
+        "xlo": 64,
+        "xhi": 65,
+        "n": 60
+      },
+      {
+        "xlo": 65,
+        "xhi": 66,
+        "n": 60
+      },
+      {
+        "xlo": 66,
+        "xhi": 67,
+        "n": 30
+      }
+    ]
+  },
+  "removal_log": [
+    {
+      "atom_id": 271,
+      "grain_id": 1,
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 2131
+    },
+    {
+      "atom_id": 2133,
+      "grain_id": 2,
+      "x": 66.59756752314607,
+      "y": 0,
+      "z": 3.51,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 273
+    },
+    {
+      "atom_id": 275,
+      "grain_id": 1,
+      "x": 0,
+      "y": 0,
+      "z": 7.02,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 2135
+    },
+    {
+      "atom_id": 2137,
+      "grain_id": 2,
+      "x": 66.59756752314607,
+      "y": 0,
+      "z": 10.53,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 277
+    },
+    {
+      "atom_id": 279,
+      "grain_id": 1,
+      "x": 0,
+      "y": 0,
+      "z": 14.04,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 2139
+    },
+    {
+      "atom_id": 2141,
+      "grain_id": 2,
+      "x": 66.59756752314607,
+      "y": 0,
+      "z": 17.549999999999997,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 281
+    },
+    {
+      "atom_id": 283,
+      "grain_id": 1,
+      "x": 0,
+      "y": 0,
+      "z": 21.06,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 2143
+    },
+    {
+      "atom_id": 2145,
+      "grain_id": 2,
+      "x": 66.59756752314607,
+      "y": 0,
+      "z": 24.57,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 285
+    },
+    {
+      "atom_id": 287,
+      "grain_id": 1,
+      "x": 0,
+      "y": 0,
+      "z": 28.08,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 2147
+    },
+    {
+      "atom_id": 2149,
+      "grain_id": 2,
+      "x": 66.59756752314607,
+      "y": 0,
+      "z": 31.589999999999996,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 289
+    },
+    {
+      "atom_id": 111,
+      "grain_id": 1,
+      "x": 0,
+      "y": 5.549797293595505,
+      "z": 1.755,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 1971
+    },
+    {
+      "atom_id": 1972,
+      "grain_id": 2,
+      "x": 66.59756752314607,
+      "y": 5.549797293595505,
+      "z": 5.265,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 112
+    },
+    {
+      "atom_id": 113,
+      "grain_id": 1,
+      "x": 0,
+      "y": 5.549797293595505,
+      "z": 8.774999999999999,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 1973
+    },
+    {
+      "atom_id": 1974,
+      "grain_id": 2,
+      "x": 66.59756752314607,
+      "y": 5.549797293595505,
+      "z": 12.285,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 114
+    },
+    {
+      "atom_id": 115,
+      "grain_id": 1,
+      "x": 0,
+      "y": 5.549797293595505,
+      "z": 15.794999999999998,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 1975
+    },
+    {
+      "atom_id": 1976,
+      "grain_id": 2,
+      "x": 66.59756752314607,
+      "y": 5.549797293595505,
+      "z": 19.305,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 116
+    },
+    {
+      "atom_id": 117,
+      "grain_id": 1,
+      "x": 0,
+      "y": 5.549797293595505,
+      "z": 22.814999999999998,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 1977
+    },
+    {
+      "atom_id": 1978,
+      "grain_id": 2,
+      "x": 66.59756752314607,
+      "y": 5.549797293595505,
+      "z": 26.325,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 118
+    },
+    {
+      "atom_id": 119,
+      "grain_id": 1,
+      "x": 0,
+      "y": 5.549797293595505,
+      "z": 29.834999999999997,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 1979
+    },
+    {
+      "atom_id": 1980,
+      "grain_id": 2,
+      "x": 66.59756752314607,
+      "y": 5.549797293595505,
+      "z": 33.345,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 120
+    },
+    {
+      "atom_id": 131,
+      "grain_id": 1,
+      "x": 0,
+      "y": 11.09959458719101,
+      "z": 0,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 1991
+    },
+    {
+      "atom_id": 1993,
+      "grain_id": 2,
+      "x": 66.59756752314607,
+      "y": 11.09959458719101,
+      "z": 3.51,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 133
+    },
+    {
+      "atom_id": 135,
+      "grain_id": 1,
+      "x": 0,
+      "y": 11.09959458719101,
+      "z": 7.02,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 1995
+    },
+    {
+      "atom_id": 1997,
+      "grain_id": 2,
+      "x": 66.59756752314607,
+      "y": 11.09959458719101,
+      "z": 10.53,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 137
+    },
+    {
+      "atom_id": 139,
+      "grain_id": 1,
+      "x": 0,
+      "y": 11.09959458719101,
+      "z": 14.04,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 1999
+    },
+    {
+      "atom_id": 2001,
+      "grain_id": 2,
+      "x": 66.59756752314607,
+      "y": 11.09959458719101,
+      "z": 17.549999999999997,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 141
+    },
+    {
+      "atom_id": 143,
+      "grain_id": 1,
+      "x": 0,
+      "y": 11.09959458719101,
+      "z": 21.06,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 2003
+    },
+    {
+      "atom_id": 2005,
+      "grain_id": 2,
+      "x": 66.59756752314607,
+      "y": 11.09959458719101,
+      "z": 24.57,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 145
+    },
+    {
+      "atom_id": 147,
+      "grain_id": 1,
+      "x": 0,
+      "y": 11.09959458719101,
+      "z": 28.08,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 2007
+    },
+    {
+      "atom_id": 2009,
+      "grain_id": 2,
+      "x": 66.59756752314607,
+      "y": 11.09959458719101,
+      "z": 31.589999999999996,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 149
+    },
+    {
+      "atom_id": 21,
+      "grain_id": 1,
+      "x": 0,
+      "y": 16.649391880786517,
+      "z": 1.755,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 1881
+    },
+    {
+      "atom_id": 1882,
+      "grain_id": 2,
+      "x": 66.59756752314607,
+      "y": 16.649391880786517,
+      "z": 5.265,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 22
+    },
+    {
+      "atom_id": 23,
+      "grain_id": 1,
+      "x": 0,
+      "y": 16.649391880786517,
+      "z": 8.774999999999999,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 1883
+    },
+    {
+      "atom_id": 1884,
+      "grain_id": 2,
+      "x": 66.59756752314607,
+      "y": 16.649391880786517,
+      "z": 12.285,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 24
+    },
+    {
+      "atom_id": 25,
+      "grain_id": 1,
+      "x": 0,
+      "y": 16.649391880786517,
+      "z": 15.794999999999998,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 1885
+    },
+    {
+      "atom_id": 1886,
+      "grain_id": 2,
+      "x": 66.59756752314607,
+      "y": 16.649391880786517,
+      "z": 19.305,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 26
+    },
+    {
+      "atom_id": 27,
+      "grain_id": 1,
+      "x": 0,
+      "y": 16.649391880786517,
+      "z": 22.814999999999998,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 1887
+    },
+    {
+      "atom_id": 1888,
+      "grain_id": 2,
+      "x": 66.59756752314607,
+      "y": 16.649391880786517,
+      "z": 26.325,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 28
+    },
+    {
+      "atom_id": 29,
+      "grain_id": 1,
+      "x": 0,
+      "y": 16.649391880786517,
+      "z": 29.834999999999997,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 1889
+    },
+    {
+      "atom_id": 1890,
+      "grain_id": 2,
+      "x": 66.59756752314607,
+      "y": 16.649391880786517,
+      "z": 33.345,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 30
+    },
+    {
+      "atom_id": 41,
+      "grain_id": 1,
+      "x": 0,
+      "y": 22.19918917438202,
+      "z": 0,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 1901
+    },
+    {
+      "atom_id": 1903,
+      "grain_id": 2,
+      "x": 66.59756752314607,
+      "y": 22.19918917438202,
+      "z": 3.51,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 43
+    },
+    {
+      "atom_id": 45,
+      "grain_id": 1,
+      "x": 0,
+      "y": 22.19918917438202,
+      "z": 7.02,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 1905
+    },
+    {
+      "atom_id": 1907,
+      "grain_id": 2,
+      "x": 66.59756752314607,
+      "y": 22.19918917438202,
+      "z": 10.53,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 47
+    },
+    {
+      "atom_id": 49,
+      "grain_id": 1,
+      "x": 0,
+      "y": 22.19918917438202,
+      "z": 14.04,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 1909
+    },
+    {
+      "atom_id": 1911,
+      "grain_id": 2,
+      "x": 66.59756752314607,
+      "y": 22.19918917438202,
+      "z": 17.549999999999997,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 51
+    },
+    {
+      "atom_id": 53,
+      "grain_id": 1,
+      "x": 0,
+      "y": 22.19918917438202,
+      "z": 21.06,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 1913
+    },
+    {
+      "atom_id": 1915,
+      "grain_id": 2,
+      "x": 66.59756752314607,
+      "y": 22.19918917438202,
+      "z": 24.57,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 55
+    },
+    {
+      "atom_id": 57,
+      "grain_id": 1,
+      "x": 0,
+      "y": 22.19918917438202,
+      "z": 28.08,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 1917
+    },
+    {
+      "atom_id": 1919,
+      "grain_id": 2,
+      "x": 66.59756752314607,
+      "y": 22.19918917438202,
+      "z": 31.589999999999996,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 59
+    },
+    {
+      "atom_id": 1,
+      "grain_id": 1,
+      "x": 0,
+      "y": 27.748986467977527,
+      "z": 1.755,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 1861
+    },
+    {
+      "atom_id": 1862,
+      "grain_id": 2,
+      "x": 66.59756752314607,
+      "y": 27.748986467977527,
+      "z": 5.265,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 2
+    },
+    {
+      "atom_id": 3,
+      "grain_id": 1,
+      "x": 0,
+      "y": 27.748986467977527,
+      "z": 8.774999999999999,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 1863
+    },
+    {
+      "atom_id": 1864,
+      "grain_id": 2,
+      "x": 66.59756752314607,
+      "y": 27.748986467977527,
+      "z": 12.285,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 4
+    },
+    {
+      "atom_id": 5,
+      "grain_id": 1,
+      "x": 0,
+      "y": 27.748986467977527,
+      "z": 15.794999999999998,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 1865
+    },
+    {
+      "atom_id": 1866,
+      "grain_id": 2,
+      "x": 66.59756752314607,
+      "y": 27.748986467977527,
+      "z": 19.305,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 6
+    },
+    {
+      "atom_id": 7,
+      "grain_id": 1,
+      "x": 0,
+      "y": 27.748986467977527,
+      "z": 22.814999999999998,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 1867
+    },
+    {
+      "atom_id": 1868,
+      "grain_id": 2,
+      "x": 66.59756752314607,
+      "y": 27.748986467977527,
+      "z": 26.325,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 8
+    },
+    {
+      "atom_id": 9,
+      "grain_id": 1,
+      "x": 0,
+      "y": 27.748986467977527,
+      "z": 29.834999999999997,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 1869
+    },
+    {
+      "atom_id": 1870,
+      "grain_id": 2,
+      "x": 66.59756752314607,
+      "y": 27.748986467977527,
+      "z": 33.345,
+      "nearest_distance_A": 0,
+      "gb": "GB1",
+      "partner_atom_id": 10
+    },
+    {
+      "atom_id": 1851,
+      "grain_id": 1,
+      "x": 33.298783761573034,
+      "y": 0,
+      "z": 0,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 3711
+    },
+    {
+      "atom_id": 3712,
+      "grain_id": 2,
+      "x": 33.298783761573034,
+      "y": 0,
+      "z": 3.51,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 1852
+    },
+    {
+      "atom_id": 1853,
+      "grain_id": 1,
+      "x": 33.298783761573034,
+      "y": 0,
+      "z": 7.02,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 3713
+    },
+    {
+      "atom_id": 3714,
+      "grain_id": 2,
+      "x": 33.298783761573034,
+      "y": 0,
+      "z": 10.53,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 1854
+    },
+    {
+      "atom_id": 1855,
+      "grain_id": 1,
+      "x": 33.298783761573034,
+      "y": 0,
+      "z": 14.04,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 3715
+    },
+    {
+      "atom_id": 3716,
+      "grain_id": 2,
+      "x": 33.298783761573034,
+      "y": 0,
+      "z": 17.549999999999997,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 1856
+    },
+    {
+      "atom_id": 1857,
+      "grain_id": 1,
+      "x": 33.298783761573034,
+      "y": 0,
+      "z": 21.06,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 3717
+    },
+    {
+      "atom_id": 3718,
+      "grain_id": 2,
+      "x": 33.298783761573034,
+      "y": 0,
+      "z": 24.57,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 1858
+    },
+    {
+      "atom_id": 1859,
+      "grain_id": 1,
+      "x": 33.298783761573034,
+      "y": 0,
+      "z": 28.08,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 3719
+    },
+    {
+      "atom_id": 3720,
+      "grain_id": 2,
+      "x": 33.298783761573034,
+      "y": 0,
+      "z": 31.589999999999996,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 1860
+    },
+    {
+      "atom_id": 1812,
+      "grain_id": 1,
+      "x": 33.298783761573034,
+      "y": 5.549797293595505,
+      "z": 1.755,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 3672
+    },
+    {
+      "atom_id": 3674,
+      "grain_id": 2,
+      "x": 33.298783761573034,
+      "y": 5.549797293595505,
+      "z": 5.265,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 1814
+    },
+    {
+      "atom_id": 1816,
+      "grain_id": 1,
+      "x": 33.298783761573034,
+      "y": 5.549797293595505,
+      "z": 8.774999999999999,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 3676
+    },
+    {
+      "atom_id": 3678,
+      "grain_id": 2,
+      "x": 33.298783761573034,
+      "y": 5.549797293595505,
+      "z": 12.285,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 1818
+    },
+    {
+      "atom_id": 1820,
+      "grain_id": 1,
+      "x": 33.298783761573034,
+      "y": 5.549797293595505,
+      "z": 15.794999999999998,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 3680
+    },
+    {
+      "atom_id": 3682,
+      "grain_id": 2,
+      "x": 33.298783761573034,
+      "y": 5.549797293595505,
+      "z": 19.305,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 1822
+    },
+    {
+      "atom_id": 1824,
+      "grain_id": 1,
+      "x": 33.298783761573034,
+      "y": 5.549797293595505,
+      "z": 22.814999999999998,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 3684
+    },
+    {
+      "atom_id": 3686,
+      "grain_id": 2,
+      "x": 33.298783761573034,
+      "y": 5.549797293595505,
+      "z": 26.325,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 1826
+    },
+    {
+      "atom_id": 1828,
+      "grain_id": 1,
+      "x": 33.298783761573034,
+      "y": 5.549797293595505,
+      "z": 29.834999999999997,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 3688
+    },
+    {
+      "atom_id": 3690,
+      "grain_id": 2,
+      "x": 33.298783761573034,
+      "y": 5.549797293595505,
+      "z": 33.345,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 1830
+    },
+    {
+      "atom_id": 1841,
+      "grain_id": 1,
+      "x": 33.298783761573034,
+      "y": 11.09959458719101,
+      "z": 0,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 3701
+    },
+    {
+      "atom_id": 3702,
+      "grain_id": 2,
+      "x": 33.298783761573034,
+      "y": 11.09959458719101,
+      "z": 3.51,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 1842
+    },
+    {
+      "atom_id": 1843,
+      "grain_id": 1,
+      "x": 33.298783761573034,
+      "y": 11.09959458719101,
+      "z": 7.02,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 3703
+    },
+    {
+      "atom_id": 3704,
+      "grain_id": 2,
+      "x": 33.298783761573034,
+      "y": 11.09959458719101,
+      "z": 10.53,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 1844
+    },
+    {
+      "atom_id": 1845,
+      "grain_id": 1,
+      "x": 33.298783761573034,
+      "y": 11.09959458719101,
+      "z": 14.04,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 3705
+    },
+    {
+      "atom_id": 3706,
+      "grain_id": 2,
+      "x": 33.298783761573034,
+      "y": 11.09959458719101,
+      "z": 17.549999999999997,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 1846
+    },
+    {
+      "atom_id": 1847,
+      "grain_id": 1,
+      "x": 33.298783761573034,
+      "y": 11.09959458719101,
+      "z": 21.06,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 3707
+    },
+    {
+      "atom_id": 3708,
+      "grain_id": 2,
+      "x": 33.298783761573034,
+      "y": 11.09959458719101,
+      "z": 24.57,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 1848
+    },
+    {
+      "atom_id": 1849,
+      "grain_id": 1,
+      "x": 33.298783761573034,
+      "y": 11.09959458719101,
+      "z": 28.08,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 3709
+    },
+    {
+      "atom_id": 3710,
+      "grain_id": 2,
+      "x": 33.298783761573034,
+      "y": 11.09959458719101,
+      "z": 31.589999999999996,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 1850
+    },
+    {
+      "atom_id": 1752,
+      "grain_id": 1,
+      "x": 33.298783761573034,
+      "y": 16.649391880786517,
+      "z": 1.755,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 3612
+    },
+    {
+      "atom_id": 3614,
+      "grain_id": 2,
+      "x": 33.298783761573034,
+      "y": 16.649391880786517,
+      "z": 5.265,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 1754
+    },
+    {
+      "atom_id": 1756,
+      "grain_id": 1,
+      "x": 33.298783761573034,
+      "y": 16.649391880786517,
+      "z": 8.774999999999999,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 3616
+    },
+    {
+      "atom_id": 3618,
+      "grain_id": 2,
+      "x": 33.298783761573034,
+      "y": 16.649391880786517,
+      "z": 12.285,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 1758
+    },
+    {
+      "atom_id": 1760,
+      "grain_id": 1,
+      "x": 33.298783761573034,
+      "y": 16.649391880786517,
+      "z": 15.794999999999998,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 3620
+    },
+    {
+      "atom_id": 3622,
+      "grain_id": 2,
+      "x": 33.298783761573034,
+      "y": 16.649391880786517,
+      "z": 19.305,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 1762
+    },
+    {
+      "atom_id": 1764,
+      "grain_id": 1,
+      "x": 33.298783761573034,
+      "y": 16.649391880786517,
+      "z": 22.814999999999998,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 3624
+    },
+    {
+      "atom_id": 3626,
+      "grain_id": 2,
+      "x": 33.298783761573034,
+      "y": 16.649391880786517,
+      "z": 26.325,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 1766
+    },
+    {
+      "atom_id": 1768,
+      "grain_id": 1,
+      "x": 33.298783761573034,
+      "y": 16.649391880786517,
+      "z": 29.834999999999997,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 3628
+    },
+    {
+      "atom_id": 3630,
+      "grain_id": 2,
+      "x": 33.298783761573034,
+      "y": 16.649391880786517,
+      "z": 33.345,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 1770
+    },
+    {
+      "atom_id": 1781,
+      "grain_id": 1,
+      "x": 33.298783761573034,
+      "y": 22.19918917438202,
+      "z": 0,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 3641
+    },
+    {
+      "atom_id": 3642,
+      "grain_id": 2,
+      "x": 33.298783761573034,
+      "y": 22.19918917438202,
+      "z": 3.51,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 1782
+    },
+    {
+      "atom_id": 1783,
+      "grain_id": 1,
+      "x": 33.298783761573034,
+      "y": 22.19918917438202,
+      "z": 7.02,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 3643
+    },
+    {
+      "atom_id": 3644,
+      "grain_id": 2,
+      "x": 33.298783761573034,
+      "y": 22.19918917438202,
+      "z": 10.53,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 1784
+    },
+    {
+      "atom_id": 1785,
+      "grain_id": 1,
+      "x": 33.298783761573034,
+      "y": 22.19918917438202,
+      "z": 14.04,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 3645
+    },
+    {
+      "atom_id": 3646,
+      "grain_id": 2,
+      "x": 33.298783761573034,
+      "y": 22.19918917438202,
+      "z": 17.549999999999997,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 1786
+    },
+    {
+      "atom_id": 1787,
+      "grain_id": 1,
+      "x": 33.298783761573034,
+      "y": 22.19918917438202,
+      "z": 21.06,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 3647
+    },
+    {
+      "atom_id": 3648,
+      "grain_id": 2,
+      "x": 33.298783761573034,
+      "y": 22.19918917438202,
+      "z": 24.57,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 1788
+    },
+    {
+      "atom_id": 1789,
+      "grain_id": 1,
+      "x": 33.298783761573034,
+      "y": 22.19918917438202,
+      "z": 28.08,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 3649
+    },
+    {
+      "atom_id": 3650,
+      "grain_id": 2,
+      "x": 33.298783761573034,
+      "y": 22.19918917438202,
+      "z": 31.589999999999996,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 1790
+    },
+    {
+      "atom_id": 1632,
+      "grain_id": 1,
+      "x": 33.298783761573034,
+      "y": 27.748986467977527,
+      "z": 1.755,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 3492
+    },
+    {
+      "atom_id": 3494,
+      "grain_id": 2,
+      "x": 33.298783761573034,
+      "y": 27.748986467977527,
+      "z": 5.265,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 1634
+    },
+    {
+      "atom_id": 1636,
+      "grain_id": 1,
+      "x": 33.298783761573034,
+      "y": 27.748986467977527,
+      "z": 8.774999999999999,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 3496
+    },
+    {
+      "atom_id": 3498,
+      "grain_id": 2,
+      "x": 33.298783761573034,
+      "y": 27.748986467977527,
+      "z": 12.285,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 1638
+    },
+    {
+      "atom_id": 1640,
+      "grain_id": 1,
+      "x": 33.298783761573034,
+      "y": 27.748986467977527,
+      "z": 15.794999999999998,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 3500
+    },
+    {
+      "atom_id": 3502,
+      "grain_id": 2,
+      "x": 33.298783761573034,
+      "y": 27.748986467977527,
+      "z": 19.305,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 1642
+    },
+    {
+      "atom_id": 1644,
+      "grain_id": 1,
+      "x": 33.298783761573034,
+      "y": 27.748986467977527,
+      "z": 22.814999999999998,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 3504
+    },
+    {
+      "atom_id": 3506,
+      "grain_id": 2,
+      "x": 33.298783761573034,
+      "y": 27.748986467977527,
+      "z": 26.325,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 1646
+    },
+    {
+      "atom_id": 1648,
+      "grain_id": 1,
+      "x": 33.298783761573034,
+      "y": 27.748986467977527,
+      "z": 29.834999999999997,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 3508
+    },
+    {
+      "atom_id": 3510,
+      "grain_id": 2,
+      "x": 33.298783761573034,
+      "y": 27.748986467977527,
+      "z": 33.345,
+      "nearest_distance_A": 0,
+      "gb": "GB2",
+      "partner_atom_id": 1650
+    }
+  ],
+  "legacy_comparison": {
+    "old_atoms_before_after": "3600 -> 3224",
+    "old_removal_pct": 10.44,
+    "old_box_A": "85.977 x 60.795 x 14.892 (triclinic, xy=-17.195 xz=-8.598 yz=-6.079)",
+    "new_atoms_before_after": "3720 -> 3600",
+    "new_removal_pct": 3.2258,
+    "new_box_A": [
+      66.59756752314607,
+      33.298783761573034,
+      35.099999999999994
+    ],
+    "new_box_triclinic": false
+  }
+}

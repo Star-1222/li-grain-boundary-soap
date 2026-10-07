@@ -1,0 +1,34 @@
+row_index,structure,atom_index,atom_id,x,y,z,ptm,cna,peatom,selection_type,selection_reason
+0,stable,30978,15487,64.961355932,5.2657059987,83.51101257,1,1,-4.4507,bulk,"lower bulk CNA=1/PTM=1 away from interface, PEATOM near slab median"
+1,stable,12633,3157,33.840295235999996,0.0038778087914999996,98.58832603,1,1,-4.4507,bulk,"lower bulk CNA=1/PTM=1 away from interface, PEATOM near slab median"
+2,stable,17690,2287,22.424260364,3.5078221409,252.47514761,1,1,-4.45067,bulk,"upper bulk CNA=1/PTM=1 away from interface, PEATOM near slab median"
+3,stable,46636,8226,84.591793572,1.7570068628,276.30515164,1,1,-4.45067,bulk,"upper bulk CNA=1/PTM=1 away from interface, PEATOM near slab median"
+4,stable,37745,8836,97.223676484,1.7579715572999999,4.02392549,0,5,-4.06537,non_dominant,non-dominant PTM 0/CNA 5 in interface
+5,stable,18876,4723,54.462816364000005,1.7578136981999999,4.613644149,1,5,-4.3165,non_dominant,non-dominant PTM 1/CNA 5 in interface
+6,stable,4476,10298,7.9653611092,5.261689361599999,140.14402736,0,5,-4.06703,high_pe_interface,highest c_PEATOM in interface region
+7,stable,9475,11192,21.423788232,5.2585672594,4.01818809,0,5,-4.06705,high_pe_interface,highest c_PEATOM in interface region
+8,stable,28,10603,15.108554252000001,3.5079449202,4.026536007,0,5,-4.06798,interface_pair,interface run 1 PTM 0/CNA 5
+9,stable,107,20029,18.943175240000002,8.7735632194,1.6656618871000002,1,1,-4.40425,interface_pair,interface run 1 PTM 1/CNA 1
+10,stable,28405,43014,60.776938595999994,14.0314815025,4.612467981999999,1,5,-4.31959,interface_pair,interface run 1 PTM 1/CNA 5
+11,stable,14024,31502,33.228227428,12.2773511833,140.15177285000001,0,5,-4.06725,interface_pair,interface run 2 PTM 0/CNA 5
+12,stable,23474,4412,48.356793144,1.7441641480199999,142.50439372,1,1,-4.40439,interface_pair,interface run 2 PTM 1/CNA 1
+13,metastable,39118,26589,86.888613771,8.7613081661,41.207153436,1,1,-4.45069,bulk,"lower bulk CNA=1/PTM=1 away from interface, PEATOM near slab median"
+14,metastable,42020,37371,100.439171796,10.5208557907,128.169720738,1,1,-4.45069,bulk,"lower bulk CNA=1/PTM=1 away from interface, PEATOM near slab median"
+15,metastable,35374,35196,75.406695102,14.0304269828,215.02901628,1,1,-4.45065,bulk,"upper bulk CNA=1/PTM=1 away from interface, PEATOM near slab median"
+16,metastable,17968,12907,37.511421318,5.2547362627,259.290432018,1,1,-4.45065,bulk,"upper bulk CNA=1/PTM=1 away from interface, PEATOM near slab median"
+17,metastable,18874,12966,41.50922757,1.73607599806,3.0089948472,0,5,-3.95735,non_dominant,non-dominant PTM 0/CNA 5 in interface
+18,metastable,32788,6779,76.10345099999999,8.7541695082,139.039360344,1,5,-4.05434,non_dominant,non-dominant PTM 1/CNA 5 in interface
+19,metastable,37734,7672,84.676863543,1.7515425055199998,4.093721253,2,2,-4.19558,non_dominant,non-dominant PTM 2/CNA 2 in interface
+20,metastable,9444,12372,40.364239526999995,3.4974863388,4.1035033836,2,5,-4.18977,non_dominant,non-dominant PTM 2/CNA 5 in interface
+21,metastable,18984,22389,41.514584121,15.805742797699999,3.0374232678,0,5,-3.9774,high_pe_interface,highest c_PEATOM in interface region
+22,metastable,139,38295,10.0152848985,13.9801231232,2.9604284333999997,0,5,-3.98563,high_pe_interface,highest c_PEATOM in interface region
+23,metastable,37741,45941,85.863289056,0.0047302641533,2.9729071044,0,5,-3.99068,interface_pair,interface run 1 PTM 0/CNA 5
+24,metastable,18871,3540,41.967667481999996,1.7553556363,0.8464067389799999,1,1,-4.22921,interface_pair,interface run 1 PTM 1/CNA 1
+25,metastable,19024,5313,41.718840527999994,1.7572674636,5.1896641194,1,5,-4.05589,interface_pair,interface run 1 PTM 1/CNA 5
+26,metastable,18991,41235,40.462577718,13.9881212264,4.141627875,2,2,-4.2134,interface_pair,interface run 1 PTM 2/CNA 2
+27,metastable,143,29458,13.784831330999998,15.745283451799999,2.968345935,2,5,-4.19381,interface_pair,interface run 1 PTM 2/CNA 5
+28,metastable,14097,2650,31.985583093,0.021088858295000002,141.18827355,0,5,-3.98675,interface_pair,interface run 2 PTM 0/CNA 5
+29,metastable,14152,22672,39.48899930699999,7.013038568600001,142.39167641999998,1,1,-4.33359,interface_pair,interface run 2 PTM 1/CNA 1
+30,metastable,32742,6765,69.77059277999999,0.0072905166226,139.02042718799999,1,5,-4.05931,interface_pair,interface run 2 PTM 1/CNA 5
+31,metastable,23419,22675,45.795377972999994,8.771954764,140.0623245,2,2,-4.20891,interface_pair,interface run 2 PTM 2/CNA 2
+32,metastable,13940,12072,33.285810048,1.7507198935900001,140.09043736799998,2,5,-4.1923,interface_pair,interface run 2 PTM 2/CNA 5

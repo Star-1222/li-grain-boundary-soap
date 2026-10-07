@@ -1,0 +1,36 @@
+# SOAP analysis environment for the Lithium GB project
+# [NEW 2026-08-21] Part of the 09_SOAP_Expansion_20260821 deliverable.
+#
+# Install with:
+#     python -m venv .soap_venv
+#     .soap_venv/Scripts/activate        (Windows)  /  source .soap_venv/bin/activate  (Linux)
+#     pip install -r environment/requirements_soap.txt
+#
+# Then verify with:
+#     python environment/verify_soap_env.py
+#
+# Versions below are the ones validated on 2026-08-21
+# (Windows 11, Python 3.13.12):
+#     numpy 2.4.3, scipy 1.17.1, ase 3.28.0, dscribe 2.1.2, pytest 9.1.1
+#
+# NOTES
+# * scipy >= 1.15 renamed sph_harm -> sph_harm_y with the physics argument
+#   order (n, m, theta_polar, phi_azimuth).  soap_analysis/soap_backend.py
+#   handles BOTH conventions; no version pinning is required for correctness,
+#   but pinning is recommended for reproducibility.
+# * dscribe is OPTIONAL: the numpy reference backend has no dependencies
+#   beyond numpy/scipy.  dscribe only adds an independent cross-check.
+# * quippy (QUIP) is also optional and is NOT pinned here because binary
+#   wheels are platform-dependent; install manually if needed.
+
+# --- core (required) --------------------------------------------------------
+numpy>=1.24
+scipy>=1.10
+pytest>=7.0
+
+# --- optional: dscribe backend (cross-validation) ---------------------------
+ase>=3.22
+dscribe>=2.0
+
+# --- optional: quippy backend ------------------------------------------------
+# quippy-ase   # install manually; wheels are platform-specific

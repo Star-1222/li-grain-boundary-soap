@@ -1,0 +1,7 @@
+figure,content
+stage6_scalar_disorder_vs_energy.png,interface D vs excess energy by state
+stage6_magnitude_matched_direction_energy.png,matched-pair directional distance vs energy difference
+stage6_directional_heterogeneity.png,within-state and cross-state cosine distributions
+stage6_energy_model_improvement.png,grouped-CV R2/RMSE/MAE by energy model
+stage6_representative_cases.png,representative magnitude-matched directional cases
+stage6_spatial_direction_residual.png,spatial maps of directional heterogeneity and residual energy

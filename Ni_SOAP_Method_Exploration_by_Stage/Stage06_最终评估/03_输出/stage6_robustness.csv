@@ -1,0 +1,5 @@
+condition,n_pairs,spearman
+baseline,119980,0.8316902342825557
+exclude_CSP_above_p99,119270,0.8312533095842387
+exclude_volume_above_p99,119845,0.8320427223235486
+exclude_energy_outliers,118159,0.8315775362187527

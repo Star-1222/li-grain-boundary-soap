@@ -1,0 +1,3 @@
+OBSOLETE — DO NOT USE FOR SCIENTIFIC RESULTS
+This directory contains superseded or invalid intermediate files.
+Use the adjacent v2_final directory as the authoritative package.

@@ -1,0 +1,7 @@
+Package creation time: 2026-08-02T14:50:04+08:00
+Python: Python 3.14.4
+Pytest: pytest 9.1.1
+WSL logical processors: 24
+
+OpenKIM model:
+	SNAP_ZuoChenLi_2019_Li__MO_732106099012_000

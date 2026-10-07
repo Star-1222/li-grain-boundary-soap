@@ -1,0 +1,40 @@
+# Resume Stage 3 quench from the latest periodic restart.
+# Usage example:
+# lmp -in lammps/in.3_quench_resume -var restart 'outputs/stage3_quench.checkpoint.*' -var outdir outputs -var kim_model MODEL
+
+units metal
+atom_style atomic
+boundary p p p
+
+# The wildcard selects the restart with the largest timestep.
+read_restart ${restart}
+
+pair_style kim ${kim_model}
+pair_coeff * * Li
+timestep 0.001
+
+neighbor 2.0 bin
+neigh_modify delay 0 every 1 check yes
+
+thermo 1000
+thermo_style custom step temp pe ke etotal press pxx pyy pzz pxy pxz pyz
+
+# Same fix ID/style restores the Nose-Hoover state.
+fix 1 all nvt temp 300.0 1.0 0.1
+
+dump 1 all custom 1000 ${outdir}/stage3_quench.dump id type x y z vx vy vz
+dump_modify 1 append yes sort id
+
+restart 1000 ${outdir}/stage3_quench.checkpoint
+
+# Preserve the original 300 -> 1 K ramp over global steps 0..50000.
+run 50000 upto start 0 stop 50000
+
+unfix 1
+undump 1
+restart 0
+
+velocity all set 0.0 0.0 0.0
+write_data ${outdir}/stage3_quenched.data
+write_restart ${outdir}/stage3_quenched.restart
+print "STAGE3_QUENCH_RESUME_DONE"

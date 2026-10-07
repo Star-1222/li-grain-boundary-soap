@@ -1,0 +1,48 @@
+# v2 Sigma5 (310)[001] BCC Li -- resume from a restart checkpoint
+# THIS SCRIPT IS A REAL RESTART-CONTINUATION SCRIPT, NOT A COPY OF THE
+# STAGE SCRIPTS.  It reads an arbitrary restart file, applies the requested
+# continuation (anneal / quench / final minimize) and writes dedicated
+# resume_<stage>.data / resume_<stage>.restart outputs.
+#
+# Usage:
+#   lmp -in in.resume \
+#       -var restart ../outputs/stage2_anneal.checkpoint -var stage anneal \
+#       -var nsteps 5000 -var tstart 300.0 -var tstop 300.0 \
+#       -var outdir ../outputs \
+#       -var kim_model SNAP_ZuoChenLi_2019_Li__MO_732106099012_000
+#
+# stage == anneal : NVT at (tstart,tstop) for nsteps more
+# stage == quench : NVT ramp tstart -> tstop for nsteps more
+# stage == final  : zero velocities + force-converged minimize (nsteps ignored)
+units metal
+atom_style atomic
+boundary p p p
+read_restart ${restart}
+pair_style kim ${kim_model}
+pair_coeff * *
+timestep 0.001
+neighbor 2.0 bin
+neigh_modify delay 0 every 1 check yes
+thermo 1000
+thermo_style custom step temp pe ke etotal press pxx pyy pzz pxy pxz pyz
+if "${stage} == final" then &
+  "velocity all set 0.0 0.0 0.0" &
+  "fix 1 all box/relax y 0.0 z 0.0" &
+  "min_style cg" &
+  "minimize 0.0 1.0e-6 10000 100000" &
+  "unfix 1" &
+else &
+  "fix 1 all nvt temp ${tstart} ${tstop} 0.1" &
+  "run ${nsteps}" &
+  "unfix 1"
+# thermo keywords are always available, so these variables work in both branches
+variable fmax_v equal fmax
+variable fnorm_v equal fnorm
+variable vmax_v equal max(vx)
+print "RESUME stage=${stage} fmax=${fmax_v} fnorm=${fnorm_v} vmax=${vmax_v}"
+dump 1 all custom 500 ${outdir}/resume_${stage}.dump id type x y z vx vy vz
+run 0
+undump 1
+write_data ${outdir}/resume_${stage}.data
+write_restart ${outdir}/resume_${stage}.restart
+print "RESUME_DONE"

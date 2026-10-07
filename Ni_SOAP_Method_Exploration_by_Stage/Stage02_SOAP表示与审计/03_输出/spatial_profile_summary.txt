@@ -1,0 +1,25 @@
+Stage 2 spatial profiling
+bin count per axis: 200
+interface-like bin definition: non-dominant CNA/PTM fraction > 0.1 and bin atom count >= 50
+non-dominant means CNA != 1 or PTM != 1 (the dominant class inferred from the data)
+
+=== stable ===
+axis x: interface-like bins=0, max non-dominant fraction=0.0441
+axis y: interface-like bins=0, max non-dominant fraction=0.0286
+axis z: interface-like bins=7, max non-dominant fraction=1.0000
+identified GB normal from binning: z (localized interfacial CNA/PTM deviations)
+interface-like z ranges (Angstrom): 0.943-5.236; 139.750-142.612
+interface atom count: 1600 (3.40% of structure)
+bulk PEATOM median (dominant CNA/PTM outside interface): -4.45060
+interface PEATOM: median=-4.34838, mean=-4.32225, max=-4.06537
+
+=== metastable ===
+axis x: interface-like bins=0, max non-dominant fraction=0.0769
+axis y: interface-like bins=0, max non-dominant fraction=1.0000
+axis z: interface-like bins=9, max non-dominant fraction=0.8827
+identified GB normal from binning: z (localized interfacial CNA/PTM deviations)
+interface-like z ranges (Angstrom): 0.846-6.576; 138.382-142.680
+interface atom count: 2059 (4.37% of structure)
+bulk PEATOM median (dominant CNA/PTM outside interface): -4.45058
+interface PEATOM: median=-4.37646, mean=-4.33731, max=-3.95735
+

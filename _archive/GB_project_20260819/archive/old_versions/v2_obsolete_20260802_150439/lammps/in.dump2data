@@ -1,0 +1,16 @@
+# v2 dump2data.in -- rebuild a LAMMPS data file from a trajectory dump
+# FIXED vs legacy: the old script created an EMPTY box with create_box and
+# then used read_dump with the DEFAULT 'add no' (replace atoms in an empty
+# box).  Here the box is taken from the dump itself (box yes) and atoms are
+# APPENDED explicitly (add yes), so the reconstructed data file is complete
+# even when the dump holds all atoms.
+#
+# Usage:
+#   lmp -in in.dump2data -var dump ../outputs/stage2_anneal.dump \
+#       -var frame 1 -var out ../outputs/rebuilt_from_dump.data
+units metal
+atom_style atomic
+boundary p p p
+read_dump ${dump} ${frame} x y z id type box yes add yes format line "%f %f %f %d %d"
+write_data ${out}
+print "DUMP2DATA_DONE"

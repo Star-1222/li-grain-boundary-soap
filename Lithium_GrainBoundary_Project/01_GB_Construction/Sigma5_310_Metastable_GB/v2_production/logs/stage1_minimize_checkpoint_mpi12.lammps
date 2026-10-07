@@ -1,0 +1,1075 @@
+LAMMPS (10 Dec 2025)
+  using 1 OpenMP thread(s) per MPI task
+# v2 Sigma5 (310)[001] BCC Li -- stage 1: initial energy minimization
+# Usage: lmp -in in.1_minimize -var outdir ../outputs -var kim_model SNAP_ZuoChenLi_2019_Li__MO_732106099012_000
+units metal
+atom_style atomic
+boundary p p p
+read_data ${input_data}
+read_data outputs/Sigma5_310.data
+Reading data file ...
+  orthogonal box = (0 0 0) to (66.525211 33.262605 35.061865)
+  3 by 2 by 2 MPI processor grid
+  reading atoms ...
+  3600 atoms
+  reading velocities ...
+  3600 velocities
+  read_data CPU = 0.023 seconds
+pair_style kim ${kim_model}
+pair_style kim SNAP_ZuoChenLi_2019_Li__MO_732106099012_000
+pair_coeff * * Li
+neighbor 2.0 bin
+neigh_modify delay 0 every 1 check yes
+#
+# ---- cell relaxation policy ----
+# y, z (GB plane): FIXED at the zero-pressure bulk lattice/CSL periods.
+# This preserves the intended in-plane bicrystal periodicity.
+# x (GB normal): RELAXED at zero target pressure so the two periodic GBs
+# can accommodate their excess volume without imposing normal stress.
+fix 1 all box/relax x 0.0
+min_style cg
+thermo 100
+thermo_style custom step pe etotal press pxx pyy pzz pxy pxz pyz lx ly lz
+# Pre-anneal convergence with restartable 500-iteration chunks.
+variable fmax_chunk equal fmax
+variable fnorm_chunk equal fnorm
+variable chunk loop 20
+
+label stage1_chunk
+minimize 0.0 1.0e-4 500 5000
+
+CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE
+
+Your simulation uses code contributions which should be cited:
+
+- OpenKIM Project: https://doi.org/10.1007/s11837-011-0102-6
+
+@Article{tadmor:elliott:2011,
+ author = {E. B. Tadmor and R. S. Elliott and J. P. Sethna and R. E. Miller and C. A. Becker},
+ title = {The potential of atomistic simulations and the {K}nowledgebase of {I}nteratomic {M}odels},
+ journal = {{JOM}},
+ year =    2011,
+ volume =  63,
+ number =  17,
+ pages =   {17},
+ doi =     {10.1007/s11837-011-0102-6}
+}
+
+- OpenKIM potential: https://openkim.org/cite/MO_732106099012_000#item-citation
+
+QENvbW1lbnQKewpcZG9jdW1lbnRjbGFzc3thcnRpY2xlfQpcdXNlcGFja2FnZXt1cmx9ClxiZWdpbntkb2N1bWVudH0KVGhpcyBNb2RlbCBvcmlnaW5hbGx5IHB1Ymxpc2hlZCBpbiBcY2l0ZXtNT183MzIxMDYwOTkwMTJfMDAwYX0gaXMgYXJjaGl2ZWQgaW4gT3BlbktJTX5cY2l0ZXtNT183MzIxMDYwOTkwMTJfMDAwLCBNRF81MzY3NTAzMTA3MzVfMDAwLCB0YWRtb3I6ZWxsaW90dDoyMDExLCBlbGxpb3R0OnRhZG1vcjoyMDExfS4KXGJpYmxpb2dyYXBoeXN0eWxle3ZhbmNvdXZlcn0KXGJpYmxpb2dyYXBoeXtraW1jaXRlLU1PXzczMjEwNjA5OTAxMl8wMDAuYmlifQpcZW5ke2RvY3VtZW50fQp9CgpATWlzY3tNT183MzIxMDYwOTkwMTJfMDAwLAogIGF1dGhvciAgICAgICA9IHtZdW54aW5nIFp1b30sCiAgdGl0bGUgICAgICAgID0ge3tBfSBzcGVjdHJhbCBuZWlnaGJvciBhbmFseXNpcyBwb3RlbnRpYWwgZm9yIHtMfWkgZGV2ZWxvcGVkIGJ5IHtZfXVueGluZyB7Wn11byB2MDAwfSwKICBkb2kgICAgICAgICAgPSB7MTAuMjU5NTAvNzg4ZDQ3ZDV9LAogIGhvd3B1Ymxpc2hlZCA9IHtPcGVuS0lNLCBcdXJse2h0dHBzOi8vZG9pLm9yZy8xMC4yNTk1MC83ODhkNDdkNX19LAogIGtleXdvcmRzICAgICA9IHtPcGVuS0lNLCBNb2RlbCwgTU9fNzMyMTA2MDk5MDEyXzAwMH0sCiAgcHVibGlzaGVyICAgID0ge09wZW5LSU19LAogIHllYXIgICAgICAgICA9IDIwMjAsCn0KCkBNaXNje01EXzUzNjc1MDMxMDczNV8wMDAsCiAgYXV0aG9yICAgICAgID0ge1lhc2VyIEFmc2hhcn0sCiAgdGl0bGUgICAgICAgID0ge3tTfXBlY3RyYWwgbmVpZ2hib3IgYW5hbHlzaXMgcG90ZW50aWFsICh7U05BUH0pIG1vZGVsIGRyaXZlciB2MDAwfSwKICBkb2kgICAgICAgICAgPSB7MTAuMjU5NTAvZjRmYWU0OTN9LAogIGhvd3B1Ymxpc2hlZCA9IHtPcGVuS0lNLCBcdXJse2h0dHBzOi8vZG9pLm9yZy8xMC4yNTk1MC83ODhkNDdkNX19LAogIGtleXdvcmRzICAgICA9IHtPcGVuS0lNLCBNb2RlbCBEcml2ZXIsIE1EXzUzNjc1MDMxMDczNV8wMDB9LAogIHB1Ymxpc2hlciAgICA9IHtPcGVuS0lNfSwKICB5ZWFyICAgICAgICAgPSAyMDE5LAp9CgpAQXJ0aWNsZXt0YWRtb3I6ZWxsaW90dDoyMDExLAogIGF1dGhvciAgICA9IHtFLiBCLiBUYWRtb3IgYW5kIFIuIFMuIEVsbGlvdHQgYW5kIEouIFAuIFNldGhuYSBhbmQgUi4gRS4gTWlsbGVyIGFuZCBDLiBBLiBCZWNrZXJ9LAogIHRpdGxlICAgICA9IHtUaGUgcG90ZW50aWFsIG9mIGF0b21pc3RpYyBzaW11bGF0aW9ucyBhbmQgdGhlIHtLfW5vd2xlZGdlYmFzZSBvZiB7SX1udGVyYXRvbWljIHtNfW9kZWxzfSwKICBqb3VybmFsICAgPSB7e0pPTX19LAogIHllYXIgICAgICA9IHsyMDExfSwKICB2b2x1bWUgICAgPSB7NjN9LAogIG51bWJlciAgICA9IHs3fSwKICBwYWdlcyAgICAgPSB7MTd9LAogIGRvaSAgICAgICA9IHsxMC4xMDA3L3MxMTgzNy0wMTEtMDEwMi02fSwKfQoKQE1pc2N7ZWxsaW90dDp0YWRtb3I6MjAxMSwKICBhdXRob3IgICAgICAgPSB7UnlhbiBTLiBFbGxpb3R0IGFuZCBFbGxhZCBCLiBUYWRtb3J9LAogIHRpdGxlICAgICAgICA9IHt7S31ub3dsZWRnZWJhc2Ugb2Yge0l9bnRlcmF0b21pYyB7TX1vZGVscyAoe0tJTX0pIEFwcGxpY2F0aW9uIFByb2dyYW1taW5nIEludGVyZmFjZSAoe0FQSX0pfSwKICBob3dwdWJsaXNoZWQgPSB7XHVybHtodHRwczovL29wZW5raW0ub3JnL2tpbS1hcGl9fSwKICBwdWJsaXNoZXIgICAgPSB7T3BlbktJTX0sCiAgeWVhciAgICAgICAgID0gMjAxMSwKICBkb2kgICAgICAgICAgPSB7MTAuMjU5NTAvZmY4ZjU2M2F9LAp9CgpAQXJ0aWNsZXtNT183MzIxMDYwOTkwMTJfMDAwYSwKICBhdXRob3IgPSB7WnVvLCBZdW54aW5nIGFuZCBDaGVuLCBDaGkgYW5kIExpLCBYaWFuZ2d1byBhbmQgRGVuZywgWmhpIGFuZCBDaGVuLCBZaW1pbmcgYW5kIEJlaGxlciwgSntcIm99cmcgYW5kIENze1wnYX1ueWksIEd7XCdhfWJvciBhbmQgU2hhcGVldiwgQWxleGFuZGVyIFYuIGFuZCBUaG9tcHNvbiwgQWlkYW4gUC4gYW5kIFdvb2QsIE1pdGNoZWxsIEEuIGFuZCBPbmcsIFNoeXVlIFBpbmd9LAogIGRvaSA9IHsxMC4xMDIxL2Fjcy5qcGNhLjliMDg3MjN9LAogIGpvdXJuYWwgPSB7VGhlIEpvdXJuYWwgb2YgUGh5c2ljYWwgQ2hlbWlzdHJ5IEF9LAogIG51bWJlciA9IHs0fSwKICBwYWdlcyA9IHs3MzEtLTc0NX0sCiAgdGl0bGUgPSB7UGVyZm9ybWFuY2UgYW5kIENvc3QgQXNzZXNzbWVudCBvZiBNYWNoaW5lIExlYXJuaW5nIEludGVyYXRvbWljIFBvdGVudGlhbHN9LAogIHZvbHVtZSA9IHsxMjR9LAogIHllYXIgPSB7MjAyMH0sCn0KCITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE
+
+Generated 0 of 0 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7.1
+  ghost atom cutoff = 7.1
+  binsize = 3.55, bins = 19 10 10
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair kim, perpetual
+      attributes: full, newton off
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+WARNING: Energy due to 3 extra global DOFs will be included in minimizer energies
+ (src/min.cpp:222)
+Per MPI rank memory allocation (min/avg/max) = 4.373 | 4.373 | 4.373 Mbytes
+   Step         PotEng         TotEng         Press           Pxx            Pyy            Pzz            Pxy            Pxz            Pyz             Lx             Ly             Lz      
+         0  -6792.0684     -6792.0684     -862.90264      1445.7576     -1668.7399     -2365.7256     -3.1198523e-08 -5.0449662e-13  3.2254217e-13  66.525211      33.262605      35.061865    
+       100  -6794.0292     -6794.0292     -1549.7911     -12.6154       -1945.718      -2691.04       -3.5640719e-08 -7.5114658e-14 -2.3714567e-13  66.990887      33.262605      35.061865    
+       200  -6804.7578     -6804.7578     -1469.1288     -430.49292     -1737.2319     -2239.6618     -3.7314615e-08 -1.6904779e-13  9.2306295e-13  66.871142      33.262605      35.061865    
+       300  -6805.9938     -6805.9938     -1214.2934     -13.418612     -1601.6987     -2027.763      -3.5979381e-08 -8.2715821e-13 -3.6092016e-13  66.684871      33.262605      35.061865    
+       400  -6806.9372     -6806.9372     -1169.697      -13.327774     -1558.4523     -1937.3109     -3.5560044e-08 -3.3520946e-12 -3.1041257e-13  66.644956      33.262605      35.061865    
+       500  -6807.7449     -6807.7449     -1124.4136     -9.5008506     -1516.0243     -1847.7155     -3.4968651e-08 -3.6117027e-12 -1.4275388e-13  66.605041      33.262605      35.061865    
+Loop time of 93.6895 on 12 procs for 500 steps with 3600 atoms
+
+100.0% CPU use with 12 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = max iterations
+  Energy initial, next-to-last, final = 
+     -6792.06837416381  -6807.74124834719  -6807.74486559673
+  Force two-norm initial, final = 71.092061 4.1089954
+  Force max component initial, final = 70.010415 0.46007609
+  Final line search alpha, max atom move = 0.00021093741 9.704726e-05
+  Iterations, force evaluations = 500 500
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 71.842     | 75.293     | 78.617     |  23.5 | 80.36
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 14.923     | 18.251     | 21.702     |  47.6 | 19.48
+Output  | 0.00028015 | 0.00030927 | 0.00057538 |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.1452     |            |       |  0.15
+
+Nlocal:            300 ave         315 max         285 min
+Histogram: 4 0 0 0 0 4 0 0 0 4
+Nghost:           1448 ave        1464 max        1432 min
+Histogram: 4 0 0 0 2 2 0 0 0 4
+Neighs:              0 ave           0 max           0 min
+Histogram: 12 0 0 0 0 0 0 0 0 0
+FullNghs:        19340 ave       20265 max       18450 min
+Histogram: 4 0 0 0 4 0 0 0 0 4
+
+Total # of neighbors = 232080
+Ave neighs/atom = 64.466667
+Neighbor list builds = 0
+Dangerous builds = 0
+variable fmax_saved string ${fmax_chunk}
+variable fmax_saved string 0.247113315842673
+variable fnorm_saved string ${fnorm_chunk}
+variable fnorm_saved string 4.08315726525382
+print "STAGE1_CHECKPOINT chunk=${chunk} fmax=${fmax_saved} fnorm=${fnorm_saved}"
+STAGE1_CHECKPOINT chunk=1 fmax=0.247113315842673 fnorm=4.08315726525382
+if "${fmax_saved} < 1.0e-4" then "jump SELF stage1_finish"
+write_data ${outdir}/stage1_checkpoint.data
+write_data outputs/stage1_checkpoint.data
+System init for write_data ...
+Generated 0 of 0 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7.1
+  ghost atom cutoff = 7.1
+  binsize = 3.55, bins = 19 10 10
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair kim, perpetual
+      attributes: full, newton off
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+write_restart ${outdir}/stage1_checkpoint.restart
+write_restart outputs/stage1_checkpoint.restart
+System init for write_restart ...
+Generated 0 of 0 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7.1
+  ghost atom cutoff = 7.1
+  binsize = 3.55, bins = 19 10 10
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair kim, perpetual
+      attributes: full, newton off
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+next chunk
+jump SELF stage1_chunk
+minimize 0.0 1.0e-4 500 5000
+Generated 0 of 0 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7.1
+  ghost atom cutoff = 7.1
+  binsize = 3.55, bins = 19 10 10
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair kim, perpetual
+      attributes: full, newton off
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+WARNING: Energy due to 3 extra global DOFs will be included in minimizer energies
+ (src/min.cpp:222)
+Per MPI rank memory allocation (min/avg/max) = 4.373 | 4.373 | 4.373 Mbytes
+   Step         PotEng         TotEng         Press           Pxx            Pyy            Pzz            Pxy            Pxz            Pyz             Lx             Ly             Lz      
+       500  -6807.7449     -6807.7449     -1124.4136     -9.5008506     -1516.0243     -1847.7155     -3.4967039e-08 -3.8015343e-12  2.6880455e-13  66.605041      33.262605      35.061865    
+       600  -6808.2902     -6808.2902     -1094.9158     -16.576069     -1486.0756     -1782.0956     -3.4505562e-08 -1.509453e-13   2.6515563e-13  66.578399      33.262605      35.061865    
+       700  -6808.8202     -6808.8202     -1047.2638      7.3644512     -1447.4024     -1701.7534     -3.3836703e-08 -1.8658868e-12  8.0560481e-14  66.538436      33.262605      35.061865    
+       800  -6809.4545     -6809.4545     -1002.3124     -2.2371464     -1402.8379     -1601.8622     -3.2970423e-08 -1.9442559e-12 -1.2569165e-12  66.498473      33.262605      35.061865    
+       900  -6809.7317     -6809.7317     -970.57287      11.909375     -1377.0075     -1546.6205     -3.2473557e-08  3.2085622e-13  5.407792e-13   66.471831      33.262605      35.061865    
+      1000  -6810.0601     -6810.0601     -940.38283      7.3319526     -1347.9608     -1480.5197     -3.1702649e-08 -1.5773074e-12 -1.2314643e-12  66.445189      33.262605      35.061865    
+Loop time of 103.263 on 12 procs for 500 steps with 3600 atoms
+
+100.0% CPU use with 12 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = max iterations
+  Energy initial, next-to-last, final = 
+     -6807.74486559673  -6810.05916997743  -6810.06009556809
+  Force two-norm initial, final = 4.1090573 2.0207687
+  Force max component initial, final = 0.46062818 0.35547386
+  Final line search alpha, max atom move = 0.00020650828 7.3408296e-05
+  Iterations, force evaluations = 500 500
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 70.397     | 77.297     | 83.859     |  53.0 | 74.85
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 19.312     | 25.875     | 32.775     |  91.7 | 25.06
+Output  | 0.00028045 | 0.00031505 | 0.00054056 |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.09064    |            |       |  0.09
+
+Nlocal:            300 ave         315 max         284 min
+Histogram: 2 1 1 2 1 1 0 0 0 4
+Nghost:           1448 ave        1465 max        1432 min
+Histogram: 4 0 0 0 2 0 2 2 0 2
+Neighs:              0 ave           0 max           0 min
+Histogram: 12 0 0 0 0 0 0 0 0 0
+FullNghs:        19300 ave       20310 max       18251 min
+Histogram: 2 1 1 2 2 0 0 0 0 4
+
+Total # of neighbors = 231600
+Ave neighs/atom = 64.333333
+Neighbor list builds = 0
+Dangerous builds = 0
+variable fmax_saved string ${fmax_chunk}
+variable fmax_saved string 0.108802948237752
+variable fnorm_saved string ${fnorm_chunk}
+variable fnorm_saved string 1.98925730306814
+print "STAGE1_CHECKPOINT chunk=${chunk} fmax=${fmax_saved} fnorm=${fnorm_saved}"
+STAGE1_CHECKPOINT chunk=2 fmax=0.108802948237752 fnorm=1.98925730306814
+if "${fmax_saved} < 1.0e-4" then "jump SELF stage1_finish"
+write_data ${outdir}/stage1_checkpoint.data
+write_data outputs/stage1_checkpoint.data
+System init for write_data ...
+Generated 0 of 0 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7.1
+  ghost atom cutoff = 7.1
+  binsize = 3.55, bins = 19 10 10
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair kim, perpetual
+      attributes: full, newton off
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+write_restart ${outdir}/stage1_checkpoint.restart
+write_restart outputs/stage1_checkpoint.restart
+System init for write_restart ...
+Generated 0 of 0 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7.1
+  ghost atom cutoff = 7.1
+  binsize = 3.55, bins = 19 10 10
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair kim, perpetual
+      attributes: full, newton off
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+next chunk
+jump SELF stage1_chunk
+minimize 0.0 1.0e-4 500 5000
+Generated 0 of 0 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7.1
+  ghost atom cutoff = 7.1
+  binsize = 3.55, bins = 19 10 10
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair kim, perpetual
+      attributes: full, newton off
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+WARNING: Energy due to 3 extra global DOFs will be included in minimizer energies
+ (src/min.cpp:222)
+Per MPI rank memory allocation (min/avg/max) = 4.373 | 4.373 | 4.373 Mbytes
+   Step         PotEng         TotEng         Press           Pxx            Pyy            Pzz            Pxy            Pxz            Pyz             Lx             Ly             Lz      
+      1000  -6810.0601     -6810.0601     -940.38283      7.3319526     -1347.9608     -1480.5197     -3.1702649e-08 -1.5773074e-12 -1.2314643e-12  66.445189      33.262605      35.061865    
+      1100  -6810.3423     -6810.3423     -910.23623      5.440065      -1319.881      -1416.2678     -3.089046e-08  -4.0688407e-12  5.5518545e-13  66.418611      33.262605      35.061865    
+      1200  -6810.4607     -6810.4607     -895.04086      7.9721512     -1306.7185     -1386.3762     -3.0511755e-08 -3.8626364e-12 -3.1881948e-13  66.405322      33.262605      35.061865    
+      1300  -6810.5698     -6810.5698     -879.88658      11.726127     -1293.9847     -1357.4012     -3.0137806e-08 -3.8661555e-12 -2.8890311e-12  66.392033      33.262605      35.061865    
+      1400  -6810.8046     -6810.8046     -851.10833      8.69785       -1267.6777     -1294.3451     -2.9340738e-08 -2.6251334e-12 -1.9453124e-12  66.365455      33.262605      35.061865    
+      1500  -6810.88       -6810.88       -853.90824     -16.061604     -1264.4084     -1281.2548     -2.9239718e-08 -1.8172992e-12 -2.271766e-12   66.365455      33.262605      35.061865    
+Loop time of 103.714 on 12 procs for 500 steps with 3600 atoms
+
+100.0% CPU use with 12 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = max iterations
+  Energy initial, next-to-last, final = 
+     -6810.06009556809  -6810.87831551873  -6810.87998692827
+  Force two-norm initial, final = 2.0206188 1.3539594
+  Force max component initial, final = 0.35462072 0.7768432
+  Final line search alpha, max atom move = 0.0012611308 0.00097970088
+  Iterations, force evaluations = 500 500
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 73.576     | 78.258     | 84.463     |  38.5 | 75.46
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 19.166     | 25.371     | 30.051     |  67.5 | 24.46
+Output  | 0.00025895 | 0.00029982 | 0.00056889 |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.08531    |            |       |  0.08
+
+Nlocal:            300 ave         315 max         284 min
+Histogram: 2 1 1 2 1 1 0 0 0 4
+Nghost:           1448 ave        1465 max        1432 min
+Histogram: 4 0 0 0 2 0 2 2 0 2
+Neighs:              0 ave           0 max           0 min
+Histogram: 12 0 0 0 0 0 0 0 0 0
+FullNghs:        19300 ave       20310 max       18251 min
+Histogram: 2 1 1 2 2 0 0 0 0 4
+
+Total # of neighbors = 231600
+Ave neighs/atom = 64.333333
+Neighbor list builds = 0
+Dangerous builds = 0
+variable fmax_saved string ${fmax_chunk}
+variable fmax_saved string 0.0437132253301066
+variable fnorm_saved string ${fnorm_chunk}
+variable fnorm_saved string 1.10892767951527
+print "STAGE1_CHECKPOINT chunk=${chunk} fmax=${fmax_saved} fnorm=${fnorm_saved}"
+STAGE1_CHECKPOINT chunk=3 fmax=0.0437132253301066 fnorm=1.10892767951527
+if "${fmax_saved} < 1.0e-4" then "jump SELF stage1_finish"
+write_data ${outdir}/stage1_checkpoint.data
+write_data outputs/stage1_checkpoint.data
+System init for write_data ...
+Generated 0 of 0 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7.1
+  ghost atom cutoff = 7.1
+  binsize = 3.55, bins = 19 10 10
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair kim, perpetual
+      attributes: full, newton off
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+write_restart ${outdir}/stage1_checkpoint.restart
+write_restart outputs/stage1_checkpoint.restart
+System init for write_restart ...
+Generated 0 of 0 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7.1
+  ghost atom cutoff = 7.1
+  binsize = 3.55, bins = 19 10 10
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair kim, perpetual
+      attributes: full, newton off
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+next chunk
+jump SELF stage1_chunk
+minimize 0.0 1.0e-4 500 5000
+Generated 0 of 0 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7.1
+  ghost atom cutoff = 7.1
+  binsize = 3.55, bins = 19 10 10
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair kim, perpetual
+      attributes: full, newton off
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+WARNING: Energy due to 3 extra global DOFs will be included in minimizer energies
+ (src/min.cpp:222)
+Per MPI rank memory allocation (min/avg/max) = 4.373 | 4.373 | 4.373 Mbytes
+   Step         PotEng         TotEng         Press           Pxx            Pyy            Pzz            Pxy            Pxz            Pyz             Lx             Ly             Lz      
+      1500  -6810.88       -6810.88       -853.90824     -16.061604     -1264.4084     -1281.2548     -2.9239985e-08 -1.5920041e-12 -2.1425939e-12  66.365455      33.262605      35.061865    
+      1600  -6810.9573     -6810.9573     -839.20137     -5.88016       -1254.1682     -1257.5557     -2.9022173e-08 -2.8634078e-12 -1.7903416e-12  66.352182      33.262605      35.061865    
+      1700  -6811.0195     -6811.0195     -824.18051      9.0356957     -1244.8578     -1236.7194     -2.8834709e-08 -4.9237736e-12 -2.0344156e-12  66.338909      33.262605      35.061865    
+      1800  -6811.0798     -6811.0798     -827.22201     -11.342948     -1243.1898     -1227.1332     -2.8826536e-08 -4.3833376e-12 -1.7417091e-12  66.338909      33.262605      35.061865    
+      1900  -6811.189      -6811.189      -815.61303     -12.877573     -1233.8516     -1200.1099     -2.8839233e-08 -5.5128757e-12 -1.5229783e-12  66.325636      33.262605      35.061865    
+      2000  -6811.2459     -6811.2459     -801.53354      3.6687523     -1226.2845     -1181.9849     -2.9001878e-08 -4.6938723e-12 -1.5282703e-12  66.312363      33.262605      35.061865    
+Loop time of 102.014 on 12 procs for 500 steps with 3600 atoms
+
+100.0% CPU use with 12 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = max iterations
+  Energy initial, next-to-last, final = 
+     -6810.87998692827  -6811.24565809794   -6811.2459210867
+  Force two-norm initial, final = 1.3534247 0.83218879
+  Force max component initial, final = 0.77591099 0.17723169
+  Final line search alpha, max atom move = 0.00016960269 3.0058972e-05
+  Iterations, force evaluations = 500 500
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 71.228     | 76.96      | 81.602     |  42.8 | 75.44
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 20.32      | 24.962     | 30.695     |  75.1 | 24.47
+Output  | 0.00027207 | 0.00030953 | 0.00056319 |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.09153    |            |       |  0.09
+
+Nlocal:            300 ave         315 max         285 min
+Histogram: 1 1 3 1 2 0 0 0 0 4
+Nghost:           1448 ave        1464 max        1432 min
+Histogram: 4 0 0 0 0 2 2 2 0 2
+Neighs:              0 ave           0 max           0 min
+Histogram: 12 0 0 0 0 0 0 0 0 0
+FullNghs:        19300 ave       20310 max       18315 min
+Histogram: 2 0 3 2 1 0 0 0 0 4
+
+Total # of neighbors = 231600
+Ave neighs/atom = 64.333333
+Neighbor list builds = 0
+Dangerous builds = 0
+variable fmax_saved string ${fmax_chunk}
+variable fmax_saved string 0.025471389856506
+variable fnorm_saved string ${fnorm_chunk}
+variable fnorm_saved string 0.813097236594719
+print "STAGE1_CHECKPOINT chunk=${chunk} fmax=${fmax_saved} fnorm=${fnorm_saved}"
+STAGE1_CHECKPOINT chunk=4 fmax=0.025471389856506 fnorm=0.813097236594719
+if "${fmax_saved} < 1.0e-4" then "jump SELF stage1_finish"
+write_data ${outdir}/stage1_checkpoint.data
+write_data outputs/stage1_checkpoint.data
+System init for write_data ...
+Generated 0 of 0 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7.1
+  ghost atom cutoff = 7.1
+  binsize = 3.55, bins = 19 10 10
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair kim, perpetual
+      attributes: full, newton off
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+write_restart ${outdir}/stage1_checkpoint.restart
+write_restart outputs/stage1_checkpoint.restart
+System init for write_restart ...
+Generated 0 of 0 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7.1
+  ghost atom cutoff = 7.1
+  binsize = 3.55, bins = 19 10 10
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair kim, perpetual
+      attributes: full, newton off
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+next chunk
+jump SELF stage1_chunk
+minimize 0.0 1.0e-4 500 5000
+Generated 0 of 0 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7.1
+  ghost atom cutoff = 7.1
+  binsize = 3.55, bins = 19 10 10
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair kim, perpetual
+      attributes: full, newton off
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+WARNING: Energy due to 3 extra global DOFs will be included in minimizer energies
+ (src/min.cpp:222)
+Per MPI rank memory allocation (min/avg/max) = 4.373 | 4.373 | 4.373 Mbytes
+   Step         PotEng         TotEng         Press           Pxx            Pyy            Pzz            Pxy            Pxz            Pyz             Lx             Ly             Lz      
+      2000  -6811.2459     -6811.2459     -801.53354      3.6687523     -1226.2845     -1181.9849     -2.9002486e-08 -3.8866312e-12 -1.1788924e-12  66.312363      33.262605      35.061865    
+      2100  -6811.5177     -6811.5177     -774.64648      3.0771413     -1207.9239     -1119.0927     -2.8831319e-08 -5.5392969e-12 -2.5869267e-12  66.272575      33.262605      35.061865    
+      2200  -6811.5908     -6811.5908     -766.11486      12.16448      -1204.7921     -1105.7169     -2.9548894e-08 -5.849217e-12   8.5884418e-13  66.259313      33.262605      35.061865    
+      2300  -6811.6453     -6811.6453     -773.70688     -9.1049217     -1208.0684     -1103.9473     -3.0252143e-08 -8.6516101e-12  3.3381852e-13  66.259313      33.262605      35.061865    
+      2400  -6811.733      -6811.733      -768.34606     -8.0586951     -1206.2654     -1090.7141     -3.133488e-08  -6.5522417e-12 -1.0577924e-12  66.24605       33.262605      35.061865    
+      2500  -6811.7926     -6811.7926     -759.23814      3.6257449     -1202.7659     -1078.5743     -3.2159896e-08 -5.2868697e-12 -2.9716432e-13  66.232788      33.262605      35.061865    
+Loop time of 90.5357 on 12 procs for 500 steps with 3600 atoms
+
+100.0% CPU use with 12 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = max iterations
+  Energy initial, next-to-last, final = 
+      -6811.2459210867  -6811.79225779974  -6811.79256201738
+  Force two-norm initial, final = 0.83215861 0.57203706
+  Force max component initial, final = 0.17708991 0.17501395
+  Final line search alpha, max atom move = 0.00018013141 3.152551e-05
+  Iterations, force evaluations = 500 500
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 76.82      | 81.419     | 85.781     |  35.2 | 89.93
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 4.5658     | 8.9327     | 13.526     | 106.1 |  9.87
+Output  | 0.00037464 | 0.00041203 | 0.00074093 |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.1835     |            |       |  0.20
+
+Nlocal:            300 ave         315 max         285 min
+Histogram: 4 0 0 2 0 0 2 0 0 4
+Nghost:           1448 ave        1464 max        1432 min
+Histogram: 4 0 0 2 0 0 2 0 0 4
+Neighs:              0 ave           0 max           0 min
+Histogram: 12 0 0 0 0 0 0 0 0 0
+FullNghs:        19220 ave       20190 max       18255 min
+Histogram: 4 0 0 2 0 0 2 0 0 4
+
+Total # of neighbors = 230640
+Ave neighs/atom = 64.066667
+Neighbor list builds = 0
+Dangerous builds = 0
+variable fmax_saved string ${fmax_chunk}
+variable fmax_saved string 0.0208867349816879
+variable fnorm_saved string ${fnorm_chunk}
+variable fnorm_saved string 0.544606755389015
+print "STAGE1_CHECKPOINT chunk=${chunk} fmax=${fmax_saved} fnorm=${fnorm_saved}"
+STAGE1_CHECKPOINT chunk=5 fmax=0.0208867349816879 fnorm=0.544606755389015
+if "${fmax_saved} < 1.0e-4" then "jump SELF stage1_finish"
+write_data ${outdir}/stage1_checkpoint.data
+write_data outputs/stage1_checkpoint.data
+System init for write_data ...
+Generated 0 of 0 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7.1
+  ghost atom cutoff = 7.1
+  binsize = 3.55, bins = 19 10 10
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair kim, perpetual
+      attributes: full, newton off
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+write_restart ${outdir}/stage1_checkpoint.restart
+write_restart outputs/stage1_checkpoint.restart
+System init for write_restart ...
+Generated 0 of 0 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7.1
+  ghost atom cutoff = 7.1
+  binsize = 3.55, bins = 19 10 10
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair kim, perpetual
+      attributes: full, newton off
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+next chunk
+jump SELF stage1_chunk
+minimize 0.0 1.0e-4 500 5000
+Generated 0 of 0 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7.1
+  ghost atom cutoff = 7.1
+  binsize = 3.55, bins = 19 10 10
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair kim, perpetual
+      attributes: full, newton off
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+WARNING: Energy due to 3 extra global DOFs will be included in minimizer energies
+ (src/min.cpp:222)
+Per MPI rank memory allocation (min/avg/max) = 4.373 | 4.373 | 4.373 Mbytes
+   Step         PotEng         TotEng         Press           Pxx            Pyy            Pzz            Pxy            Pxz            Pyz             Lx             Ly             Lz      
+      2500  -6811.7926     -6811.7926     -759.23814      3.6257449     -1202.7659     -1078.5743     -3.2159716e-08 -5.3318462e-12 -9.2311258e-13  66.232788      33.262605      35.061865    
+      2600  -6811.8632     -6811.8632     -752.23375      9.884608      -1200.0067     -1066.5791     -3.327376e-08  -5.2772027e-12 -1.0624286e-12  66.219541      33.262605      35.061865    
+      2700  -6811.9358     -6811.9358     -745.92694      14.562757     -1197.316      -1055.0276     -3.4626938e-08 -7.9498559e-12 -1.3531216e-13  66.206295      33.262605      35.061865    
+      2800  -6812.0174     -6812.0174     -741.57976      14.355636     -1195.0579     -1044.037      -3.6373447e-08 -6.1733378e-12 -1.6189629e-12  66.193048      33.262605      35.061865    
+      2900  -6812.1288     -6812.1288     -743.16559     -0.90068332    -1194.2789     -1034.3172     -3.9324802e-08 -4.1207035e-12  3.2400954e-13  66.179801      33.262605      35.061865    
+      3000  -6812.5343     -6812.5343     -724.82207     -5.5843291     -1168.4777     -1000.4042     -5.9553396e-08 -3.9528801e-12 -1.7145545e-13  66.104113      33.262605      35.061865    
+Loop time of 91.6033 on 12 procs for 500 steps with 3600 atoms
+
+100.0% CPU use with 12 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = max iterations
+  Energy initial, next-to-last, final = 
+     -6811.79256201738  -6812.53402958251  -6812.53432443751
+  Force two-norm initial, final = 0.57197284 0.34473853
+  Force max component initial, final = 0.17480393 0.26923093
+  Final line search alpha, max atom move = 0.00017288113 4.6544949e-05
+  Iterations, force evaluations = 500 518
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 78.345     | 82.674     | 86.746     |  33.6 | 90.25
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 4.6968     | 8.7699     | 13.095     | 103.3 |  9.57
+Output  | 0.00034901 | 0.00040377 | 0.00064923 |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.1587     |            |       |  0.17
+
+Nlocal:            300 ave         315 max         285 min
+Histogram: 4 0 0 2 0 0 2 0 0 4
+Nghost:           1448 ave        1464 max        1432 min
+Histogram: 4 0 0 2 0 0 2 0 0 4
+Neighs:              0 ave           0 max           0 min
+Histogram: 12 0 0 0 0 0 0 0 0 0
+FullNghs:        19220 ave       20190 max       18255 min
+Histogram: 4 0 0 2 0 0 2 0 0 4
+
+Total # of neighbors = 230640
+Ave neighs/atom = 64.066667
+Neighbor list builds = 0
+Dangerous builds = 0
+variable fmax_saved string ${fmax_chunk}
+variable fmax_saved string 0.0067839663761769
+variable fnorm_saved string ${fnorm_chunk}
+variable fnorm_saved string 0.215312240149743
+print "STAGE1_CHECKPOINT chunk=${chunk} fmax=${fmax_saved} fnorm=${fnorm_saved}"
+STAGE1_CHECKPOINT chunk=6 fmax=0.0067839663761769 fnorm=0.215312240149743
+if "${fmax_saved} < 1.0e-4" then "jump SELF stage1_finish"
+write_data ${outdir}/stage1_checkpoint.data
+write_data outputs/stage1_checkpoint.data
+System init for write_data ...
+Generated 0 of 0 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7.1
+  ghost atom cutoff = 7.1
+  binsize = 3.55, bins = 19 10 10
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair kim, perpetual
+      attributes: full, newton off
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+write_restart ${outdir}/stage1_checkpoint.restart
+write_restart outputs/stage1_checkpoint.restart
+System init for write_restart ...
+Generated 0 of 0 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7.1
+  ghost atom cutoff = 7.1
+  binsize = 3.55, bins = 19 10 10
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair kim, perpetual
+      attributes: full, newton off
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+next chunk
+jump SELF stage1_chunk
+minimize 0.0 1.0e-4 500 5000
+Generated 0 of 0 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7.1
+  ghost atom cutoff = 7.1
+  binsize = 3.55, bins = 19 10 10
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair kim, perpetual
+      attributes: full, newton off
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+WARNING: Energy due to 3 extra global DOFs will be included in minimizer energies
+ (src/min.cpp:222)
+Per MPI rank memory allocation (min/avg/max) = 4.373 | 4.373 | 4.373 Mbytes
+   Step         PotEng         TotEng         Press           Pxx            Pyy            Pzz            Pxy            Pxz            Pyz             Lx             Ly             Lz      
+      3000  -6812.5343     -6812.5343     -724.82207     -5.5843291     -1168.4777     -1000.4042     -5.9551453e-08 -3.5976429e-12 -1.8094046e-13  66.104113      33.262605      35.061865    
+      3100  -6812.7376     -6812.7376     -695.21581      0.073633173   -1098.362      -987.35905     -4.562269e-07  -1.4001837e-11  3.0144545e-12  66.030493      33.262605      35.061865    
+      3200  -6812.7376     -6812.7376     -694.54997      0.15720248    -1094.8627     -988.94444     -1.0434834e-06 -2.6150295e-11  7.591003e-12   66.029478      33.262605      35.061865    
+      3300  -6812.7377     -6812.7377     -700.40905      0.33897549    -1100.6853     -1000.8808     -2.1958388e-06  5.199946e-11  -8.2803524e-12  66.028436      33.262605      35.061865    
+      3400  -6812.7378     -6812.7378     -695.93014      10.536091     -1100.4085     -997.91802     -6.4757086e-06  6.7246978e-11 -2.5018747e-11  66.026316      33.262605      35.061865    
+      3500  -6812.7381     -6812.7381     -691.30687     -0.38816396    -1086.6632     -986.86927     -1.7945984e-05  7.8318996e-11 -2.0595098e-11  66.027019      33.262605      35.061865    
+Loop time of 181.9 on 12 procs for 500 steps with 3600 atoms
+
+100.0% CPU use with 12 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = max iterations
+  Energy initial, next-to-last, final = 
+     -6812.53432443751  -6812.73814513411  -6812.73814519161
+  Force two-norm initial, final = 0.3443302 0.023636711
+  Force max component initial, final = 0.26870788 0.018677752
+  Final line search alpha, max atom move = 0.01124383 0.00021000947
+  Iterations, force evaluations = 500 979
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 142.57     | 151.68     | 160.21     |  50.1 | 83.39
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 21.302     | 29.823     | 38.926     | 112.9 | 16.40
+Output  | 0.0002588  | 0.00029794 | 0.00055046 |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.3971     |            |       |  0.22
+
+Nlocal:            300 ave         315 max         285 min
+Histogram: 4 0 0 0 0 4 0 0 0 4
+Nghost:           1448 ave        1464 max        1432 min
+Histogram: 4 0 0 0 2 2 0 0 0 4
+Neighs:              0 ave           0 max           0 min
+Histogram: 12 0 0 0 0 0 0 0 0 0
+FullNghs:        19220 ave       20190 max       18255 min
+Histogram: 4 0 0 0 4 0 0 0 0 4
+
+Total # of neighbors = 230640
+Ave neighs/atom = 64.066667
+Neighbor list builds = 0
+Dangerous builds = 0
+variable fmax_saved string ${fmax_chunk}
+variable fmax_saved string 0.000400534329537933
+variable fnorm_saved string ${fnorm_chunk}
+variable fnorm_saved string 0.0144857065450896
+print "STAGE1_CHECKPOINT chunk=${chunk} fmax=${fmax_saved} fnorm=${fnorm_saved}"
+STAGE1_CHECKPOINT chunk=7 fmax=0.000400534329537933 fnorm=0.0144857065450896
+if "${fmax_saved} < 1.0e-4" then "jump SELF stage1_finish"
+write_data ${outdir}/stage1_checkpoint.data
+write_data outputs/stage1_checkpoint.data
+System init for write_data ...
+Generated 0 of 0 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7.1
+  ghost atom cutoff = 7.1
+  binsize = 3.55, bins = 19 10 10
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair kim, perpetual
+      attributes: full, newton off
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+write_restart ${outdir}/stage1_checkpoint.restart
+write_restart outputs/stage1_checkpoint.restart
+System init for write_restart ...
+Generated 0 of 0 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7.1
+  ghost atom cutoff = 7.1
+  binsize = 3.55, bins = 19 10 10
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair kim, perpetual
+      attributes: full, newton off
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+next chunk
+jump SELF stage1_chunk
+minimize 0.0 1.0e-4 500 5000
+Generated 0 of 0 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7.1
+  ghost atom cutoff = 7.1
+  binsize = 3.55, bins = 19 10 10
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair kim, perpetual
+      attributes: full, newton off
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+WARNING: Energy due to 3 extra global DOFs will be included in minimizer energies
+ (src/min.cpp:222)
+Per MPI rank memory allocation (min/avg/max) = 4.373 | 4.373 | 4.373 Mbytes
+   Step         PotEng         TotEng         Press           Pxx            Pyy            Pzz            Pxy            Pxz            Pyz             Lx             Ly             Lz      
+      3500  -6812.7381     -6812.7381     -691.30687     -0.38816396    -1086.6632     -986.86927     -1.7945984e-05  7.8057798e-11 -2.0630679e-11  66.027019      33.262605      35.061865    
+      3600  -6812.7387     -6812.7387     -697.5438      -0.017452337   -1098.1106     -994.50332     -0.0010360263   7.7087797e-12  5.3905612e-15  66.029269      33.262605      35.061865    
+      3700  -6812.7387     -6812.7387     -697.57664     -0.0086419989  -1098.2035     -994.5178      -0.017800793    1.2944115e-10 -2.4217188e-11  66.029442      33.262605      35.061865    
+      3800  -6812.7387     -6812.7387     -697.2494      -0.0052554959  -1097.3175     -994.42541     -0.18091526    -9.0662327e-11  1.063827e-11   66.029072      33.262605      35.061865    
+      3900  -6812.9353     -6812.9353     -730.78593      9.6275313     -1136.6931     -1065.2922     -384.78404      3.7664795e-06  4.9720242e-07  66.051236      33.262605      35.061865    
+      4000  -6813.9598     -6813.9598     -751.13716     -26.983529     -972.11219     -1254.3158     -1023.9361     -0.0043314428   0.011733714    66.048987      33.262605      35.061865    
+Loop time of 169.322 on 12 procs for 500 steps with 3600 atoms
+
+100.0% CPU use with 12 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = max iterations
+  Energy initial, next-to-last, final = 
+     -6812.73814519161   -6813.7709962831  -6813.95978786395
+  Force two-norm initial, final = 0.023619502 1.3164833
+  Force max component initial, final = 0.018655969 1.2968847
+  Final line search alpha, max atom move = 0.15981922 0.2072671
+  Iterations, force evaluations = 500 909
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 133.84     | 139.97     | 146.76     |  39.9 | 82.66
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 22.348     | 29.148     | 35.275     |  87.4 | 17.21
+Output  | 0.00029871 | 0.00033196 | 0.00058764 |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.2066     |            |       |  0.12
+
+Nlocal:            300 ave         315 max         285 min
+Histogram: 4 0 0 0 0 4 0 0 0 4
+Nghost:           1448 ave        1464 max        1432 min
+Histogram: 4 0 0 0 2 2 0 0 0 4
+Neighs:              0 ave           0 max           0 min
+Histogram: 12 0 0 0 0 0 0 0 0 0
+FullNghs:        19300 ave       20310 max       18315 min
+Histogram: 4 0 0 0 4 0 0 0 0 4
+
+Total # of neighbors = 231600
+Ave neighs/atom = 64.333333
+Neighbor list builds = 0
+Dangerous builds = 0
+variable fmax_saved string ${fmax_chunk}
+variable fmax_saved string 0.0150635844585257
+variable fnorm_saved string ${fnorm_chunk}
+variable fnorm_saved string 0.226314789354172
+print "STAGE1_CHECKPOINT chunk=${chunk} fmax=${fmax_saved} fnorm=${fnorm_saved}"
+STAGE1_CHECKPOINT chunk=8 fmax=0.0150635844585257 fnorm=0.226314789354172
+if "${fmax_saved} < 1.0e-4" then "jump SELF stage1_finish"
+write_data ${outdir}/stage1_checkpoint.data
+write_data outputs/stage1_checkpoint.data
+System init for write_data ...
+Generated 0 of 0 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7.1
+  ghost atom cutoff = 7.1
+  binsize = 3.55, bins = 19 10 10
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair kim, perpetual
+      attributes: full, newton off
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+write_restart ${outdir}/stage1_checkpoint.restart
+write_restart outputs/stage1_checkpoint.restart
+System init for write_restart ...
+Generated 0 of 0 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7.1
+  ghost atom cutoff = 7.1
+  binsize = 3.55, bins = 19 10 10
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair kim, perpetual
+      attributes: full, newton off
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+next chunk
+jump SELF stage1_chunk
+minimize 0.0 1.0e-4 500 5000
+Generated 0 of 0 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7.1
+  ghost atom cutoff = 7.1
+  binsize = 3.55, bins = 19 10 10
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair kim, perpetual
+      attributes: full, newton off
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+WARNING: Energy due to 3 extra global DOFs will be included in minimizer energies
+ (src/min.cpp:222)
+Per MPI rank memory allocation (min/avg/max) = 4.373 | 4.373 | 4.373 Mbytes
+   Step         PotEng         TotEng         Press           Pxx            Pyy            Pzz            Pxy            Pxz            Pyz             Lx             Ly             Lz      
+      4000  -6813.9598     -6813.9598     -751.13716     -26.983529     -972.11219     -1254.3158     -1023.9361     -0.0043314428   0.011733714    66.048987      33.262605      35.061865    
+      4100  -6814.8483     -6814.8483     -727.53204     -0.24958886    -826.42364     -1355.9229     -1691.1415     -0.1907799      0.19409343     66.014824      33.262605      35.061865    
+      4200  -6815.7968     -6815.7968     -695.442        1.8851642     -615.72556     -1472.4856     -2315.6971     -0.16602857    -0.031740368    65.962966      33.262605      35.061865    
+      4300  -6815.8958     -6815.8958     -693.17115     -1.0299772     -582.03842     -1496.4451     -2416.302       0.018709476    0.035742989    65.949591      33.262605      35.061865    
+      4400  -6815.905      -6815.905      -679.45155      9.67394       -557.07704     -1490.9515     -2416.1586     -0.12405066     0.021539567    65.936155      33.262605      35.061865    
+      4500  -6815.9093     -6815.9093     -684.9088       1.235225      -572.06881     -1483.8928     -2415.4838     -0.027151969    0.0079169918   65.947945      33.262605      35.061865    
+Loop time of 153.385 on 12 procs for 500 steps with 3600 atoms
+
+100.0% CPU use with 12 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = max iterations
+  Energy initial, next-to-last, final = 
+     -6813.95978786395  -6815.90926246997  -6815.90928962369
+  Force two-norm initial, final = 1.3169083 0.063779222
+  Force max component initial, final = 1.2973162 0.05938724
+  Final line search alpha, max atom move = 1 0.05938724
+  Iterations, force evaluations = 500 857
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 121.67     | 129.44     | 136.42     |  41.5 | 84.39
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 16.752     | 23.732     | 31.517     |  96.9 | 15.47
+Output  | 0.0002723  | 0.0003009  | 0.00054954 |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.2107     |            |       |  0.14
+
+Nlocal:            300 ave         319 max         282 min
+Histogram: 2 2 0 0 2 2 0 1 1 2
+Nghost:           1448 ave        1467 max        1430 min
+Histogram: 3 0 1 1 1 2 0 1 1 2
+Neighs:              0 ave           0 max           0 min
+Histogram: 12 0 0 0 0 0 0 0 0 0
+FullNghs:      19297.8 ave       20607 max       18111 min
+Histogram: 2 2 0 2 0 2 0 1 1 2
+
+Total # of neighbors = 231574
+Ave neighs/atom = 64.326111
+Neighbor list builds = 0
+Dangerous builds = 0
+variable fmax_saved string ${fmax_chunk}
+variable fmax_saved string 0.00145997513790577
+variable fnorm_saved string ${fnorm_chunk}
+variable fnorm_saved string 0.0232582211228509
+print "STAGE1_CHECKPOINT chunk=${chunk} fmax=${fmax_saved} fnorm=${fnorm_saved}"
+STAGE1_CHECKPOINT chunk=9 fmax=0.00145997513790577 fnorm=0.0232582211228509
+if "${fmax_saved} < 1.0e-4" then "jump SELF stage1_finish"
+write_data ${outdir}/stage1_checkpoint.data
+write_data outputs/stage1_checkpoint.data
+System init for write_data ...
+Generated 0 of 0 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7.1
+  ghost atom cutoff = 7.1
+  binsize = 3.55, bins = 19 10 10
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair kim, perpetual
+      attributes: full, newton off
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+write_restart ${outdir}/stage1_checkpoint.restart
+write_restart outputs/stage1_checkpoint.restart
+System init for write_restart ...
+Generated 0 of 0 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7.1
+  ghost atom cutoff = 7.1
+  binsize = 3.55, bins = 19 10 10
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair kim, perpetual
+      attributes: full, newton off
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+next chunk
+jump SELF stage1_chunk
+minimize 0.0 1.0e-4 500 5000
+Generated 0 of 0 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7.1
+  ghost atom cutoff = 7.1
+  binsize = 3.55, bins = 19 10 10
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair kim, perpetual
+      attributes: full, newton off
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+WARNING: Energy due to 3 extra global DOFs will be included in minimizer energies
+ (src/min.cpp:222)
+Per MPI rank memory allocation (min/avg/max) = 4.373 | 4.373 | 4.373 Mbytes
+   Step         PotEng         TotEng         Press           Pxx            Pyy            Pzz            Pxy            Pxz            Pyz             Lx             Ly             Lz      
+      4500  -6815.9093     -6815.9093     -684.9088       1.235225      -572.06881     -1483.8928     -2415.4838     -0.027151969    0.0079169918   65.947945      33.262605      35.061865    
+      4600  -6815.9102     -6815.9102     -685.30659      0.30036575    -568.78762     -1487.4325     -2413.7047     -0.0079611974   0.00011626302  65.945655      33.262605      35.061865    
+      4700  -6815.9102     -6815.9102     -685.30856      0.12909364    -569.03898     -1487.0158     -2414.2399      0.00086996344  0.0014862866   65.946379      33.262605      35.061865    
+      4800  -6815.9102     -6815.9102     -685.75272      0.066469804   -569.56455     -1487.7601     -2413.5325      0.00021713271  0.00096796053  65.946113      33.262605      35.061865    
+      4900  -6815.9102     -6815.9102     -685.57252      0.10044135    -569.80836     -1487.0096     -2413.8202     -0.0022754022   0.00078529974  65.946547      33.262605      35.061865    
+      5000  -6815.9102     -6815.9102     -685.58257      0.055583207   -569.80347     -1486.9998     -2414.1019      0.00062406712 -0.00010776518  65.94656       33.262605      35.061865    
+Loop time of 178.432 on 12 procs for 500 steps with 3600 atoms
+
+100.0% CPU use with 12 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = max iterations
+  Energy initial, next-to-last, final = 
+     -6815.90928962369  -6815.91022436662  -6815.91022438866
+  Force two-norm initial, final = 0.063694636 0.0029153719
+  Force max component initial, final = 0.059296389 0.0026682455
+  Final line search alpha, max atom move = 1 0.0026682455
+  Iterations, force evaluations = 500 1000
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 142.15     | 152.59     | 162.63     |  49.1 | 85.52
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 15.455     | 25.503     | 35.949     | 120.1 | 14.29
+Output  | 0.00026328 | 0.00029778 | 0.00060449 |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.3379     |            |       |  0.19
+
+Nlocal:            300 ave         319 max         279 min
+Histogram: 2 0 0 3 1 0 1 1 2 2
+Nghost:           1448 ave        1470 max        1428 min
+Histogram: 2 1 2 0 1 1 2 1 0 2
+Neighs:              0 ave           0 max           0 min
+Histogram: 12 0 0 0 0 0 0 0 0 0
+FullNghs:      19138.8 ave       20400 max       17704 min
+Histogram: 2 0 2 1 1 0 1 1 2 2
+
+Total # of neighbors = 229666
+Ave neighs/atom = 63.796111
+Neighbor list builds = 0
+Dangerous builds = 0
+variable fmax_saved string ${fmax_chunk}
+variable fmax_saved string 5.71022306670027e-05
+variable fnorm_saved string ${fnorm_chunk}
+variable fnorm_saved string 0.00117467414056579
+print "STAGE1_CHECKPOINT chunk=${chunk} fmax=${fmax_saved} fnorm=${fnorm_saved}"
+STAGE1_CHECKPOINT chunk=10 fmax=5.71022306670027e-05 fnorm=0.00117467414056579
+if "${fmax_saved} < 1.0e-4" then "jump SELF stage1_finish"
+jump SELF stage1_finish
+unfix 1
+print "STAGE1_MINIMIZE fmax=${fmax_saved} fnorm=${fnorm_saved}"
+STAGE1_MINIMIZE fmax=5.71022306670027e-05 fnorm=0.00117467414056579
+write_data ${outdir}/stage1_minimized.data
+write_data outputs/stage1_minimized.data
+System init for write_data ...
+Generated 0 of 0 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7.1
+  ghost atom cutoff = 7.1
+  binsize = 3.55, bins = 19 10 10
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair kim, perpetual
+      attributes: full, newton off
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+write_restart ${outdir}/stage1_minimized.restart
+write_restart outputs/stage1_minimized.restart
+System init for write_restart ...
+Generated 0 of 0 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7.1
+  ghost atom cutoff = 7.1
+  binsize = 3.55, bins = 19 10 10
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair kim, perpetual
+      attributes: full, newton off
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+print "STAGE1_DONE"
+STAGE1_DONE
+Total wall time: 0:21:09

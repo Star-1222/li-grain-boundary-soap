@@ -1,0 +1,27 @@
+{
+  "a_A": 3.506186475312,
+  "box_A": [
+    66.52521097958189,
+    66.52521097958189,
+    70.12372950624
+  ],
+  "in_plane_periods_A": [
+    11.087535163263649,
+    3.506186475312
+  ],
+  "K": 6,
+  "J": 6,
+  "L": 20,
+  "theta_deg": 36.86989764584402,
+  "sites_per_grain": 7440,
+  "total_before_removal": 14880,
+  "coincident_pairs_gb1": 240,
+  "coincident_pairs_gb2": 240,
+  "removed_total": 480,
+  "removed_grain1": 240,
+  "removed_grain2": 240,
+  "final_total": 14400,
+  "final_grain1": 7200,
+  "final_grain2": 7200,
+  "removal_fraction_pct": 3.225806451612903
+}

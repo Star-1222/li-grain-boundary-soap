@@ -1,0 +1,37 @@
+DScribe SOAP stage-1 test
+SOAP feature dimensionality reported by DScribe: 1014
+
+DScribe construction warnings:
+  An ill-conditioned matrix detected: slice 0 has rcond = 1.5192613205000558e-16.
+  An ill-conditioned matrix detected: slice 0 has rcond = 6.541001081359935e-17.
+
+=== SOAP test: stable ===
+parameter set: rcut=3.25 A, nmax=12, lmax=12, sigma=0.5 A, species=['Ni'], periodic=True
+test atom indices: [0, 1, 2, 3, 4]
+SOAP matrix shape: (5, 1014)
+shape matches DScribe reported dimensionality (1014): True
+all finite: True
+reproducible: True
+cosine similarity matrix (rows/cols follow test indices):
+  1.0000  0.9976  0.9980  0.9926  0.9975
+  0.9976  1.0000  0.9935  0.9923  1.0000
+  0.9980  0.9935  1.0000  0.9933  0.9932
+  0.9926  0.9923  0.9933  1.0000  0.9920
+  0.9975  1.0000  0.9932  0.9920  1.0000
+off-diagonal similarity range: 0.9920 - 1.0000
+
+=== SOAP test: metastable ===
+parameter set: rcut=3.25 A, nmax=12, lmax=12, sigma=0.5 A, species=['Ni'], periodic=True
+test atom indices: [0, 1, 2, 3, 4]
+SOAP matrix shape: (5, 1014)
+shape matches DScribe reported dimensionality (1014): True
+all finite: True
+reproducible: True
+cosine similarity matrix (rows/cols follow test indices):
+  1.0000  0.9936  0.9933  0.9982  0.9971
+  0.9936  1.0000  1.0000  0.9937  0.9915
+  0.9933  1.0000  1.0000  0.9934  0.9914
+  0.9982  0.9937  0.9934  1.0000  0.9924
+  0.9971  0.9915  0.9914  0.9924  1.0000
+off-diagonal similarity range: 0.9914 - 1.0000
+
