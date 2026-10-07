@@ -23,6 +23,7 @@ BCC 锂 Σ5(310)[001] 对称倾转晶界的亚稳态构建，以及一套可迁�
 
 | 文档 | 内容 |
 |---|---|
+| [`STUDY_GUIDE.md`](STUDY_GUIDE.md) | ★ **从零理解本项目的学习路线**（7 章，含自检问题） |
 | [`PROJECT_REVIEW.md`](PROJECT_REVIEW.md) | ★ **项目评估与改进路线**：缺口、优先级、行动清单 |
 | [`ARTIFACT_LEDGER.md`](ARTIFACT_LEDGER.md) | 产物台账：每个文件的层次、用途、内容分析、校验和 |
 | [`DATA_MANIFEST.md`](DATA_MANIFEST.md) | 未入库的大文件清单（约 466 MB），数据还原核对表 |

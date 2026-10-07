@@ -511,8 +511,9 @@
 项目根与工具,DATA_MANIFEST.csv,DATA_MANIFEST.csv,.csv,结论,17207,数据表。,"60 行 × 7 列 [﻿相对路径, 文件名, 扩展名, 层次, 大小(字节), 用途说明 …]",9778fbfb1008720461f4ee2349c370549d3b1b9e63b71b36c018296aa576453d
 项目根与工具,DATA_MANIFEST.md,DATA_MANIFEST.md,.md,文档,12684,Markdown 文档。,,fa3d369bb149092bf3bd34de0c4d6b4332844afa408b5564287c6b103b9191fd
 项目根与工具,PROJECT_REVIEW.md,PROJECT_REVIEW.md,.md,文档,10847,Markdown 文档。,,057a0f2ae486d02eb30aeaa3689eb1c2f3d984d4c9a59b09ec6a8781e4af2a6d
-项目根与工具,README.md,README.md,.md,文档,4084,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,efc4ebf9cf3a59a44a63efe951c2ad64405f3f48d9aa7785a141fe6531b743c6
+项目根与工具,README.md,README.md,.md,文档,4199,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,ec7c57df9d973182d390550c405e9fa9165c55b7a66be3a38b22522cec2aa786
 项目根与工具,refresh_ledger.cmd,refresh_ledger.cmd,.cmd,输入,657,（未分类）,,b08e57c1262d97f326a4508ce91dc1e0cf3f4f762becf739c17f8563a3e8bc0e
+项目根与工具,STUDY_GUIDE.md,STUDY_GUIDE.md,.md,文档,11223,Markdown 文档。,,0547b00a49b37c03edf04586c0b9b600f18dac68777c269e3263b2ab0e7b1dab
 项目根与工具,tools\artifact_ledger.py,artifact_ledger.py,.py,代码,28622,Python 脚本。,,561aa827375c349349dc50cd2b2f4d89ceb65c844e3f3a5fdb05fdc0f0090508
 项目根与工具,tools\build_artifact_catalog.py,build_artifact_catalog.py,.py,代码,31053,Python 脚本。,,9a5963b1a712e902e4e5e86615c46b40c4537307ff3549cb9adcd558d8a68b43
 项目根与工具,tools\compute_gb_energy.py,compute_gb_energy.py,.py,代码,6410,Python 脚本。,,27a40dce4dd0bd475b542bda5932aa4033c3a2f6a23c89a02e6e6cb6df54ce09
