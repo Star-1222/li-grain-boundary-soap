@@ -3,7 +3,6 @@
 > 本文件由 `artifact_ledger.py` 自动生成，请勿手工编辑。
 > 每次重新生成都会刷新文件清单、校验和与内容分析。
 
-- 扫描根目录：`D:\Research`
 - 文件总数：**507**
 - 总体积：**47.78 MB**
 
@@ -694,11 +693,11 @@
 |---|---|---|---|
 | `DATA_MANIFEST.csv` | 20.2 KB | 数据表。 | 71 行 × 7 列 [﻿相对路径, 文件名, 扩展名, 层次, 大小(字节), 用途说明 …] |
 
-### 代码（4 个，67.1 KB）
+### 代码（4 个，67.2 KB）
 
 | 文件 | 大小 | 用途 |
 |---|---|---|
-| `tools\artifact_ledger.py` | 27.9 KB | Python 脚本。 |
+| `tools\artifact_ledger.py` | 28.0 KB | Python 脚本。 |
 | `tools\build_artifact_catalog.py` | 30.2 KB | Python 脚本。 |
 | `tools\compute_gb_energy.py` | 6.3 KB | Python 脚本。 |
 | `tools\install_git_hook.ps1` | 2.7 KB | PowerShell 脚本。 |

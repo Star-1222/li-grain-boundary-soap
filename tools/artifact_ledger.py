@@ -627,7 +627,7 @@ def main() -> int:
     md.append("> 本文件由 `artifact_ledger.py` 自动生成，请勿手工编辑。")
     md.append("> 每次重新生成都会刷新文件清单、校验和与内容分析。")
     md.append("")
-    md.append(f"- 扫描根目录：`{ROOT}`")
+    # 刻意不写绝对路径：台账随仓库走，写死本机路径会让克隆副本无法复现。
     md.append(f"- 文件总数：**{len(rows)}**")
     md.append(f"- 总体积：**{base.human(total)}**")
     md.append("")
