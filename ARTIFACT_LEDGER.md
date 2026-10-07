@@ -3,23 +3,23 @@
 > 本文件由 `artifact_ledger.py` 自动生成，请勿手工编辑。
 > 每次重新生成都会刷新文件清单、校验和与内容分析。
 
-- 文件总数：**518**
-- 总体积：**54.38 MB**
+- 文件总数：**519**
+- 总体积：**54.39 MB**
 
 ## 层次分布
 
 | 层次 | 文件数 | 体积 | 占总比 | 处置 |
 |---|---:|---:|---:|---|
-| **结论** | 192 | 35.05 MB | 64.5% | 必须保留 |
+| **结论** | 192 | 35.05 MB | 64.4% | 必须保留 |
 | **续算** | 11 | 6.60 MB | 12.1% | 保留至后续阶段完成 |
 | **追溯** | 39 | 1.06 MB | 2.0% | 随代码进版本控制 |
-| **代码** | 134 | 902.8 KB | 1.6% | 进版本控制 |
+| **代码** | 134 | 902.9 KB | 1.6% | 进版本控制 |
 | **输入** | 51 | 8.10 MB | 14.9% | 进版本控制 |
-| **文档** | 91 | 2.69 MB | 4.9% | 进版本控制 |
+| **文档** | 92 | 2.69 MB | 5.0% | 进版本控制 |
 
 ## 自动识别的结构特征
 
-- 结论性产物只有 35.05 MB，占 64.5%。
+- 结论性产物只有 35.05 MB，占 64.4%。
 - 决定“可复现”的追溯+代码+输入合计仅 10.04 MB（18.5%），是最该保护的一层。
 - 双语拼接文档 16 份。中英文同处一文件，改动一侧另一侧会静默过期，建议拆分为 `README.md` + `README.en.md`。
 
@@ -512,7 +512,7 @@
 | `00_汇总报告\Ni_SOAP_最终报告.md` | 6.3 KB | ★ 方法探索总报告：项目定位、六个 Stage 的结论、十条下一版建议、以及“不能确定”清单。 |
 | `00_汇总报告\项目文件索引_脚本输出报告_按阶段.md` | 3.9 KB | Markdown 文档。 |
 | `90_历史归档\归档说明.md` | 1.8 KB | Markdown 文档。 |
-| `README.md` | 2.0 KB | Markdown 文档。 |
+| `README.md` | 2.0 KB | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |
 | `Stage01_数据准备与SOAP初测\01_报告\Stage01_确定性结论与待讨论.md` | 3.2 KB | Markdown 文档。 |
 | `Stage02_SOAP表示与审计\01_报告\Stage02_确定性结论与待讨论.md` | 4.0 KB | Markdown 文档。 |
 | `Stage03_LAE阈值与LAE_LER构建\01_报告\Stage03_确定性结论与待讨论.md` | 3.1 KB | Markdown 文档。 |
@@ -657,8 +657,8 @@
 
 | 文件 | 大小 | 用途 | 内容分析 |
 |---|---|---|---|
-| `GB_project_20260819\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\docs\README.md` | 10.9 KB | Markdown 文档。 |  |
-| `GB_project_20260819\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\docs\notes\README.md` | 18 B | Markdown 文档。 |  |
+| `GB_project_20260819\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\docs\README.md` | 10.9 KB | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |  |
+| `GB_project_20260819\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\docs\notes\README.md` | 18 B | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |  |
 | `GB_project_20260819\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\docs\reports\FINAL_MIGRATION_PLAN.md` | 4.7 KB | Markdown 文档。 |  |
 | `GB_project_20260819\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\docs\reports\FINAL_STATUS.md` | 426 B | Markdown 文档。 |  |
 | `GB_project_20260819\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\docs\reports\PROJECT_CLEANUP_REPORT.md` | 5.2 KB | Markdown 文档。 |  |
@@ -667,23 +667,23 @@
 | `GB_project_20260819\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\docs\reports\file_inventory.md` | 10.7 KB | Markdown 文档。 |  |
 | `GB_project_20260819\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\docs\reports\migration_inventory.md` | 11.5 KB | Markdown 文档。 |  |
 | `GB_project_20260819\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\docs\reports\verification_report.md` | 1.8 KB | Markdown 文档。 |  |
-| `GB_project_20260819\02_MD_Simulation\README.md` | 18 B | Markdown 文档。 |  |
-| `GB_project_20260819\03_Analysis\README.md` | 18 B | Markdown 文档。 |  |
-| `GB_project_20260819\04_Potential_Validation\README.md` | 18 B | Markdown 文档。 |  |
-| `GB_project_20260819\05_DFT_Validation\README.md` | 18 B | Markdown 文档。 |  |
-| `GB_project_20260819\06_Publication\README.md` | 18 B | Markdown 文档。 |  |
+| `GB_project_20260819\02_MD_Simulation\README.md` | 18 B | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |  |
+| `GB_project_20260819\03_Analysis\README.md` | 18 B | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |  |
+| `GB_project_20260819\04_Potential_Validation\README.md` | 18 B | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |  |
+| `GB_project_20260819\05_DFT_Validation\README.md` | 18 B | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |  |
+| `GB_project_20260819\06_Publication\README.md` | 18 B | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |  |
 | `GB_project_20260819\07_Documentation\PROJECT_MIGRATION_REPORT.md` | 2.1 KB | Markdown 文档。 |  |
-| `GB_project_20260819\README.md` | 792 B | Markdown 文档。 |  |
+| `GB_project_20260819\README.md` | 792 B | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |  |
 | `GB_project_20260819\archive\debugging\cs5_310_ref_result.json` | 33.2 KB | 参数与元数据。 | 字段: schema, description, parameters, orientation, counts, distances, gb_equivalence, bulk_bcc |
-| `GB_project_20260819\archive\legacy\li_gb_project\README.md` | 5.4 KB | Markdown 文档。 |  |
+| `GB_project_20260819\archive\legacy\li_gb_project\README.md` | 5.4 KB | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |  |
 | `GB_project_20260819\archive\legacy\li_gb_project\SETUP.md` | 2.7 KB | Markdown 文档。 |  |
-| `GB_project_20260819\archive\legacy\li_gb_project\lammps_test\README.md` | 3.2 KB | Markdown 文档。 |  |
+| `GB_project_20260819\archive\legacy\li_gb_project\lammps_test\README.md` | 3.2 KB | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |  |
 | `GB_project_20260819\archive\not_migrated\NOTES.md` | 627 B | Markdown 文档。 |  |
-| `GB_project_20260819\archive\old_versions\legacy_generator\README.md` | 6.0 KB | Markdown 文档。 |  |
+| `GB_project_20260819\archive\old_versions\legacy_generator\README.md` | 6.0 KB | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |  |
 | `GB_project_20260819\archive\old_versions\legacy_generator\lammps_workflow\anneal_save.in` | 365 B | 早期退火脚本，含中途保存设置。 |  |
 | `GB_project_20260819\archive\old_versions\legacy_generator\lammps_workflow\continue.in` | 609 B | 早期续算脚本。 |  |
 | `GB_project_20260819\archive\old_versions\legacy_generator\lammps_workflow\dump2data.in` | 492 B | 早期 dump→data 转换脚本。 |  |
-| `GB_project_20260819\archive\old_versions\v2_obsolete_20260802_150439\README.md` | 7.5 KB | Markdown 文档。 |  |
+| `GB_project_20260819\archive\old_versions\v2_obsolete_20260802_150439\README.md` | 7.5 KB | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |  |
 | `GB_project_20260819\archive\old_versions\v2_obsolete_20260802_150439\pytest.ini` | 40 B | 测试框架配置。 |  |
 | `GB_project_20260819\archive\old_versions\v2_obsolete_20260802_150439\reports\build_report.md` | 4.6 KB | Markdown 文档。 |  |
 | `GB_project_20260819\archive\old_versions\v2_obsolete_20260802_150439\reports\reference_energy_bulk.md` | 1.2 KB | Markdown 文档。 |  |
@@ -692,7 +692,7 @@
 | `Li_metastable_2x2_legacy_20260819\PROMPT_FOR_CODEX.md` | 19.1 KB | Markdown 文档。 |  |
 | `Li_metastable_2x2_legacy_20260819\PROTOCOL.md` | 5.0 KB | Markdown 文档。 |  |
 | `Li_metastable_2x2_legacy_20260819\PROVENANCE.md` | 2.2 KB | Markdown 文档。 |  |
-| `Li_metastable_2x2_legacy_20260819\README.md` | 2.7 KB | Markdown 文档。 |  |
+| `Li_metastable_2x2_legacy_20260819\README.md` | 2.7 KB | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |  |
 | `Li_metastable_2x2_legacy_20260819\RUN_STATUS.md` | 2.3 KB | Markdown 文档。 |  |
 | `Li_metastable_2x2_legacy_20260819\legacy\MIGRATION_MAP.md` | 1.1 KB | Markdown 文档。 |  |
 | `Li_metastable_2x2_legacy_20260819\legacy\README_LEGACY_CORE.md` | 712 B | Markdown 文档。 |  |
@@ -712,7 +712,7 @@
 
 ## 项目根与工具
 
-仓库根目录与 `tools/` — 11 个文件，112.3 KB
+仓库根目录与 `tools/` — 12 个文件，116.4 KB
 
 ### 结论（1 个，16.8 KB）
 
@@ -720,12 +720,12 @@
 |---|---|---|---|
 | `DATA_MANIFEST.csv` | 16.8 KB | 数据表。 | 60 行 × 7 列 [﻿相对路径, 文件名, 扩展名, 层次, 大小(字节), 用途说明 …] |
 
-### 代码（4 个，67.2 KB）
+### 代码（4 个，67.3 KB）
 
 | 文件 | 大小 | 用途 |
 |---|---|---|
 | `tools\artifact_ledger.py` | 28.0 KB | Python 脚本。 |
-| `tools\build_artifact_catalog.py` | 30.2 KB | Python 脚本。 |
+| `tools\build_artifact_catalog.py` | 30.3 KB | Python 脚本。 |
 | `tools\compute_gb_energy.py` | 6.3 KB | Python 脚本。 |
 | `tools\install_git_hook.ps1` | 2.7 KB | PowerShell 脚本。 |
 
@@ -736,11 +736,12 @@
 | `.gitignore` | 1.3 KB | Git 忽略规则，指定哪些文件不纳入版本控制。 |
 | `refresh_ledger.cmd` | 657 B | （未分类） |
 
-### 文档（4 个，26.4 KB）
+### 文档（5 个，30.4 KB）
 
 | 文件 | 大小 | 用途 |
 |---|---|---|
 | `.gitattributes` | 748 B | （未分类） |
 | `DATA_MANIFEST.md` | 12.4 KB | Markdown 文档。 |
 | `PROJECT_REVIEW.md` | 10.6 KB | Markdown 文档。 |
-| `tools\README.md` | 2.7 KB | Markdown 文档。 |
+| `README.md` | 4.0 KB | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |
+| `tools\README.md` | 2.7 KB | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |

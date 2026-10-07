@@ -177,7 +177,7 @@
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\06_环境与实现\verify_soap_env.py,verify_soap_env.py,.py,代码,5385,环境自检脚本，确认 SOAP 依赖可用。,,d43a6f7da73406d73368a12b5ea19c098714df690f86f92f3a0dfe913fe2bb30
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\90_历史归档\归档说明.md,归档说明.md,.md,文档,1854,Markdown 文档。,,4fabfc33d9c133aa67af68fd2034343fa4c2c8a8c8153c4d225a1d82fac277a2
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\90_历史归档\旧版材料\inspect_structures_v_old.py,inspect_structures_v_old.py,.py,代码,3996,Python 脚本。,,b9469f9ca66706a47966faa850d5a27060d398da87a973a2234fe56cf969a8f9
-项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\README.md,README.md,.md,文档,2026,Markdown 文档。,,db8f656dba8ac24a721f7488c4975162748c85f5c5d6fd6d183ac0e020a3aa00
+项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\README.md,README.md,.md,文档,2026,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,db8f656dba8ac24a721f7488c4975162748c85f5c5d6fd6d183ac0e020a3aa00
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage01_数据准备与SOAP初测\01_报告\Stage01_确定性结论与待讨论.md,Stage01_确定性结论与待讨论.md,.md,文档,3323,Markdown 文档。,,56b00c4d315ad1f2b85a9db9da2aae7d8c9f775e8408ebcae9351da763c07a00
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage01_数据准备与SOAP初测\02_脚本\cfg_reader.py,cfg_reader.py,.py,代码,8911,CFG 格式解析脚本。,,98d45d637b64c87c1ee0a047089b782fb9c033f5e0fdf9faa2c5cd33f2803075
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage01_数据准备与SOAP初测\02_脚本\inspect_structures.py,inspect_structures.py,.py,代码,4334,结构概览脚本，检查原子数与字段完整性。,,c0ef4bb8a815501160aa6333f78699cd21f9596e057a1b31582538d1ea302713
@@ -350,8 +350,8 @@
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage06_最终评估\03_输出\stage6_spatial_direction_residual.png,stage6_spatial_direction_residual.png,.png,结论,82228,Stage06 最终评估产物：相关系数、模型对比与稳健性检验。,,1dc3132d78aea6b6c0fa6ccffbea2a20ec99e79c32e705e097fd0e4f27e9ee43
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage06_最终评估\03_输出\stage6_spatial_summary.csv,stage6_spatial_summary.csv,.csv,结论,955,Stage06 最终评估产物：相关系数、模型对比与稳健性检验。,"8 行 × 9 列 [state, interface_id, field, n, mean, std …]",3007322be7d61bba5ef8e427888cec3dabcd84cd102e7af659eeb3eee74782b2
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage06_最终评估\03_输出\stage6_state_classification.csv,stage6_state_classification.csv,.csv,结论,1083,Stage06 最终评估产物：相关系数、模型对比与稳健性检验。,"10 行 × 8 列 [test_interface, n_train, n_test, roc_auc, balanced_accuracy, f1 …]",ca299960f4cd780434e996bff20453eded7c75de03e2f3360560d546ed92bb98
-归档区：为溯源保留的历史副本,_archive\GB_project_20260819\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\docs\notes\README.md,README.md,.md,文档,18,Markdown 文档。,,3b8e7097e5e0ff56b024e4ec2ced82ea565a4701bfd1be97557cfac686f82667
-归档区：为溯源保留的历史副本,_archive\GB_project_20260819\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\docs\README.md,README.md,.md,文档,11206,Markdown 文档。,,9bdeca5890cc043270431a567d2f83bfa9eb56911451e098521edecf97322ef4
+归档区：为溯源保留的历史副本,_archive\GB_project_20260819\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\docs\notes\README.md,README.md,.md,文档,18,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,3b8e7097e5e0ff56b024e4ec2ced82ea565a4701bfd1be97557cfac686f82667
+归档区：为溯源保留的历史副本,_archive\GB_project_20260819\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\docs\README.md,README.md,.md,文档,11206,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,9bdeca5890cc043270431a567d2f83bfa9eb56911451e098521edecf97322ef4
 归档区：为溯源保留的历史副本,_archive\GB_project_20260819\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\docs\reports\build_report.md,build_report.md,.md,文档,2182,Markdown 文档。,,20a6fa3ff670e6b643a0e71e4a016877ad4cec3624b9702c3c7b2c3f71b50c99
 归档区：为溯源保留的历史副本,_archive\GB_project_20260819\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\docs\reports\conflict_report.md,conflict_report.md,.md,文档,5451,Markdown 文档。,,3eb6e1f6e10fe76048719381a3c6837d1f77ff476c6452bb0a91da9213251427
 归档区：为溯源保留的历史副本,_archive\GB_project_20260819\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\docs\reports\file_inventory.md,file_inventory.md,.md,文档,10941,Markdown 文档。,,05040cfc4053343bb773b9f3ebd881f34d589f4e5ee1160b7bd8d59ce9a18efd
@@ -360,20 +360,20 @@
 归档区：为溯源保留的历史副本,_archive\GB_project_20260819\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\docs\reports\migration_inventory.md,migration_inventory.md,.md,文档,11794,Markdown 文档。,,9d2ccecd3039f4e9df6c4b87f085a8d42aa58c5d1c27a02d111daa0ea2276125
 归档区：为溯源保留的历史副本,_archive\GB_project_20260819\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\docs\reports\PROJECT_CLEANUP_REPORT.md,PROJECT_CLEANUP_REPORT.md,.md,文档,5313,Markdown 文档。,,f25138bead62488eeae6c2279002bf3bd52120e96759abd57d487c3e37a1d67e
 归档区：为溯源保留的历史副本,_archive\GB_project_20260819\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\docs\reports\verification_report.md,verification_report.md,.md,文档,1806,Markdown 文档。,,668cc10f82b52d4548bebbfdf6aebe7154cd3b9661f6e0bcfead24d89b11afce
-归档区：为溯源保留的历史副本,_archive\GB_project_20260819\02_MD_Simulation\README.md,README.md,.md,文档,18,Markdown 文档。,,3b8e7097e5e0ff56b024e4ec2ced82ea565a4701bfd1be97557cfac686f82667
-归档区：为溯源保留的历史副本,_archive\GB_project_20260819\03_Analysis\README.md,README.md,.md,文档,18,Markdown 文档。,,3b8e7097e5e0ff56b024e4ec2ced82ea565a4701bfd1be97557cfac686f82667
-归档区：为溯源保留的历史副本,_archive\GB_project_20260819\04_Potential_Validation\README.md,README.md,.md,文档,18,Markdown 文档。,,3b8e7097e5e0ff56b024e4ec2ced82ea565a4701bfd1be97557cfac686f82667
-归档区：为溯源保留的历史副本,_archive\GB_project_20260819\05_DFT_Validation\README.md,README.md,.md,文档,18,Markdown 文档。,,3b8e7097e5e0ff56b024e4ec2ced82ea565a4701bfd1be97557cfac686f82667
-归档区：为溯源保留的历史副本,_archive\GB_project_20260819\06_Publication\README.md,README.md,.md,文档,18,Markdown 文档。,,3b8e7097e5e0ff56b024e4ec2ced82ea565a4701bfd1be97557cfac686f82667
+归档区：为溯源保留的历史副本,_archive\GB_project_20260819\02_MD_Simulation\README.md,README.md,.md,文档,18,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,3b8e7097e5e0ff56b024e4ec2ced82ea565a4701bfd1be97557cfac686f82667
+归档区：为溯源保留的历史副本,_archive\GB_project_20260819\03_Analysis\README.md,README.md,.md,文档,18,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,3b8e7097e5e0ff56b024e4ec2ced82ea565a4701bfd1be97557cfac686f82667
+归档区：为溯源保留的历史副本,_archive\GB_project_20260819\04_Potential_Validation\README.md,README.md,.md,文档,18,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,3b8e7097e5e0ff56b024e4ec2ced82ea565a4701bfd1be97557cfac686f82667
+归档区：为溯源保留的历史副本,_archive\GB_project_20260819\05_DFT_Validation\README.md,README.md,.md,文档,18,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,3b8e7097e5e0ff56b024e4ec2ced82ea565a4701bfd1be97557cfac686f82667
+归档区：为溯源保留的历史副本,_archive\GB_project_20260819\06_Publication\README.md,README.md,.md,文档,18,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,3b8e7097e5e0ff56b024e4ec2ced82ea565a4701bfd1be97557cfac686f82667
 归档区：为溯源保留的历史副本,_archive\GB_project_20260819\07_Documentation\PROJECT_MIGRATION_REPORT.md,PROJECT_MIGRATION_REPORT.md,.md,文档,2183,Markdown 文档。,,9b8dca21abd008cd51197bbed943ccdb0c818f2dda5685890c08a3045d44e76c
 归档区：为溯源保留的历史副本,_archive\GB_project_20260819\_unique_preserved\early_env_test\kim.log,kim.log,.log,追溯,6331,OpenKIM 势函数调用日志，记录实际加载的模型标识。,,c6e3e085c4766ea9d08220dfa0faf7fdc001ff70a597b948ed56ed03109c70ea
 归档区：为溯源保留的历史副本,_archive\GB_project_20260819\archive\debugging\cs5_310_ref_result.json,cs5_310_ref_result.json,.json,文档,34022,参数与元数据。,"字段: schema, description, parameters, orientation, counts, distances, gb_equivalence, bulk_bcc",bfb358b9f8a7a8f715ea3e2f78b9e08b4eeb10f752f3a8db8c880d101c5a40a0
 归档区：为溯源保留的历史副本,_archive\GB_project_20260819\archive\legacy\li_gb_project\.gitignore,.gitignore,(无),输入,210,Git 忽略规则，指定哪些文件不纳入版本控制。,,541d8e519355be9bc86f4b24ea8f3c7fdbb9bc2e8d54fb03b94005f5400ecdad
 归档区：为溯源保留的历史副本,_archive\GB_project_20260819\archive\legacy\li_gb_project\lammps_test\final.data,final.data,.data,结论,728,LAMMPS 原子构型：某个阶段结束时的静态结构快照。,16 原子 · 盒子 7.02 × 7.02 × 7.02 Å · timestep 1,0bf76a929d262dd269d2f1ea12989207bf8a7e553827fba591aa61abfc68732a
 归档区：为溯源保留的历史副本,_archive\GB_project_20260819\archive\legacy\li_gb_project\lammps_test\in.test_li,in.test_li,.test_li,输入,1429,早期环境连通性测试：确认 LAMMPS + OpenKIM 能正确调用 Li 势函数。,,b77bfafd06f62a31ac29610a512eb7921cb9c4dbb386a39ad19b4d85e71eaa6d
-归档区：为溯源保留的历史副本,_archive\GB_project_20260819\archive\legacy\li_gb_project\lammps_test\README.md,README.md,.md,文档,3298,Markdown 文档。,,4a9421e64b70b27dd1a635c59bf9ee19531efc0c33308693eb1f18b45f6224ab
+归档区：为溯源保留的历史副本,_archive\GB_project_20260819\archive\legacy\li_gb_project\lammps_test\README.md,README.md,.md,文档,3298,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,4a9421e64b70b27dd1a635c59bf9ee19531efc0c33308693eb1f18b45f6224ab
 归档区：为溯源保留的历史副本,_archive\GB_project_20260819\archive\legacy\li_gb_project\lammps_test\run.sh,run.sh,.sh,代码,563,Shell 脚本（在 WSL/Linux 下运行）。,,d070de0ea886304b9aad12c7e4a119d666569eb1f57b53808c5440138e1e3176
-归档区：为溯源保留的历史副本,_archive\GB_project_20260819\archive\legacy\li_gb_project\README.md,README.md,.md,文档,5540,Markdown 文档。,,26cad9d360339f5b99f17758e77aef00db475f2fa1c66b8868fbf2c4574a93ae
+归档区：为溯源保留的历史副本,_archive\GB_project_20260819\archive\legacy\li_gb_project\README.md,README.md,.md,文档,5540,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,26cad9d360339f5b99f17758e77aef00db475f2fa1c66b8868fbf2c4574a93ae
 归档区：为溯源保留的历史副本,_archive\GB_project_20260819\archive\legacy\li_gb_project\requirements.txt,requirements.txt,.txt,输入,1077,Python 依赖清单，用于重建运行环境。,,bf728c8a926f529d19427e114e170a8b99f32a33ef03eded034112e30d9a03df
 归档区：为溯源保留的历史副本,_archive\GB_project_20260819\archive\legacy\li_gb_project\SETUP.md,SETUP.md,.md,文档,2745,Markdown 文档。,,ae453d2d9e08bb48ac59cb81f101166b0c2f6085b92563d296e0944a0771ff28
 归档区：为溯源保留的历史副本,_archive\GB_project_20260819\archive\legacy\li_gb_project\setup_env.sh,setup_env.sh,.sh,代码,1471,Shell 脚本（在 WSL/Linux 下运行）。,,d3e84a911465f88e275315260c6dfe5780e093e99e3a4c7f41babc97eec0d650
@@ -405,7 +405,7 @@
 归档区：为溯源保留的历史副本,_archive\GB_project_20260819\archive\old_versions\legacy_generator\output\Sigma5_310.lmp,Sigma5_310.lmp,.lmp,结论,267845,LAMMPS 结构文件。,"3,224 原子 · 盒子 85.98 × 60.79 × 14.89 Å",cf12c748e8f36e39b526430081939342d92aa65e08b0c41296d9cc90ec484ada
 归档区：为溯源保留的历史副本,_archive\GB_project_20260819\archive\old_versions\legacy_generator\output\Sigma5_310.xyz,Sigma5_310.xyz,.xyz,结论,232134,扩展 XYZ 结构文件，可携带每原子附加列。,"3,224 原子",eaf096dc56bc2ef805943bae1607586a76488b36eb82ed65cc66c086eb6b8503
 归档区：为溯源保留的历史副本,_archive\GB_project_20260819\archive\old_versions\legacy_generator\output\Sigma5_310_grainID.xyz,Sigma5_310_grainID.xyz,.xyz,结论,150867,扩展 XYZ 结构文件，可携带每原子附加列。,"3,224 原子 · 附加列: Lattice=""-35.1000000000 35.1000000000 70.2000000000 42.1200000000 -42.1200000000 21.0600000000 10.5300000000 10.5300000000 -10.5300000000"" Properties=species:S:1:pos:R:3:grain_id:R:1",c16e551d9ab34a3c53e86e841a5a24844165d23eaea7ef32d95cb32d08a690ac
-归档区：为溯源保留的历史副本,_archive\GB_project_20260819\archive\old_versions\legacy_generator\README.md,README.md,.md,文档,6150,Markdown 文档。,,d841f007aca34338afe7e8c63a929e07009adf21c56abac677523e723af6ef75
+归档区：为溯源保留的历史副本,_archive\GB_project_20260819\archive\old_versions\legacy_generator\README.md,README.md,.md,文档,6150,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,d841f007aca34338afe7e8c63a929e07009adf21c56abac677523e723af6ef75
 归档区：为溯源保留的历史副本,_archive\GB_project_20260819\archive\old_versions\legacy_generator\utils.py,utils.py,.py,代码,2938,Python 脚本。,,1adb9280fdabba1ff7b1bd1a586e6f7e2b4f1c663955b01d00a700da0cfea92b
 归档区：为溯源保留的历史副本,_archive\GB_project_20260819\archive\old_versions\v2_obsolete_20260802_150439\DO_NOT_USE.txt,DO_NOT_USE.txt,.txt,结论,179,纯文本结果或检查报告。,,f9e2fa1ea14d94169c62590160e324ae8528c7d66411ac549ccfe9609fc186ef
 归档区：为溯源保留的历史副本,_archive\GB_project_20260819\archive\old_versions\v2_obsolete_20260802_150439\generator\__init__.py,__init__.py,.py,代码,86,Python 脚本。,,e9fe6ba786f594f8afffc8f84f8814732e756313b2a3666313cc4bb6a4f348b6
@@ -429,7 +429,7 @@
 归档区：为溯源保留的历史副本,_archive\GB_project_20260819\archive\old_versions\v2_obsolete_20260802_150439\lammps\resume.sh,resume.sh,.sh,代码,787,从中断处续算的脚本。,,e1699624ea1d29c4c22794935219c0ca8e9b4e7279f2f8c9d9075a2b5431360a
 归档区：为溯源保留的历史副本,_archive\GB_project_20260819\archive\old_versions\v2_obsolete_20260802_150439\lammps\run_all.sh,run_all.sh,.sh,代码,1410,完整热历史编排脚本；带 .done 标记实现断点续算。,,06bfdd850dc583b4479008ea5812cc56cfab9fe0813508bbba36cd199ca8c5d7
 归档区：为溯源保留的历史副本,_archive\GB_project_20260819\archive\old_versions\v2_obsolete_20260802_150439\pytest.ini,pytest.ini,.ini,文档,40,测试框架配置。,,efcce6f55356a0fdaf6f9631b9d9a9a92fd1caba8ddce5809b8a77bb998cc3ba
-归档区：为溯源保留的历史副本,_archive\GB_project_20260819\archive\old_versions\v2_obsolete_20260802_150439\README.md,README.md,.md,文档,7688,Markdown 文档。,,f0d63029fb6036f24bc5d0a466ce50d49ca6e07aa4c59d430a56b9a74263b31e
+归档区：为溯源保留的历史副本,_archive\GB_project_20260819\archive\old_versions\v2_obsolete_20260802_150439\README.md,README.md,.md,文档,7688,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,f0d63029fb6036f24bc5d0a466ce50d49ca6e07aa4c59d430a56b9a74263b31e
 归档区：为溯源保留的历史副本,_archive\GB_project_20260819\archive\old_versions\v2_obsolete_20260802_150439\reports\build_report.md,build_report.md,.md,文档,4672,Markdown 文档。,,d2dbc16f03854f2bda8017dd5362b3ed9acfe7a6ae43af7b04ef23ad6f12590b
 归档区：为溯源保留的历史副本,_archive\GB_project_20260819\archive\old_versions\v2_obsolete_20260802_150439\reports\reference_energy_bulk.md,reference_energy_bulk.md,.md,文档,1205,Markdown 文档。,,0532b85a8e60c87af23834ee0025e3e92202e644954e42a117ee3560adc18657
 归档区：为溯源保留的历史副本,_archive\GB_project_20260819\archive\old_versions\v2_obsolete_20260802_150439\reports\stage_io_table.md,stage_io_table.md,.md,文档,2169,Markdown 文档。,,69a930c85a7780cb3699b1866ab3c00f1a957c7e6885339fc78bc9d7c5bb0a2f
@@ -448,7 +448,7 @@
 归档区：为溯源保留的历史副本,_archive\GB_project_20260819\archive\old_versions\v2_obsolete_20260802_150439\tests\test_velocities_zero.py,test_velocities_zero.py,.py,代码,1181,Python 脚本。,,7714a4bb9b0459d24ce84089fa27ca652877f670f036f7c796735403c50c9a42
 归档区：为溯源保留的历史副本,_archive\GB_project_20260819\archive\old_versions\v2_obsolete_20260802_150439\tests\test_verify.py,test_verify.py,.py,代码,1820,Python 脚本。,,22b5874ba20ebef27aa3b4bf3a5df6ca1211b00f0c1423b0104880e370934857
 归档区：为溯源保留的历史副本,_archive\GB_project_20260819\archive\old_versions\v2_obsolete_20260802_150439\tests\test_workflow_scripts.py,test_workflow_scripts.py,.py,代码,1724,Python 脚本。,,aceef33cb3f3d0340bfd046b955764fadecf31c72efc08b8831d6164653f9f51
-归档区：为溯源保留的历史副本,_archive\GB_project_20260819\README.md,README.md,.md,文档,792,Markdown 文档。,,888f135d91bb4911b661510162d4b5f3d1f81ac57769a123548fb2ad51a04c36
+归档区：为溯源保留的历史副本,_archive\GB_project_20260819\README.md,README.md,.md,文档,792,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,888f135d91bb4911b661510162d4b5f3d1f81ac57769a123548fb2ad51a04c36
 归档区：为溯源保留的历史副本,_archive\Li_metastable_2x2_legacy_20260819\legacy\generator_old\__init__.py,__init__.py,.py,代码,86,Python 脚本。,,e9fe6ba786f594f8afffc8f84f8814732e756313b2a3666313cc4bb6a4f348b6
 归档区：为溯源保留的历史副本,_archive\Li_metastable_2x2_legacy_20260819\legacy\generator_old\builder.py,builder.py,.py,代码,8990,Python 脚本。,,a8742e4ed729821697fa12bee89cead9106967cf7a24fae4d1814f6cc1bc2672
 归档区：为溯源保留的历史副本,_archive\Li_metastable_2x2_legacy_20260819\legacy\generator_old\bulk.py,bulk.py,.py,代码,2345,Python 脚本。,,9e52b56b50c7c4742f2cae7a6124ffa0ab92ca77f985b35e1a0719e4aa8f63d0
@@ -501,7 +501,7 @@
 归档区：为溯源保留的历史副本,_archive\Li_metastable_2x2_legacy_20260819\PROMPT_FOR_CODEX.md,PROMPT_FOR_CODEX.md,.md,文档,19517,Markdown 文档。,,af15c453a754167a4d92c5ff50787e55077840523212e05eec9301846065a0ed
 归档区：为溯源保留的历史副本,_archive\Li_metastable_2x2_legacy_20260819\PROTOCOL.md,PROTOCOL.md,.md,文档,5130,Markdown 文档。,,ba7fe45bc0af17b37b819b20b5725a8c1d2ccb51edecf50302ed6f0edd9cad7d
 归档区：为溯源保留的历史副本,_archive\Li_metastable_2x2_legacy_20260819\PROVENANCE.md,PROVENANCE.md,.md,文档,2205,Markdown 文档。,,86cdcb7bc0af31fa07364753d2b117e345a5866a7b68414a6a86cbb7ef151127
-归档区：为溯源保留的历史副本,_archive\Li_metastable_2x2_legacy_20260819\README.md,README.md,.md,文档,2803,Markdown 文档。,,92414b146d6bc9bb94d3f7587b0972503b14b237221c7e716d177472327a9638
+归档区：为溯源保留的历史副本,_archive\Li_metastable_2x2_legacy_20260819\README.md,README.md,.md,文档,2803,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,92414b146d6bc9bb94d3f7587b0972503b14b237221c7e716d177472327a9638
 归档区：为溯源保留的历史副本,_archive\Li_metastable_2x2_legacy_20260819\RUN_STATUS.md,RUN_STATUS.md,.md,文档,2326,Markdown 文档。,,0ceacbef0515f0d8dd1bfad86172fd8f89a2d98469c49788e61381ac663ec51a
 归档区：为溯源保留的历史副本,_archive\Li_metastable_2x2_legacy_20260819\stage0_build_validate\build_report.md,build_report.md,.md,文档,2360,Markdown 文档。,,8a7afb4498acfd385046fc56bd5d889be4d8d671a8ca864fda996a594dea0e05
 归档区：为溯源保留的历史副本,_archive\Li_metastable_2x2_legacy_20260819\stage0_build_validate\validation_report.md,validation_report.md,.md,文档,1813,Markdown 文档。,,e1b8041cdc71e21a9ef83b5fb46b729d91d484a287258d2523c6d6c3ddb2b2e3
@@ -511,9 +511,10 @@
 项目根与工具,DATA_MANIFEST.csv,DATA_MANIFEST.csv,.csv,结论,17207,数据表。,"60 行 × 7 列 [﻿相对路径, 文件名, 扩展名, 层次, 大小(字节), 用途说明 …]",9778fbfb1008720461f4ee2349c370549d3b1b9e63b71b36c018296aa576453d
 项目根与工具,DATA_MANIFEST.md,DATA_MANIFEST.md,.md,文档,12684,Markdown 文档。,,fa3d369bb149092bf3bd34de0c4d6b4332844afa408b5564287c6b103b9191fd
 项目根与工具,PROJECT_REVIEW.md,PROJECT_REVIEW.md,.md,文档,10847,Markdown 文档。,,057a0f2ae486d02eb30aeaa3689eb1c2f3d984d4c9a59b09ec6a8781e4af2a6d
+项目根与工具,README.md,README.md,.md,文档,4084,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,efc4ebf9cf3a59a44a63efe951c2ad64405f3f48d9aa7785a141fe6531b743c6
 项目根与工具,refresh_ledger.cmd,refresh_ledger.cmd,.cmd,输入,657,（未分类）,,b08e57c1262d97f326a4508ce91dc1e0cf3f4f762becf739c17f8563a3e8bc0e
 项目根与工具,tools\artifact_ledger.py,artifact_ledger.py,.py,代码,28622,Python 脚本。,,561aa827375c349349dc50cd2b2f4d89ceb65c844e3f3a5fdb05fdc0f0090508
-项目根与工具,tools\build_artifact_catalog.py,build_artifact_catalog.py,.py,代码,30945,Python 脚本。,,93db9b0542d2b748583022694752999ea27ba33ad73126113fa33f341d7149bf
+项目根与工具,tools\build_artifact_catalog.py,build_artifact_catalog.py,.py,代码,31053,Python 脚本。,,9a5963b1a712e902e4e5e86615c46b40c4537307ff3549cb9adcd558d8a68b43
 项目根与工具,tools\compute_gb_energy.py,compute_gb_energy.py,.py,代码,6410,Python 脚本。,,27a40dce4dd0bd475b542bda5932aa4033c3a2f6a23c89a02e6e6cb6df54ce09
 项目根与工具,tools\install_git_hook.ps1,install_git_hook.ps1,.ps1,代码,2807,PowerShell 脚本。,,cade355890b48472ec86081230acb4dd88d369889b9de42e261a3b3ce23f0684
-项目根与工具,tools\README.md,README.md,.md,文档,2724,Markdown 文档。,,9375e112a0ffa1d7f6ebab22301a3ee598a9da28d0d3be1ba6d3ac41e769182a
+项目根与工具,tools\README.md,README.md,.md,文档,2724,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,9375e112a0ffa1d7f6ebab22301a3ee598a9da28d0d3be1ba6d3ac41e769182a

@@ -205,6 +205,7 @@ PATH_PURPOSE = {
 }
 
 BASENAME_PURPOSE = {
+    "README.md": "仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。",
     "bulk_Li.data": "体相参考结构的 LAMMPS 格式（128 原子 BCC）。",
     "bulk_Li.xyz": "体相参考结构的通用格式。",
     "bulk_Li.cif": "体相参考结构的晶体学格式。",
