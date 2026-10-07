@@ -5,7 +5,7 @@
 
 - 扫描根目录：`D:\Research`
 - 文件总数：**574**
-- 总体积：**520.56 MB**
+- 总体积：**520.57 MB**
 
 ## 层次分布
 
@@ -15,8 +15,8 @@
 | **续算** | 11 | 6.60 MB | 1.3% | 保留至后续阶段完成 |
 | **中间** | 14 | 283.67 MB | 54.5% | 可重算，建议只留清单+摘要 |
 | **追溯** | 40 | 1.07 MB | 0.2% | 随代码进版本控制 |
-| **代码** | 134 | 893.1 KB | 0.2% | 进版本控制 |
-| **输入** | 51 | 8.09 MB | 1.6% | 进版本控制 |
+| **代码** | 134 | 894.8 KB | 0.2% | 进版本控制 |
+| **输入** | 51 | 8.10 MB | 1.6% | 进版本控制 |
 | **文献** | 43 | 182.49 MB | 35.1% | 不进版本控制 |
 | **文档** | 90 | 2.69 MB | 0.5% | 进版本控制 |
 
@@ -804,23 +804,23 @@
 
 ## 项目根与工具
 
-仓库根目录与 `tools/` — 9 个文件，72.9 KB
+仓库根目录与 `tools/` — 9 个文件，74.8 KB
 
-### 代码（4 个，57.5 KB）
+### 代码（4 个，59.1 KB）
 
 | 文件 | 大小 | 用途 |
 |---|---|---|
-| `tools\artifact_ledger.py` | 19.5 KB | Python 脚本。 |
-| `tools\build_artifact_catalog.py` | 29.6 KB | Python 脚本。 |
-| `tools\compute_gb_energy.py` | 6.0 KB | Python 脚本。 |
-| `tools\install_git_hook.ps1` | 2.3 KB | PowerShell 脚本。 |
+| `tools\artifact_ledger.py` | 19.9 KB | Python 脚本。 |
+| `tools\build_artifact_catalog.py` | 30.2 KB | Python 脚本。 |
+| `tools\compute_gb_energy.py` | 6.3 KB | Python 脚本。 |
+| `tools\install_git_hook.ps1` | 2.7 KB | PowerShell 脚本。 |
 
-### 输入（2 个，1.4 KB）
+### 输入（2 个，1.7 KB）
 
 | 文件 | 大小 | 用途 |
 |---|---|---|
 | `.gitignore` | 1.0 KB | Git 忽略规则，指定哪些文件不纳入版本控制。 |
-| `refresh_ledger.cmd` | 376 B | （未分类） |
+| `refresh_ledger.cmd` | 679 B | （未分类） |
 
 ### 文档（3 个，14.0 KB）
 

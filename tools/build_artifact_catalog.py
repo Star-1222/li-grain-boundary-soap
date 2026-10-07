@@ -13,8 +13,25 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
-ROOT = Path(r"D:\Research")
-OUT_DIR = Path(r"C:\Users\1\Documents\Codex\2026-10-07\ni\outputs")
+def _default_root() -> Path:
+    """Repository root, derived from this file's location.
+
+    The script normally lives at <repo>/tools/build_artifact_catalog.py, so the
+    repository root is two levels up. Override with RESEARCH_ROOT when the
+    tree lives somewhere else.
+    """
+    env = os.environ.get("RESEARCH_ROOT")
+    if env:
+        return Path(env)
+    here = Path(__file__).resolve().parent
+    return here.parent if here.name == "tools" else here
+
+
+ROOT = _default_root()
+
+# Optional mirror copy of the generated ledger; empty disables it.
+_mirror_env = os.environ.get("LEDGER_MIRROR")
+OUT_DIR = Path(_mirror_env) if _mirror_env else None
 
 PROJECTS = [
     ("Li_Sigma5_310_2x2_阶段一验收_2026-09-05_new", "项目二：阶段一验收包（14400 原子 2x2）"),
@@ -399,9 +416,10 @@ def main() -> int:
                 "sha256": sha256(path),
             })
 
-    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    out_dir = OUT_DIR if OUT_DIR is not None else ROOT
+    out_dir.mkdir(parents=True, exist_ok=True)
 
-    csv_path = OUT_DIR / "产物台账.csv"
+    csv_path = out_dir / "ARTIFACT_LEDGER.csv"
     with csv_path.open("w", newline="", encoding="utf-8-sig") as fh:
         w = csv.writer(fh)
         w.writerow(["项目", "相对路径", "文件名", "扩展名", "层次", "大小(字节)", "用途说明", "SHA256"])
@@ -472,7 +490,7 @@ def main() -> int:
                 md.append(f"| `{shown}` | {human(r['size'])} | {r['purpose']} |")
             md.append("")
 
-    md_path = OUT_DIR / "产物台账.md"
+    md_path = out_dir / "ARTIFACT_LEDGER.md"
     md_path.write_text("\n".join(md), encoding="utf-8")
 
     print(f"files={len(rows)}")

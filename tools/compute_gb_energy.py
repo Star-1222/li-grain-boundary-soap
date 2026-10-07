@@ -12,11 +12,22 @@ between stages (some include Temp/KinEng, some include Lx/Ly/Lz).
 
 from __future__ import annotations
 
+import os
 import re
 import sys
 from pathlib import Path
 
-ROOT = Path(r"D:\Research")
+
+def _default_root() -> Path:
+    """Repository root, derived from this file's location (tools/..)."""
+    env = os.environ.get("RESEARCH_ROOT")
+    if env:
+        return Path(env)
+    here = Path(__file__).resolve().parent
+    return here.parent if here.name == "tools" else here
+
+
+ROOT = _default_root()
 PROD = (ROOT / "Lithium_GrainBoundary_Project" / "01_GB_Construction"
         / "Sigma5_310_Metastable_GB" / "v2_production")
 ACC = (ROOT / "Li_Sigma5_310_2x2_阶段一验收_2026-09-05_new"

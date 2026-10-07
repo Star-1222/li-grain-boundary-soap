@@ -35,7 +35,16 @@ try {
         New-Item -ItemType Directory -Force -Path $hookDir | Out-Null
     }
 
-    [string]$py = "C:/Users/1/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe"
+    # Locate a Python interpreter without hardcoding one machine's layout.
+    $candidates = @()
+    $onPath = Get-Command python -ErrorAction SilentlyContinue
+    if ($onPath) { $candidates += $onPath.Source }
+    $candidates += (Join-Path $env:USERPROFILE ".cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe")
+    [string]$py = ""
+    foreach ($c in $candidates) {
+        if (Test-Path -LiteralPath $c) { $py = $c -replace '\\', '/'; break }
+    }
+    if (-not $py) { $py = "python" }
     [string]$script = "$top/tools/artifact_ledger.py"
     [string]$ledger = "$rel" + "ARTIFACT_LEDGER.md"
     [string]$ledgerCsv = "$rel" + "ARTIFACT_LEDGER.csv"

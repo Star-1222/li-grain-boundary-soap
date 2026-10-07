@@ -27,13 +27,25 @@ import numpy as np
 
 import build_artifact_catalog as base
 
-ROOT = Path(os.environ.get("RESEARCH_ROOT", r"D:\Research"))
+def _default_root() -> Path:
+    """Repository root, derived from this file's location.
+
+    Restoring the repository anywhere must keep working, so nothing here
+    hardcodes an absolute path. Override with RESEARCH_ROOT if needed.
+    """
+    env = os.environ.get("RESEARCH_ROOT")
+    if env:
+        return Path(env)
+    here = Path(__file__).resolve().parent
+    return here.parent if here.name == "tools" else here
+
+
+ROOT = _default_root()
 LEDGER_MD = ROOT / os.environ.get("LEDGER_MD_NAME", "ARTIFACT_LEDGER.md")
 LEDGER_CSV = ROOT / os.environ.get("LEDGER_CSV_NAME", "ARTIFACT_LEDGER.csv")
-MIRROR_DIR = Path(os.environ.get(
-    "LEDGER_MIRROR",
-    r"C:\Users\1\Documents\Codex\2026-10-07\ni\outputs",
-))
+
+_mirror = os.environ.get("LEDGER_MIRROR")
+MIRROR_DIR = Path(_mirror) if _mirror else None
 
 
 # --- content probes ----------------------------------------------------------
@@ -507,8 +519,7 @@ def main() -> int:
             w.writerow([r["project"], r["rel"], r["name"], r["ext"], r["layer"],
                         r["size"], r["purpose"], r["analysis"], r["sha256"]])
 
-    mirror = str(MIRROR_DIR)
-    if mirror:
+    if MIRROR_DIR is not None:
         MIRROR_DIR.mkdir(parents=True, exist_ok=True)
         (MIRROR_DIR / LEDGER_MD.name).write_text("\n".join(md), encoding="utf-8")
         (MIRROR_DIR / LEDGER_CSV.name).write_bytes(LEDGER_CSV.read_bytes())

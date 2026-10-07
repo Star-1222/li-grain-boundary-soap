@@ -567,9 +567,9 @@
 项目根与工具,.gitattributes,.gitattributes,(无),文档,748,（未分类）,,4c0a9ade8fcbcd679ff5b73e003ccbdeb18b5dc6846c0c2f18081013c26c68a3
 项目根与工具,.gitignore,.gitignore,(无),输入,1066,Git 忽略规则，指定哪些文件不纳入版本控制。,,3644599746060dd4cc180a5360641ea49661a8c715e1dd0aba1f90d39ecc1481
 项目根与工具,PROJECT_REVIEW.md,PROJECT_REVIEW.md,.md,文档,10847,Markdown 文档。,,057a0f2ae486d02eb30aeaa3689eb1c2f3d984d4c9a59b09ec6a8781e4af2a6d
-项目根与工具,refresh_ledger.cmd,refresh_ledger.cmd,.cmd,输入,376,（未分类）,,db65098c6d5a2f5ab46ecbfb0137c041e289a39e46e051dd532b8f55e8d9dbe7
-项目根与工具,tools\artifact_ledger.py,artifact_ledger.py,.py,代码,20019,Python 脚本。,,edf60628bca616ef0af4bb07c247adf2653be07052d2e31bd02f507904de60ee
-项目根与工具,tools\build_artifact_catalog.py,build_artifact_catalog.py,.py,代码,30326,Python 脚本。,,768bbc3b2a1d333b8b1d0a018ab4af55748dbdcc1f8cf476f05348aec71eb883
-项目根与工具,tools\compute_gb_energy.py,compute_gb_energy.py,.py,代码,6121,Python 脚本。,,c997d2e535c207e975e8ddc4b74953255d0447982286a617deb0a8913c1ba12c
-项目根与工具,tools\install_git_hook.ps1,install_git_hook.ps1,.ps1,代码,2401,PowerShell 脚本。,,fe2e39311875e7b0fe34f860248b7f86186e8d661a4bb164941131ef6c40a47d
+项目根与工具,refresh_ledger.cmd,refresh_ledger.cmd,.cmd,输入,679,（未分类）,,0360b9107b95b95c40aa99e11cbb6db5174746aba7c1227e84fb39997014aeda
+项目根与工具,tools\artifact_ledger.py,artifact_ledger.py,.py,代码,20366,Python 脚本。,,156ba5c70c1fa711f746c179222304aa30e0583d6499a41fa542f617d4cf3354
+项目根与工具,tools\build_artifact_catalog.py,build_artifact_catalog.py,.py,代码,30945,Python 脚本。,,93db9b0542d2b748583022694752999ea27ba33ad73126113fa33f341d7149bf
+项目根与工具,tools\compute_gb_energy.py,compute_gb_energy.py,.py,代码,6410,Python 脚本。,,27a40dce4dd0bd475b542bda5932aa4033c3a2f6a23c89a02e6e6cb6df54ce09
+项目根与工具,tools\install_git_hook.ps1,install_git_hook.ps1,.ps1,代码,2807,PowerShell 脚本。,,cade355890b48472ec86081230acb4dd88d369889b9de42e261a3b3ce23f0684
 项目根与工具,tools\README.md,README.md,.md,文档,2724,Markdown 文档。,,9375e112a0ffa1d7f6ebab22301a3ee598a9da28d0d3be1ba6d3ac41e769182a
