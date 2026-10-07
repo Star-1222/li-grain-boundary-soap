@@ -19,6 +19,7 @@ import hashlib
 import json
 import os
 import re
+import subprocess
 import sys
 from collections import defaultdict
 from pathlib import Path
@@ -299,6 +300,34 @@ def probe(path: Path, ext: str) -> str:
     return ""
 
 
+# --- git-scoped file discovery ----------------------------------------------
+
+def _git_paths(root: Path, extra_args):
+    """Return a set of repo-relative paths from git, or None if unavailable."""
+    try:
+        proc = subprocess.run(
+            ["git", "-C", str(root), "ls-files", "-z", *extra_args],
+            capture_output=True,
+        )
+    except (OSError, subprocess.SubprocessError):
+        return None
+    if proc.returncode != 0:
+        return None
+    raw = proc.stdout.decode("utf-8", "replace")
+    names = [n for n in raw.split("\0") if n]
+    return {n.replace("/", os.sep) for n in names}
+
+
+def tracked_paths(root: Path):
+    """Files the repository would contain: tracked + untracked-but-not-ignored."""
+    return _git_paths(root, ["--cached", "--others", "--exclude-standard"])
+
+
+def ignored_paths(root: Path):
+    """Files present locally but excluded by .gitignore."""
+    return _git_paths(root, ["--others", "--ignored", "--exclude-standard"])
+
+
 # --- cross-checks ------------------------------------------------------------
 
 def cross_checks(rows: list[dict]) -> list[str]:
@@ -372,9 +401,107 @@ def structural_flags(rows: list[dict]) -> list[str]:
     return flags
 
 
+DATA_MD = ROOT / "DATA_MANIFEST.md"
+DATA_CSV = ROOT / "DATA_MANIFEST.csv"
+
+
+def write_data_manifest() -> int:
+    """Inventory the bulk data that .gitignore keeps out of the repository.
+
+    A fresh clone has none of these files, so this manifest is the checklist
+    for restoring them: it records what each one is and what it should hash to.
+    """
+    ignored = ignored_paths(ROOT)
+    if not ignored:
+        print("未发现被忽略的文件（或当前目录不是 git 仓库）")
+        return 0
+
+    entries = []
+    for rel in sorted(ignored):
+        p = ROOT / rel
+        if not p.is_file():
+            continue
+        ext = p.suffix.lower()
+        entries.append({
+            "rel": rel,
+            "name": p.name,
+            "ext": ext or "(无)",
+            "layer": base.classify_layer(rel, ext, p.name),
+            "size": p.stat().st_size,
+            "purpose": base.describe(rel, ext, p.name),
+            "sha256": base.sha256(p),
+        })
+
+    total = sum(e["size"] for e in entries)
+    by_layer: dict[str, list] = defaultdict(list)
+    for e in entries:
+        by_layer[e["layer"]].append(e)
+
+    md: list[str] = []
+    md.append("# 未纳入版本控制的数据清单")
+    md.append("")
+    md.append("> 本文件由 `tools/artifact_ledger.py --data-manifest` 生成。")
+    md.append("> `ARTIFACT_LEDGER.md` 只覆盖仓库内容；本文件登记的是被 `.gitignore`")
+    md.append("> 排除在仓库之外、但**仍然重要**的本地数据。")
+    md.append("> 全新克隆不含这些文件 —— 本清单即为还原它们时的核对表。")
+    md.append("")
+    md.append(f"- 条目数：**{len(entries)}**")
+    md.append(f"- 合计体积：**{base.human(total)}**")
+    md.append("")
+    md.append("## 为什么不在仓库里")
+    md.append("")
+    md.append("| 层次 | 文件数 | 体积 | 原因 |")
+    md.append("|---|---:|---:|---|")
+    reasons = {
+        "文献": "第三方论文，体积大且有版权",
+        "中间": "可由上游输入与脚本重算，代价是算力",
+        "续算": "LAMMPS 二进制检查点，含速度场；**无法由结构文件还原**",
+        "追溯": "运行日志，体积偏大",
+        "结论": "数据表，体积偏大",
+        "输入": "输入文件",
+        "文档": "文档",
+        "代码": "代码",
+    }
+    for key in base.LAYERS:
+        g = by_layer.get(key)
+        if not g:
+            continue
+        md.append(f"| **{key}** | {len(g)} | "
+                  f"{base.human(sum(e['size'] for e in g))} | {reasons.get(key, '')} |")
+    md.append("")
+    md.append("## 清单")
+    md.append("")
+    md.append("| 文件 | 大小 | 层次 | SHA256（前 16 位） | 是什么 |")
+    md.append("|---|---:|---|---|---|")
+    for e in sorted(entries, key=lambda x: -x["size"]):
+        md.append(f"| `{e['rel']}` | {base.human(e['size'])} | {e['layer']} "
+                  f"| `{e['sha256'][:16]}` | {e['purpose']} |")
+    md.append("")
+    md.append("## 还原步骤")
+    md.append("")
+    md.append("1. 从备份介质取回上述文件，保持相对路径不变")
+    md.append("2. 核对校验和：`certutil -hashfile <文件> SHA256`，比对上表")
+    md.append("3. 重新生成台账：双击 `refresh_ledger.cmd`")
+    md.append("")
+
+    DATA_MD.write_text("\n".join(md), encoding="utf-8")
+    with DATA_CSV.open("w", newline="", encoding="utf-8-sig") as fh:
+        w = csv.writer(fh, lineterminator="\n")
+        w.writerow(["相对路径", "文件名", "扩展名", "层次", "大小(字节)",
+                    "用途说明", "SHA256"])
+        for e in entries:
+            w.writerow([e["rel"], e["name"], e["ext"], e["layer"],
+                        e["size"], e["purpose"], e["sha256"]])
+    print(f"data manifest: {len(entries)} entries, {base.human(total)}")
+    print(f"  {DATA_MD}")
+    return 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--quiet", action="store_true")
+    ap.add_argument("--data-manifest", action="store_true",
+                    help="另外生成 DATA_MANIFEST.md/csv，登记未纳入版本控制的大文件")
     args = ap.parse_args()
     try:
         sys.stdout.reconfigure(encoding="utf-8", errors="replace")
@@ -383,12 +510,19 @@ def main() -> int:
 
     rows: list[dict] = []
     self_outputs = {LEDGER_MD.resolve(), LEDGER_CSV.resolve()}
+    # 先生成数据清单，使台账能收录其最新校验和（避免慢一拍的抖动）。
+    if args.data_manifest:
+        write_data_manifest()
+    # 在 git 仓库内，台账只覆盖仓库内容，这样任何克隆副本重新生成的结果都一致。
+    tracked = tracked_paths(ROOT)
     for proj, title in base.PROJECTS:
         for path in base.iter_project_files(proj):
             # 跳过台账自身：把它的哈希写进台账会导致每次生成都自变。
             if path.resolve() in self_outputs:
                 continue
             rel = str(path.relative_to(ROOT))
+            if tracked is not None and rel not in tracked:
+                continue
             ext = path.suffix.lower()
             rows.append({
                 "group": proj,
@@ -512,7 +646,9 @@ def main() -> int:
 
     LEDGER_MD.write_text("\n".join(md), encoding="utf-8")
     with LEDGER_CSV.open("w", newline="", encoding="utf-8-sig") as fh:
-        w = csv.writer(fh)
+        # 显式 LF：csv.writer 默认 \r\n，会被 .gitattributes 归一化，
+        # 导致工作区永远显示"已修改"。
+        w = csv.writer(fh, lineterminator="\n")
         w.writerow(["项目", "相对路径", "文件名", "扩展名", "层次",
                     "大小(字节)", "用途说明", "内容分析", "SHA256"])
         for r in rows:

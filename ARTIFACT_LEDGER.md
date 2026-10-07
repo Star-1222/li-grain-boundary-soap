@@ -4,27 +4,23 @@
 > 每次重新生成都会刷新文件清单、校验和与内容分析。
 
 - 扫描根目录：`D:\Research`
-- 文件总数：**574**
-- 总体积：**520.57 MB**
+- 文件总数：**507**
+- 总体积：**47.84 MB**
 
 ## 层次分布
 
 | 层次 | 文件数 | 体积 | 占总比 | 处置 |
 |---|---:|---:|---:|---|
-| **结论** | 191 | 35.07 MB | 6.7% | 必须保留 |
-| **续算** | 11 | 6.60 MB | 1.3% | 保留至后续阶段完成 |
-| **中间** | 14 | 283.67 MB | 54.5% | 可重算，建议只留清单+摘要 |
-| **追溯** | 40 | 1.07 MB | 0.2% | 随代码进版本控制 |
-| **代码** | 134 | 894.8 KB | 0.2% | 进版本控制 |
-| **输入** | 51 | 8.10 MB | 1.6% | 进版本控制 |
-| **文献** | 43 | 182.49 MB | 35.1% | 不进版本控制 |
-| **文档** | 90 | 2.69 MB | 0.5% | 进版本控制 |
+| **结论** | 192 | 35.09 MB | 73.4% | 必须保留 |
+| **追溯** | 39 | 1.06 MB | 2.2% | 随代码进版本控制 |
+| **代码** | 134 | 900.2 KB | 1.8% | 进版本控制 |
+| **输入** | 51 | 8.10 MB | 16.9% | 进版本控制 |
+| **文档** | 91 | 2.71 MB | 5.7% | 进版本控制 |
 
 ## 自动识别的结构特征
 
-- 可再生的中间产物共 14 个、283.67 MB，占总体积 54.5%。其中最重的单项是 `stage5b_matched_direction_energy_pairs.csv`（142.87 MB）。
-- 结论性产物只有 35.07 MB，占 6.7%。
-- 决定“可复现”的追溯+代码+输入合计仅 10.04 MB（1.9%），是最该保护的一层。
+- 结论性产物只有 35.09 MB，占 73.4%。
+- 决定“可复现”的追溯+代码+输入合计仅 10.04 MB（21.0%），是最该保护的一层。
 - 双语拼接文档 16 份。中英文同处一文件，改动一侧另一侧会静默过期，建议拆分为 `README.md` + `README.en.md`。
 
 ## 交叉核对：报告声称 vs 数据实测
@@ -40,18 +36,8 @@
 
 | 文件 | 内容分析 |
 |---|---|
-| `stage5b_matched_direction_energy_pairs.csv` | 334,553 行 × 29 列 [category, tolerance, state_i, atom_i, state_j, atom_j …] |
-| `stage2_75_pairwise_sample.csv` | 700,000 行 × 6 列 [category, row_i, row_j, d_raw, cos, d_norm] |
-| `stage2_75_soap_vectors.npy` | 数组 (4659, 1014) · float64 · 有限值 True |
-| `p1_quench.dump` | 轨迹 36 帧 · timestep 0 → 35,000 · 14,400 原子 |
-| `p1_anneal.dump` | 轨迹 26 帧 · timestep 0 → 25,000 · 14,400 原子 |
-| `stage3_quench.dump` | 轨迹 51 帧 · timestep 0 → 50,000 · 3,600 原子 |
-| `stage2_anneal.dump` | 轨迹 41 帧 · timestep 0 → 20,000 · 3,600 原子 |
-| `traj_quench.dump` | 轨迹 52 帧 · timestep 0 → 50,044 · 3,224 原子 |
-| `p1_hold.dump` | 轨迹 11 帧 · timestep 0 → 5,000 · 14,400 原子 |
 | `ni_stable.cfg` | 47,120 原子 |
 | `ni_metastable.cfg` | 47,120 原子 |
-| `traj_anneal.dump` | 轨迹 20 帧 · timestep 1,000 → 20,000 · 3,224 原子 |
 | `p1_held.data` | 14,400 原子 · 盒子 66.17 × 66.10 × 69.66 Å · timestep 5,000 |
 | `p1_held_0K.data` | 14,400 原子 · 盒子 66.17 × 66.10 × 69.66 Å · timestep 187 |
 | `p1_quenched.data` | 14,400 原子 · 盒子 66.17 × 66.11 × 69.66 Å · timestep 35,300 |
@@ -80,10 +66,20 @@
 | `Sigma5_310.data` | 3,600 原子 · 盒子 66.53 × 33.26 × 35.06 Å |
 | `stage1_minimized.data` | 3,600 原子 · 盒子 65.95 × 33.26 × 35.06 Å · timestep 5,000 |
 | `stage4_final.data` | 3,600 原子 · 盒子 66.01 × 33.26 × 35.06 Å · timestep 3,000 |
+| `stage3_quenched.data` | 3,600 原子 · 盒子 65.95 × 33.26 × 35.06 Å · timestep 50,000 |
+| `Sigma5_310.lmp` | 3,224 原子 · 盒子 85.98 × 60.79 × 14.89 Å |
+| `Sigma5_310.lmp` | 3,224 原子 · 盒子 85.98 × 60.79 × 14.89 Å |
+| `Sigma5_310_minimized.data` | 3,224 原子 · 盒子 85.98 × 61.20 × 15.30 Å · timestep 277 |
+| `rebuilt_stage2.data` | 3,600 原子 · 盒子 65.95 × 33.26 × 35.06 Å · timestep 20,000 |
+| `Sigma5_310.xyz` | 3,224 原子 |
+| `Sigma5_310.xyz` | 3,600 原子 · 附加列: Lattice="66.5252109796 0.0 0.0 0.0 33.2626054898 0.0 0.0 0.0 35.0618647531" Properties=species:S:1:pos:R:3:grain_id:I:1 pbc="T T T" |
+| `Sigma5_310_grain_id.xyz` | 3,600 原子 · 附加列: Li x y z grain_id |
+| `Sigma5_310_grainID.xyz` | 3,224 原子 · 附加列: Lattice="-35.1000000000 35.1000000000 70.2000000000 42.1200000000 -42.1200000000 21.0600000000 10.5300000000 10.5300000000 -10.5300000000" Properties=species:S:1:pos:R:3:grain_id:R:1 |
+| `stage4a_metastable_disorder.xyz` | 2,559 原子 · 附加列: Ni D10 continuous SOAP disorder (visualization only) |
 
 ## 项目二：阶段一验收包（14400 原子 2x2）
 
-`Li_Sigma5_310_2x2_阶段一验收_2026-09-05_new` — 42 个文件，47.62 MB
+`Li_Sigma5_310_2x2_阶段一验收_2026-09-05_new` — 35 个文件，11.75 MB
 
 ### 结论（10 个，11.43 MB）
 
@@ -99,23 +95,6 @@
 | `Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\5_保持10K零压\p1_held_0K.data` | 1.82 MB | 终态在 0 K 下再做一次复核的结构，对应验收步骤 F（晶界 38.1%/38.0% BCC，内部 98.7% BCC）。 | 14,400 原子 · 盒子 66.17 × 66.10 × 69.66 Å · timestep 187 |
 | `Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\5_保持10K零压\p1_hold_pressure.stats` | 171 B | ★ 保持段的压力时间序列。“10 K、0 bar 下维持”这个结论的直接证据来源。 | 2 个采样点 · 标量时均压力 -0.87 bar · 分量 Pxx=-187, Pyy=+383, Pzz=-199 · ⚠ 分量极差 582 bar，各向异性显著 |
 | `Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\6_结构分析\cna_phase1_report.txt` | 3.3 KB | ★ CNA 结构分析结论：各阶段 BCC 分数（晶界约 38%、晶粒内部 98.7%）。验收判据“晶界真实无序、内部保持 BCC”靠它成立。 | 晶界 BCC: initial 73.3% → p1_min0 60.0% → casecheck 43.7% → p1_final 38.1% · 晶内 BCC: 100.0% → 100.0% → 99.9% → 98.7% · 无序带宽: 2.5 Å → 4.5 Å → 4.5 Å → 6.5 Å |
-
-### 续算（4 个，4.84 MB）
-
-| 文件 | 大小 | 用途 |
-|---|---|---|
-| `Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\1_零应力弛豫0K\p1_min0.restart` | 1.21 MB | LAMMPS 续算检查点：保存速度场与热力学状态，只能在 LAMMPS 内读取。 |
-| `Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\2_退火363K零压\p1_annealed.restart` | 1.21 MB | LAMMPS 续算检查点：保存速度场与热力学状态，只能在 LAMMPS 内读取。 |
-| `Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\4_淬火10K\p1_quenched.restart` | 1.21 MB | LAMMPS 续算检查点：保存速度场与热力学状态，只能在 LAMMPS 内读取。 |
-| `Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\5_保持10K零压\p1_held.restart` | 1.21 MB | ★ 阶段二的起点。验收报告明确指定用这个检查点继续后续计算。 |
-
-### 中间（3 个，31.03 MB）
-
-| 文件 | 大小 | 用途 | 内容分析 |
-|---|---|---|---|
-| `Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\2_退火363K零压\p1_anneal.dump` | 11.05 MB | 退火 25 ps 的过程轨迹。报告里“末 16 ps 时均 T=362.8 K”就是从这里统计出来的。 | 轨迹 26 帧 · timestep 0 → 25,000 · 14,400 原子 |
-| `Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\4_淬火10K\p1_quench.dump` | 15.30 MB | 淬火过程轨迹（35.3 ps）。用于核实降温速率是否严格为 10 K/ps。 | 轨迹 36 帧 · timestep 0 → 35,000 · 14,400 原子 |
-| `Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\5_保持10K零压\p1_hold.dump` | 4.68 MB | 10 K 保持段的过程轨迹。用于确认无序结构在整个保持期内持续存在，而非中途塌陷。 | 轨迹 11 帧 · timestep 0 → 5,000 · 14,400 原子 |
 
 ### 追溯（10 个，288.9 KB）
 
@@ -164,7 +143,7 @@
 
 ## 项目一：锂晶界主项目
 
-`Lithium_GrainBoundary_Project` — 151 个文件，135.81 MB
+`Lithium_GrainBoundary_Project` — 117 个文件，10.87 MB
 
 ### 结论（21 个，7.78 MB）
 
@@ -191,23 +170,6 @@
 | `Li_Sigma5_310_metastable_2x2\stage0_build_validate\Sigma5_310_K6_J6_L20_grain_id.xyz` | 668.2 KB | 扩展 XYZ 结构文件，可携带每原子附加列。 | 14,400 原子 · 附加列: Li x y z grain_id |
 | `Li_Sigma5_310_metastable_2x2\stage0_build_validate\structure.data` | 1.30 MB | 初始结构的 LAMMPS 格式。 | 14,400 原子 · 盒子 66.53 × 66.53 × 70.12 Å |
 | `Li_Sigma5_310_metastable_2x2\stage0_build_validate\structure.xyz` | 668.3 KB | 初始结构的通用格式。 | 14,400 原子 · 附加列: Lattice="66.5252109796 0.0 0.0 0.0 66.5252109796 0.0 0.0 0.0 70.1237295062" Properties=species:S:1:pos:R:3:grain_id:I:1 pbc="T T T" |
-
-### 续算（5 个，1.22 MB）
-
-| 文件 | 大小 | 用途 |
-|---|---|---|
-| `01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\data\annealed\stage2_annealed.restart` | 310.3 KB | LAMMPS 续算检查点：保存速度场与热力学状态，只能在 LAMMPS 内读取。 |
-| `01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\data\bulk\bulk_Li_minimized.restart` | 11.9 KB | 体相弛豫的续算检查点。 |
-| `01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\data\final\stage4_final.restart` | 310.3 KB | 最终结构的续算检查点，含速度与热力学状态。 |
-| `01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\data\minimized\stage1_minimized.restart` | 310.3 KB | LAMMPS 续算检查点：保存速度场与热力学状态，只能在 LAMMPS 内读取。 |
-| `01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\data\quenched\stage3_quenched.restart` | 310.3 KB | LAMMPS 续算检查点：保存速度场与热力学状态，只能在 LAMMPS 内读取。 |
-
-### 中间（2 个，17.79 MB）
-
-| 文件 | 大小 | 用途 | 内容分析 |
-|---|---|---|---|
-| `01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\data\annealed\stage2_anneal.dump` | 7.90 MB | 退火过程轨迹。用来观察晶界重构是怎样逐步发生的，而不只是看首末两帧。 | 轨迹 41 帧 · timestep 0 → 20,000 · 3,600 原子 |
-| `01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\data\quenched\stage3_quench.dump` | 9.89 MB | 淬火过程轨迹。用于核对降温速率与系统响应是否正常。 | 轨迹 51 帧 · timestep 0 → 50,000 · 3,600 原子 |
 
 ### 追溯（24 个，525.8 KB）
 
@@ -301,38 +263,6 @@
 | `Li_Sigma5_310_metastable_2x2\lammps\in.3_quench` | 940 B | Stage 3 输入脚本：以 10 K/ps 从 363 K 淬火到 10 K，把高温无序结构冻结下来。 |
 | `Li_Sigma5_310_metastable_2x2\lammps\in.4_10K_hold` | 863 B | 2×2 实验的 10 K 保持输入脚本（对应 in.4_final 在旧版命名下的同一角色）。 |
 
-### 文献（27 个，105.92 MB）
-
-| 文件 | 大小 | 用途 |
-|---|---|---|
-| `00_Literature\grain_boundary\2024 --Metastable grain boundaries the roles of structural and chemical disorders in their energetics, non-equilibrium kinetic evolution, and mechanical behaviors.pdf` | 5.46 MB | PDF 文档。 |
-| `00_Literature\grain_boundary\Atomistic modeling of the mechanical.pdf` | 2.21 MB | PDF 文档。 |
-| `00_Literature\grain_boundary\Grain Boundary Softening A Potential Mechanism for Lithium Metal.pdf` | 2.95 MB | PDF 文档。 |
-| `00_Literature\lithium_metal\Diﬀusion and Deformation Mechanism Maps in Li.pdf` | 4.63 MB | PDF 文档。 |
-| `00_Literature\lithium_metal\Elastic and plastic mechanical properties of lithium measured .pdf` | 2.08 MB | PDF 文档。 |
-| `00_Literature\lithium_metal\The growth mechanism of lithium dendrites and its.pdf` | 756.1 KB | PDF 文档。 |
-| `00_Literature\lithium_metal\mechanistic-insights-into-li-transport-enabled-by-isolated-sulfur-species-in-li3ps4-glasses.pdf` | 6.36 MB | PDF 文档。 |
-| `00_Literature\soap\1-s2.0-S1359645415300860-main.pdf` | 1.75 MB | PDF 文档。 |
-| `00_Literature\soap\1-s2.0-S1359645424010450-main.pdf` | 2.67 MB | PDF 文档。 |
-| `00_Literature\soap\2013_Bartok_PRB_OnRepresentingChemicalEnvironments_SOAP原始论文.pdf` | 6.61 MB | PDF 文档。 |
-| `00_Literature\soap\2017_Rosenbrock_npjComputMater_DiscoveringBuildingBlocks_ML_GBs.pdf` | 3.00 MB | PDF 文档。 |
-| `00_Literature\soap\2017_Rosenbrock_npjComputMater_SI_SOAP参数选择_补充材料.pdf` | 2.25 MB | PDF 文档。 |
-| `00_Literature\soap\2018_Priedeman_ActaMater_QuantifyingConnectingAtomicCrystallographicGBStructure.pdf` | 8.02 MB | PDF 文档。 |
-| `00_Literature\soap\2018_Priedeman_BYU硕士论文_QuantifyingGBAtomicStructures_SOAP.pdf` | 4.35 MB | PDF 文档。 |
-| `00_Literature\soap\2018_Priedeman_QuantifyingConnectingGBStructure_长版54页.pdf` | 17.42 MB | PDF 文档。 |
-| `00_Literature\soap\2020_Fujii_NatCommun_GBThermalConductivity_LocalAtomicEnvironments_作者版.pdf` | 7.00 MB | PDF 文档。 |
-| `00_Literature\soap\2020_Fujii_NatCommun_GBThermalConductivity_LocalAtomicEnvironments_正式版.pdf` | 4.96 MB | PDF 文档。 |
-| `00_Literature\soap\2020_Wagih_NatCommun_GBSegregationEnergySpectra_Polycrystals.pdf` | 1.28 MB | PDF 文档。 |
-| `00_Literature\soap\2022_SongDeng_PRM_AtomicEnergyInGrainBoundaries_MachineLearning.pdf` | 3.31 MB | PDF 文档。 |
-| `00_Literature\soap\2024_Mishra_PRM_LearningFromMetastableSymmetricTiltGBs_PhysicsBasedDescriptors.pdf` | 10.41 MB | PDF 文档。 |
-| `00_Literature\soap\Feature engineering descriptors, transforms, and machine learning for grain boundaries and variable-sized atom clusters.pdf` | 2.77 MB | PDF 文档。 |
-| `00_Literature\soap\NI_SOAP_PROOF_FINAL_BI.html` | 67.0 KB | HTML 报告（含公式渲染）。 |
-| `00_Literature\soap\NI_SOAP_PROOF_FINAL_BI_files\katex.min.css` | 23.3 KB | 网页样式表（随 HTML 报告）。 |
-| `00_Literature\soap\Ni SOAP报告.pdf` | 4.19 MB | PDF 文档。 |
-| `00_Literature\soap\笔记_SOAP原理_信息来源与参考文献.pdf` | 358.5 KB | PDF 文档。 |
-| `00_Literature\soap\笔记_SOAP原理_结构有序无序度表征.pdf` | 421.7 KB | PDF 文档。 |
-| `07_Documentation\presentations\Li_metal_metastable_atomic_structure_mechanical_analysis.pdf` | 678.0 KB | PDF 文档。 |
-
 ### 文档（19 个，2.41 MB）
 
 | 文件 | 大小 | 用途 |
@@ -359,7 +289,7 @@
 
 ## 项目三：Ni SOAP 方法探索
 
-`Ni_SOAP_Method_Exploration_by_Stage` — 213 个文件，326.79 MB
+`Ni_SOAP_Method_Exploration_by_Stage` — 190 个文件，22.18 MB
 
 ### 结论（150 个，13.66 MB）
 
@@ -516,18 +446,6 @@
 | `Stage06_最终评估\03_输出\stage6_spatial_summary.csv` | 964 B | Stage06 最终评估产物：相关系数、模型对比与稳健性检验。 | 8 行 × 9 列 [state, interface_id, field, n, mean, std …] |
 | `Stage06_最终评估\03_输出\stage6_state_classification.csv` | 1.1 KB | Stage06 最终评估产物：相关系数、模型对比与稳健性检验。 | 10 行 × 8 列 [test_interface, n_train, n_test, roc_auc, balanced_accuracy, f1 …] |
 
-### 中间（7 个，228.04 MB）
-
-| 文件 | 大小 | 用途 | 内容分析 |
-|---|---|---|---|
-| `Stage01_数据准备与SOAP初测\03_输出\soap_vectors_metastable.npz` | 39.5 KB | NumPy 压缩数组（中间计算量）。 | vectors (5, 1014) float64 · indices (5,) int64 · rcut () float64 · nmax () int64 |
-| `Stage01_数据准备与SOAP初测\03_输出\soap_vectors_stable.npz` | 39.5 KB | NumPy 压缩数组（中间计算量）。 | vectors (5, 1014) float64 · indices (5,) int64 · rcut () float64 · nmax () int64 |
-| `Stage02_SOAP表示与审计\03_输出\stage2_5_raw_soap_vectors.npy` | 261.5 KB | Stage02.5 表示审计产物。 | 数组 (33, 1014) · float64 · 有限值 True |
-| `Stage02_SOAP表示与审计\03_输出\stage2_75_bulk_reference_vectors.npy` | 16.0 KB | Stage02.75 全人口 SOAP 与距离审计产物。 | 数组 (2, 1014) · float64 · 有限值 True |
-| `Stage02_SOAP表示与审计\03_输出\stage2_75_pairwise_sample.csv` | 48.78 MB | 原子对距离样本表（48.8 MB）。支撑“原始距离里 42–46% 来自范数差”这一结论，属中间表。 | 700,000 行 × 6 列 [category, row_i, row_j, d_raw, cos, d_norm] |
-| `Stage02_SOAP表示与审计\03_输出\stage2_75_soap_vectors.npy` | 36.04 MB | ★ SOAP 主矩阵（4659 原子 × 1014 维，36 MB）。后续全部分析都建立在这个矩阵上；重算耗时较长。 | 数组 (4659, 1014) · float64 · 有限值 True |
-| `Stage05_物理空间与方向\03_输出\stage5b_matched_direction_energy_pairs.csv` | 142.87 MB | ★ 配对重采样中间表（142.9 MB，占本项目近一半体积）。最终结论只用到由它算出的相关系数，本体属可再生的中间产物。 | 334,553 行 × 29 列 [category, tolerance, state_i, atom_i, state_j, atom_j …] |
-
 ### 代码（27 个，468.2 KB）
 
 | 文件 | 大小 | 用途 |
@@ -568,27 +486,6 @@
 | `Stage01_数据准备与SOAP初测\02_脚本\ni_metastable.cfg` | 4.01 MB | 输入构型之一：亚稳的 Ni 晶界构型（源数据）。 | 47,120 原子 |
 | `Stage01_数据准备与SOAP初测\02_脚本\ni_stable.cfg` | 4.02 MB | 输入构型之一：稳定的 Ni 晶界构型（源数据）。 | 47,120 原子 |
 
-### 文献（16 个，76.57 MB）
-
-| 文件 | 大小 | 用途 |
-|---|---|---|
-| `05_文献\1-s2.0-S1359645415300860-main.pdf` | 1.75 MB | PDF 文档。 |
-| `05_文献\1-s2.0-S1359645424010450-main.pdf` | 2.67 MB | PDF 文档。 |
-| `05_文献\2013_Bartok_PRB_OnRepresentingChemicalEnvironments_SOAP原始论文.pdf` | 6.61 MB | PDF 文档。 |
-| `05_文献\2017_Rosenbrock_npjComputMater_DiscoveringBuildingBlocks_ML_GBs.pdf` | 3.00 MB | PDF 文档。 |
-| `05_文献\2017_Rosenbrock_npjComputMater_SI_SOAP参数选择_补充材料.pdf` | 2.25 MB | PDF 文档。 |
-| `05_文献\2018_Priedeman_ActaMater_QuantifyingConnectingAtomicCrystallographicGBStructure.pdf` | 8.02 MB | PDF 文档。 |
-| `05_文献\2018_Priedeman_BYU硕士论文_QuantifyingGBAtomicStructures_SOAP.pdf` | 4.35 MB | PDF 文档。 |
-| `05_文献\2018_Priedeman_QuantifyingConnectingGBStructure_长版54页.pdf` | 17.42 MB | PDF 文档。 |
-| `05_文献\2020_Fujii_NatCommun_GBThermalConductivity_LocalAtomicEnvironments_作者版.pdf` | 7.00 MB | PDF 文档。 |
-| `05_文献\2020_Fujii_NatCommun_GBThermalConductivity_LocalAtomicEnvironments_正式版.pdf` | 4.96 MB | PDF 文档。 |
-| `05_文献\2020_Wagih_NatCommun_GBSegregationEnergySpectra_Polycrystals.pdf` | 1.28 MB | PDF 文档。 |
-| `05_文献\2022_SongDeng_PRM_AtomicEnergyInGrainBoundaries_MachineLearning.pdf` | 3.31 MB | PDF 文档。 |
-| `05_文献\2024_Mishra_PRM_LearningFromMetastableSymmetricTiltGBs_PhysicsBasedDescriptors.pdf` | 10.41 MB | PDF 文档。 |
-| `05_文献\Feature engineering descriptors, transforms, and machine learning for grain boundaries and variable-sized atom clusters.pdf` | 2.77 MB | PDF 文档。 |
-| `05_文献\笔记_SOAP原理_信息来源与参考文献.pdf` | 358.5 KB | PDF 文档。 |
-| `05_文献\笔记_SOAP原理_结构有序无序度表征.pdf` | 421.7 KB | PDF 文档。 |
-
 ### 文档（10 个，35.3 KB）
 
 | 文件 | 大小 | 用途 |
@@ -606,7 +503,7 @@
 
 ## 归档区：为溯源保留的历史副本
 
-`_archive` — 159 个文件，10.27 MB
+`_archive` — 154 个文件，2.91 MB
 
 ### 结论（10 个，2.20 MB）
 
@@ -623,26 +520,11 @@
 | `GB_project_20260819\archive\old_versions\legacy_generator\output\Sigma5_310_grainID.xyz` | 147.3 KB | 扩展 XYZ 结构文件，可携带每原子附加列。 | 3,224 原子 · 附加列: Lattice="-35.1000000000 35.1000000000 70.2000000000 42.1200000000 -42.1200000000 21.0600000000 10.5300000000 10.5300000000 -10.5300000000" Properties=species:S:1:pos:R:3:grain_id:R:1 |
 | `GB_project_20260819\archive\old_versions\v2_obsolete_20260802_150439\DO_NOT_USE.txt` | 179 B | 纯文本结果或检查报告。 |  |
 
-### 续算（2 个，556.0 KB）
-
-| 文件 | 大小 | 用途 |
-|---|---|---|
-| `GB_project_20260819\archive\old_versions\legacy_generator\lammps_workflow\Sigma5_310_minimized.restart` | 278.0 KB | LAMMPS 续算检查点：保存速度场与热力学状态，只能在 LAMMPS 内读取。 |
-| `GB_project_20260819\archive\old_versions\legacy_generator\lammps_workflow\final_gb.restart` | 278.0 KB | LAMMPS 续算检查点：保存速度场与热力学状态，只能在 LAMMPS 内读取。 |
-
-### 中间（2 个，6.81 MB）
-
-| 文件 | 大小 | 用途 | 内容分析 |
-|---|---|---|---|
-| `GB_project_20260819\archive\old_versions\legacy_generator\lammps_workflow\traj_anneal.dump` | 1.89 MB | LAMMPS 轨迹：该阶段的过程演化，多帧记录。 | 轨迹 20 帧 · timestep 1,000 → 20,000 · 3,224 原子 |
-| `GB_project_20260819\archive\old_versions\legacy_generator\lammps_workflow\traj_quench.dump` | 4.92 MB | LAMMPS 轨迹：该阶段的过程演化，多帧记录。 | 轨迹 52 帧 · timestep 0 → 50,044 · 3,224 原子 |
-
-### 追溯（6 个，281.0 KB）
+### 追溯（5 个，272.2 KB）
 
 | 文件 | 大小 | 用途 | 内容分析 |
 |---|---|---|---|
 | `GB_project_20260819\_unique_preserved\early_env_test\kim.log` | 6.2 KB | OpenKIM 势函数调用日志，记录实际加载的模型标识。 |  |
-| `GB_project_20260819\archive\legacy\li_gb_project\lammps_test\log.lammps` | 8.8 KB | LAMMPS 运行日志，含各阶段数值历史与断言结果。 |  |
 | `GB_project_20260819\archive\old_versions\legacy_generator\lammps_workflow\kim.log` | 240.6 KB | OpenKIM 势函数调用日志，记录实际加载的模型标识。 |  |
 | `GB_project_20260819\archive\old_versions\legacy_generator\lammps_workflow\log.lammps` | 17.9 KB | LAMMPS 运行日志，含各阶段数值历史与断言结果。 |  |
 | `Li_metastable_2x2_legacy_20260819\legacy\reports_v2\ENVIRONMENT.txt` | 180 B | 纯文本结果或检查报告。 |  |
@@ -804,13 +686,19 @@
 
 ## 项目根与工具
 
-仓库根目录与 `tools/` — 9 个文件，74.8 KB
+仓库根目录与 `tools/` — 11 个文件，115.8 KB
 
-### 代码（4 个，59.1 KB）
+### 结论（1 个，20.2 KB）
+
+| 文件 | 大小 | 用途 | 内容分析 |
+|---|---|---|---|
+| `DATA_MANIFEST.csv` | 20.2 KB | 数据表。 | 71 行 × 7 列 [﻿相对路径, 文件名, 扩展名, 层次, 大小(字节), 用途说明 …] |
+
+### 代码（4 个，64.6 KB）
 
 | 文件 | 大小 | 用途 |
 |---|---|---|
-| `tools\artifact_ledger.py` | 19.9 KB | Python 脚本。 |
+| `tools\artifact_ledger.py` | 25.3 KB | Python 脚本。 |
 | `tools\build_artifact_catalog.py` | 30.2 KB | Python 脚本。 |
 | `tools\compute_gb_energy.py` | 6.3 KB | Python 脚本。 |
 | `tools\install_git_hook.ps1` | 2.7 KB | PowerShell 脚本。 |
@@ -822,10 +710,11 @@
 | `.gitignore` | 1.0 KB | Git 忽略规则，指定哪些文件不纳入版本控制。 |
 | `refresh_ledger.cmd` | 679 B | （未分类） |
 
-### 文档（3 个，14.0 KB）
+### 文档（4 个，29.3 KB）
 
 | 文件 | 大小 | 用途 |
 |---|---|---|
 | `.gitattributes` | 748 B | （未分类） |
+| `DATA_MANIFEST.md` | 15.3 KB | Markdown 文档。 |
 | `PROJECT_REVIEW.md` | 10.6 KB | Markdown 文档。 |
 | `tools\README.md` | 2.7 KB | Markdown 文档。 |
