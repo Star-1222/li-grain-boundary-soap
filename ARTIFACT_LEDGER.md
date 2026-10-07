@@ -3,23 +3,24 @@
 > 本文件由 `artifact_ledger.py` 自动生成，请勿手工编辑。
 > 每次重新生成都会刷新文件清单、校验和与内容分析。
 
-- 文件总数：**507**
-- 总体积：**47.78 MB**
+- 文件总数：**518**
+- 总体积：**54.38 MB**
 
 ## 层次分布
 
 | 层次 | 文件数 | 体积 | 占总比 | 处置 |
 |---|---:|---:|---:|---|
-| **结论** | 192 | 35.05 MB | 73.4% | 必须保留 |
-| **追溯** | 39 | 1.06 MB | 2.2% | 随代码进版本控制 |
-| **代码** | 134 | 902.8 KB | 1.8% | 进版本控制 |
-| **输入** | 51 | 8.10 MB | 16.9% | 进版本控制 |
-| **文档** | 91 | 2.69 MB | 5.6% | 进版本控制 |
+| **结论** | 192 | 35.05 MB | 64.5% | 必须保留 |
+| **续算** | 11 | 6.60 MB | 12.1% | 保留至后续阶段完成 |
+| **追溯** | 39 | 1.06 MB | 2.0% | 随代码进版本控制 |
+| **代码** | 134 | 902.8 KB | 1.6% | 进版本控制 |
+| **输入** | 51 | 8.10 MB | 14.9% | 进版本控制 |
+| **文档** | 91 | 2.69 MB | 4.9% | 进版本控制 |
 
 ## 自动识别的结构特征
 
-- 结论性产物只有 35.05 MB，占 73.4%。
-- 决定“可复现”的追溯+代码+输入合计仅 10.04 MB（21.0%），是最该保护的一层。
+- 结论性产物只有 35.05 MB，占 64.5%。
+- 决定“可复现”的追溯+代码+输入合计仅 10.04 MB（18.5%），是最该保护的一层。
 - 双语拼接文档 16 份。中英文同处一文件，改动一侧另一侧会静默过期，建议拆分为 `README.md` + `README.en.md`。
 
 ## 交叉核对：报告声称 vs 数据实测
@@ -78,7 +79,7 @@
 
 ## 项目二：阶段一验收包（14400 原子 2x2）
 
-`Li_Sigma5_310_2x2_阶段一验收_2026-09-05_new` — 35 个文件，11.75 MB
+`Li_Sigma5_310_2x2_阶段一验收_2026-09-05_new` — 39 个文件，16.59 MB
 
 ### 结论（10 个，11.43 MB）
 
@@ -94,6 +95,15 @@
 | `Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\5_保持10K零压\p1_held_0K.data` | 1.82 MB | 终态在 0 K 下再做一次复核的结构，对应验收步骤 F（晶界 38.1%/38.0% BCC，内部 98.7% BCC）。 | 14,400 原子 · 盒子 66.17 × 66.10 × 69.66 Å · timestep 187 |
 | `Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\5_保持10K零压\p1_hold_pressure.stats` | 171 B | ★ 保持段的压力时间序列。“10 K、0 bar 下维持”这个结论的直接证据来源。 | 2 个采样点 · 标量时均压力 -0.87 bar · 分量 Pxx=-187, Pyy=+383, Pzz=-199 · ⚠ 分量极差 582 bar，各向异性显著 |
 | `Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\6_结构分析\cna_phase1_report.txt` | 3.3 KB | ★ CNA 结构分析结论：各阶段 BCC 分数（晶界约 38%、晶粒内部 98.7%）。验收判据“晶界真实无序、内部保持 BCC”靠它成立。 | 晶界 BCC: initial 73.3% → p1_min0 60.0% → casecheck 43.7% → p1_final 38.1% · 晶内 BCC: 100.0% → 100.0% → 99.9% → 98.7% · 无序带宽: 2.5 Å → 4.5 Å → 4.5 Å → 6.5 Å |
+
+### 续算（4 个，4.84 MB）
+
+| 文件 | 大小 | 用途 |
+|---|---|---|
+| `Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\1_零应力弛豫0K\p1_min0.restart` | 1.21 MB | LAMMPS 续算检查点：保存速度场与热力学状态，只能在 LAMMPS 内读取。 |
+| `Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\2_退火363K零压\p1_annealed.restart` | 1.21 MB | LAMMPS 续算检查点：保存速度场与热力学状态，只能在 LAMMPS 内读取。 |
+| `Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\4_淬火10K\p1_quenched.restart` | 1.21 MB | LAMMPS 续算检查点：保存速度场与热力学状态，只能在 LAMMPS 内读取。 |
+| `Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\5_保持10K零压\p1_held.restart` | 1.21 MB | ★ 阶段二的起点。验收报告明确指定用这个检查点继续后续计算。 |
 
 ### 追溯（10 个，288.9 KB）
 
@@ -142,7 +152,7 @@
 
 ## 项目一：锂晶界主项目
 
-`Lithium_GrainBoundary_Project` — 117 个文件，10.86 MB
+`Lithium_GrainBoundary_Project` — 122 个文件，12.08 MB
 
 ### 结论（21 个，7.78 MB）
 
@@ -169,6 +179,16 @@
 | `Li_Sigma5_310_metastable_2x2\stage0_build_validate\Sigma5_310_K6_J6_L20_grain_id.xyz` | 668.2 KB | 扩展 XYZ 结构文件，可携带每原子附加列。 | 14,400 原子 · 附加列: Li x y z grain_id |
 | `Li_Sigma5_310_metastable_2x2\stage0_build_validate\structure.data` | 1.30 MB | 初始结构的 LAMMPS 格式。 | 14,400 原子 · 盒子 66.53 × 66.53 × 70.12 Å |
 | `Li_Sigma5_310_metastable_2x2\stage0_build_validate\structure.xyz` | 668.3 KB | 初始结构的通用格式。 | 14,400 原子 · 附加列: Lattice="66.5252109796 0.0 0.0 0.0 66.5252109796 0.0 0.0 0.0 70.1237295062" Properties=species:S:1:pos:R:3:grain_id:I:1 pbc="T T T" |
+
+### 续算（5 个，1.22 MB）
+
+| 文件 | 大小 | 用途 |
+|---|---|---|
+| `01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\data\annealed\stage2_annealed.restart` | 310.3 KB | LAMMPS 续算检查点：保存速度场与热力学状态，只能在 LAMMPS 内读取。 |
+| `01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\data\bulk\bulk_Li_minimized.restart` | 11.9 KB | 体相弛豫的续算检查点。 |
+| `01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\data\final\stage4_final.restart` | 310.3 KB | 最终结构的续算检查点，含速度与热力学状态。 |
+| `01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\data\minimized\stage1_minimized.restart` | 310.3 KB | LAMMPS 续算检查点：保存速度场与热力学状态，只能在 LAMMPS 内读取。 |
+| `01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\data\quenched\stage3_quenched.restart` | 310.3 KB | LAMMPS 续算检查点：保存速度场与热力学状态，只能在 LAMMPS 内读取。 |
 
 ### 追溯（24 个，525.2 KB）
 
@@ -502,7 +522,7 @@
 
 ## 归档区：为溯源保留的历史副本
 
-`_archive` — 154 个文件，2.91 MB
+`_archive` — 156 个文件，3.45 MB
 
 ### 结论（10 个，2.20 MB）
 
@@ -518,6 +538,13 @@
 | `GB_project_20260819\archive\old_versions\legacy_generator\output\Sigma5_310.xyz` | 226.7 KB | 扩展 XYZ 结构文件，可携带每原子附加列。 | 3,224 原子 |
 | `GB_project_20260819\archive\old_versions\legacy_generator\output\Sigma5_310_grainID.xyz` | 147.3 KB | 扩展 XYZ 结构文件，可携带每原子附加列。 | 3,224 原子 · 附加列: Lattice="-35.1000000000 35.1000000000 70.2000000000 42.1200000000 -42.1200000000 21.0600000000 10.5300000000 10.5300000000 -10.5300000000" Properties=species:S:1:pos:R:3:grain_id:R:1 |
 | `GB_project_20260819\archive\old_versions\v2_obsolete_20260802_150439\DO_NOT_USE.txt` | 179 B | 纯文本结果或检查报告。 |  |
+
+### 续算（2 个，556.0 KB）
+
+| 文件 | 大小 | 用途 |
+|---|---|---|
+| `GB_project_20260819\archive\old_versions\legacy_generator\lammps_workflow\Sigma5_310_minimized.restart` | 278.0 KB | LAMMPS 续算检查点：保存速度场与热力学状态，只能在 LAMMPS 内读取。 |
+| `GB_project_20260819\archive\old_versions\legacy_generator\lammps_workflow\final_gb.restart` | 278.0 KB | LAMMPS 续算检查点：保存速度场与热力学状态，只能在 LAMMPS 内读取。 |
 
 ### 追溯（5 个，272.2 KB）
 
@@ -685,13 +712,13 @@
 
 ## 项目根与工具
 
-仓库根目录与 `tools/` — 11 个文件，118.3 KB
+仓库根目录与 `tools/` — 11 个文件，112.3 KB
 
-### 结论（1 个，20.2 KB）
+### 结论（1 个，16.8 KB）
 
 | 文件 | 大小 | 用途 | 内容分析 |
 |---|---|---|---|
-| `DATA_MANIFEST.csv` | 20.2 KB | 数据表。 | 71 行 × 7 列 [﻿相对路径, 文件名, 扩展名, 层次, 大小(字节), 用途说明 …] |
+| `DATA_MANIFEST.csv` | 16.8 KB | 数据表。 | 60 行 × 7 列 [﻿相对路径, 文件名, 扩展名, 层次, 大小(字节), 用途说明 …] |
 
 ### 代码（4 个，67.2 KB）
 
@@ -702,18 +729,18 @@
 | `tools\compute_gb_energy.py` | 6.3 KB | Python 脚本。 |
 | `tools\install_git_hook.ps1` | 2.7 KB | PowerShell 脚本。 |
 
-### 输入（2 个，1.7 KB）
+### 输入（2 个，1.9 KB）
 
 | 文件 | 大小 | 用途 |
 |---|---|---|
-| `.gitignore` | 1.0 KB | Git 忽略规则，指定哪些文件不纳入版本控制。 |
+| `.gitignore` | 1.3 KB | Git 忽略规则，指定哪些文件不纳入版本控制。 |
 | `refresh_ledger.cmd` | 657 B | （未分类） |
 
-### 文档（4 个，29.2 KB）
+### 文档（4 个，26.4 KB）
 
 | 文件 | 大小 | 用途 |
 |---|---|---|
 | `.gitattributes` | 748 B | （未分类） |
-| `DATA_MANIFEST.md` | 15.3 KB | Markdown 文档。 |
+| `DATA_MANIFEST.md` | 12.4 KB | Markdown 文档。 |
 | `PROJECT_REVIEW.md` | 10.6 KB | Markdown 文档。 |
 | `tools\README.md` | 2.7 KB | Markdown 文档。 |

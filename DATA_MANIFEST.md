@@ -5,14 +5,13 @@
 > 排除在仓库之外、但**仍然重要**的本地数据。
 > 全新克隆不含这些文件 —— 本清单即为还原它们时的核对表。
 
-- 条目数：**71**
-- 合计体积：**472.84 MB**
+- 条目数：**60**
+- 合计体积：**466.24 MB**
 
 ## 为什么不在仓库里
 
 | 层次 | 文件数 | 体积 | 原因 |
 |---|---:|---:|---|
-| **续算** | 11 | 6.60 MB | LAMMPS 二进制检查点，含速度场；**无法由结构文件还原** |
 | **中间** | 14 | 283.67 MB | 可由上游输入与脚本重算，代价是算力 |
 | **追溯** | 1 | 8.8 KB | 运行日志，体积偏大 |
 | **文献** | 43 | 182.49 MB | 第三方论文，体积大且有版权 |
@@ -67,22 +66,12 @@
 | `Ni_SOAP_Method_Exploration_by_Stage\05_文献\1-s2.0-S1359645415300860-main.pdf` | 1.75 MB | 文献 | `91adda1828777ead` | PDF 文档。 |
 | `Lithium_GrainBoundary_Project\00_Literature\soap\2020_Wagih_NatCommun_GBSegregationEnergySpectra_Polycrystals.pdf` | 1.28 MB | 文献 | `caf2af0725887b63` | PDF 文档。 |
 | `Ni_SOAP_Method_Exploration_by_Stage\05_文献\2020_Wagih_NatCommun_GBSegregationEnergySpectra_Polycrystals.pdf` | 1.28 MB | 文献 | `caf2af0725887b63` | PDF 文档。 |
-| `Li_Sigma5_310_2x2_阶段一验收_2026-09-05_new\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\1_零应力弛豫0K\p1_min0.restart` | 1.21 MB | 续算 | `d313dd88336833d4` | LAMMPS 续算检查点：保存速度场与热力学状态，只能在 LAMMPS 内读取。 |
-| `Li_Sigma5_310_2x2_阶段一验收_2026-09-05_new\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\2_退火363K零压\p1_annealed.restart` | 1.21 MB | 续算 | `f5d5ae15bd47f480` | LAMMPS 续算检查点：保存速度场与热力学状态，只能在 LAMMPS 内读取。 |
-| `Li_Sigma5_310_2x2_阶段一验收_2026-09-05_new\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\4_淬火10K\p1_quenched.restart` | 1.21 MB | 续算 | `c8b6969e25018eac` | LAMMPS 续算检查点：保存速度场与热力学状态，只能在 LAMMPS 内读取。 |
-| `Li_Sigma5_310_2x2_阶段一验收_2026-09-05_new\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\5_保持10K零压\p1_held.restart` | 1.21 MB | 续算 | `72ac717035b23e87` | ★ 阶段二的起点。验收报告明确指定用这个检查点继续后续计算。 |
 | `Lithium_GrainBoundary_Project\00_Literature\lithium_metal\The growth mechanism of lithium dendrites and its.pdf` | 756.1 KB | 文献 | `b082f9a80de4dfc6` | PDF 文档。 |
 | `Lithium_GrainBoundary_Project\07_Documentation\presentations\Li_metal_metastable_atomic_structure_mechanical_analysis.pdf` | 678.0 KB | 文献 | `23bd55d59dc7b96a` | PDF 文档。 |
 | `Lithium_GrainBoundary_Project\00_Literature\soap\笔记_SOAP原理_结构有序无序度表征.pdf` | 421.7 KB | 文献 | `093369c5d22e2e25` | PDF 文档。 |
 | `Ni_SOAP_Method_Exploration_by_Stage\05_文献\笔记_SOAP原理_结构有序无序度表征.pdf` | 421.7 KB | 文献 | `093369c5d22e2e25` | PDF 文档。 |
 | `Lithium_GrainBoundary_Project\00_Literature\soap\笔记_SOAP原理_信息来源与参考文献.pdf` | 358.5 KB | 文献 | `aff3850764f097b2` | PDF 文档。 |
 | `Ni_SOAP_Method_Exploration_by_Stage\05_文献\笔记_SOAP原理_信息来源与参考文献.pdf` | 358.5 KB | 文献 | `aff3850764f097b2` | PDF 文档。 |
-| `Lithium_GrainBoundary_Project\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\data\annealed\stage2_annealed.restart` | 310.3 KB | 续算 | `f59422f65a12a3f8` | LAMMPS 续算检查点：保存速度场与热力学状态，只能在 LAMMPS 内读取。 |
-| `Lithium_GrainBoundary_Project\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\data\final\stage4_final.restart` | 310.3 KB | 续算 | `2402868224082244` | 最终结构的续算检查点，含速度与热力学状态。 |
-| `Lithium_GrainBoundary_Project\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\data\minimized\stage1_minimized.restart` | 310.3 KB | 续算 | `b7184f69b1f0512a` | LAMMPS 续算检查点：保存速度场与热力学状态，只能在 LAMMPS 内读取。 |
-| `Lithium_GrainBoundary_Project\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\data\quenched\stage3_quenched.restart` | 310.3 KB | 续算 | `7fc8c1e3030364cf` | LAMMPS 续算检查点：保存速度场与热力学状态，只能在 LAMMPS 内读取。 |
-| `_archive\GB_project_20260819\archive\old_versions\legacy_generator\lammps_workflow\Sigma5_310_minimized.restart` | 278.0 KB | 续算 | `0a0a56d183c78ad7` | LAMMPS 续算检查点：保存速度场与热力学状态，只能在 LAMMPS 内读取。 |
-| `_archive\GB_project_20260819\archive\old_versions\legacy_generator\lammps_workflow\final_gb.restart` | 278.0 KB | 续算 | `2c3c066af42c11f3` | LAMMPS 续算检查点：保存速度场与热力学状态，只能在 LAMMPS 内读取。 |
 | `Ni_SOAP_Method_Exploration_by_Stage\Stage02_SOAP表示与审计\03_输出\stage2_5_raw_soap_vectors.npy` | 261.5 KB | 中间 | `e91756c89f16dfeb` | Stage02.5 表示审计产物。 |
 | `Lithium_GrainBoundary_Project\00_Literature\soap\NI_SOAP_PROOF_FINAL_BI.html` | 67.0 KB | 文献 | `e9b873ad47ffbd61` | HTML 报告（含公式渲染）。 |
 | `Ni_SOAP_Method_Exploration_by_Stage\Stage01_数据准备与SOAP初测\03_输出\soap_vectors_metastable.npz` | 39.5 KB | 中间 | `195920ac2d0414b4` | NumPy 压缩数组（中间计算量）。 |
@@ -91,7 +80,6 @@
 | `tools\__pycache__\build_artifact_catalog.cpython-312.pyc` | 35.1 KB | 文档 | `5f1438b0afe15528` | （未分类） |
 | `Lithium_GrainBoundary_Project\00_Literature\soap\NI_SOAP_PROOF_FINAL_BI_files\katex.min.css` | 23.3 KB | 文献 | `0289a02cf451a44d` | 网页样式表（随 HTML 报告）。 |
 | `Ni_SOAP_Method_Exploration_by_Stage\Stage02_SOAP表示与审计\03_输出\stage2_75_bulk_reference_vectors.npy` | 16.0 KB | 中间 | `81a636b05b9c1251` | Stage02.75 全人口 SOAP 与距离审计产物。 |
-| `Lithium_GrainBoundary_Project\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\data\bulk\bulk_Li_minimized.restart` | 11.9 KB | 续算 | `14c13c90994c83dd` | 体相弛豫的续算检查点。 |
 | `_archive\GB_project_20260819\archive\legacy\li_gb_project\lammps_test\log.lammps` | 8.8 KB | 追溯 | `ee4069064f9d2f57` | LAMMPS 运行日志，含各阶段数值历史与断言结果。 |
 
 ## 还原步骤

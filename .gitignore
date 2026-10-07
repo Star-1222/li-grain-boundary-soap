@@ -22,8 +22,12 @@ venv/
 *.dump
 *.npy
 *.npz
-*.restart
 *.log.lammps
+
+# 注意：*.restart 刻意「不」忽略。
+# 检查点保存了速度场与热力学状态，仅凭 .data 结构文件无法还原；
+# 而 .data 写出的只是坐标。丢失后必须从上一阶段重跑。
+# 体积很小（全部 11 个共约 6.6 MB），值得入库。
 
 # --- 单体超大数据表（结论由同目录的汇总表承载）---
 stage2_75_pairwise_sample.csv
