@@ -500,8 +500,8 @@
 项目根与工具,DATA_MANIFEST.csv,DATA_MANIFEST.csv,.csv,结论,20708,数据表。,"71 行 × 7 列 [﻿相对路径, 文件名, 扩展名, 层次, 大小(字节), 用途说明 …]",080d6b6a48304a82a87664d54a17d24cc031f0bf129b931cccff2f421371f2d1
 项目根与工具,DATA_MANIFEST.md,DATA_MANIFEST.md,.md,文档,15617,Markdown 文档。,,8dfd0f13c6e40326ce06d9edb127153559bfa22e2175b5037cd5dfa3f74fabf8
 项目根与工具,PROJECT_REVIEW.md,PROJECT_REVIEW.md,.md,文档,10847,Markdown 文档。,,057a0f2ae486d02eb30aeaa3689eb1c2f3d984d4c9a59b09ec6a8781e4af2a6d
-项目根与工具,refresh_ledger.cmd,refresh_ledger.cmd,.cmd,输入,679,（未分类）,,0360b9107b95b95c40aa99e11cbb6db5174746aba7c1227e84fb39997014aeda
-项目根与工具,tools\artifact_ledger.py,artifact_ledger.py,.py,代码,25938,Python 脚本。,,4510c35a881158fd93e47b70623df4b75e93c52954b4f95eacb1213b584c4bbd
+项目根与工具,refresh_ledger.cmd,refresh_ledger.cmd,.cmd,输入,657,（未分类）,,b08e57c1262d97f326a4508ce91dc1e0cf3f4f762becf739c17f8563a3e8bc0e
+项目根与工具,tools\artifact_ledger.py,artifact_ledger.py,.py,代码,28563,Python 脚本。,,8ec408ea2d24f92a98a5ff4490084a7e68ec8c2412ed4758ffc33d48effaf253
 项目根与工具,tools\build_artifact_catalog.py,build_artifact_catalog.py,.py,代码,30945,Python 脚本。,,93db9b0542d2b748583022694752999ea27ba33ad73126113fa33f341d7149bf
 项目根与工具,tools\compute_gb_energy.py,compute_gb_energy.py,.py,代码,6410,Python 脚本。,,27a40dce4dd0bd475b542bda5932aa4033c3a2f6a23c89a02e6e6cb6df54ce09
 项目根与工具,tools\install_git_hook.ps1,install_git_hook.ps1,.ps1,代码,2807,PowerShell 脚本。,,cade355890b48472ec86081230acb4dd88d369889b9de42e261a3b3ce23f0684

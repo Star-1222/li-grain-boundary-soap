@@ -328,6 +328,69 @@ def ignored_paths(root: Path):
     return _git_paths(root, ["--others", "--ignored", "--exclude-standard"])
 
 
+def git_blob_digests(root: Path):
+    """Map repo-relative path -> (sha256, size) of the *repository* content.
+
+    Hashing the working-tree bytes makes the ledger depend on each machine's
+    core.autocrlf / core.eol settings: the same commit checks out as LF on one
+    box and CRLF on another. Hashing the git blob instead gives one answer
+    everywhere, which is what makes a fresh clone reproduce the ledger exactly.
+    """
+    try:
+        ls = subprocess.run(
+            ["git", "-C", str(root), "ls-files", "-s", "-z"],
+            capture_output=True, check=True,
+        )
+    except (OSError, subprocess.SubprocessError):
+        return None
+    if ls.returncode != 0:
+        return None
+
+    path_to_sha = {}
+    for rec in ls.stdout.decode("utf-8", "replace").split("\0"):
+        if not rec:
+            continue
+        meta, _, path = rec.partition("\t")
+        parts = meta.split()
+        if len(parts) >= 2:
+            path_to_sha[path.replace("/", os.sep)] = parts[1]
+    if not path_to_sha:
+        return None
+
+    shas = list(dict.fromkeys(path_to_sha.values()))
+    try:
+        proc = subprocess.run(
+            ["git", "-C", str(root), "cat-file", "--batch"],
+            input=("\n".join(shas) + "\n").encode(),
+            capture_output=True, check=True,
+        )
+    except (OSError, subprocess.SubprocessError):
+        return None
+
+    digest_by_sha = {}
+    buf = proc.stdout
+    pos = 0
+    while pos < len(buf):
+        nl = buf.find(b"\n", pos)
+        if nl < 0:
+            break
+        header = buf[pos:nl].decode("utf-8", "replace").split()
+        pos = nl + 1
+        if len(header) >= 3 and header[1] == "blob":
+            size = int(header[2])
+            blob = buf[pos:pos + size]
+            pos += size + 1
+            digest_by_sha[header[0]] = (hashlib.sha256(blob).hexdigest(), size)
+        else:
+            break
+
+    out = {}
+    for p, sha in path_to_sha.items():
+        if sha in digest_by_sha:
+            out[p] = digest_by_sha[sha]
+    return out
+
+
 # --- cross-checks ------------------------------------------------------------
 
 def cross_checks(rows: list[dict]) -> list[str]:
@@ -484,7 +547,9 @@ def write_data_manifest() -> int:
     md.append("3. 重新生成台账：双击 `refresh_ledger.cmd`")
     md.append("")
 
-    DATA_MD.write_text("\n".join(md), encoding="utf-8")
+    # newline="\n" 必须显式指定：Windows 上 write_text 默认把 \n 转成 \r\n，
+    # 会导致工作区内容与 git 规范化后的结果不一致。
+    DATA_MD.write_text("\n".join(md), encoding="utf-8", newline="\n")
     with DATA_CSV.open("w", newline="", encoding="utf-8-sig") as fh:
         w = csv.writer(fh, lineterminator="\n")
         w.writerow(["相对路径", "文件名", "扩展名", "层次", "大小(字节)",
@@ -515,6 +580,7 @@ def main() -> int:
         write_data_manifest()
     # 在 git 仓库内，台账只覆盖仓库内容，这样任何克隆副本重新生成的结果都一致。
     tracked = tracked_paths(ROOT)
+    blob_digests = git_blob_digests(ROOT) or {}
     for proj, title in base.PROJECTS:
         for path in base.iter_project_files(proj):
             # 跳过台账自身：把它的哈希写进台账会导致每次生成都自变。
@@ -524,6 +590,13 @@ def main() -> int:
             if tracked is not None and rel not in tracked:
                 continue
             ext = path.suffix.lower()
+            # 已跟踪文件用仓库内容的哈希与大小，保证跨机器一致；
+            # 未跟踪文件只能按工作区实际内容计算。
+            digest = blob_digests.get(rel)
+            if digest:
+                size, sha256 = digest[1], digest[0]
+            else:
+                size, sha256 = path.stat().st_size, base.sha256(path)
             rows.append({
                 "group": proj,
                 "project": title,
@@ -531,10 +604,10 @@ def main() -> int:
                 "name": path.name,
                 "ext": ext or "(无)",
                 "layer": base.classify_layer(rel, ext, path.name),
-                "size": path.stat().st_size,
+                "size": size,
                 "purpose": base.describe(rel, ext, path.name),
                 "analysis": probe(path, ext),
-                "sha256": base.sha256(path),
+                "sha256": sha256,
             })
 
     if not rows:
@@ -644,7 +717,7 @@ def main() -> int:
                     md.append(f"| `{shown}` | {base.human(r['size'])} | {r['purpose']} |")
             md.append("")
 
-    LEDGER_MD.write_text("\n".join(md), encoding="utf-8")
+    LEDGER_MD.write_text("\n".join(md), encoding="utf-8", newline="\n")
     with LEDGER_CSV.open("w", newline="", encoding="utf-8-sig") as fh:
         # 显式 LF：csv.writer 默认 \r\n，会被 .gitattributes 归一化，
         # 导致工作区永远显示"已修改"。
@@ -657,7 +730,8 @@ def main() -> int:
 
     if MIRROR_DIR is not None:
         MIRROR_DIR.mkdir(parents=True, exist_ok=True)
-        (MIRROR_DIR / LEDGER_MD.name).write_text("\n".join(md), encoding="utf-8")
+        (MIRROR_DIR / LEDGER_MD.name).write_text(
+            "\n".join(md), encoding="utf-8", newline="\n")
         (MIRROR_DIR / LEDGER_CSV.name).write_bytes(LEDGER_CSV.read_bytes())
 
     if not args.quiet:
