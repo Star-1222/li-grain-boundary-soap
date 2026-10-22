@@ -713,7 +713,7 @@
 
 ## 项目根与工具
 
-仓库根目录与 `tools/` — 13 个文件，127.5 KB
+仓库根目录与 `tools/` — 13 个文件，127.6 KB
 
 ### 结论（1 个，16.8 KB）
 
@@ -730,11 +730,11 @@
 | `tools\compute_gb_energy.py` | 6.3 KB | Python 脚本。 |
 | `tools\install_git_hook.ps1` | 2.7 KB | PowerShell 脚本。 |
 
-### 输入（2 个，1.9 KB）
+### 输入（2 个，2.1 KB）
 
 | 文件 | 大小 | 用途 |
 |---|---|---|
-| `.gitignore` | 1.3 KB | Git 忽略规则，指定哪些文件不纳入版本控制。 |
+| `.gitignore` | 1.5 KB | Git 忽略规则，指定哪些文件不纳入版本控制。 |
 | `refresh_ledger.cmd` | 657 B | （未分类） |
 
 ### 文档（6 个，41.4 KB）

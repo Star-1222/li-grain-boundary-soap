@@ -508,7 +508,7 @@
 归档区：为溯源保留的历史副本,_archive\Li_metastable_2x2_legacy_20260819\stage0_build_validate\validation_report.md,validation_report.md,.md,文档,1813,Markdown 文档。,,e1b8041cdc71e21a9ef83b5fb46b729d91d484a287258d2523c6d6c3ddb2b2e3
 归档区：为溯源保留的历史副本,_archive\Li_metastable_2x2_legacy_20260819\stage0_build_validate\verification_report.md,verification_report.md,.md,文档,1813,Markdown 文档。,,e1b8041cdc71e21a9ef83b5fb46b729d91d484a287258d2523c6d6c3ddb2b2e3
 项目根与工具,.gitattributes,.gitattributes,(无),文档,748,（未分类）,,4c0a9ade8fcbcd679ff5b73e003ccbdeb18b5dc6846c0c2f18081013c26c68a3
-项目根与工具,.gitignore,.gitignore,(无),输入,1335,Git 忽略规则，指定哪些文件不纳入版本控制。,,e5dd0f8edd684e1b1039c127e1f7a47fd4ab30003e5b0c40bb39c258f9490bdd
+项目根与工具,.gitignore,.gitignore,(无),输入,1505,Git 忽略规则，指定哪些文件不纳入版本控制。,,f3e429fdb339bd0d58e4bee1ee3d716f3eccc2146ade319e8f696dbfc25e95fd
 项目根与工具,DATA_MANIFEST.csv,DATA_MANIFEST.csv,.csv,结论,17207,数据表。,"60 行 × 7 列 [﻿相对路径, 文件名, 扩展名, 层次, 大小(字节), 用途说明 …]",9778fbfb1008720461f4ee2349c370549d3b1b9e63b71b36c018296aa576453d
 项目根与工具,DATA_MANIFEST.md,DATA_MANIFEST.md,.md,文档,12684,Markdown 文档。,,fa3d369bb149092bf3bd34de0c4d6b4332844afa408b5564287c6b103b9191fd
 项目根与工具,PROJECT_REVIEW.md,PROJECT_REVIEW.md,.md,文档,10847,Markdown 文档。,,057a0f2ae486d02eb30aeaa3689eb1c2f3d984d4c9a59b09ec6a8781e4af2a6d
