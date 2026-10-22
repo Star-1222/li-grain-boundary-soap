@@ -3,7 +3,7 @@
 > 本文件由 `artifact_ledger.py` 自动生成，请勿手工编辑。
 > 每次重新生成都会刷新文件清单、校验和与内容分析。
 
-- 文件总数：**520**
+- 文件总数：**521**
 - 总体积：**54.40 MB**
 
 ## 层次分布
@@ -15,7 +15,7 @@
 | **追溯** | 39 | 1.06 MB | 2.0% | 随代码进版本控制 |
 | **代码** | 134 | 902.9 KB | 1.6% | 进版本控制 |
 | **输入** | 51 | 8.10 MB | 14.9% | 进版本控制 |
-| **文档** | 93 | 2.70 MB | 5.0% | 进版本控制 |
+| **文档** | 94 | 2.71 MB | 5.0% | 进版本控制 |
 
 ## 自动识别的结构特征
 
@@ -152,7 +152,7 @@
 
 ## 项目一：锂晶界主项目
 
-`Lithium_GrainBoundary_Project` — 122 个文件，12.08 MB
+`Lithium_GrainBoundary_Project` — 123 个文件，12.09 MB
 
 ### 结论（21 个，7.78 MB）
 
@@ -282,12 +282,13 @@
 | `Li_Sigma5_310_metastable_2x2\lammps\in.3_quench` | 940 B | Stage 3 输入脚本：以 10 K/ps 从 363 K 淬火到 10 K，把高温无序结构冻结下来。 |
 | `Li_Sigma5_310_metastable_2x2\lammps\in.4_10K_hold` | 863 B | 2×2 实验的 10 K 保持输入脚本（对应 in.4_final 在旧版命名下的同一角色）。 |
 
-### 文档（19 个，2.40 MB）
+### 文档（20 个，2.40 MB）
 
 | 文件 | 大小 | 用途 |
 |---|---|---|
 | `01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\tests\pytest.ini` | 40 B | 测试框架配置。 |
 | `07_Documentation\presentations\Li_metal_metastable_GB_atomic_mechanical_analysis.pptx` | 2.20 MB | 汇报幻灯片。 |
+| `AGENTS.md` | 3.1 KB | Markdown 文档。 |
 | `Li_Sigma5_310_metastable_2x2\stage0_build_validate\grain_map` | 101.7 KB | 2×2 模型的晶粒归属图。 |
 | `Reports\GB_Construction\FINAL_STATUS_BI.md` | 1.0 KB | 双语版报告（中文版与英文版首尾拼接在同一文件内）。 |
 | `Reports\GB_Construction\README_BI.md` | 20.7 KB | 双语版报告（中文版与英文版首尾拼接在同一文件内）。 |
