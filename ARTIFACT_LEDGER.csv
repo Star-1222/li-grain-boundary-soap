@@ -162,6 +162,7 @@
 项目一：锂晶界主项目,Lithium_GrainBoundary_Project\Reports\Team_Reviews\TEAM_REVIEW_Li_Sigma5_2x2_run_20260830_BI.md,TEAM_REVIEW_Li_Sigma5_2x2_run_20260830_BI.md,.md,文档,11266,双语版报告（中文版与英文版首尾拼接在同一文件内）。,,93c0884294bdaf12f26c7e33e0f1da86e5a20fa8bd855a969a7ecb16115f4fed
 项目一：锂晶界主项目,Lithium_GrainBoundary_Project\Reports\Team_Reviews\TEAM_REVIEW_Li_Sigma5_310_metastable_2x2_20260901_BI.md,TEAM_REVIEW_Li_Sigma5_310_metastable_2x2_20260901_BI.md,.md,文档,8316,双语版报告（中文版与英文版首尾拼接在同一文件内）。,,1bdaed4785377254ba8ffe6d2073928dd089639fec8182eaba6913aceec45d1d
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\00_汇总报告\Ni_SOAP_最终报告.md,Ni_SOAP_最终报告.md,.md,文档,6433,★ 方法探索总报告：项目定位、六个 Stage 的结论、十条下一版建议、以及“不能确定”清单。,,d91901f6ce03ed72276883be0907e4e74320cb74f68b9c6ed37148ad00a4147c
+项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\00_汇总报告\SOAP参数确定报告_2026-10-22.md,SOAP参数确定报告_2026-10-22.md,.md,文档,7803,Markdown 文档。,,768a3242875a80152cac5d21bf5350263ebd68a885bfe21f85c3b17d062c7983
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\00_汇总报告\项目文件索引_按阶段.csv,项目文件索引_按阶段.csv,.csv,结论,61602,数据表。,"209 行 × 11 列 [Stage, Category, Subcategory, RelativePath, FileName, Extension …]",6f4b6bfa5999584ad792b5d87edbc5d0ef4a8f19144d63cbff478b3d7dde6c33
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\00_汇总报告\项目文件索引_脚本输出报告_按阶段.md,项目文件索引_脚本输出报告_按阶段.md,.md,文档,3993,Markdown 文档。,,395a7f76e4ef5a174b505a34d0a4d20f3166b11261e846e13927c93c839beb9f
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\06_环境与实现\requirements_soap.txt,requirements_soap.txt,.txt,输入,1487,SOAP 分析的 Python 依赖清单。,,1c5b460066e1ef08285f1b53738cc8a535260ada9fcaf401780bba1a8e022c40
@@ -514,7 +515,6 @@
 项目根与工具,PROJECT_REVIEW.md,PROJECT_REVIEW.md,.md,文档,10847,Markdown 文档。,,057a0f2ae486d02eb30aeaa3689eb1c2f3d984d4c9a59b09ec6a8781e4af2a6d
 项目根与工具,README.md,README.md,.md,文档,4199,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,ec7c57df9d973182d390550c405e9fa9165c55b7a66be3a38b22522cec2aa786
 项目根与工具,refresh_ledger.cmd,refresh_ledger.cmd,.cmd,输入,657,（未分类）,,b08e57c1262d97f326a4508ce91dc1e0cf3f4f762becf739c17f8563a3e8bc0e
-项目根与工具,SOAP参数确定报告_2026-10-22.md,SOAP参数确定报告_2026-10-22.md,.md,文档,7803,Markdown 文档。,,768a3242875a80152cac5d21bf5350263ebd68a885bfe21f85c3b17d062c7983
 项目根与工具,STUDY_GUIDE.md,STUDY_GUIDE.md,.md,文档,11223,Markdown 文档。,,0547b00a49b37c03edf04586c0b9b600f18dac68777c269e3263b2ab0e7b1dab
 项目根与工具,tools\artifact_ledger.py,artifact_ledger.py,.py,代码,28622,Python 脚本。,,561aa827375c349349dc50cd2b2f4d89ceb65c844e3f3a5fdb05fdc0f0090508
 项目根与工具,tools\build_artifact_catalog.py,build_artifact_catalog.py,.py,代码,31053,Python 脚本。,,9a5963b1a712e902e4e5e86615c46b40c4537307ff3549cb9adcd558d8a68b43
