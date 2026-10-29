@@ -1,0 +1,51 @@
+{
+  "name": "final_xonly_fast",
+  "file": "exp_barostat/xonly_fast/final.data",
+  "n_atoms": 14400,
+  "box_A": [
+    65.89344146719816,
+    66.5252109796,
+    70.1237295062
+  ],
+  "volume_per_atom_A3": 21.346710714333383,
+  "a_implied_if_bcc_A": 3.4950520950008013,
+  "reference_a_A": 3.506,
+  "rdf_first_peak_A": 3.0300000000000002,
+  "rdf_first_minimum_A": 3.25,
+  "coordination_rcut_A": 3.25,
+  "A_nn8nnn6_absolute": {
+    "fraction": 0.0,
+    "count": 0
+  },
+  "Aprime_nn8nnn6_rescaled": {
+    "fraction": 0.0,
+    "count": 0
+  },
+  "C_coordination8": {
+    "fraction": 0.7967361111111111,
+    "count": 11473,
+    "mean_CN": 8.13111111111111
+  },
+  "B_steinhardt_bcc": {
+    "fraction": 0.9028472222222222,
+    "count": 13001,
+    "q4_mean": 0.04643077027314788,
+    "q6_mean": 0.481010015772371,
+    "q4_std": 0.017197097492679763,
+    "q6_std": 0.055755660783211126
+  },
+  "w_GB_A": {
+    "coordination": 15.924248354572887,
+    "steinhardt": 7.138456158946466
+  },
+  "profile_coordination": {
+    "bulk_plateau_Q": 1.0,
+    "min_Q": 0.2303370786516854,
+    "threshold_Q": 0.6151685393258427
+  },
+  "profile_steinhardt": {
+    "bulk_plateau_Q": 1.0,
+    "min_Q": 0.07462686567164178,
+    "threshold_Q": 0.5373134328358209
+  }
+}

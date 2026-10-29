@@ -1,0 +1,105 @@
+# =====================================================================
+# Li Sigma5 (310)[001] 2x2 -- 10 K hold : BAROSTAT COMPARISON
+#
+# Purpose: separate the two suspected causes of the residual deviatoric
+#          stress at Stage 4 (see bi-weekly report 2026-10-01..10-15):
+#            (a) barostat coupling  -> compare x-only vs aniso
+#          Size dependence is NOT varied here (same 14400-atom cell, same
+#          restart for both branches) so that the comparison is clean.
+#
+# Branch xonly : fix npt temp 10 10 0.1 x 0.0 0.0 1000.0
+#                only the GB normal is barostatted; y,z frozen at CSL
+#                periodicity. This is the CURRENT protocol.
+# Branch aniso : fix npt temp 10 10 0.1 aniso 0.0 0.0 1000.0
+#                x,y,z each get their own piston; cheaper to reach the
+#                target pressure, but y,z no longer keep the CSL length.
+#
+# Usage:
+#   mpirun -np 12 lmp-kim -in lammps/in.baro_hold \
+#     -var outdir /home/lenovo/Li_meta_2x2/exp_barostat/xonly \
+#     -var baro   xonly \
+#     -var nsteps 20000 \
+#     -var restart /home/lenovo/Li_meta_2x2/stage3b_quench/stage3b_quenched.restart \
+#     -var kim_model SNAP_ZuoChenLi_2019_Li__MO_732106099012_000 \
+#     -log logs/baro_xonly.lammps
+# =====================================================================
+
+units           metal
+atom_style      atomic
+boundary        p p p
+
+# CNA cutoff for BCC Li: 1NN = sqrt(3)/2*a = 3.036 A, 2NN = a = 3.506 A.
+# 3.27 A sits between the two shells so CNA keeps only the 1NN bond set.
+# NOTE: this is a compromise value for the strained GB region; both branches
+# use the identical cutoff, so the branch-to-branch comparison stays fair.
+variable        cna_cut  equal 3.27
+
+read_restart    ${restart}
+
+pair_style      kim ${kim_model}
+pair_coeff      * * Li
+
+timestep        0.001
+reset_timestep  0
+
+# ---- reference box : initial cell, used for strain bookkeeping ----------
+variable        Lx0  equal $(lx)
+variable        Ly0  equal $(ly)
+variable        Lz0  equal $(lz)
+print           "REFBOX Lx0=${Lx0} Ly0=${Ly0} Lz0=${Lz0} natoms=$(atoms)"
+
+# Branch key:  xonly | aniso | xonly_fast | aniso_fast
+#   *_fast variants only differ in Pdamp (see below).
+#
+# IMPORTANT (protocol bug found while setting this up):
+#   in `units metal` the barostat damping Pdamp is expressed in PICOSECONDS.
+#   The existing Stage 2-4 inputs use "x 0.0 0.0 1000.0", i.e. Pdamp = 1000 ps,
+#   while the hold itself lasts only 5-20 ps.  The piston mass is then so heavy
+#   that the box barely moves at all.  The *_fast branches repeat a sane
+#   Pdamp = 0.1 ps (= 100 timesteps, the usual recommendation) to separate this
+#   effect from the choice of coupling scheme.
+if "${baro} == xonly" then &
+  "variable damp equal 1000.0" "variable scheme string x"
+if "${baro} == aniso" then &
+  "variable damp equal 1000.0" "variable scheme string aniso"
+if "${baro} == xonly_fast" then &
+  "variable damp equal 0.1" "variable scheme string x"
+if "${baro} == aniso_fast" then &
+  "variable damp equal 0.1" "variable scheme string aniso"
+
+fix             fNPT all npt temp 10.0 10.0 0.1 ${scheme} 0.0 0.0 ${damp}
+print           "BRANCH ${baro} : scheme=${scheme} Pdamp=${damp} ps natoms=$(atoms)"
+
+# ---- diagnostics --------------------------------------------------------
+# ordered (BCC) atom count -> crystal fraction
+compute         cCNA   all cna/atom ${cna_cut}
+variable        isBCC  atom "c_cCNA == 3"
+compute         cNBCC  all reduce sum v_isBCC
+
+variable        fBCC   equal c_cNBCC/atoms
+variable        eXX    equal (lx-v_Lx0)/v_Lx0
+variable        eYY    equal (ly-v_Ly0)/v_Ly0
+variable        eZZ    equal (lz-v_Lz0)/v_Lz0
+variable        pMean  equal (pxx+pyy+pzz)/3.0
+# deviatoric (von Mises-like) stress from the diagonal components.
+# shear items are intentionally left out: |Pxy|,|Pxz|,|Pyz| < 25 bar here,
+# i.e. < 3% of the normal-stress spread, so they do not move the number.
+variable        devP   equal sqrt(((pxx-(pxx+pyy+pzz)/3.0)^2+(pyy-(pxx+pyy+pzz)/3.0)^2+(pzz-(pxx+pyy+pzz)/3.0)^2)/2.0)
+variable        peAtom equal pe/atoms
+
+thermo          200
+thermo_style    custom step temp press pxx pyy pzz v_pMean v_devP &
+                       lx ly lz vol v_eXX v_eYY v_eZZ pe v_peAtom v_fBCC
+
+dump            1 all custom 2000 ${outdir}/traj.dump id type x y z vx vy vz
+dump_modify     1 sort id
+restart         5000 ${outdir}/checkpoint
+
+run             ${nsteps}
+
+unfix           fNPT
+undump          1
+
+write_data      ${outdir}/final.data
+write_restart   ${outdir}/final.restart
+print           "BARO_HOLD_DONE branch=${baro} steps=${nsteps}"

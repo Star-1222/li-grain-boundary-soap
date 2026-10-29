@@ -1,0 +1,263 @@
+LAMMPS (10 Dec 2025)
+# =====================================================================
+# Li Sigma5 (310)[001] 2x2 -- 10 K hold : BAROSTAT COMPARISON
+#
+# Purpose: separate the two suspected causes of the residual deviatoric
+#          stress at Stage 4 (see bi-weekly report 2026-10-01..10-15):
+#            (a) barostat coupling  -> compare x-only vs aniso
+#          Size dependence is NOT varied here (same 14400-atom cell, same
+#          restart for both branches) so that the comparison is clean.
+#
+# Branch xonly : fix npt temp 10 10 0.1 x 0.0 0.0 1000.0
+#                only the GB normal is barostatted; y,z frozen at CSL
+#                periodicity. This is the CURRENT protocol.
+# Branch aniso : fix npt temp 10 10 0.1 aniso 0.0 0.0 1000.0
+#                x,y,z each get their own piston; cheaper to reach the
+#                target pressure, but y,z no longer keep the CSL length.
+#
+# Usage:
+#   mpirun -np 12 lmp-kim -in lammps/in.baro_hold \
+#     -var outdir /home/lenovo/Li_meta_2x2/exp_barostat/xonly \
+#     -var baro   xonly \
+#     -var nsteps 20000 \
+#     -var restart /home/lenovo/Li_meta_2x2/stage3b_quench/stage3b_quenched.restart \
+#     -var kim_model SNAP_ZuoChenLi_2019_Li__MO_732106099012_000 \
+#     -log logs/baro_xonly.lammps
+# =====================================================================
+
+units           metal
+atom_style      atomic
+boundary        p p p
+
+# CNA cutoff for BCC Li: 1NN = sqrt(3)/2*a = 3.036 A, 2NN = a = 3.506 A.
+# 3.27 A sits between the two shells so CNA keeps only the 1NN bond set.
+# NOTE: this is a compromise value for the strained GB region; both branches
+# use the identical cutoff, so the branch-to-branch comparison stays fair.
+variable        cna_cut  equal 3.27
+
+read_restart    ${restart}
+read_restart    /home/lenovo/Li_meta_2x2/stage3b_quench/stage3b_quenched.restart
+Reading restart file ...
+  restart file = 10 Dec 2025, LAMMPS = 10 Dec 2025
+WARNING: Restart file used different # of processors: 12 vs. 6 (src/read_restart.cpp:630)
+  restoring atom style atomic from restart
+  orthogonal box = (0.24803068 0 0) to (66.27718 66.525211 70.12373)
+  1 by 2 by 3 MPI processor grid
+  pair style kim stores no restart info
+  14400 atoms
+  read_restart CPU = 0.007 seconds
+
+pair_style      kim ${kim_model}
+pair_style      kim SNAP_ZuoChenLi_2019_Li__MO_732106099012_000
+pair_coeff      * * Li
+
+timestep        0.001
+reset_timestep  0
+
+# ---- reference box : initial cell, used for strain bookkeeping ----------
+variable        Lx0  equal $(lx)
+variable        Lx0  equal 66.029149622551727816
+variable        Ly0  equal $(ly)
+variable        Ly0  equal 66.52521097960000418
+variable        Lz0  equal $(lz)
+variable        Lz0  equal 70.123729506199993011
+print           "REFBOX Lx0=${Lx0} Ly0=${Ly0} Lz0=${Lz0} natoms=$(atoms)"
+REFBOX Lx0=66.0291496225517 Ly0=66.5252109796 Lz0=70.1237295062 natoms=14400
+
+# Branch key:  xonly | aniso | xonly_fast | aniso_fast
+#   *_fast variants only differ in Pdamp (see below).
+#
+# IMPORTANT (protocol bug found while setting this up):
+#   in `units metal` the barostat damping Pdamp is expressed in PICOSECONDS.
+#   The existing Stage 2-4 inputs use "x 0.0 0.0 1000.0", i.e. Pdamp = 1000 ps,
+#   while the hold itself lasts only 5-20 ps.  The piston mass is then so heavy
+#   that the box barely moves at all.  The *_fast branches repeat a sane
+#   Pdamp = 0.1 ps (= 100 timesteps, the usual recommendation) to separate this
+#   effect from the choice of coupling scheme.
+if "${baro} == xonly" then   "variable damp equal 1000.0" "variable scheme string x"
+if "${baro} == aniso" then   "variable damp equal 1000.0" "variable scheme string aniso"
+if "${baro} == xonly_fast" then   "variable damp equal 0.1" "variable scheme string x"
+if "${baro} == aniso_fast" then   "variable damp equal 0.1" "variable scheme string aniso"
+variable damp equal 0.1
+variable scheme string aniso
+
+fix             fNPT all npt temp 10.0 10.0 0.1 ${scheme} 0.0 0.0 ${damp}
+fix             fNPT all npt temp 10.0 10.0 0.1 aniso 0.0 0.0 ${damp}
+fix             fNPT all npt temp 10.0 10.0 0.1 aniso 0.0 0.0 0.1
+print           "BRANCH ${baro} : scheme=${scheme} Pdamp=${damp} ps natoms=$(atoms)"
+BRANCH aniso_fast : scheme=aniso Pdamp=0.1 ps natoms=14400
+
+# ---- diagnostics --------------------------------------------------------
+# ordered (BCC) atom count -> crystal fraction
+compute         cCNA   all cna/atom ${cna_cut}
+compute         cCNA   all cna/atom 3.27
+variable        isBCC  atom "c_cCNA == 3"
+compute         cNBCC  all reduce sum v_isBCC
+
+variable        fBCC   equal c_cNBCC/atoms
+variable        eXX    equal (lx-v_Lx0)/v_Lx0
+variable        eYY    equal (ly-v_Ly0)/v_Ly0
+variable        eZZ    equal (lz-v_Lz0)/v_Lz0
+variable        pMean  equal (pxx+pyy+pzz)/3.0
+# deviatoric (von Mises-like) stress from the diagonal components.
+# shear items are intentionally left out: |Pxy|,|Pxz|,|Pyz| < 25 bar here,
+# i.e. < 3% of the normal-stress spread, so they do not move the number.
+variable        devP   equal sqrt(((pxx-(pxx+pyy+pzz)/3.0)^2+(pyy-(pxx+pyy+pzz)/3.0)^2+(pzz-(pxx+pyy+pzz)/3.0)^2)/2.0)
+variable        peAtom equal pe/atoms
+
+thermo          200
+thermo_style    custom step temp press pxx pyy pzz v_pMean v_devP                        lx ly lz vol v_eXX v_eYY v_eZZ pe v_peAtom v_fBCC
+
+dump            1 all custom 2000 ${outdir}/traj.dump id type x y z vx vy vz
+dump            1 all custom 2000 /home/lenovo/Li_meta_2x2/exp_barostat/aniso_fast/traj.dump id type x y z vx vy vz
+dump_modify     1 sort id
+restart         5000 ${outdir}/checkpoint
+restart         5000 /home/lenovo/Li_meta_2x2/exp_barostat/aniso_fast/checkpoint
+
+run             ${nsteps}
+run             5000
+
+CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE
+
+Your simulation uses code contributions which should be cited:
+
+- OpenKIM Project: https://doi.org/10.1007/s11837-011-0102-6
+
+@Article{tadmor:elliott:2011,
+ author = {E. B. Tadmor and R. S. Elliott and J. P. Sethna and R. E. Miller and C. A. Becker},
+ title = {The potential of atomistic simulations and the {K}nowledgebase of {I}nteratomic {M}odels},
+ journal = {{JOM}},
+ year =    2011,
+ volume =  63,
+ number =  17,
+ pages =   {17},
+ doi =     {10.1007/s11837-011-0102-6}
+}
+
+- OpenKIM potential: https://openkim.org/cite/MO_732106099012_000#item-citation
+
+QENvbW1lbnQKewpcZG9jdW1lbnRjbGFzc3thcnRpY2xlfQpcdXNlcGFja2FnZXt1cmx9ClxiZWdpbntkb2N1bWVudH0KVGhpcyBNb2RlbCBvcmlnaW5hbGx5IHB1Ymxpc2hlZCBpbiBcY2l0ZXtNT183MzIxMDYwOTkwMTJfMDAwYX0gaXMgYXJjaGl2ZWQgaW4gT3BlbktJTX5cY2l0ZXtNT183MzIxMDYwOTkwMTJfMDAwLCBNRF81MzY3NTAzMTA3MzVfMDAwLCB0YWRtb3I6ZWxsaW90dDoyMDExLCBlbGxpb3R0OnRhZG1vcjoyMDExfS4KXGJpYmxpb2dyYXBoeXN0eWxle3ZhbmNvdXZlcn0KXGJpYmxpb2dyYXBoeXtraW1jaXRlLU1PXzczMjEwNjA5OTAxMl8wMDAuYmlifQpcZW5ke2RvY3VtZW50fQp9CgpATWlzY3tNT183MzIxMDYwOTkwMTJfMDAwLAogIGF1dGhvciAgICAgICA9IHtZdW54aW5nIFp1b30sCiAgdGl0bGUgICAgICAgID0ge3tBfSBzcGVjdHJhbCBuZWlnaGJvciBhbmFseXNpcyBwb3RlbnRpYWwgZm9yIHtMfWkgZGV2ZWxvcGVkIGJ5IHtZfXVueGluZyB7Wn11byB2MDAwfSwKICBkb2kgICAgICAgICAgPSB7MTAuMjU5NTAvNzg4ZDQ3ZDV9LAogIGhvd3B1Ymxpc2hlZCA9IHtPcGVuS0lNLCBcdXJse2h0dHBzOi8vZG9pLm9yZy8xMC4yNTk1MC83ODhkNDdkNX19LAogIGtleXdvcmRzICAgICA9IHtPcGVuS0lNLCBNb2RlbCwgTU9fNzMyMTA2MDk5MDEyXzAwMH0sCiAgcHVibGlzaGVyICAgID0ge09wZW5LSU19LAogIHllYXIgICAgICAgICA9IDIwMjAsCn0KCkBNaXNje01EXzUzNjc1MDMxMDczNV8wMDAsCiAgYXV0aG9yICAgICAgID0ge1lhc2VyIEFmc2hhcn0sCiAgdGl0bGUgICAgICAgID0ge3tTfXBlY3RyYWwgbmVpZ2hib3IgYW5hbHlzaXMgcG90ZW50aWFsICh7U05BUH0pIG1vZGVsIGRyaXZlciB2MDAwfSwKICBkb2kgICAgICAgICAgPSB7MTAuMjU5NTAvZjRmYWU0OTN9LAogIGhvd3B1Ymxpc2hlZCA9IHtPcGVuS0lNLCBcdXJse2h0dHBzOi8vZG9pLm9yZy8xMC4yNTk1MC83ODhkNDdkNX19LAogIGtleXdvcmRzICAgICA9IHtPcGVuS0lNLCBNb2RlbCBEcml2ZXIsIE1EXzUzNjc1MDMxMDczNV8wMDB9LAogIHB1Ymxpc2hlciAgICA9IHtPcGVuS0lNfSwKICB5ZWFyICAgICAgICAgPSAyMDE5LAp9CgpAQXJ0aWNsZXt0YWRtb3I6ZWxsaW90dDoyMDExLAogIGF1dGhvciAgICA9IHtFLiBCLiBUYWRtb3IgYW5kIFIuIFMuIEVsbGlvdHQgYW5kIEouIFAuIFNldGhuYSBhbmQgUi4gRS4gTWlsbGVyIGFuZCBDLiBBLiBCZWNrZXJ9LAogIHRpdGxlICAgICA9IHtUaGUgcG90ZW50aWFsIG9mIGF0b21pc3RpYyBzaW11bGF0aW9ucyBhbmQgdGhlIHtLfW5vd2xlZGdlYmFzZSBvZiB7SX1udGVyYXRvbWljIHtNfW9kZWxzfSwKICBqb3VybmFsICAgPSB7e0pPTX19LAogIHllYXIgICAgICA9IHsyMDExfSwKICB2b2x1bWUgICAgPSB7NjN9LAogIG51bWJlciAgICA9IHs3fSwKICBwYWdlcyAgICAgPSB7MTd9LAogIGRvaSAgICAgICA9IHsxMC4xMDA3L3MxMTgzNy0wMTEtMDEwMi02fSwKfQoKQE1pc2N7ZWxsaW90dDp0YWRtb3I6MjAxMSwKICBhdXRob3IgICAgICAgPSB7UnlhbiBTLiBFbGxpb3R0IGFuZCBFbGxhZCBCLiBUYWRtb3J9LAogIHRpdGxlICAgICAgICA9IHt7S31ub3dsZWRnZWJhc2Ugb2Yge0l9bnRlcmF0b21pYyB7TX1vZGVscyAoe0tJTX0pIEFwcGxpY2F0aW9uIFByb2dyYW1taW5nIEludGVyZmFjZSAoe0FQSX0pfSwKICBob3dwdWJsaXNoZWQgPSB7XHVybHtodHRwczovL29wZW5raW0ub3JnL2tpbS1hcGl9fSwKICBwdWJsaXNoZXIgICAgPSB7T3BlbktJTX0sCiAgeWVhciAgICAgICAgID0gMjAxMSwKICBkb2kgICAgICAgICAgPSB7MTAuMjU5NTAvZmY4ZjU2M2F9LAp9CgpAQXJ0aWNsZXtNT183MzIxMDYwOTkwMTJfMDAwYSwKICBhdXRob3IgPSB7WnVvLCBZdW54aW5nIGFuZCBDaGVuLCBDaGkgYW5kIExpLCBYaWFuZ2d1byBhbmQgRGVuZywgWmhpIGFuZCBDaGVuLCBZaW1pbmcgYW5kIEJlaGxlciwgSntcIm99cmcgYW5kIENze1wnYX1ueWksIEd7XCdhfWJvciBhbmQgU2hhcGVldiwgQWxleGFuZGVyIFYuIGFuZCBUaG9tcHNvbiwgQWlkYW4gUC4gYW5kIFdvb2QsIE1pdGNoZWxsIEEuIGFuZCBPbmcsIFNoeXVlIFBpbmd9LAogIGRvaSA9IHsxMC4xMDIxL2Fjcy5qcGNhLjliMDg3MjN9LAogIGpvdXJuYWwgPSB7VGhlIEpvdXJuYWwgb2YgUGh5c2ljYWwgQ2hlbWlzdHJ5IEF9LAogIG51bWJlciA9IHs0fSwKICBwYWdlcyA9IHs3MzEtLTc0NX0sCiAgdGl0bGUgPSB7UGVyZm9ybWFuY2UgYW5kIENvc3QgQXNzZXNzbWVudCBvZiBNYWNoaW5lIExlYXJuaW5nIEludGVyYXRvbWljIFBvdGVudGlhbHN9LAogIHZvbHVtZSA9IHsxMjR9LAogIHllYXIgPSB7MjAyMH0sCn0KCITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE
+
+Generated 0 of 0 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7.1
+  ghost atom cutoff = 7.1
+  binsize = 3.55, bins = 19 19 20
+  2 neighbor lists, perpetual/occasional/extra = 1 1 0
+  (1) pair kim, perpetual
+      attributes: full, newton off
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+  (2) compute cna/atom, occasional
+      attributes: full, newton on
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 4.434 | 4.442 | 4.446 Mbytes
+   Step          Temp          Press           Pxx            Pyy            Pzz          v_pMean         v_devP           Lx             Ly             Lz           Volume         v_eXX          v_eYY          v_eZZ          PotEng        v_peAtom        v_fBCC    
+         0   12.20437      -851.64963     -320.45036     -843.91184     -1390.5867     -851.64963      535.11013      66.02915       66.525211      70.12373       308025.71      4.3044185e-16  0              0             -27243.285     -1.8918948      0            
+       200   11.284641     -2.0691232     -1.0244448     -2.0934481     -3.0894765     -2.0691232      1.0327307      66.158699      66.358549      69.363453      304519.1       0.0019620069  -0.0025052523  -0.010841931   -27246.218     -1.8920985      0            
+       400   10.344114     -14.278301     -9.6396583     -11.09267      -22.102575     -14.278301      6.8148556      66.174251      66.356785      69.40964       304785.4       0.0021975358  -0.0025317575  -0.010183281   -27247.774     -1.8922066      0            
+       600   9.8332726     -18.515385     -14.934301     -8.0830922     -32.52876      -18.515385      12.610146      66.166382      66.355499      69.447421      304909.13      0.0020783576  -0.0025510904  -0.0096445064  -27248.755     -1.8922746      0            
+       800   9.9122756     -3.1238675      1.7599017      3.0299899     -14.161494     -3.1238675      9.5799364      66.160524      66.354779      69.427149      304789.83      0.0019896382  -0.0025619168  -0.0099335988  -27248.68      -1.8922694      0            
+      1000   10.089784      1.4277547      18.901096      3.3498325     -17.967665      1.4277547      18.509381      66.167095      66.352783      69.402937      304704.64      0.0020891638  -0.0025919237  -0.010278862   -27248.195     -1.8922358      0            
+      1200   9.9307791      5.7357788      20.145619      4.9476821     -7.8859648      5.7357788      14.0324        66.156695      66.356445      69.426799      304778.31      0.0019316573  -0.0025368723  -0.0099385891  -27248.572     -1.892262       0            
+      1400   9.9055298      23.741863      39.42432       30.318283      1.4829855      23.741863      19.80715       66.137476      66.365289      69.425056      304722.73      0.0016405871  -0.0024039248  -0.0099634403  -27248.714     -1.8922718      0            
+      1600   10.047182      29.381352      35.958888      43.211964      8.9732027      29.381352      18.042206      66.148476      66.350338      69.417913      304673.4       0.0018071777  -0.0026286699  -0.010065305   -27248.359     -1.8922472      0            
+      1800   10.029571      33.31421       39.886245      49.100752      10.955634      33.31421       19.903674      66.157595      66.349844      69.40034       304635.99      0.001945289   -0.0026360935  -0.010315906   -27248.547     -1.8922602      0            
+      2000   9.9371361      40.993669      55.958429      50.157707      16.864871      40.993669      21.096475      66.139801      66.355759      69.423571      304683.16      0.0016757946  -0.0025471906  -0.0099846226  -27248.765     -1.8922754      0            
+      2200   9.9847133      26.540547      43.110461      25.95378       10.557399      26.540547      16.284462      66.153319      66.348605      69.405589      304633.65      0.00188052    -0.0026547296  -0.010241045   -27248.401     -1.8922501      0            
+      2400   9.9594552      34.971353      59.232256      37.206424      8.4753781      34.971353      25.452147      66.165005      66.340631      69.397124      304613.69      0.0020575002  -0.0027745876  -0.010361763   -27248.339     -1.8922458      0            
+      2600   9.9146036      17.416384      25.014652      26.537927      0.6965737      17.416384      14.499798      66.166372      66.342285      69.427398      304760.48      0.002078212   -0.0027497204  -0.0099300352  -27248.614     -1.8922649      0            
+      2800   10.047565      6.0227876      11.453642      29.942086     -23.327365      6.0227876      27.046797      66.154338      66.345328      69.430491      304732.59      0.0018959488  -0.0027039861  -0.009885933   -27248.618     -1.8922651      0            
+      3000   10.070307     -6.662017      -0.26825912    -0.90031217    -18.81748      -6.662017       10.531682      66.166896      66.355765      69.39377       304677.16      0.0020861421  -0.0025470938  -0.010409598   -27248.593     -1.8922634      0            
+      3200   10.027575     -20.122982      8.9251472     -21.397313     -47.896778     -20.122982      28.432389      66.158527      66.370362      69.423824      304837.61      0.0019593985  -0.002327675   -0.0099810089  -27248.705     -1.8922712      0            
+      3400   9.9137851     -19.707238     -7.2440747     -22.26083      -29.616809     -19.707238      11.40287       66.144869      66.374102      69.430605      304821.62      0.0017525439  -0.0022714596  -0.009884301   -27248.426     -1.8922518      0            
+      3600   10.050687     -57.03397      -41.78033      -49.783359     -79.538222     -57.03397       19.895806      66.160364      66.371287      69.433784      304894.05      0.0019872128  -0.0023137753  -0.0098389714  -27248.564     -1.8922614      0            
+      3800   9.9428937     -30.106364     -28.160048     -19.918924     -42.240119     -30.106364      11.287163      66.17445       66.354723      69.440427      304912.03      0.0022005426  -0.0025627618  -0.009744239   -27248.533     -1.8922592      0            
+      4000   10.012119     -55.416298     -51.198171     -40.288497     -74.762225     -55.416298      17.619703      66.175578      66.361237      69.451501      304995.8       0.0022176324  -0.0024648358  -0.0095863176  -27248.659     -1.892268       0            
+      4200   10.073843     -31.563873     -21.900631     -31.500309     -41.290679     -31.563873      9.6951801      66.159071      66.358761      69.438876      304852.91      0.0019676385  -0.0025020614  -0.009766354   -27248.505     -1.8922573      0            
+      4400   10.055636     -31.992348     -14.149034     -38.214536     -43.613475     -31.992348      15.686779      66.174384      66.361671      69.43292       304910.69      0.0021995515  -0.0024583173  -0.0098512996  -27248.737     -1.8922734      0            
+      4600   10.034573     -23.316772     -12.217342     -22.809172     -34.923801     -23.316772      11.361737      66.169814      66.359889      69.438206      304904.66      0.0021303387  -0.0024851023  -0.009775907   -27248.705     -1.8922712      0            
+      4800   10.068291     -5.8888413     -4.1377632      3.6332046     -17.161965     -5.8888413      10.507591      66.152008      66.365933      69.423271      304784.8       0.0018606696  -0.0023942502  -0.0099888935  -27248.401     -1.8922501      0            
+      5000   10.018837      13.096987      10.662881      33.243755     -4.6156748      13.096987      19.046725      66.156206      66.349801      69.443715      304819.79      0.0019242417  -0.0026367438  -0.0096973495  -27248.596     -1.8922636      0            
+Loop time of 4716.4 on 6 procs for 5000 steps with 14400 atoms
+
+Performance: 0.092 ns/day, 262.022 hours/ns, 1.060 timesteps/s, 15.266 katom-step/s
+100.0% CPU use with 6 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 4083.3     | 4287.9     | 4406.9     | 175.8 | 90.92
+Neigh   | 0.022091   | 0.02441    | 0.025554   |   0.8 |  0.00
+Comm    | 307.83     | 426.84     | 631.43     | 557.2 |  9.05
+Output  | 0.084981   | 0.085948   | 0.087908   |   0.3 |  0.00
+Modify  | 1.2109     | 1.2398     | 1.2653     |   1.5 |  0.03
+Other   |            | 0.2904     |            |       |  0.01
+
+Nlocal:           2400 ave        2439 max        2341 min
+Histogram: 2 0 0 0 0 0 0 1 1 2
+Nghost:         4272.5 ave        4358 max        4134 min
+Histogram: 2 0 0 0 0 0 0 0 1 3
+Neighs:              0 ave           0 max           0 min
+Histogram: 6 0 0 0 0 0 0 0 0 0
+FullNghs:       153805 ave      156365 max      149866 min
+Histogram: 1 1 0 0 0 0 0 1 1 2
+
+Total # of neighbors = 922830
+Ave neighs/atom = 64.085417
+Neighbor list builds = 3
+Dangerous builds = 0
+
+unfix           fNPT
+undump          1
+
+write_data      ${outdir}/final.data
+write_data      /home/lenovo/Li_meta_2x2/exp_barostat/aniso_fast/final.data
+System init for write_data ...
+Generated 0 of 0 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7.1
+  ghost atom cutoff = 7.1
+  binsize = 3.55, bins = 19 19 20
+  2 neighbor lists, perpetual/occasional/extra = 1 1 0
+  (1) pair kim, perpetual
+      attributes: full, newton off
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+  (2) compute cna/atom, occasional
+      attributes: full, newton on
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+write_restart   ${outdir}/final.restart
+write_restart   /home/lenovo/Li_meta_2x2/exp_barostat/aniso_fast/final.restart
+System init for write_restart ...
+Generated 0 of 0 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7.1
+  ghost atom cutoff = 7.1
+  binsize = 3.55, bins = 19 19 20
+  2 neighbor lists, perpetual/occasional/extra = 1 1 0
+  (1) pair kim, perpetual
+      attributes: full, newton off
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+  (2) compute cna/atom, occasional
+      attributes: full, newton on
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+print           "BARO_HOLD_DONE branch=${baro} steps=${nsteps}"
+BARO_HOLD_DONE branch=aniso_fast steps=5000
+Total wall time: 1:18:37

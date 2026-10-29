@@ -1,0 +1,20 @@
+{
+  "start_quenched": {
+    "w_GB_fixed50_A_coordination": 11.004858270425292,
+    "min_Q_coordination": 0.0,
+    "bulk_Q_coordination": 1.0,
+    "w_GB_fixed50_A_steinhardt": 5.502429135212646
+  },
+  "final_xonly_fast": {
+    "w_GB_fixed50_A_coordination": 11.531352256759677,
+    "min_Q_coordination": 0.2303370786516854,
+    "bulk_Q_coordination": 1.0,
+    "w_GB_fixed50_A_steinhardt": 6.5893441467198155
+  },
+  "final_aniso_fast": {
+    "w_GB_fixed50_A_coordination": 13.231241133377987,
+    "min_Q_coordination": 0.0,
+    "bulk_Q_coordination": 1.0,
+    "w_GB_fixed50_A_steinhardt": 5.513017138907495
+  }
+}

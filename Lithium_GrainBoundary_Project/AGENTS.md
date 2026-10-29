@@ -9,7 +9,7 @@
 - 核心研究链条：**SOAP 结构描述符 → 亚稳程度 M → 不同受力机制 → 临界剪切强度 τ_c → M–τ_c 映射**。方法组合为 LAMMPS + SOAP + 剪切加载。
 - 相关文档：`Li_metal_metastable_atomic_structure_mechanical_analysis.pdf`（14 页，2026 年大创立项报告）。
 - 模拟数据规模：`natoms=14400`（Li Σ5 晶界模型），6 个 MPI 进程，5 ps 时长，时间步 0.001。
-- 控压（barostat）方案对照实验：`xonly` 与 `aniso` 两个分支，`fix npt temp 10 10 0.1 ${scheme} 0.0 0.0 ${damp}`；日志在 `03_原始日志/`（`baro_xonly_fast.lammps`、`baro_aniso_fast.lammps`，各 263 行）。
+- 控压（barostat）方案对照实验（2026-10-15，归档在仓库根 `Li_Sigma5_控压方案对照_2026-10-15/`）：`xonly` 与 `aniso` 两个分支，`fix npt temp 10 10 0.1 ${scheme} 0.0 0.0 ${damp}`；日志在 `03_原始日志/`（`baro_xonly_fast.lammps`、`baro_aniso_fast.lammps`）。结论：偏应力 627.6 → 15.9 bar，代价是 ε_zz = −0.99%。
 - 结构分析用配位数（CN）判据：第一近邻截断 3.25 Å，取 g(r) 第一谷。
 
 ## 方法论争议点（讨论时主动指出）
