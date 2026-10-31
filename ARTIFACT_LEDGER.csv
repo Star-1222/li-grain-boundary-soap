@@ -37,6 +37,7 @@
 项目二：阶段一验收包（14400 原子 2x2）,Li_Sigma5_310_2x2_阶段一验收_2026-09-05_new\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\RUN_META.md,RUN_META.md,.md,文档,3384,本次运行的元信息：时间、机器、参数、势函数标识。,,47561b9e93e7b661a0545b481fc2b4de603cd485c9863284f570ed560d73c89e
 项目二：阶段一验收包（14400 原子 2x2）,Li_Sigma5_310_2x2_阶段一验收_2026-09-05_new\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\RUN_STATUS.md,RUN_STATUS.md,.md,文档,4718,本次运行的实时执行记录与各步骤状态。,,48002a617059650c37a3df44ae2ed16f69c1b21bc7ab4d3b6f1fa02073907e2d
 项目二：阶段一验收包（14400 原子 2x2）,Li_Sigma5_310_2x2_阶段一验收_2026-09-05_new\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\总结报告.md,总结报告.md,.md,文档,5486,阶段一零压运行的中文总结报告。,,123ef922364a0a5f747b36b93dac6e9d6db57b2cd8e43086994e9bcf19cccd92
+项目二：阶段一验收包（14400 原子 2x2）,Li_Sigma5_310_2x2_阶段一验收_2026-09-05_new\README.md,README.md,.md,文档,794,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,4cf8fe9df41f0c639df98a36379a1991b2d872dd4f5b0f5476f89ce14b531f70
 项目二：阶段一验收包（14400 原子 2x2）,Li_Sigma5_310_2x2_阶段一验收_2026-09-05_new\阶段一验收汇报_2026-09-04.md,阶段一验收汇报_2026-09-04.md,.md,文档,2062,★ 阶段一验收结论：原目标通过，可进入阶段二；并记录了 0 bar 口径的保留意见。,,d5cff09ecce0c1b4a6dae8d5977f753904a4940bdfc3cdb9cbd3cae061000850
 项目一：锂晶界主项目,Lithium_GrainBoundary_Project\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\data\annealed\stage2_annealed.data,stage2_annealed.data,.data,结论,467158,★ Stage 2 退火末态：363 K、0 bar 下 25 ps 后的结构。晶界在此阶段发生热重构。,"3,600 原子 · 盒子 65.95 × 33.26 × 35.06 Å · timestep 20,000",c988b93dec412e010e7dd38d6a1455947a520d8b08698d9e5a92a6ceea269ef2
 项目一：锂晶界主项目,Lithium_GrainBoundary_Project\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\data\annealed\stage2_annealed.restart,stage2_annealed.restart,.restart,续算,317785,LAMMPS 续算检查点：保存速度场与热力学状态，只能在 LAMMPS 内读取。,,f59422f65a12a3f837073494eadcbd90035ba9858ed7a67c5216eaecba4ba8e5
@@ -114,7 +115,7 @@
 项目一：锂晶界主项目,Lithium_GrainBoundary_Project\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\tests\test_verify.py,test_verify.py,.py,代码,2559,Python 脚本。,,aaa69e1b0a4410e546b260311d3d851ba19c95b4c7a7c7c64f54a4179cad506e
 项目一：锂晶界主项目,Lithium_GrainBoundary_Project\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\tests\test_workflow_scripts.py,test_workflow_scripts.py,.py,代码,3821,Python 脚本。,,84dbcabbff1582590f1d96c594d69246475fec293a1811c8a27c1fa3cc506a56
 项目一：锂晶界主项目,Lithium_GrainBoundary_Project\07_Documentation\presentations\Li_metal_metastable_GB_atomic_mechanical_analysis.pptx,Li_metal_metastable_GB_atomic_mechanical_analysis.pptx,.pptx,文档,2303300,汇报幻灯片。,,e47510d8599116620ead641f520c53243a41797773cddff620a479eb079744c3
-项目一：锂晶界主项目,Lithium_GrainBoundary_Project\AGENTS.md,AGENTS.md,.md,文档,3176,Markdown 文档。,,b04f7bc568977b6aed188fc669fc1449d9b6fbd6f0276e80144935a137718862
+项目一：锂晶界主项目,Lithium_GrainBoundary_Project\AGENTS.md,AGENTS.md,.md,文档,3311,Markdown 文档。,,784cbacc6bc052ccbdf0a5d1208f3236b976405d45a1cb4d3b9ce4b46a0320e0
 项目一：锂晶界主项目,Lithium_GrainBoundary_Project\Li_Sigma5_310_metastable_2x2\generator\__init__.py,__init__.py,.py,代码,86,Python 脚本。,,e9fe6ba786f594f8afffc8f84f8814732e756313b2a3666313cc4bb6a4f348b6
 项目一：锂晶界主项目,Lithium_GrainBoundary_Project\Li_Sigma5_310_metastable_2x2\generator\builder.py,builder.py,.py,代码,8990,Python 脚本。,,a8742e4ed729821697fa12bee89cead9106967cf7a24fae4d1814f6cc1bc2672
 项目一：锂晶界主项目,Lithium_GrainBoundary_Project\Li_Sigma5_310_metastable_2x2\generator\bulk.py,bulk.py,.py,代码,2345,Python 脚本。,,9e52b56b50c7c4742f2cae7a6124ffa0ab92ca77f985b35e1a0719e4aa8f63d0
@@ -145,6 +146,7 @@
 项目一：锂晶界主项目,Lithium_GrainBoundary_Project\Li_Sigma5_310_metastable_2x2\stage0_build_validate\Sigma5_310_K6_J6_L20_grain_id.xyz,Sigma5_310_K6_J6_L20_grain_id.xyz,.xyz,结论,684266,扩展 XYZ 结构文件，可携带每原子附加列。,"14,400 原子 · 附加列: Li x y z grain_id",b7688e30d5a186183cec37d52e6917ff14f49f86ba6c263602b618d48c908470
 项目一：锂晶界主项目,Lithium_GrainBoundary_Project\Li_Sigma5_310_metastable_2x2\stage0_build_validate\structure.data,structure.data,.data,结论,1368018,初始结构的 LAMMPS 格式。,"14,400 原子 · 盒子 66.53 × 66.53 × 70.12 Å",759022f003fb46bcb340ae3407665a4dfef6aec0a0aef4dd0378b23d6e29e42f
 项目一：锂晶界主项目,Lithium_GrainBoundary_Project\Li_Sigma5_310_metastable_2x2\stage0_build_validate\structure.xyz,structure.xyz,.xyz,结论,684380,初始结构的通用格式。,"14,400 原子 · 附加列: Lattice=""66.5252109796 0.0 0.0 0.0 66.5252109796 0.0 0.0 0.0 70.1237295062"" Properties=species:S:1:pos:R:3:grain_id:I:1 pbc=""T T T""",3bf32950032208b8c8abc5adcb6141a0853404bfe2b1494a16eafc2a9b058303
+项目一：锂晶界主项目,Lithium_GrainBoundary_Project\README.md,README.md,.md,文档,866,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,a7a97d9116a2e50d77301d1e35ff75153a784375ac5159cced829e5f162f94b9
 项目一：锂晶界主项目,Lithium_GrainBoundary_Project\Reports\GB_Construction\build_report_BI.md,build_report_BI.md,.md,文档,4543,双语版报告（中文版与英文版首尾拼接在同一文件内）。,,ad76cff6359a3e493390d029b5f6cde47e15e36a08a8eb5835ee304d17ab6107
 项目一：锂晶界主项目,Lithium_GrainBoundary_Project\Reports\GB_Construction\FINAL_STATUS_BI.md,FINAL_STATUS_BI.md,.md,文档,1064,双语版报告（中文版与英文版首尾拼接在同一文件内）。,,b32d30b02b79ac952a04140080d5710c97c6f026f7fbf37703a8d97c9bf4f357
 项目一：锂晶界主项目,Lithium_GrainBoundary_Project\Reports\GB_Construction\README_BI.md,README_BI.md,.md,文档,21228,双语版报告（中文版与英文版首尾拼接在同一文件内）。,,c3b3c8e750d3dd378132af9d30615ab2a24d9f5f4bb3969dc63969f7ad3abfab
@@ -166,6 +168,7 @@
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\00_汇总报告\项目文件索引_按阶段.csv,项目文件索引_按阶段.csv,.csv,结论,61602,数据表。,"209 行 × 11 列 [Stage, Category, Subcategory, RelativePath, FileName, Extension …]",6f4b6bfa5999584ad792b5d87edbc5d0ef4a8f19144d63cbff478b3d7dde6c33
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\00_汇总报告\项目文件索引_脚本输出报告_按阶段.md,项目文件索引_脚本输出报告_按阶段.md,.md,文档,3993,Markdown 文档。,,395a7f76e4ef5a174b505a34d0a4d20f3166b11261e846e13927c93c839beb9f
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\06_环境与实现\requirements_soap.txt,requirements_soap.txt,.txt,输入,1487,SOAP 分析的 Python 依赖清单。,,1c5b460066e1ef08285f1b53738cc8a535260ada9fcaf401780bba1a8e022c40
+项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\06_环境与实现\requirements_stages.txt,requirements_stages.txt,.txt,输入,171,纯文本结果或检查报告。,,59fc5b0cb1a6e661b6d6f8a7b6447362a82e5aab0929cce3c44213afe29fb306
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\06_环境与实现\setup_soap_env.sh,setup_soap_env.sh,.sh,代码,2564,SOAP 分析环境的一键配置脚本。,,f792e2e280f4d3820aea01fd87c094ab5eabac51afc528de94370f9c6fc2e233
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\06_环境与实现\soap_analysis\__init__.py,__init__.py,.py,代码,1830,Python 脚本。,,6f8d2b15518fe2b8121feff9ff87b1a521a623a619cb29cb497d6ab2c2d18f32
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\06_环境与实现\soap_analysis\bulk_reference.py,bulk_reference.py,.py,代码,1794,Python 脚本。,,f694c283403289a170f63f72e09d81adf77c6477da70750abac1404c2b4d88e0
@@ -179,7 +182,7 @@
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\06_环境与实现\verify_soap_env.py,verify_soap_env.py,.py,代码,5385,环境自检脚本，确认 SOAP 依赖可用。,,d43a6f7da73406d73368a12b5ea19c098714df690f86f92f3a0dfe913fe2bb30
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\90_历史归档\归档说明.md,归档说明.md,.md,文档,1854,Markdown 文档。,,4fabfc33d9c133aa67af68fd2034343fa4c2c8a8c8153c4d225a1d82fac277a2
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\90_历史归档\旧版材料\inspect_structures_v_old.py,inspect_structures_v_old.py,.py,代码,3996,Python 脚本。,,b9469f9ca66706a47966faa850d5a27060d398da87a973a2234fe56cf969a8f9
-项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\README.md,README.md,.md,文档,2026,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,db8f656dba8ac24a721f7488c4975162748c85f5c5d6fd6d183ac0e020a3aa00
+项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\README.md,README.md,.md,文档,2252,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,de8ee8243a51eb44517cd4c6b8b50c3479d930228a6c5066af0cfcf229c24a94
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage01_数据准备与SOAP初测\01_报告\Stage01_确定性结论与待讨论.md,Stage01_确定性结论与待讨论.md,.md,文档,3323,Markdown 文档。,,56b00c4d315ad1f2b85a9db9da2aae7d8c9f775e8408ebcae9351da763c07a00
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage01_数据准备与SOAP初测\02_脚本\cfg_reader.py,cfg_reader.py,.py,代码,8911,CFG 格式解析脚本。,,98d45d637b64c87c1ee0a047089b782fb9c033f5e0fdf9faa2c5cd33f2803075
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage01_数据准备与SOAP初测\02_脚本\inspect_structures.py,inspect_structures.py,.py,代码,4334,结构概览脚本，检查原子数与字段完整性。,,c0ef4bb8a815501160aa6333f78699cd21f9596e057a1b31582538d1ea302713
@@ -190,6 +193,7 @@
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage01_数据准备与SOAP初测\03_输出\inspection_summary.txt,inspection_summary.txt,.txt,结论,2873,纯文本结果或检查报告。,,5073b1f83efa924dc0dc64864ac6669e3ca59dcc82233b3a19da1480117b49c9
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage01_数据准备与SOAP初测\03_输出\soap_test_summary.txt,soap_test_summary.txt,.txt,结论,1450,纯文本结果或检查报告。,,7142f4add6488d33f1f0265ebc21b78d9f8afabbb8d0d7ee62895b55d35c19f8
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage01_数据准备与SOAP初测\03_输出\stage1_qc_report.txt,stage1_qc_report.txt,.txt,结论,7437,Stage01 数据准备与初测产物。,,95f143f8f48adfb6878cb74447d7894f7ac92e1e15a1568d3f4077630b3ed95e
+项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage01_输入输出检索表.md,Stage01_输入输出检索表.md,.md,文档,7847,Markdown 文档。,,13d0bbb4a20a8d57b7540c31315f4096bbabec8af2b4ac85c273eb9da9b5ff60
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage02_SOAP表示与审计\01_报告\Stage02_确定性结论与待讨论.md,Stage02_确定性结论与待讨论.md,.md,文档,4102,Markdown 文档。,,808d0e52503d2c33beebab5d142f861d245597e2f59d94a472f2b6f9360c0448
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage02_SOAP表示与审计\02_脚本\stage2_5_audit.py,stage2_5_audit.py,.py,代码,27067,Stage02.5 表示审计产物。,,71e680a90b28339891d44d155fb53a4833dda02218a964158c8ac0dfc314d220
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage02_SOAP表示与审计\02_脚本\stage2_75_full.py,stage2_75_full.py,.py,代码,32111,Stage02.75 全人口 SOAP 与距离审计产物。,,ffa25dfab54cf05dd29eb9e74960c221e583b58320307c53e2725d36932962bd
@@ -215,6 +219,7 @@
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage02_SOAP表示与审计\03_输出\stage2_75_pairwise_summary.csv,stage2_75_pairwise_summary.csv,.csv,结论,4575,Stage02.75 全人口 SOAP 与距离审计产物。,"21 行 × 12 列 [category, metric, N, min, p5, p25 …]",0be0e0869429981c0304f457369669ff5f384f2a14e15130a85731f2038fafbd
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage02_SOAP表示与审计\03_输出\stage2_75_population_summary.csv,stage2_75_population_summary.csv,.csv,结论,7916,Stage02.75 全人口 SOAP 与距离审计产物。,"40 行 × 12 列 [category, metric, N, min, p5, p25 …]",2ee532e1a87a3e654f7e75bacf963b6990889695503632016c9ee22641d09b00
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage02_SOAP表示与审计\03_输出\stage2_75_ptm_cna_summary.csv,stage2_75_ptm_cna_summary.csv,.csv,结论,2884,Stage02.75 全人口 SOAP 与距离审计产物。,"16 行 × 12 列 [structure, group_type, group_value, N, soap_norm_median, soap_norm_iqr …]",68334cfa047bfd5905fd44088e4686d0e73375604e129279fe914bf6faca6c51
+项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage02_输入输出检索表.md,Stage02_输入输出检索表.md,.md,文档,14261,Markdown 文档。,,9cf4141908c1fa8a7b069b85419fd7aba0c857efdcf7cf558ab0bf1b77df83f9
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage03_LAE阈值与LAE_LER构建\01_报告\Stage03_确定性结论与待讨论.md,Stage03_确定性结论与待讨论.md,.md,文档,3150,Markdown 文档。,,e0e93f0256c9dfd2d1cc9b41c34d96830c4222617cc84ba0360d39a46e361c1f
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage03_LAE阈值与LAE_LER构建\02_脚本\stage3a_lae_threshold.py,stage3a_lae_threshold.py,.py,代码,57988,Stage03A 阈值扫描产物：衡量 epsilon 取值对结果的影响。,,4191fd2e89172b978e4284b5400a329fb7a1472ba6158b51d62fb2d0f5b5ebc4
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage03_LAE阈值与LAE_LER构建\02_脚本\stage3b_lae_ler.py,stage3b_lae_ler.py,.py,代码,40369,Stage03B 类别构建产物：LAE 分类与 LER 人口指纹。,,6af088e7150b922b46afd078cdeac296566336f5c927c9db44236109dea74240
@@ -250,6 +255,7 @@
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage03_LAE阈值与LAE_LER构建\03_输出\stage3b_partition_ari.csv,stage3b_partition_ari.csv,.csv,结论,68912,★ 不同随机顺序下分区的一致性（ARI）。这是判定贪心 LAE “有顺序依赖、不可作为物理分类”的量化依据。,"2,175 行 × 4 列 [epsilon, run_i, run_j, ari]",ce3fae9a51a0afca8590d3cf802993ab48afcdf56975b65715aa41a3aef9b345
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage03_LAE阈值与LAE_LER构建\03_输出\stage3b_representative_atoms.csv,stage3b_representative_atoms.csv,.csv,结论,6670,Stage03B 类别构建产物：LAE 分类与 LER 人口指纹。,"50 行 × 13 列 [epsilon, class_id, role, atom_id, structure, region …]",1a2f950ad16c31f623ff620dfc8b210d6d4d6058ff287eeb5e721a8cbac649e9
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage03_LAE阈值与LAE_LER构建\03_输出\stage3b_run_summary.csv,stage3b_run_summary.csv,.csv,结论,7571,Stage03B 类别构建产物：LAE 分类与 LER 人口指纹。,"150 行 × 7 列 [epsilon, run, seed, n_classes, mean_ari_to_others, min_ari_to_others …]",6722f1794b7557f17e7cbc38317c7ce167cd6fa5778eca60c62983ebc97e824c
+项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage03_输入输出检索表.md,Stage03_输入输出检索表.md,.md,文档,16564,Markdown 文档。,,87fe613326baa0c024d6e4034048ecb44641d78c3dfe44df4f85fb69386dc8c1
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage04_无序度与能量关联\01_报告\Stage04_确定性结论与待讨论.md,Stage04_确定性结论与待讨论.md,.md,文档,3755,Markdown 文档。,,b588c947db19a78de8ccd4aa96d13e8f322223cd62e0a799815db270a2e7cf43
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage04_无序度与能量关联\02_脚本\stage4a_continuous_disorder.py,stage4a_continuous_disorder.py,.py,代码,28213,Stage04A 连续无序度产物。,,e2f4179bd788a3d1e12215c095468c4273480f561476ece097ae737e40bc3a7a
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage04_无序度与能量关联\02_脚本\stage4b_disorder_energy.py,stage4b_disorder_energy.py,.py,代码,33995,Stage04B 无序度-能量关联产物。,,67768ffb0fffa67444eceff4a76c7b851ee63ad0276bb39a52d7f3034399c74b
@@ -289,6 +295,7 @@
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage04_无序度与能量关联\03_输出\stage4b_pca_interface_energy.png,stage4b_pca_interface_energy.png,.png,结论,61830,Stage04B 无序度-能量关联产物。,,67656b8124e5db875d743290d859a0aae7f44e8ce3c94960fc38777b6d03c943
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage04_无序度与能量关联\03_输出\stage4b_stable_interface_scatter.png,stage4b_stable_interface_scatter.png,.png,结论,12035,Stage04B 无序度-能量关联产物。,,4c5a88d06163bfd4122314d7d2dff46ce603675dc25b9bfee69084b4f7b3bb46
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage04_无序度与能量关联\03_输出\stage4b_state_binned_trends.png,stage4b_state_binned_trends.png,.png,结论,24412,Stage04B 无序度-能量关联产物。,,05a09693a73a1732fab5bd435b64017c9fe65276857c61ae63cbe50e405034ca
+项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage04_输入输出检索表.md,Stage04_输入输出检索表.md,.md,文档,18380,Markdown 文档。,,869f4b52d1b4675dd5a4eea9dac4a9203dc36a6bbce73221a3d666f133784345
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage05_物理空间与方向\01_报告\Stage05_确定性结论与待讨论.md,Stage05_确定性结论与待讨论.md,.md,文档,3872,Markdown 文档。,,463d419ae1d6f6daebb064c334394af4d043a74e053936f3fecc43e05699503a
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage05_物理空间与方向\02_脚本\stage5a_physical_spatial_residual.py,stage5a_physical_spatial_residual.py,.py,代码,51112,Stage05A 物理描述符与空间分布产物。,,25e254afdb0951da69837b4be620c4f00d86d39864c4d8a55b12dbce50cc4b26
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage05_物理空间与方向\02_脚本\stage5b_soap_direction.py,stage5b_soap_direction.py,.py,代码,47864,Stage05B SOAP 方向相关产物。,,4e5e7139a7e5368db8fc95d6fe00286dcd15994f4a39d75495c810bdaa6e6cc9
@@ -335,6 +342,7 @@
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage05_物理空间与方向\03_输出\stage5b_representative_cases.png,stage5b_representative_cases.png,.png,结论,36620,Stage05B SOAP 方向相关产物。,,4071dca60b91a3f281c46ea68c9f30a9b0764d59d22a46155fa1cd5834788c19
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage05_物理空间与方向\03_输出\stage5b_representative_direction_cases.xyz,stage5b_representative_direction_cases.xyz,.xyz,结论,120252,Stage05B SOAP 方向相关产物。,59 原子 · 附加列: central=1180 state=stable D=12.14652217671282 dE=-0.0661999999999993 Eres=-0.0015399999999998 CN=13.0 RMS=0.0613492856268347 CSP=9.284815819772238 dV=1.9134011445628063,3c7182b4e42ef75f353ee8ab9702f01030953b5bc7fc58b6d33f66ab7516b672
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage05_物理空间与方向\03_输出\stage5b_stable_direction_autocorrelation.png,stage5b_stable_direction_autocorrelation.png,.png,结论,25637,Stage05B SOAP 方向相关产物。,,11e36cee7e45187ec22bec61272dccb9db225cb685019497132c842578f49dd9
+项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage05_输入输出检索表.md,Stage05_输入输出检索表.md,.md,文档,21532,Markdown 文档。,,cce3211de9ff552135dfd8c65bcdb1d6ef7baa784a64d8304b269550a77aa34b
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage06_最终评估\01_报告\Stage06_确定性结论与待讨论.md,Stage06_确定性结论与待讨论.md,.md,文档,3619,Markdown 文档。,,ef9d6c95f5cd7bb71a57ad7488cd5d4dbff39a0c8cf986687c42c1e5af7be044
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage06_最终评估\02_脚本\stage6_final_analysis.py,stage6_final_analysis.py,.py,代码,38275,Stage06 最终评估产物：相关系数、模型对比与稳健性检验。,,366aa25d1fbced34b7fda9a03810ed8e3abe3bef142cb9e485883060644fac66
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage06_最终评估\03_输出\stage6_correlations.csv,stage6_correlations.csv,.csv,结论,25343,★ 全项目最终相关系数：原始 0.8317，控制物理描述符后降到 0.2058。这是方法线最重要的产出。,无序度 D 与位移范数相关 0.99998 · D 与过剩能相关 0.277,fc191ba890431c7f6defdbfadce2609a3047e775b7a60cef453fa2d7ae69aab0
@@ -352,6 +360,34 @@
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage06_最终评估\03_输出\stage6_spatial_direction_residual.png,stage6_spatial_direction_residual.png,.png,结论,82228,Stage06 最终评估产物：相关系数、模型对比与稳健性检验。,,1dc3132d78aea6b6c0fa6ccffbea2a20ec99e79c32e705e097fd0e4f27e9ee43
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage06_最终评估\03_输出\stage6_spatial_summary.csv,stage6_spatial_summary.csv,.csv,结论,955,Stage06 最终评估产物：相关系数、模型对比与稳健性检验。,"8 行 × 9 列 [state, interface_id, field, n, mean, std …]",3007322be7d61bba5ef8e427888cec3dabcd84cd102e7af659eeb3eee74782b2
 项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage06_最终评估\03_输出\stage6_state_classification.csv,stage6_state_classification.csv,.csv,结论,1083,Stage06 最终评估产物：相关系数、模型对比与稳健性检验。,"10 行 × 8 列 [test_interface, n_train, n_test, roc_auc, balanced_accuracy, f1 …]",ca299960f4cd780434e996bff20453eded7c75de03e2f3360560d546ed92bb98
+项目三：Ni SOAP 方法探索,Ni_SOAP_Method_Exploration_by_Stage\Stage06_输入输出检索表.md,Stage06_输入输出检索表.md,.md,文档,10720,Markdown 文档。,,cb517ab04474f63bc7a7583c455a70fc0901029ea7187a75c5435691693ba9df
+项目四：Li 控压方案对照,Li_Sigma5_控压方案对照_2026-10-15\00_双周报告\双周报告10.01-10.15.docx,双周报告10.01-10.15.docx,.docx,文档,26629,（未分类）,,503137de6839bb070535007d0b19fbe1ab0c9126cbdc9fe62dfd173bdeb3800f
+项目四：Li 控压方案对照,Li_Sigma5_控压方案对照_2026-10-15\00_双周报告\过去两周所做的事与结果.docx,过去两周所做的事与结果.docx,.docx,文档,38051,（未分类）,,cbb11db962949de2ac290525e6b7940614314ac19d1f4af540ab8c46a36474c6
+项目四：Li 控压方案对照,Li_Sigma5_控压方案对照_2026-10-15\00_双周报告\过去两周所做的事与结果.md,过去两周所做的事与结果.md,.md,文档,1752,Markdown 文档。,,8c93b2920062970fee5d60cc4de3a0cecd65e213e87fa71e0f0f62ae90938e5b
+项目四：Li 控压方案对照,Li_Sigma5_控压方案对照_2026-10-15\01_数据产物\final_aniso_fast.json,final_aniso_fast.json,.json,文档,1205,参数与元数据。,"字段: name, file, n_atoms, box_A, volume_per_atom_A3, a_implied_if_bcc_A, reference_a_A, rdf_first_peak_A",63d88f69f600e9d081f15c6f4682c78e064b231b5c6f13fed45c1aede53a1777
+项目四：Li 控压方案对照,Li_Sigma5_控压方案对照_2026-10-15\01_数据产物\final_xonly_fast.json,final_xonly_fast.json,.json,文档,1233,参数与元数据。,"字段: name, file, n_atoms, box_A, volume_per_atom_A3, a_implied_if_bcc_A, reference_a_A, rdf_first_peak_A",15b63cd8a0fec3a9f42b777aa2ba10517d10ef3c0d63ac020bd64a5d11a2fb64
+项目四：Li 控压方案对照,Li_Sigma5_控压方案对照_2026-10-15\01_数据产物\gb_width_fixed.json,gb_width_fixed.json,.json,文档,610,参数与元数据。,"字段: start_quenched, final_xonly_fast, final_aniso_fast",31531b1aea28ba35e3464aae8d93be76feaab6fb5aabec269d2aaa8a1f66b1d4
+项目四：Li 控压方案对照,Li_Sigma5_控压方案对照_2026-10-15\01_数据产物\start_quenched.json,start_quenched.json,.json,文档,1202,参数与元数据。,"字段: name, file, n_atoms, box_A, volume_per_atom_A3, a_implied_if_bcc_A, reference_a_A, rdf_first_peak_A",d421c6978889f355249cb59391dcd99794f9a1ff4c3bf2f328b047c8319bb771
+项目四：Li 控压方案对照,Li_Sigma5_控压方案对照_2026-10-15\01_数据产物\summary.json,summary.json,.json,文档,4719,参数与元数据。,"字段: xonly_fast, aniso_fast",0eab7c635a3677e33aaf7d9fc219bbe48ad4e127b89e3cdd5b35f6142b740fcf
+项目四：Li 控压方案对照,Li_Sigma5_控压方案对照_2026-10-15\01_数据产物\summary.md,summary.md,.md,文档,763,Markdown 文档。,,6192d4f3b94b8db911038cc346aab8c0b9faf5f7ae013fa29b23ea536f6d43a4
+项目四：Li 控压方案对照,Li_Sigma5_控压方案对照_2026-10-15\01_数据产物\thermo_aniso_fast.csv,thermo_aniso_fast.csv,.csv,结论,11977,数据表。,"26 行 × 18 列 [Step, Temp, Press, Pxx, Pyy, Pzz …]",7606aa93a8153837ce40aed79130d30a2159165d7e90703052b066d996a1e6fa
+项目四：Li 控压方案对照,Li_Sigma5_控压方案对照_2026-10-15\01_数据产物\thermo_xonly_fast.csv,thermo_xonly_fast.csv,.csv,结论,11993,数据表。,"26 行 × 18 列 [Step, Temp, Press, Pxx, Pyy, Pzz …]",37f26773cfb57da06079b1551c917b1ee805912ffbbd6914650fd3a382782740
+项目四：Li 控压方案对照,Li_Sigma5_控压方案对照_2026-10-15\01_数据产物\结果报告.md,结果报告.md,.md,文档,9557,Markdown 文档。,,f0fc5d1a7909fc69a64a5eed169f00df10b54f3ad3699d0d16cd490276423c46
+项目四：Li 控压方案对照,Li_Sigma5_控压方案对照_2026-10-15\02_图\fig_profile.png,fig_profile.png,.png,结论,214649,图表，可直接用于报告或论文。,,eb382d6d0aa63cf5646b972f068c2a81b6ff19c0dbc873911aafe4736dbe1391
+项目四：Li 控压方案对照,Li_Sigma5_控压方案对照_2026-10-15\02_图\fig_strain.png,fig_strain.png,.png,结论,169962,图表，可直接用于报告或论文。,,9a3929a7aade8d69bf2afd015bb70c981f53d33532cd73286024dd8cf2dc64d2
+项目四：Li 控压方案对照,Li_Sigma5_控压方案对照_2026-10-15\02_图\fig_stress.png,fig_stress.png,.png,结论,185472,图表，可直接用于报告或论文。,,51a74a6e75e4a28612e951096ae5cd59026f0cd90ca9bc97decba0a283c6f11c
+项目四：Li 控压方案对照,Li_Sigma5_控压方案对照_2026-10-15\03_原始日志\baro_aniso_fast.lammps,baro_aniso_fast.lammps,.lammps,追溯,20369,LAMMPS 运行日志，含各阶段数值历史与断言结果。,,2402c2f89c89ac41fde2b90924465b63cbfcb9250c1648ba75722d5f8316ea37
+项目四：Li 控压方案对照,Li_Sigma5_控压方案对照_2026-10-15\03_原始日志\baro_xonly_fast.lammps,baro_xonly_fast.lammps,.lammps,追溯,20354,LAMMPS 运行日志，含各阶段数值历史与断言结果。,,e1e5886d5181e8b9761a0385e9102c85a377c9f8bfefa7478e2597e721767818
+项目四：Li 控压方案对照,Li_Sigma5_控压方案对照_2026-10-15\04_脚本\analyze_structure.py,analyze_structure.py,.py,代码,12735,Python 脚本。,,48c25b756cbc6d35eb1c3a5cf50405e9c09243b102ebf1e87d601880079356fd
+项目四：Li 控压方案对照,Li_Sigma5_控压方案对照_2026-10-15\04_脚本\compare_barostat.py,compare_barostat.py,.py,代码,4267,Python 脚本。,,04b31ff4394538b8f0cd9a4143eafb8e9d0f26262f401571dc0267f8b9825cbf
+项目四：Li 控压方案对照,Li_Sigma5_控压方案对照_2026-10-15\04_脚本\dump_box.py,dump_box.py,.py,代码,1569,Python 脚本。,,38b7d16ba3c425c26c7e1b859b647c9d104a5cd575d2d330b4c26725bb574750
+项目四：Li 控压方案对照,Li_Sigma5_控压方案对照_2026-10-15\04_脚本\gb_width_fixed.py,gb_width_fixed.py,.py,代码,1490,Python 脚本。,,324fcb40e69074611608dbbba10cc4e21a5016f594eb46e58ec3bc7b42609ff9
+项目四：Li 控压方案对照,Li_Sigma5_控压方案对照_2026-10-15\04_脚本\in.baro_hold,in.baro_hold,.baro_hold,输入,4600,LAMMPS 输入脚本。,,3a3e501dd81755a1204ea68638e3b4a485b05d32e20acbe6ece592f25ba90aa8
+项目四：Li 控压方案对照,Li_Sigma5_控压方案对照_2026-10-15\04_脚本\make_figures.py,make_figures.py,.py,代码,5137,Python 脚本。,,c961ea5744a06d10b576701d14838186ce443ea48788ee43543261a3bb07a128
+项目四：Li 控压方案对照,Li_Sigma5_控压方案对照_2026-10-15\04_脚本\probe_rdf.py,probe_rdf.py,.py,代码,1213,Python 脚本。,,c38303a726753890a02f506c5e15e904a6e29a7570cfc0125392997f5794f0f4
+项目四：Li 控压方案对照,Li_Sigma5_控压方案对照_2026-10-15\04_脚本\run_barostat.sh,run_barostat.sh,.sh,代码,2301,Shell 脚本（在 WSL/Linux 下运行）。,,c14db1cc7afbe5844f48488602962689eb92ee78d7512a663d4b603e4171b87f
+项目四：Li 控压方案对照,Li_Sigma5_控压方案对照_2026-10-15\04_脚本\validate_q.py,validate_q.py,.py,代码,3287,Python 脚本。,,efac0f6a1c9be42a445c8b5f0cc7b6bfabb88511d8f3214d9d79b116e456dffd
+项目四：Li 控压方案对照,Li_Sigma5_控压方案对照_2026-10-15\README.md,README.md,.md,文档,4793,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,8c197d422dfe4203b581cd046897d07c191b061f5b3f6028980baf6b67eaf25f
 归档区：为溯源保留的历史副本,_archive\GB_project_20260819\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\docs\notes\README.md,README.md,.md,文档,18,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,3b8e7097e5e0ff56b024e4ec2ced82ea565a4701bfd1be97557cfac686f82667
 归档区：为溯源保留的历史副本,_archive\GB_project_20260819\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\docs\README.md,README.md,.md,文档,11206,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,9bdeca5890cc043270431a567d2f83bfa9eb56911451e098521edecf97322ef4
 归档区：为溯源保留的历史副本,_archive\GB_project_20260819\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\docs\reports\build_report.md,build_report.md,.md,文档,2182,Markdown 文档。,,20a6fa3ff670e6b643a0e71e4a016877ad4cec3624b9702c3c7b2c3f71b50c99
@@ -508,16 +544,23 @@
 归档区：为溯源保留的历史副本,_archive\Li_metastable_2x2_legacy_20260819\stage0_build_validate\build_report.md,build_report.md,.md,文档,2360,Markdown 文档。,,8a7afb4498acfd385046fc56bd5d889be4d8d671a8ca864fda996a594dea0e05
 归档区：为溯源保留的历史副本,_archive\Li_metastable_2x2_legacy_20260819\stage0_build_validate\validation_report.md,validation_report.md,.md,文档,1813,Markdown 文档。,,e1b8041cdc71e21a9ef83b5fb46b729d91d484a287258d2523c6d6c3ddb2b2e3
 归档区：为溯源保留的历史副本,_archive\Li_metastable_2x2_legacy_20260819\stage0_build_validate\verification_report.md,verification_report.md,.md,文档,1813,Markdown 文档。,,e1b8041cdc71e21a9ef83b5fb46b729d91d484a287258d2523c6d6c3ddb2b2e3
-项目根与工具,.gitattributes,.gitattributes,(无),文档,748,（未分类）,,4c0a9ade8fcbcd679ff5b73e003ccbdeb18b5dc6846c0c2f18081013c26c68a3
-项目根与工具,.gitignore,.gitignore,(无),输入,1505,Git 忽略规则，指定哪些文件不纳入版本控制。,,f3e429fdb339bd0d58e4bee1ee3d716f3eccc2146ade319e8f696dbfc25e95fd
-项目根与工具,DATA_MANIFEST.csv,DATA_MANIFEST.csv,.csv,结论,17207,数据表。,"60 行 × 7 列 [﻿相对路径, 文件名, 扩展名, 层次, 大小(字节), 用途说明 …]",9778fbfb1008720461f4ee2349c370549d3b1b9e63b71b36c018296aa576453d
-项目根与工具,DATA_MANIFEST.md,DATA_MANIFEST.md,.md,文档,12684,Markdown 文档。,,fa3d369bb149092bf3bd34de0c4d6b4332844afa408b5564287c6b103b9191fd
-项目根与工具,PROJECT_REVIEW.md,PROJECT_REVIEW.md,.md,文档,10847,Markdown 文档。,,057a0f2ae486d02eb30aeaa3689eb1c2f3d984d4c9a59b09ec6a8781e4af2a6d
-项目根与工具,README.md,README.md,.md,文档,4199,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,ec7c57df9d973182d390550c405e9fa9165c55b7a66be3a38b22522cec2aa786
-项目根与工具,refresh_ledger.cmd,refresh_ledger.cmd,.cmd,输入,657,（未分类）,,b08e57c1262d97f326a4508ce91dc1e0cf3f4f762becf739c17f8563a3e8bc0e
-项目根与工具,STUDY_GUIDE.md,STUDY_GUIDE.md,.md,文档,11223,Markdown 文档。,,0547b00a49b37c03edf04586c0b9b600f18dac68777c269e3263b2ab0e7b1dab
-项目根与工具,tools\artifact_ledger.py,artifact_ledger.py,.py,代码,28622,Python 脚本。,,561aa827375c349349dc50cd2b2f4d89ceb65c844e3f3a5fdb05fdc0f0090508
-项目根与工具,tools\build_artifact_catalog.py,build_artifact_catalog.py,.py,代码,31053,Python 脚本。,,9a5963b1a712e902e4e5e86615c46b40c4537307ff3549cb9adcd558d8a68b43
-项目根与工具,tools\compute_gb_energy.py,compute_gb_energy.py,.py,代码,6410,Python 脚本。,,27a40dce4dd0bd475b542bda5932aa4033c3a2f6a23c89a02e6e6cb6df54ce09
-项目根与工具,tools\install_git_hook.ps1,install_git_hook.ps1,.ps1,代码,2807,PowerShell 脚本。,,cade355890b48472ec86081230acb4dd88d369889b9de42e261a3b3ce23f0684
-项目根与工具,tools\README.md,README.md,.md,文档,2724,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,9375e112a0ffa1d7f6ebab22301a3ee598a9da28d0d3be1ba6d3ac41e769182a
+归档区：为溯源保留的历史副本,_archive\README.md,README.md,.md,文档,488,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,f1f42d350a29a5e105e6c85b684a19fe65bb43eb5872da3e056fd46073e4ca32
+项目根、文档与工具,.gitattributes,.gitattributes,(无),文档,748,（未分类）,,4c0a9ade8fcbcd679ff5b73e003ccbdeb18b5dc6846c0c2f18081013c26c68a3
+项目根、文档与工具,.gitignore,.gitignore,(无),输入,1587,Git 忽略规则，指定哪些文件不纳入版本控制。,,17420904063f6cff8fa1bc0ff9563291bf10683e36c097d26843d168e2b45690
+项目根、文档与工具,DATA_MANIFEST.csv,DATA_MANIFEST.csv,.csv,结论,17207,数据表。,"60 行 × 7 列 [﻿相对路径, 文件名, 扩展名, 层次, 大小(字节), 用途说明 …]",9778fbfb1008720461f4ee2349c370549d3b1b9e63b71b36c018296aa576453d
+项目根、文档与工具,DATA_MANIFEST.md,DATA_MANIFEST.md,.md,文档,12684,Markdown 文档。,,fa3d369bb149092bf3bd34de0c4d6b4332844afa408b5564287c6b103b9191fd
+项目根、文档与工具,docs\MAINTENANCE.md,MAINTENANCE.md,.md,文档,2457,Markdown 文档。,,2cbd0e8d57159abff8a9289b2d0cd5ea1a6082fb124147cbf174c50f2e4d7cff
+项目根、文档与工具,docs\PROJECT_REVIEW.md,PROJECT_REVIEW.md,.md,文档,10847,Markdown 文档。,,057a0f2ae486d02eb30aeaa3689eb1c2f3d984d4c9a59b09ec6a8781e4af2a6d
+项目根、文档与工具,docs\RESEARCH_STATUS.md,RESEARCH_STATUS.md,.md,文档,2247,Markdown 文档。,,0fdd0b3929097684b01707fad2392092fe8a23b976a35a7d8c5e665c0a7624a4
+项目根、文档与工具,docs\STUDY_GUIDE.md,STUDY_GUIDE.md,.md,文档,11223,Markdown 文档。,,0547b00a49b37c03edf04586c0b9b600f18dac68777c269e3263b2ab0e7b1dab
+项目根、文档与工具,docs\VERSIONS.md,VERSIONS.md,.md,文档,2619,Markdown 文档。,,c944b82e42397aee2bfee41e5c40337cc830ed06febb5f8b11ccc8b15513437e
+项目根、文档与工具,docs\WORKFLOWS.md,WORKFLOWS.md,.md,文档,4570,Markdown 文档。,,eb9d66a4c75a0fbeba4eaa29aa348dcc1c08718ae3f1c54eab345d24d6137e78
+项目根、文档与工具,README.md,README.md,.md,文档,1826,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,302c7cda1c4bf3d32e51eaa8832a47998b6df0f13ba7ccbfb353d97878baa862
+项目根、文档与工具,refresh_ledger.cmd,refresh_ledger.cmd,.cmd,输入,657,（未分类）,,b08e57c1262d97f326a4508ce91dc1e0cf3f4f762becf739c17f8563a3e8bc0e
+项目根、文档与工具,tests\test_repository_tools.py,test_repository_tools.py,.py,代码,6446,Python 脚本。,,5d5604c47326a1a01c6c23810d1be2e53c83f00a7dea723bdc0560918f0559e0
+项目根、文档与工具,tools\artifact_ledger.py,artifact_ledger.py,.py,代码,28643,Python 脚本。,,e702373942c2bf478275aa9f769140129aeeba6a5bdf0a2ae5c51a034fa7fe64
+项目根、文档与工具,tools\build_artifact_catalog.py,build_artifact_catalog.py,.py,代码,31427,Python 脚本。,,68b77455705dabf7e359c0ffee06993bc582e4b3dca9d383676f7086b2480468
+项目根、文档与工具,tools\compute_gb_energy.py,compute_gb_energy.py,.py,代码,6410,Python 脚本。,,27a40dce4dd0bd475b542bda5932aa4033c3a2f6a23c89a02e6e6cb6df54ce09
+项目根、文档与工具,tools\install_git_hook.ps1,install_git_hook.ps1,.ps1,代码,2807,PowerShell 脚本。,,cade355890b48472ec86081230acb4dd88d369889b9de42e261a3b3ce23f0684
+项目根、文档与工具,tools\prepare_soap_workspace.py,prepare_soap_workspace.py,.py,代码,5312,Python 脚本。,,ccdd0c198fcf61d6eb1fcb97dcd31955d60052fc6b82f0bd10ffe46b5a35f46c
+项目根、文档与工具,tools\README.md,README.md,.md,文档,2400,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,c5720b45280b1c37edc6b2716e2659083a820ad28d7ebc64b19f34a6f8223312

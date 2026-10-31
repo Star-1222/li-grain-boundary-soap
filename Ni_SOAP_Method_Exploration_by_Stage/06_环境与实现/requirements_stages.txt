@@ -1,0 +1,9 @@
+# Imports required by archived Ni Stage01-06 scripts.
+# This is an unpinned dependency list, not a reproduction lockfile.
+numpy
+scipy
+ase
+dscribe
+matplotlib
+pandas
+Pillow

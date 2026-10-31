@@ -1,6 +1,8 @@
 # Ni SOAP 方法探索（按 Stage 整理）
 
-整理日期：2026-09-25
+归档整理日期：2026-09-25
+
+重跑入口：[工作流与执行顺序](../docs/WORKFLOWS.md)。先运行 `python tools/prepare_soap_workspace.py --dest runs/ni-soap-001`（仓库根目录），准备同目录脚本与共享输出的独立副本。
 
 本项目的主要目标是探索可迁移的 SOAP 方法。它不是势函数或能量来源审计，后续工作重点是 SOAP 参数、距离定义、体相参考、LAE 稳定性、方向表示和独立验证。
 

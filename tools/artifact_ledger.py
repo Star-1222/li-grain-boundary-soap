@@ -683,7 +683,7 @@ def main() -> int:
             continue
         md.append(f"## {title}")
         md.append("")
-        where = f"`{proj}`" if proj else "仓库根目录与 `tools/`"
+        where = f"`{proj}`" if proj else "仓库根目录、文档、工具与其他项目"
         md.append(f"{where} — {len(proj_rows)} 个文件，"
                   f"{base.human(sum(r['size'] for r in proj_rows))}")
         md.append("")

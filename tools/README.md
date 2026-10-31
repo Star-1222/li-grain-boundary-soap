@@ -1,45 +1,37 @@
-# 研究产物台账工具
+# 仓库工具
 
-这套工具把 `D:\Research` 下的每一个产物与它的说明、层次、校验和、内容分析
-绑定在一起，生成一份会自我更新的台账。
+所有命令从仓库根目录运行；Python 3.10+。
 
-## 产出物
+| 工具 | 用途 | 依赖 |
+|---|---|---|
+| `prepare_soap_workspace.py` | 将 Ni 六阶段脚本和 CFG 复制到独立运行目录，生成执行顺序与来源清单 | 标准库 |
+| `artifact_ledger.py` | 生成 `ARTIFACT_LEDGER.md/csv`，记录项目文件、用途、SHA256 与内容分析 | NumPy |
+| `build_artifact_catalog.py` | 台账分类与扫描的底层模块；日常更新使用上面的入口 | 标准库 |
+| `compute_gb_energy.py` | 从已有 LAMMPS 日志复算晶界过剩能 | 标准库 |
+| `install_git_hook.ps1` | 可选：提交前自动刷新并暂存台账 | PowerShell、Git、Python、NumPy |
 
-| 文件 | 内容 |
-|---|---|
-| `ARTIFACT_LEDGER.md` | 人读版台账：层次分布、自动识别的问题、内容分析、逐文件清单 |
-| `ARTIFACT_LEDGER.csv` | 机器可读版：每行一个产物，含 SHA256，可用 Excel 筛选 |
+## 准备 SOAP 运行副本
 
-文件名刻意使用 ASCII，避免中文路径在脚本与 git 钩子中出问题；内容仍是中文。
-
-## 每个产物绑定了什么
-
-1. **层次** —— 结论 / 续算 / 中间 / 追溯 / 代码 / 输入 / 文献 / 文档，并给出处置建议
-2. **用途** —— 这个文件是什么、在项目里扮演什么角色
-3. **内容分析** —— 直接从文件里读出来的事实，例如：
-   - `.data` → 原子数、盒子尺寸、timestep
-   - `.dump` → 帧数、timestep 范围、原子数
-   - `.stats` → 压力分量的时均值与极差（会标注各向异性）
-   - `.npy` / `.npz` → 数组形状、类型、是否全为有限值
-   - `.csv` → 行列数、前若干列名
-   - CNA 报告 → 各阶段晶界/晶内 BCC 比例与无序带宽
-   - 能量模型表 → 各模型的 R² 均值
-4. **SHA256** —— 完整性校验；文件一变就能看出来
-
-另外台账会自动做**交叉核对**：把报告里声称的数字与原始数据实测值对照。
-例如 `stage6_energy_models.csv` 的实测 R² 与最终报告声称的数值逐项一致。
-
-## 三种更新方式
-
-### 1. 手动（随时）
-
-双击 `D:\Research\refresh_ledger.cmd`，或在命令行运行：
-
-```cmd
-D:\Research\refresh_ledger.cmd
+```bash
+python tools/prepare_soap_workspace.py --dest runs/ni-soap-001
 ```
 
-### 2. 每次提交自动更新（推荐）
+目标目录必须不存在。工具只复制脚本、两份原始 CFG 和依赖列表，不复制旧结果、不启动计算。新目录中的 `SOURCE_MANIFEST.json` 记录来源与 SHA256，`RUN_ORDER.md` 给出逐阶段命令。计算环境与执行限制见[工作流](../docs/WORKFLOWS.md)。
+
+## 台账与能量复算
+
+```bash
+python tools/artifact_ledger.py
+python tools/compute_gb_energy.py
+```
+
+Windows 也可以运行 `refresh_ledger.cmd`。台账是派生物，生成前应先暂存源文件；大小与哈希取暂存区 blob，内容分析取工作区。生成后把两份台账一起暂存。完整操作见[维护说明](../docs/MAINTENANCE.md)。
+
+`DATA_MANIFEST.md/csv` 保存未入库数据的恢复清单，只有在数据完整的原机器上才用 `--data-manifest` 更新。全新克隆保留现有清单。
+
+工具默认使用其所在仓库，旧台账工具支持用 `RESEARCH_ROOT` 指向其他根目录；`LEDGER_MIRROR` 为空时不生成镜像副本。
+
+## 可选 Git 钩子
 
 在仓库根目录执行一次：
 
@@ -47,27 +39,12 @@ D:\Research\refresh_ledger.cmd
 powershell -ExecutionPolicy Bypass -File tools\install_git_hook.ps1
 ```
 
-之后每次 `git commit`，钩子会先刷新台账并把结果一并纳入本次提交。
-若台账生成失败，钩子会放行（`exit 0`），不会阻塞你的提交。
+该脚本会写入 `.git/hooks/pre-commit`，安装前自行保留已有自定义钩子。提交时它刷新并自动暂存台账；生成失败仍放行，所以不能代替手工检查。钩子不随克隆自动安装。
 
-### 3. 定时刷新
+## 验证工具
 
-用任务计划程序定期调用 `refresh_ledger.cmd` 即可，例如每天一次。
-
-## 换目录或用别的项目
-
-通过环境变量指定扫描根：
-
-```cmd
-set RESEARCH_ROOT=E:\MyProject
-D:\Research\refresh_ledger.cmd
+```bash
+python -m unittest discover -s tests -v
 ```
 
-`LEDGER_MIRROR` 为空字符串时不产生镜像副本。
-如需登记新的项目目录，编辑 `tools\build_artifact_catalog.py` 里的 `PROJECTS` 列表。
-
-## 注意
-
-- 台账是**派生物**，不要手工编辑，改动会在下次刷新时丢失。
-- 新增产物后无需登记，重新生成即可自动收录。
-- `.cmd` 必须保持 CRLF、`.ps1` 必须保持纯 ASCII —— 这两点在本机都踩过坑。
+测试验证目录覆盖、运行副本与来源完整性、覆盖保护和文档链接。台账的覆盖与稳定性测试另需 NumPy。它们不认证历史 MD / SOAP 结果。
