@@ -6,7 +6,7 @@
 - `maintenance/docs/` 放跨项目说明、学习路线与评估；科学脚本、报告、数据留在各实验原目录。
 - `maintenance/tools/` 放仓库维护与运行准备工具，`maintenance/tests/` 检验这些工具。
 - `runs/` 放新运行副本，已加入忽略规则。结果审查后再选择必要的输入、报告、日志和检查点纳入对应实验目录。
-- `grain_boundary/archive/` 保留历史来源。不要仅因同名或文件哈希相同就删除研究证据。
+- `grain_boundary/history/` 保留历史来源。不要仅因同名或文件哈希相同就删除研究证据。
 
 ## 更新台账
 

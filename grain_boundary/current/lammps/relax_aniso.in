@@ -1,0 +1,24 @@
+# Current standard: post-quench 10 K anisotropic normal-stress relaxation.
+# Pdamp is in ps (units metal); it is supplied explicitly by run.py.
+units metal
+atom_style atomic
+boundary p p p
+read_restart "${input}"
+pair_style kim ${kim_model}
+pair_coeff * * Li
+neighbor 2.0 bin
+neigh_modify delay 0 every 1 check yes
+timestep 0.001
+reset_timestep 0
+fix barostat all npt temp 10.0 10.0 0.1 aniso 0.0 0.0 ${pdamp}
+thermo 200
+thermo_style custom step atoms temp pe press pxx pyy pzz pxy pxz pyz lx ly lz vol
+dump trajectory all custom 200 "${outdir}/trajectory.dump" id type x y z vx vy vz
+dump_modify trajectory sort id
+restart 1000 "${outdir}/checkpoint.*"
+run ${nsteps}
+unfix barostat
+undump trajectory
+write_data "${outdir}/candidate.data"
+write_restart "${outdir}/candidate.restart"
+print "CURRENT_RELAX_ANISO_DONE"

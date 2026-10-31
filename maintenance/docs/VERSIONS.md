@@ -4,16 +4,14 @@
 
 当前目录按两条研究主线组织，旧路径对照见[目录迁移表](PATH_MIGRATION.md)。
 
-## 科学版本按实验区分
+## 当前与历史
 
-| 标识 | 规范位置 | 与其他版本的关系 |
-|---|---|---|
-| Li 3600 基准 | `grain_boundary/01_GB_Construction/Sigma5_310_Metastable_GB/v2_production/` | 已验证的构建基准；其中 `src/generator/` 是该基准代码入口 |
-| Li 早期 2×2 | `grain_boundary/Li_Sigma5_310_metastable_2x2/` | 面内扩大后的早期脚手架；不能用其 NOT RUN 报告判断后续实验状态 |
-| Li 阶段一，2026-09 | `grain_boundary/experiments/phase1_2026-09/` | 独立验收记录；以包内报告、日志和检查点为准 |
-| Li 控压对照，2026-10 | `grain_boundary/experiments/barostat_2026-10/` | 后续敏感性实验；与阶段一并存，协议不能混用 |
-| Ni SOAP Stage01–06 | `soap/` | 一条方法探索链；汇总报告为规范入口，Stage 报告副本供查阅 |
-| 历史副本 | `grain_boundary/archive/`、Ni 的 `90_历史归档/` | 仅用于追溯，不作为新运行入口 |
+- **现行协议与代码：** [grain_boundary/current](../../grain_boundary/current/README.md)，标准采用淬火后 10 K aniso 松弛、三项稳定性审查、保存起点。
+- **标准起点状态：** [STATUS.json](../../grain_boundary/current/STATUS.json)，尚未登记通过新审查程序的结构。
+- **历史证据：** [grain_boundary/history](../../grain_boundary/history/README.md)，保留 3600 基准、早期 2×2、阶段一验收、控压对照和旧报告；均不作为现行默认版本。
+- **SOAP：** [soap](../../soap/README.md) 保持自己的六阶段方法探索流程。
+
+历史参数表和旧报告只描述对应运行。后续使用现行 model.json 和 PROTOCOL.md，不能按目录日期或 final/new 字样选择流程。
 
 ## Git 历史中的定位点
 

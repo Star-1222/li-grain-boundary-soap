@@ -111,8 +111,8 @@ class RepositoryToolsTests(unittest.TestCase):
                  ROOT / "maintenance/tools/README.md",
                  *sorted((ROOT / "maintenance/docs").glob("*.md"))]
         files += [ROOT / name / "README.md" for name in (
-            "grain_boundary", "grain_boundary/experiments/phase1_2026-09",
-            "soap", "grain_boundary/archive",
+            "grain_boundary", "grain_boundary/current", "grain_boundary/history/experiments/phase1_2026-09",
+            "soap", "grain_boundary/history",
         )]
         for file in files:
             for target in re.findall(r"\[[^\]]*\]\(([^)]+)\)", file.read_text(encoding="utf-8")):
@@ -139,7 +139,7 @@ class RepositoryToolsTests(unittest.TestCase):
             ])
             expected = {p for p in raw.decode("utf-8").split("\0") if p and (ROOT / p).is_file()}
             self.assertEqual(paths, expected)
-            self.assertTrue(any(p.startswith("grain_boundary/experiments/barostat_2026-10/") for p in paths))
+            self.assertTrue(any(p.startswith("grain_boundary/history/experiments/barostat_2026-10/") for p in paths))
 
 
 if __name__ == "__main__":

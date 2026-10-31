@@ -28,9 +28,9 @@ def _default_root() -> Path:
 
 
 ROOT = _default_root()
-PROD = (ROOT / "grain_boundary" / "01_GB_Construction"
+PROD = (ROOT / "grain_boundary/history/construction_baseline_3600"
         / "Sigma5_310_Metastable_GB" / "v2_production")
-ACC = (ROOT / "grain_boundary/experiments/phase1_2026-09"
+ACC = (ROOT / "grain_boundary/history/experiments/phase1_2026-09"
        / "Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03")
 
 # 1 eV/A^2 -> mJ/m^2
