@@ -1,0 +1,34 @@
+# Current protocol: QUENCH; input and outdir are supplied by run.py.
+units           metal
+atom_style      atomic
+boundary        p p p
+read_restart     "${input}"
+pair_style      kim ${kim_model}
+pair_coeff      * * Li
+neighbor        2.0 bin
+neigh_modify    delay 0 every 1 check yes
+
+timestep        0.001
+reset_timestep  0
+
+fix             1 all npt temp 363.0 10.0 0.1 iso 0.0 0.0 1.0
+
+thermo          500
+thermo_style    custom step temp pe etotal pxx pyy pzz press vol lx ly lz
+
+restart         5000 "${outdir}/checkpoint.*"
+
+dump            1 all custom 1000 "${outdir}/trajectory.dump" id type x y z
+dump_modify     1 sort id
+
+run             35300
+
+unfix           1
+undump          1
+
+write_data "${outdir}/final.data"
+write_restart "${outdir}/final.restart"
+print           "P1_QUENCH finalT=$(temp) Pxx=$(pxx) Pyy=$(pyy) Pzz=$(pzz)"
+print           "P1_QUENCH_DONE"
+
+print "CURRENT_QUENCH_DONE"

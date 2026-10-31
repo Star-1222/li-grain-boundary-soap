@@ -26,14 +26,14 @@
 | `soap\Stage02_SOAP表示与审计\03_输出\stage2_75_soap_vectors.npy` | 36.04 MB | 中间 | `bfa4378375dd7e9e` | ★ SOAP 主矩阵（4659 原子 × 1014 维，36 MB）。后续全部分析都建立在这个矩阵上；重算耗时较长。 |
 | `grain_boundary\00_Literature\soap\2018_Priedeman_QuantifyingConnectingGBStructure_长版54页.pdf` | 17.42 MB | 文献 | `ccd4e8caf1b5872b` | PDF 文档。 |
 | `soap\05_文献\2018_Priedeman_QuantifyingConnectingGBStructure_长版54页.pdf` | 17.42 MB | 文献 | `ccd4e8caf1b5872b` | PDF 文档。 |
-| `grain_boundary\experiments\phase1_2026-09\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\4_淬火10K\p1_quench.dump` | 15.30 MB | 中间 | `5e6c0aefe31bbdee` | 淬火过程轨迹（35.3 ps）。用于核实降温速率是否严格为 10 K/ps。 |
-| `grain_boundary\experiments\phase1_2026-09\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\2_退火363K零压\p1_anneal.dump` | 11.05 MB | 中间 | `267d2a85dd8aa74c` | 退火 25 ps 的过程轨迹。报告里“末 16 ps 时均 T=362.8 K”就是从这里统计出来的。 |
+| `grain_boundary\history\experiments\phase1_2026-09\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\4_淬火10K\p1_quench.dump` | 15.30 MB | 中间 | `5e6c0aefe31bbdee` | 淬火过程轨迹（35.3 ps）。用于核实降温速率是否严格为 10 K/ps。 |
+| `grain_boundary\history\experiments\phase1_2026-09\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\2_退火363K零压\p1_anneal.dump` | 11.05 MB | 中间 | `267d2a85dd8aa74c` | 退火 25 ps 的过程轨迹。报告里“末 16 ps 时均 T=362.8 K”就是从这里统计出来的。 |
 | `grain_boundary\00_Literature\soap\2024_Mishra_PRM_LearningFromMetastableSymmetricTiltGBs_PhysicsBasedDescriptors.pdf` | 10.41 MB | 文献 | `aff947cec0afc3ac` | PDF 文档。 |
 | `soap\05_文献\2024_Mishra_PRM_LearningFromMetastableSymmetricTiltGBs_PhysicsBasedDescriptors.pdf` | 10.41 MB | 文献 | `aff947cec0afc3ac` | PDF 文档。 |
-| `grain_boundary\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\data\quenched\stage3_quench.dump` | 9.89 MB | 中间 | `179a17eebc4cf6c9` | 淬火过程轨迹。用于核对降温速率与系统响应是否正常。 |
+| `grain_boundary\history\construction_baseline_3600\Sigma5_310_Metastable_GB\v2_production\data\quenched\stage3_quench.dump` | 9.89 MB | 中间 | `179a17eebc4cf6c9` | 淬火过程轨迹。用于核对降温速率与系统响应是否正常。 |
 | `grain_boundary\00_Literature\soap\2018_Priedeman_ActaMater_QuantifyingConnectingAtomicCrystallographicGBStructure.pdf` | 8.02 MB | 文献 | `ac036446151255f1` | PDF 文档。 |
 | `soap\05_文献\2018_Priedeman_ActaMater_QuantifyingConnectingAtomicCrystallographicGBStructure.pdf` | 8.02 MB | 文献 | `ac036446151255f1` | PDF 文档。 |
-| `grain_boundary\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\data\annealed\stage2_anneal.dump` | 7.90 MB | 中间 | `18d72049a0bc68b8` | 退火过程轨迹。用来观察晶界重构是怎样逐步发生的，而不只是看首末两帧。 |
+| `grain_boundary\history\construction_baseline_3600\Sigma5_310_Metastable_GB\v2_production\data\annealed\stage2_anneal.dump` | 7.90 MB | 中间 | `18d72049a0bc68b8` | 退火过程轨迹。用来观察晶界重构是怎样逐步发生的，而不只是看首末两帧。 |
 | `grain_boundary\00_Literature\soap\2020_Fujii_NatCommun_GBThermalConductivity_LocalAtomicEnvironments_作者版.pdf` | 7.00 MB | 文献 | `62172a7dcfcf808c` | PDF 文档。 |
 | `soap\05_文献\2020_Fujii_NatCommun_GBThermalConductivity_LocalAtomicEnvironments_作者版.pdf` | 7.00 MB | 文献 | `62172a7dcfcf808c` | PDF 文档。 |
 | `grain_boundary\00_Literature\soap\2013_Bartok_PRB_OnRepresentingChemicalEnvironments_SOAP原始论文.pdf` | 6.61 MB | 文献 | `51c56e5bb24ec03d` | PDF 文档。 |
@@ -42,8 +42,8 @@
 | `grain_boundary\00_Literature\grain_boundary\2024 --Metastable grain boundaries the roles of structural and chemical disorders in their energetics, non-equilibrium kinetic evolution, and mechanical behaviors.pdf` | 5.46 MB | 文献 | `ce4cba3d2a8062f7` | PDF 文档。 |
 | `grain_boundary\00_Literature\soap\2020_Fujii_NatCommun_GBThermalConductivity_LocalAtomicEnvironments_正式版.pdf` | 4.96 MB | 文献 | `355cba548cd681e2` | PDF 文档。 |
 | `soap\05_文献\2020_Fujii_NatCommun_GBThermalConductivity_LocalAtomicEnvironments_正式版.pdf` | 4.96 MB | 文献 | `355cba548cd681e2` | PDF 文档。 |
-| `grain_boundary\archive\GB_project_20260819\archive\old_versions\legacy_generator\lammps_workflow\traj_quench.dump` | 4.92 MB | 中间 | `64967a2841e6cdb1` | LAMMPS 轨迹：该阶段的过程演化，多帧记录。 |
-| `grain_boundary\experiments\phase1_2026-09\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\5_保持10K零压\p1_hold.dump` | 4.68 MB | 中间 | `e5a86bae9de6124f` | 10 K 保持段的过程轨迹。用于确认无序结构在整个保持期内持续存在，而非中途塌陷。 |
+| `grain_boundary\history\legacy\GB_project_20260819\archive\old_versions\legacy_generator\lammps_workflow\traj_quench.dump` | 4.92 MB | 中间 | `64967a2841e6cdb1` | LAMMPS 轨迹：该阶段的过程演化，多帧记录。 |
+| `grain_boundary\history\experiments\phase1_2026-09\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\5_保持10K零压\p1_hold.dump` | 4.68 MB | 中间 | `e5a86bae9de6124f` | 10 K 保持段的过程轨迹。用于确认无序结构在整个保持期内持续存在，而非中途塌陷。 |
 | `grain_boundary\00_Literature\lithium_metal\Diﬀusion and Deformation Mechanism Maps in Li.pdf` | 4.63 MB | 文献 | `05422c659103a232` | PDF 文档。 |
 | `grain_boundary\00_Literature\soap\2018_Priedeman_BYU硕士论文_QuantifyingGBAtomicStructures_SOAP.pdf` | 4.35 MB | 文献 | `a73bc6e1a2f67fe1` | PDF 文档。 |
 | `soap\05_文献\2018_Priedeman_BYU硕士论文_QuantifyingGBAtomicStructures_SOAP.pdf` | 4.35 MB | 文献 | `a73bc6e1a2f67fe1` | PDF 文档。 |
@@ -61,13 +61,13 @@
 | `soap\05_文献\2017_Rosenbrock_npjComputMater_SI_SOAP参数选择_补充材料.pdf` | 2.25 MB | 文献 | `e5bc0c22e26e7531` | PDF 文档。 |
 | `grain_boundary\00_Literature\grain_boundary\Atomistic modeling of the mechanical.pdf` | 2.21 MB | 文献 | `1f37591627c08f67` | PDF 文档。 |
 | `grain_boundary\00_Literature\lithium_metal\Elastic and plastic mechanical properties of lithium measured .pdf` | 2.08 MB | 文献 | `5ce23d3ad6e386a7` | PDF 文档。 |
-| `grain_boundary\archive\GB_project_20260819\archive\old_versions\legacy_generator\lammps_workflow\traj_anneal.dump` | 1.89 MB | 中间 | `d4c9ee4393511f28` | LAMMPS 轨迹：该阶段的过程演化，多帧记录。 |
+| `grain_boundary\history\legacy\GB_project_20260819\archive\old_versions\legacy_generator\lammps_workflow\traj_anneal.dump` | 1.89 MB | 中间 | `d4c9ee4393511f28` | LAMMPS 轨迹：该阶段的过程演化，多帧记录。 |
 | `grain_boundary\00_Literature\soap\1-s2.0-S1359645415300860-main.pdf` | 1.75 MB | 文献 | `91adda1828777ead` | PDF 文档。 |
 | `soap\05_文献\1-s2.0-S1359645415300860-main.pdf` | 1.75 MB | 文献 | `91adda1828777ead` | PDF 文档。 |
 | `grain_boundary\00_Literature\soap\2020_Wagih_NatCommun_GBSegregationEnergySpectra_Polycrystals.pdf` | 1.28 MB | 文献 | `caf2af0725887b63` | PDF 文档。 |
 | `soap\05_文献\2020_Wagih_NatCommun_GBSegregationEnergySpectra_Polycrystals.pdf` | 1.28 MB | 文献 | `caf2af0725887b63` | PDF 文档。 |
 | `grain_boundary\00_Literature\lithium_metal\The growth mechanism of lithium dendrites and its.pdf` | 756.1 KB | 文献 | `b082f9a80de4dfc6` | PDF 文档。 |
-| `grain_boundary\07_Documentation\presentations\Li_metal_metastable_atomic_structure_mechanical_analysis.pdf` | 678.0 KB | 文献 | `23bd55d59dc7b96a` | PDF 文档。 |
+| `grain_boundary\history\presentations\presentations\Li_metal_metastable_atomic_structure_mechanical_analysis.pdf` | 678.0 KB | 文献 | `23bd55d59dc7b96a` | PDF 文档。 |
 | `grain_boundary\00_Literature\soap\笔记_SOAP原理_结构有序无序度表征.pdf` | 421.7 KB | 文献 | `093369c5d22e2e25` | PDF 文档。 |
 | `soap\05_文献\笔记_SOAP原理_结构有序无序度表征.pdf` | 421.7 KB | 文献 | `093369c5d22e2e25` | PDF 文档。 |
 | `grain_boundary\00_Literature\soap\笔记_SOAP原理_信息来源与参考文献.pdf` | 358.5 KB | 文献 | `aff3850764f097b2` | PDF 文档。 |
@@ -80,7 +80,7 @@
 | `tools\__pycache__\build_artifact_catalog.cpython-312.pyc` | 35.1 KB | 文档 | `5f1438b0afe15528` | （未分类） |
 | `grain_boundary\00_Literature\soap\NI_SOAP_PROOF_FINAL_BI_files\katex.min.css` | 23.3 KB | 文献 | `0289a02cf451a44d` | 网页样式表（随 HTML 报告）。 |
 | `soap\Stage02_SOAP表示与审计\03_输出\stage2_75_bulk_reference_vectors.npy` | 16.0 KB | 中间 | `81a636b05b9c1251` | Stage02.75 全人口 SOAP 与距离审计产物。 |
-| `grain_boundary\archive\GB_project_20260819\archive\legacy\li_gb_project\lammps_test\log.lammps` | 8.8 KB | 追溯 | `ee4069064f9d2f57` | LAMMPS 运行日志，含各阶段数值历史与断言结果。 |
+| `grain_boundary\history\legacy\GB_project_20260819\archive\legacy\li_gb_project\lammps_test\log.lammps` | 8.8 KB | 追溯 | `ee4069064f9d2f57` | LAMMPS 运行日志，含各阶段数值历史与断言结果。 |
 
 ## 还原步骤
 

@@ -7,7 +7,7 @@
 | `prepare_soap_workspace.py` | 将 Ni 六阶段脚本和 CFG 复制到独立运行目录，生成执行顺序与来源清单 | 标准库 |
 | `artifact_ledger.py` | 生成 `ARTIFACT_LEDGER.md/csv`，记录项目文件、用途、SHA256 与内容分析 | NumPy |
 | `build_artifact_catalog.py` | 台账分类与扫描的底层模块；日常更新使用上面的入口 | 标准库 |
-| `compute_gb_energy.py` | 从已有 LAMMPS 日志复算晶界过剩能 | 标准库 |
+| `compute_gb_energy.py` | 从历史 LAMMPS 日志复算晶界过剩能 | 标准库 |
 | `install_git_hook.ps1` | 可选：提交前自动刷新并暂存台账 | PowerShell、Git、Python、NumPy |
 
 ## 准备 SOAP 运行副本
@@ -48,3 +48,5 @@ python -m unittest discover -s maintenance/tests -v
 ```
 
 测试验证目录覆盖、运行副本与来源完整性、覆盖保护和文档链接。台账的覆盖与稳定性测试另需 NumPy。它们不认证历史 MD / SOAP 结果。
+
+现行晶界运行与起点保存从 [grain_boundary/current](../../grain_boundary/current/README.md) 进入；能量复算工具默认查阅历史基准日志，不代表现行候选起点已经验收。

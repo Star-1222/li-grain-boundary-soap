@@ -1,0 +1,41 @@
+# Current protocol: RELAX_INITIAL; input and outdir are supplied by run.py.
+units           metal
+atom_style      atomic
+boundary        p p p
+read_data       "${input}"
+pair_style      kim ${kim_model}
+pair_coeff      * * Li
+neighbor        2.0 bin
+neigh_modify    delay 0 every 1 check yes
+
+thermo          100
+thermo_style    custom step pe pxx pyy pzz pxy pxz pyz press lx ly lz
+
+fix             1 all box/relax aniso 0.0
+min_style       cg
+
+variable        fmax_chunk equal fmax
+variable        fnorm_chunk equal fnorm
+variable        chunk loop 40
+
+label           p1_min0_loop
+minimize        0.0 1.0e-4 500 5000
+variable        fmax_saved string ${fmax_chunk}
+variable        fnorm_saved string ${fnorm_chunk}
+print           "P1MIN0_CHECKPOINT chunk=${chunk} fmax=${fmax_saved} fnorm=${fnorm_saved}"
+if              "${fmax_saved} < 1.0e-4" then "jump SELF p1_min0_finish"
+write_data "${outdir}/checkpoint.data"
+write_restart "${outdir}/checkpoint.restart"
+next            chunk
+jump            SELF p1_min0_loop
+
+label           p1_min0_finish
+if "${fmax_saved} >= 1.0e-4" then "quit 1"
+unfix           1
+print           "P1_MIN0 fmax=${fmax_saved} fnorm=${fnorm_saved}"
+print           "P1_MIN0 finalP Pxx=$(pxx) Pyy=$(pyy) Pzz=$(pzz)"
+write_data "${outdir}/final.data"
+write_restart "${outdir}/final.restart"
+print           "P1_MIN0_DONE"
+
+print "CURRENT_RELAX_INITIAL_DONE"

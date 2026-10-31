@@ -81,35 +81,35 @@ LAYERS = {
 # Exact relative-path suffix matches take priority, then basename, then rules.
 
 PATH_PURPOSE = {
-    r"grain_boundary\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\data\initial\Sigma5_310.data":
+    r"grain_boundary\history\construction_baseline_3600\Sigma5_310_Metastable_GB\v2_production\data\initial\Sigma5_310.data":
         "初始双晶模型的 LAMMPS 格式（3600 原子）。整个项目的结构基准，后续每一级计算都从这里出发。",
-    r"grain_boundary\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\data\initial\Sigma5_310.xyz":
+    r"grain_boundary\history\construction_baseline_3600\Sigma5_310_Metastable_GB\v2_production\data\initial\Sigma5_310.xyz":
         "同一模型的扩展 XYZ 格式，比 .data 更通用，便于其他软件读取。",
-    r"grain_boundary\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\data\initial\Sigma5_310_grain_id.xyz":
+    r"grain_boundary\history\construction_baseline_3600\Sigma5_310_Metastable_GB\v2_production\data\initial\Sigma5_310_grain_id.xyz":
         "每原子标注属于哪个晶粒。用来验证两条晶界在晶体学上等价——这是“对称倾转晶界”成立的前提。",
-    r"grain_boundary\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\data\initial\Sigma5_310.cif":
+    r"grain_boundary\history\construction_baseline_3600\Sigma5_310_Metastable_GB\v2_production\data\initial\Sigma5_310.cif":
         "晶体学标准格式。给外部软件或合作者读，通用性最好。",
-    r"grain_boundary\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\data\initial\Sigma5_310.grain_map":
+    r"grain_boundary\history\construction_baseline_3600\Sigma5_310_Metastable_GB\v2_production\data\initial\Sigma5_310.grain_map":
         "晶粒归属图，用于快速核对两条晶界的位置和对称性。",
-    r"grain_boundary\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\data\initial\params.json":
+    r"grain_boundary\history\construction_baseline_3600\Sigma5_310_Metastable_GB\v2_production\data\initial\params.json":
         "构建参数：超胞尺寸 K/J/L、晶格常数、势函数名。复现这个模型所需的最小信息集。",
-    r"grain_boundary\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\data\initial\removal_log.csv":
+    r"grain_boundary\history\construction_baseline_3600\Sigma5_310_Metastable_GB\v2_production\data\initial\removal_log.csv":
         "重合位点删除记录：每个晶界删了哪些原子、删了多少。保证删除对称、可审计，是可追溯性的核心。",
-    r"grain_boundary\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\data\validation\rebuilt_stage2.data":
+    r"grain_boundary\history\construction_baseline_3600\Sigma5_310_Metastable_GB\v2_production\data\validation\rebuilt_stage2.data":
         "从 dump 轨迹反推重建的结构。用来证明 dump 没有丢信息——是“模拟结果可复现”的直接证据。",
-    r"grain_boundary\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\docs\reports\SHA256SUMS.txt":
+    r"grain_boundary\history\construction_baseline_3600\Sigma5_310_Metastable_GB\v2_production\docs\reports\SHA256SUMS.txt":
         "本包内文件的校验清单。日后任何人可据此确认文件未被改动。",
-    r"grain_boundary\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\docs\reports\ENVIRONMENT.txt":
+    r"grain_boundary\history\construction_baseline_3600\Sigma5_310_Metastable_GB\v2_production\docs\reports\ENVIRONMENT.txt":
         "运行环境快照（LAMMPS 版本、MPI、势函数等），复现的必要条件。",
-    r"grain_boundary\experiments\phase1_2026-09\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\5_保持10K零压\p1_held.data":
+    r"grain_boundary\history\experiments\phase1_2026-09\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\5_保持10K零压\p1_held.data":
         "★ 验收的核心产物：10 K 保持结束时的结构。此时晶界无序、晶粒内部仍为 BCC。",
-    r"grain_boundary\experiments\phase1_2026-09\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\5_保持10K零压\p1_held.restart":
+    r"grain_boundary\history\experiments\phase1_2026-09\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\5_保持10K零压\p1_held.restart":
         "★ 阶段二的起点。验收报告明确指定用这个检查点继续后续计算。",
-    r"grain_boundary\experiments\phase1_2026-09\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\5_保持10K零压\p1_hold_pressure.stats":
+    r"grain_boundary\history\experiments\phase1_2026-09\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\5_保持10K零压\p1_hold_pressure.stats":
         "★ 保持段的压力时间序列。“10 K、0 bar 下维持”这个结论的直接证据来源。",
-    r"grain_boundary\experiments\phase1_2026-09\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\6_结构分析\cna_phase1_report.txt":
+    r"grain_boundary\history\experiments\phase1_2026-09\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\6_结构分析\cna_phase1_report.txt":
         "★ CNA 结构分析结论：各阶段 BCC 分数（晶界约 38%、晶粒内部 98.7%）。验收判据“晶界真实无序、内部保持 BCC”靠它成立。",
-    r"grain_boundary\experiments\phase1_2026-09\阶段一验收汇报_2026-09-04.md":
+    r"grain_boundary\history\experiments\phase1_2026-09\阶段一验收汇报_2026-09-04.md":
         "★ 阶段一验收结论：原目标通过，可进入阶段二；并记录了 0 bar 口径的保留意见。",
     r"soap\Stage02_SOAP表示与审计\03_输出\stage2_75_soap_vectors.npy":
         "★ SOAP 主矩阵（4659 原子 × 1014 维，36 MB）。后续全部分析都建立在这个矩阵上；重算耗时较长。",
@@ -137,71 +137,71 @@ PATH_PURPOSE = {
         "★ 方法探索总报告：项目定位、六个 Stage 的结论、十条下一版建议、以及“不能确定”清单。",
 
     # --- 锂晶界主项目：热历史各级产物 ---
-    r"grain_boundary\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\data\bulk\bulk_Li_minimized.data":
+    r"grain_boundary\history\construction_baseline_3600\Sigma5_310_Metastable_GB\v2_production\data\bulk\bulk_Li_minimized.data":
         "★ 体相参考的零压弛豫结果。给出该势函数下的平衡晶格常数 3.506186 Å —— 全部双晶都用它构建，避免把体相应变强加给晶界周期。",
-    r"grain_boundary\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\data\minimized\stage1_minimized.data":
+    r"grain_boundary\history\construction_baseline_3600\Sigma5_310_Metastable_GB\v2_production\data\minimized\stage1_minimized.data":
         "Stage 1 极小化后的结构：初始双晶在 0 K 下消除残余力的结果。",
-    r"grain_boundary\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\data\annealed\stage2_annealed.data":
+    r"grain_boundary\history\construction_baseline_3600\Sigma5_310_Metastable_GB\v2_production\data\annealed\stage2_annealed.data":
         "★ Stage 2 退火末态：363 K、0 bar 下 25 ps 后的结构。晶界在此阶段发生热重构。",
-    r"grain_boundary\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\data\annealed\stage2_anneal.dump":
+    r"grain_boundary\history\construction_baseline_3600\Sigma5_310_Metastable_GB\v2_production\data\annealed\stage2_anneal.dump":
         "退火过程轨迹。用来观察晶界重构是怎样逐步发生的，而不只是看首末两帧。",
-    r"grain_boundary\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\data\quenched\stage3_quenched.data":
+    r"grain_boundary\history\construction_baseline_3600\Sigma5_310_Metastable_GB\v2_production\data\quenched\stage3_quenched.data":
         "Stage 3 淬火末态：以 10 K/ps 降到 10 K 后的结构。无序被快速“冻”住。",
-    r"grain_boundary\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\data\quenched\stage3_quench.dump":
+    r"grain_boundary\history\construction_baseline_3600\Sigma5_310_Metastable_GB\v2_production\data\quenched\stage3_quench.dump":
         "淬火过程轨迹。用于核对降温速率与系统响应是否正常。",
-    r"grain_boundary\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\data\final\stage4_final.data":
+    r"grain_boundary\history\construction_baseline_3600\Sigma5_310_Metastable_GB\v2_production\data\final\stage4_final.data":
         "★ 全项目主产物：最终弛豫结构。单条退火-淬火-极小化轨迹收敛到的一个局域极小候选。",
-    r"grain_boundary\01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\data\final\stage4_final.restart":
+    r"grain_boundary\history\construction_baseline_3600\Sigma5_310_Metastable_GB\v2_production\data\final\stage4_final.restart":
         "最终结构的续算检查点，含速度与热力学状态。",
 
     # --- 阶段一验收包：逐步产物 ---
-    r"grain_boundary\experiments\phase1_2026-09\0_初始XYZ与检测模块\Sigma5_310_K6_J6_L20.xyz":
+    r"grain_boundary\history\experiments\phase1_2026-09\0_初始XYZ与检测模块\Sigma5_310_K6_J6_L20.xyz":
         "14400 原子 2×2 初始模型（K=6, J=6, L=20）。本验收包所有计算的起点。",
-    r"grain_boundary\experiments\phase1_2026-09\0_初始XYZ与检测模块\Sigma5_310_K6_J6_L20_grain_id.xyz":
+    r"grain_boundary\history\experiments\phase1_2026-09\0_初始XYZ与检测模块\Sigma5_310_K6_J6_L20_grain_id.xyz":
         "初始模型带晶粒标注的版本，用于确认两条晶界等价、晶粒内部无缺陷。",
-    r"grain_boundary\experiments\phase1_2026-09\0_初始XYZ与检测模块\README.md":
+    r"grain_boundary\history\experiments\phase1_2026-09\0_初始XYZ与检测模块\README.md":
         "初始结构与检测模块的说明文档。",
-    r"grain_boundary\experiments\phase1_2026-09\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\1_零应力弛豫0K\p1_min0.data":
+    r"grain_boundary\history\experiments\phase1_2026-09\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\1_零应力弛豫0K\p1_min0.data":
         "验收步骤 A：0 K 全维度零应力弛豫的末态。判据是三个方向压力约 0、最大力 8.5e-6 eV/Å。",
-    r"grain_boundary\experiments\phase1_2026-09\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\2_退火363K零压\p1_annealed.data":
+    r"grain_boundary\history\experiments\phase1_2026-09\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\2_退火363K零压\p1_annealed.data":
         "★ 验收步骤 B：363 K 等压退火 25 ps 后的末态。晶界重构就是在这 25 ps 里发生的。",
-    r"grain_boundary\experiments\phase1_2026-09\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\2_退火363K零压\p1_anneal.dump":
+    r"grain_boundary\history\experiments\phase1_2026-09\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\2_退火363K零压\p1_anneal.dump":
         "退火 25 ps 的过程轨迹。报告里“末 16 ps 时均 T=362.8 K”就是从这里统计出来的。",
-    r"grain_boundary\experiments\phase1_2026-09\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\3_末帧0K检查\p1_casecheck_0K.data":
+    r"grain_boundary\history\experiments\phase1_2026-09\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\3_末帧0K检查\p1_casecheck_0K.data":
         "★ 验收步骤 C：取退火末帧做 0 K 检查。这是判定“Case B”（晶界真实无序、晶粒内部仍为 BCC）的关键结构。",
-    r"grain_boundary\experiments\phase1_2026-09\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\4_淬火10K\p1_quenched.data":
+    r"grain_boundary\history\experiments\phase1_2026-09\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\4_淬火10K\p1_quenched.data":
         "验收步骤 D：以 10 K/ps 从 363 K 淬火到 10 K 后的末态，历时 35.3 ps。",
-    r"grain_boundary\experiments\phase1_2026-09\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\4_淬火10K\p1_quench.dump":
+    r"grain_boundary\history\experiments\phase1_2026-09\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\4_淬火10K\p1_quench.dump":
         "淬火过程轨迹（35.3 ps）。用于核实降温速率是否严格为 10 K/ps。",
-    r"grain_boundary\experiments\phase1_2026-09\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\5_保持10K零压\p1_hold.dump":
+    r"grain_boundary\history\experiments\phase1_2026-09\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\5_保持10K零压\p1_hold.dump":
         "10 K 保持段的过程轨迹。用于确认无序结构在整个保持期内持续存在，而非中途塌陷。",
-    r"grain_boundary\experiments\phase1_2026-09\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\5_保持10K零压\p1_held_0K.data":
+    r"grain_boundary\history\experiments\phase1_2026-09\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\5_保持10K零压\p1_held_0K.data":
         "终态在 0 K 下再做一次复核的结构，对应验收步骤 F（晶界 38.1%/38.0% BCC，内部 98.7% BCC）。",
-    r"grain_boundary\experiments\phase1_2026-09\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\6_结构分析\cna_phase1.py":
+    r"grain_boundary\history\experiments\phase1_2026-09\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\6_结构分析\cna_phase1.py":
         "CNA 结构分析脚本，统计各阶段晶界与晶粒内部的 BCC 比例。",
-    r"grain_boundary\experiments\phase1_2026-09\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\6_结构分析\run_phase1.sh":
+    r"grain_boundary\history\experiments\phase1_2026-09\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\6_结构分析\run_phase1.sh":
         "阶段一验收的完整编排脚本（依次跑五个步骤并收集结果）。",
-    r"grain_boundary\experiments\phase1_2026-09\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\总结报告.md":
+    r"grain_boundary\history\experiments\phase1_2026-09\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\总结报告.md":
         "阶段一零压运行的中文总结报告。",
-    r"grain_boundary\experiments\phase1_2026-09\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\RUN_META.md":
+    r"grain_boundary\history\experiments\phase1_2026-09\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\RUN_META.md":
         "本次运行的元信息：时间、机器、参数、势函数标识。",
-    r"grain_boundary\experiments\phase1_2026-09\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\RUN_STATUS.md":
+    r"grain_boundary\history\experiments\phase1_2026-09\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\RUN_STATUS.md":
         "本次运行的实时执行记录与各步骤状态。",
-    r"grain_boundary\experiments\phase1_2026-09\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\README.md":
+    r"grain_boundary\history\experiments\phase1_2026-09\Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\README.md":
         "阶段一结果包的入口说明。",
 
     # --- 2×2 构建校验（主项目内） ---
-    r"grain_boundary\Li_Sigma5_310_metastable_2x2\stage0_build_validate\Sigma5_310_K6_J6_L20.data":
+    r"grain_boundary\history\prototype_2x2\stage0_build_validate\Sigma5_310_K6_J6_L20.data":
         "2×2 模型的 Stage 0 构建产物（14400 原子），是验收包的前身。",
-    r"grain_boundary\Li_Sigma5_310_metastable_2x2\stage0_build_validate\Sigma5_310_K6_J6_L20.cif":
+    r"grain_boundary\history\prototype_2x2\stage0_build_validate\Sigma5_310_K6_J6_L20.cif":
         "2×2 模型的晶体学标准格式。",
-    r"grain_boundary\Li_Sigma5_310_metastable_2x2\stage0_build_validate\Sigma5_310_K6_J6_L20.xyz":
+    r"grain_boundary\history\prototype_2x2\stage0_build_validate\Sigma5_310_K6_J6_L20.xyz":
         "2×2 模型的通用结构格式。",
-    r"grain_boundary\Li_Sigma5_310_metastable_2x2\stage0_build_validate\removal_log.csv":
+    r"grain_boundary\history\prototype_2x2\stage0_build_validate\removal_log.csv":
         "2×2 模型的重合位点删除记录。",
-    r"grain_boundary\Li_Sigma5_310_metastable_2x2\stage0_build_validate\grain_map":
+    r"grain_boundary\history\prototype_2x2\stage0_build_validate\grain_map":
         "2×2 模型的晶粒归属图。",
-    r"grain_boundary\Li_Sigma5_310_metastable_2x2\PARAMETERS.json":
+    r"grain_boundary\history\prototype_2x2\PARAMETERS.json":
         "2×2 扩展的参数记录：K 保持 6，J 由 3 加到 6，L 由 10 加到 20。",
 }
 
