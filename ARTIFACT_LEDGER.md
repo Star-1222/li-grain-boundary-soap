@@ -3,24 +3,24 @@
 > 本文件由 `artifact_ledger.py` 自动生成，请勿手工编辑。
 > 每次重新生成都会刷新文件清单、校验和与内容分析。
 
-- 文件总数：**522**
-- 总体积：**54.41 MB**
+- 文件总数：**565**
+- 总体积：**55.24 MB**
 
 ## 层次分布
 
 | 层次 | 文件数 | 体积 | 占总比 | 处置 |
 |---|---:|---:|---:|---|
-| **结论** | 192 | 35.05 MB | 64.4% | 必须保留 |
-| **续算** | 11 | 6.60 MB | 12.1% | 保留至后续阶段完成 |
-| **追溯** | 39 | 1.06 MB | 1.9% | 随代码进版本控制 |
-| **代码** | 134 | 902.9 KB | 1.6% | 进版本控制 |
-| **输入** | 51 | 8.10 MB | 14.9% | 进版本控制 |
-| **文档** | 95 | 2.71 MB | 5.0% | 进版本控制 |
+| **结论** | 197 | 35.62 MB | 64.5% | 必须保留 |
+| **续算** | 11 | 6.60 MB | 12.0% | 保留至后续阶段完成 |
+| **追溯** | 41 | 1.10 MB | 2.0% | 随代码进版本控制 |
+| **代码** | 144 | 946.0 KB | 1.7% | 进版本控制 |
+| **输入** | 53 | 8.10 MB | 14.7% | 进版本控制 |
+| **文档** | 119 | 2.90 MB | 5.2% | 进版本控制 |
 
 ## 自动识别的结构特征
 
-- 结论性产物只有 35.05 MB，占 64.4%。
-- 决定“可复现”的追溯+代码+输入合计仅 10.04 MB（18.4%），是最该保护的一层。
+- 结论性产物只有 35.62 MB，占 64.5%。
+- 决定“可复现”的追溯+代码+输入合计仅 10.12 MB（18.3%），是最该保护的一层。
 - 双语拼接文档 16 份。中英文同处一文件，改动一侧另一侧会静默过期，建议拆分为 `README.md` + `README.en.md`。
 
 ## 交叉核对：报告声称 vs 数据实测
@@ -79,7 +79,7 @@
 
 ## 项目二：阶段一验收包（14400 原子 2x2）
 
-`Li_Sigma5_310_2x2_阶段一验收_2026-09-05_new` — 39 个文件，16.59 MB
+`Li_Sigma5_310_2x2_阶段一验收_2026-09-05_new` — 40 个文件，16.59 MB
 
 ### 结论（10 个，11.43 MB）
 
@@ -139,7 +139,7 @@
 | `Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\6_结构分析\in.p1_min0` | 1.6 KB | 该步骤的 LAMMPS 输入脚本。 |
 | `Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\6_结构分析\in.p1_quench` | 1.0 KB | 该步骤的 LAMMPS 输入脚本。 |
 
-### 文档（6 个，16.9 KB）
+### 文档（7 个，17.7 KB）
 
 | 文件 | 大小 | 用途 |
 |---|---|---|
@@ -148,11 +148,12 @@
 | `Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\RUN_META.md` | 3.3 KB | 本次运行的元信息：时间、机器、参数、势函数标识。 |
 | `Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\RUN_STATUS.md` | 4.6 KB | 本次运行的实时执行记录与各步骤状态。 |
 | `Li_Sigma5_310_2x2_阶段一零压结果_2026-09-03\总结报告.md` | 5.4 KB | 阶段一零压运行的中文总结报告。 |
+| `README.md` | 794 B | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |
 | `阶段一验收汇报_2026-09-04.md` | 2.0 KB | ★ 阶段一验收结论：原目标通过，可进入阶段二；并记录了 0 bar 口径的保留意见。 |
 
 ## 项目一：锂晶界主项目
 
-`Lithium_GrainBoundary_Project` — 123 个文件，12.09 MB
+`Lithium_GrainBoundary_Project` — 124 个文件，12.09 MB
 
 ### 结论（21 个，7.78 MB）
 
@@ -282,14 +283,15 @@
 | `Li_Sigma5_310_metastable_2x2\lammps\in.3_quench` | 940 B | Stage 3 输入脚本：以 10 K/ps 从 363 K 淬火到 10 K，把高温无序结构冻结下来。 |
 | `Li_Sigma5_310_metastable_2x2\lammps\in.4_10K_hold` | 863 B | 2×2 实验的 10 K 保持输入脚本（对应 in.4_final 在旧版命名下的同一角色）。 |
 
-### 文档（20 个，2.40 MB）
+### 文档（21 个，2.40 MB）
 
 | 文件 | 大小 | 用途 |
 |---|---|---|
 | `01_GB_Construction\Sigma5_310_Metastable_GB\v2_production\tests\pytest.ini` | 40 B | 测试框架配置。 |
 | `07_Documentation\presentations\Li_metal_metastable_GB_atomic_mechanical_analysis.pptx` | 2.20 MB | 汇报幻灯片。 |
-| `AGENTS.md` | 3.1 KB | Markdown 文档。 |
+| `AGENTS.md` | 3.2 KB | Markdown 文档。 |
 | `Li_Sigma5_310_metastable_2x2\stage0_build_validate\grain_map` | 101.7 KB | 2×2 模型的晶粒归属图。 |
+| `README.md` | 866 B | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |
 | `Reports\GB_Construction\FINAL_STATUS_BI.md` | 1.0 KB | 双语版报告（中文版与英文版首尾拼接在同一文件内）。 |
 | `Reports\GB_Construction\README_BI.md` | 20.7 KB | 双语版报告（中文版与英文版首尾拼接在同一文件内）。 |
 | `Reports\GB_Construction\build_report_BI.md` | 4.4 KB | 双语版报告（中文版与英文版首尾拼接在同一文件内）。 |
@@ -309,7 +311,7 @@
 
 ## 项目三：Ni SOAP 方法探索
 
-`Ni_SOAP_Method_Exploration_by_Stage` — 191 个文件，22.15 MB
+`Ni_SOAP_Method_Exploration_by_Stage` — 198 个文件，22.24 MB
 
 ### 结论（150 个，13.62 MB）
 
@@ -498,15 +500,16 @@
 | `Stage05_物理空间与方向\02_脚本\stage5b_soap_direction.py` | 46.7 KB | Stage05B SOAP 方向相关产物。 |
 | `Stage06_最终评估\02_脚本\stage6_final_analysis.py` | 37.4 KB | Stage06 最终评估产物：相关系数、模型对比与稳健性检验。 |
 
-### 输入（3 个，8.03 MB）
+### 输入（4 个，8.03 MB）
 
 | 文件 | 大小 | 用途 | 内容分析 |
 |---|---|---|---|
 | `06_环境与实现\requirements_soap.txt` | 1.5 KB | SOAP 分析的 Python 依赖清单。 |  |
+| `06_环境与实现\requirements_stages.txt` | 171 B | 纯文本结果或检查报告。 |  |
 | `Stage01_数据准备与SOAP初测\02_脚本\ni_metastable.cfg` | 4.01 MB | 输入构型之一：亚稳的 Ni 晶界构型（源数据）。 | 47,120 原子 |
 | `Stage01_数据准备与SOAP初测\02_脚本\ni_stable.cfg` | 4.02 MB | 输入构型之一：稳定的 Ni 晶界构型（源数据）。 | 47,120 原子 |
 
-### 文档（11 个，42.9 KB）
+### 文档（17 个，130.3 KB）
 
 | 文件 | 大小 | 用途 |
 |---|---|---|
@@ -514,17 +517,79 @@
 | `00_汇总报告\SOAP参数确定报告_2026-10-22.md` | 7.6 KB | Markdown 文档。 |
 | `00_汇总报告\项目文件索引_脚本输出报告_按阶段.md` | 3.9 KB | Markdown 文档。 |
 | `90_历史归档\归档说明.md` | 1.8 KB | Markdown 文档。 |
-| `README.md` | 2.0 KB | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |
+| `README.md` | 2.2 KB | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |
 | `Stage01_数据准备与SOAP初测\01_报告\Stage01_确定性结论与待讨论.md` | 3.2 KB | Markdown 文档。 |
+| `Stage01_输入输出检索表.md` | 7.7 KB | Markdown 文档。 |
 | `Stage02_SOAP表示与审计\01_报告\Stage02_确定性结论与待讨论.md` | 4.0 KB | Markdown 文档。 |
+| `Stage02_输入输出检索表.md` | 13.9 KB | Markdown 文档。 |
 | `Stage03_LAE阈值与LAE_LER构建\01_报告\Stage03_确定性结论与待讨论.md` | 3.1 KB | Markdown 文档。 |
+| `Stage03_输入输出检索表.md` | 16.2 KB | Markdown 文档。 |
 | `Stage04_无序度与能量关联\01_报告\Stage04_确定性结论与待讨论.md` | 3.7 KB | Markdown 文档。 |
+| `Stage04_输入输出检索表.md` | 17.9 KB | Markdown 文档。 |
 | `Stage05_物理空间与方向\01_报告\Stage05_确定性结论与待讨论.md` | 3.8 KB | Markdown 文档。 |
+| `Stage05_输入输出检索表.md` | 21.0 KB | Markdown 文档。 |
 | `Stage06_最终评估\01_报告\Stage06_确定性结论与待讨论.md` | 3.5 KB | Markdown 文档。 |
+| `Stage06_输入输出检索表.md` | 10.5 KB | Markdown 文档。 |
+
+## 项目四：Li 控压方案对照
+
+`Li_Sigma5_控压方案对照_2026-10-15` — 27 个文件，744.0 KB
+
+### 结论（5 个，580.1 KB）
+
+| 文件 | 大小 | 用途 | 内容分析 |
+|---|---|---|---|
+| `01_数据产物\thermo_aniso_fast.csv` | 11.7 KB | 数据表。 | 26 行 × 18 列 [Step, Temp, Press, Pxx, Pyy, Pzz …] |
+| `01_数据产物\thermo_xonly_fast.csv` | 11.7 KB | 数据表。 | 26 行 × 18 列 [Step, Temp, Press, Pxx, Pyy, Pzz …] |
+| `02_图\fig_profile.png` | 209.6 KB | 图表，可直接用于报告或论文。 |  |
+| `02_图\fig_strain.png` | 166.0 KB | 图表，可直接用于报告或论文。 |  |
+| `02_图\fig_stress.png` | 181.1 KB | 图表，可直接用于报告或论文。 |  |
+
+### 追溯（2 个，39.8 KB）
+
+| 文件 | 大小 | 用途 |
+|---|---|---|
+| `03_原始日志\baro_aniso_fast.lammps` | 19.9 KB | LAMMPS 运行日志，含各阶段数值历史与断言结果。 |
+| `03_原始日志\baro_xonly_fast.lammps` | 19.9 KB | LAMMPS 运行日志，含各阶段数值历史与断言结果。 |
+
+### 代码（8 个，31.2 KB）
+
+| 文件 | 大小 | 用途 |
+|---|---|---|
+| `04_脚本\analyze_structure.py` | 12.4 KB | Python 脚本。 |
+| `04_脚本\compare_barostat.py` | 4.2 KB | Python 脚本。 |
+| `04_脚本\dump_box.py` | 1.5 KB | Python 脚本。 |
+| `04_脚本\gb_width_fixed.py` | 1.5 KB | Python 脚本。 |
+| `04_脚本\make_figures.py` | 5.0 KB | Python 脚本。 |
+| `04_脚本\probe_rdf.py` | 1.2 KB | Python 脚本。 |
+| `04_脚本\run_barostat.sh` | 2.2 KB | Shell 脚本（在 WSL/Linux 下运行）。 |
+| `04_脚本\validate_q.py` | 3.2 KB | Python 脚本。 |
+
+### 输入（1 个，4.5 KB）
+
+| 文件 | 大小 | 用途 |
+|---|---|---|
+| `04_脚本\in.baro_hold` | 4.5 KB | LAMMPS 输入脚本。 |
+
+### 文档（11 个，88.4 KB）
+
+| 文件 | 大小 | 用途 | 内容分析 |
+|---|---|---|---|
+| `00_双周报告\双周报告10.01-10.15.docx` | 26.0 KB | （未分类） |  |
+| `00_双周报告\过去两周所做的事与结果.docx` | 37.2 KB | （未分类） |  |
+| `00_双周报告\过去两周所做的事与结果.md` | 1.7 KB | Markdown 文档。 |  |
+| `01_数据产物\final_aniso_fast.json` | 1.2 KB | 参数与元数据。 | 字段: name, file, n_atoms, box_A, volume_per_atom_A3, a_implied_if_bcc_A, reference_a_A, rdf_first_peak_A |
+| `01_数据产物\final_xonly_fast.json` | 1.2 KB | 参数与元数据。 | 字段: name, file, n_atoms, box_A, volume_per_atom_A3, a_implied_if_bcc_A, reference_a_A, rdf_first_peak_A |
+| `01_数据产物\gb_width_fixed.json` | 610 B | 参数与元数据。 | 字段: start_quenched, final_xonly_fast, final_aniso_fast |
+| `01_数据产物\start_quenched.json` | 1.2 KB | 参数与元数据。 | 字段: name, file, n_atoms, box_A, volume_per_atom_A3, a_implied_if_bcc_A, reference_a_A, rdf_first_peak_A |
+| `01_数据产物\summary.json` | 4.6 KB | 参数与元数据。 | 字段: xonly_fast, aniso_fast |
+| `01_数据产物\summary.md` | 763 B | Markdown 文档。 |  |
+| `01_数据产物\结果报告.md` | 9.3 KB | Markdown 文档。 |  |
+| `README.md` | 4.7 KB | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |  |
 
 ## 归档区：为溯源保留的历史副本
 
-`_archive` — 156 个文件，3.45 MB
+`_archive` — 157 个文件，3.45 MB
 
 ### 结论（10 个，2.20 MB）
 
@@ -655,7 +720,7 @@
 | `Li_metastable_2x2_legacy_20260819\legacy\lammps_v2\stage4_relax\in.4_final` | 1.6 KB | Stage 4 输入脚本：最终弛豫与保持，产出用于结构分析的末态。 |
 | `Li_metastable_2x2_legacy_20260819\legacy\requirements_v2.txt` | 34 B | 纯文本结果或检查报告。 |
 
-### 文档（52 个，217.7 KB）
+### 文档（53 个，218.2 KB）
 
 | 文件 | 大小 | 用途 | 内容分析 |
 |---|---|---|---|
@@ -711,10 +776,11 @@
 | `Li_metastable_2x2_legacy_20260819\stage0_build_validate\build_report.md` | 2.3 KB | Markdown 文档。 |  |
 | `Li_metastable_2x2_legacy_20260819\stage0_build_validate\validation_report.md` | 1.8 KB | Markdown 文档。 |  |
 | `Li_metastable_2x2_legacy_20260819\stage0_build_validate\verification_report.md` | 1.8 KB | Markdown 文档。 |  |
+| `README.md` | 488 B | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |  |
 
-## 项目根与工具
+## 项目根、文档与工具
 
-仓库根目录与 `tools/` — 13 个文件，127.6 KB
+仓库根目录、文档、工具与其他项目 — 19 个文件，148.6 KB
 
 ### 结论（1 个，16.8 KB）
 
@@ -722,29 +788,35 @@
 |---|---|---|---|
 | `DATA_MANIFEST.csv` | 16.8 KB | 数据表。 | 60 行 × 7 列 [﻿相对路径, 文件名, 扩展名, 层次, 大小(字节), 用途说明 …] |
 
-### 代码（4 个，67.3 KB）
+### 代码（6 个，79.1 KB）
 
 | 文件 | 大小 | 用途 |
 |---|---|---|
+| `tests\test_repository_tools.py` | 6.3 KB | Python 脚本。 |
 | `tools\artifact_ledger.py` | 28.0 KB | Python 脚本。 |
-| `tools\build_artifact_catalog.py` | 30.3 KB | Python 脚本。 |
+| `tools\build_artifact_catalog.py` | 30.7 KB | Python 脚本。 |
 | `tools\compute_gb_energy.py` | 6.3 KB | Python 脚本。 |
 | `tools\install_git_hook.ps1` | 2.7 KB | PowerShell 脚本。 |
+| `tools\prepare_soap_workspace.py` | 5.2 KB | Python 脚本。 |
 
-### 输入（2 个，2.1 KB）
+### 输入（2 个，2.2 KB）
 
 | 文件 | 大小 | 用途 |
 |---|---|---|
 | `.gitignore` | 1.5 KB | Git 忽略规则，指定哪些文件不纳入版本控制。 |
 | `refresh_ledger.cmd` | 657 B | （未分类） |
 
-### 文档（6 个，41.4 KB）
+### 文档（10 个，50.4 KB）
 
 | 文件 | 大小 | 用途 |
 |---|---|---|
 | `.gitattributes` | 748 B | （未分类） |
 | `DATA_MANIFEST.md` | 12.4 KB | Markdown 文档。 |
-| `PROJECT_REVIEW.md` | 10.6 KB | Markdown 文档。 |
-| `README.md` | 4.1 KB | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |
-| `STUDY_GUIDE.md` | 11.0 KB | Markdown 文档。 |
-| `tools\README.md` | 2.7 KB | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |
+| `README.md` | 1.8 KB | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |
+| `docs\MAINTENANCE.md` | 2.4 KB | Markdown 文档。 |
+| `docs\PROJECT_REVIEW.md` | 10.6 KB | Markdown 文档。 |
+| `docs\RESEARCH_STATUS.md` | 2.2 KB | Markdown 文档。 |
+| `docs\STUDY_GUIDE.md` | 11.0 KB | Markdown 文档。 |
+| `docs\VERSIONS.md` | 2.6 KB | Markdown 文档。 |
+| `docs\WORKFLOWS.md` | 4.5 KB | Markdown 文档。 |
+| `tools\README.md` | 2.3 KB | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |

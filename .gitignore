@@ -56,3 +56,6 @@ desktop.ini
 /5[0-9]*/
 /6[0-9]*/
 /9[0-9]*/
+
+# Isolated reruns; promote reviewed results into an experiment directory.
+/runs/

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Build an artifact catalog for D:\\Research.
+"""Build an artifact catalog for the repository.
 
 Walks the research tree, classifies every file by role and layer, attaches a
 plain-language purpose, and emits both a Markdown ledger and a CSV manifest
@@ -37,26 +37,29 @@ PROJECTS = [
     ("Li_Sigma5_310_2x2_阶段一验收_2026-09-05_new", "项目二：阶段一验收包（14400 原子 2x2）"),
     ("Lithium_GrainBoundary_Project", "项目一：锂晶界主项目"),
     ("Ni_SOAP_Method_Exploration_by_Stage", "项目三：Ni SOAP 方法探索"),
+    ("Li_Sigma5_控压方案对照_2026-10-15", "项目四：Li 控压方案对照"),
     ("_archive", "归档区：为溯源保留的历史副本"),
-    ("", "项目根与工具"),
+    ("", "项目根、文档与工具"),
 ]
 
 
 def iter_project_files(proj):
     """Yield files belonging to one project group.
 
-    The empty project key denotes the repository root: its own loose files
-    plus everything under tools/, without descending into the data projects.
+    The empty key includes all files outside the explicitly named projects.
+    New experiment and documentation directories must not silently disappear.
+    artifact_ledger.py additionally filters this inventory through git ls-files.
     """
     if proj == "":
+        named = {name for name, _ in PROJECTS if name}
+        excluded = {".git", "__pycache__", ".venv", "venv", ".pytest_cache", "runs"}
         for p in sorted(ROOT.iterdir()):
             if p.is_file():
                 yield p
-        tools = ROOT / "tools"
-        if tools.is_dir():
-            for p in sorted(tools.rglob("*")):
-                if p.is_file() and "__pycache__" not in p.parts:
-                    yield p
+            elif p.is_dir() and p.name not in named | excluded:
+                for child in sorted(p.rglob("*")):
+                    if child.is_file() and not excluded.intersection(child.relative_to(ROOT).parts):
+                        yield child
         return
     base = ROOT / proj
     if not base.is_dir():
