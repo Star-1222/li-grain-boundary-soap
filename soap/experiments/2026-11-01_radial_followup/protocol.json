@@ -1,0 +1,163 @@
+{
+  "registered_at": "2026-11-01T11:41:23+08:00",
+  "purpose": "diagnose radial representation and metric interpretation; no retrospective relaxation of main-grid criteria",
+  "new_polynomial_configurations": [
+    {
+      "config_id": "r4_s0p3_n6_l10",
+      "r_cut": 4.0,
+      "sigma": 0.3,
+      "n_max": 6,
+      "l_max": 10
+    },
+    {
+      "config_id": "r4_s0p3_n8_l10",
+      "r_cut": 4.0,
+      "sigma": 0.3,
+      "n_max": 8,
+      "l_max": 10
+    },
+    {
+      "config_id": "r4_s0p3_n10_l10",
+      "r_cut": 4.0,
+      "sigma": 0.3,
+      "n_max": 10,
+      "l_max": 10
+    },
+    {
+      "config_id": "r5_s0p3_n6_l10",
+      "r_cut": 5.0,
+      "sigma": 0.3,
+      "n_max": 6,
+      "l_max": 10
+    },
+    {
+      "config_id": "r5_s0p3_n8_l10",
+      "r_cut": 5.0,
+      "sigma": 0.3,
+      "n_max": 8,
+      "l_max": 10
+    },
+    {
+      "config_id": "r5_s0p3_n10_l10",
+      "r_cut": 5.0,
+      "sigma": 0.3,
+      "n_max": 10,
+      "l_max": 10
+    }
+  ],
+  "reused_gto_configurations": 6,
+  "main_distances": [
+    "raw",
+    "norm"
+  ],
+  "main_weights": "unweighted DScribe unique-term vector, as in original sweep",
+  "supplemental_weights": "sqrt(2) on off-diagonal n,n_prime terms; supplementary Frobenius metric only",
+  "basis_comparison": "compare induced distances, neighborhoods and D, never coordinates across different bases",
+  "convergence_criteria": {
+    "spearman_min": 0.98,
+    "median_relative_change_max": 0.05,
+    "knn10_overlap_min": 0.8
+  },
+  "frozen_population": "reuse original 1000 pilot centers and 400 disjoint references; no new sampling or energy filter",
+  "fcc_probes": {
+    "lattice_constant": "estimate from pooled deep-bulk nearest-12 median distance times sqrt(2)",
+    "conventional_cell_repeat": [
+      8,
+      8,
+      8
+    ],
+    "isotropic_strain": [
+      -0.02,
+      -0.01,
+      -0.005,
+      0.005,
+      0.01,
+      0.02
+    ],
+    "angular_degrees": [
+      -10,
+      -5,
+      -2,
+      -1,
+      -0.5,
+      0.5,
+      1,
+      2,
+      5,
+      10
+    ],
+    "first_shell_vacancies": [
+      1,
+      2
+    ],
+    "invariance": [
+      "translation",
+      "rotation",
+      "same-element permutation"
+    ]
+  },
+  "interpretation": "controlled geometry responses are not thermodynamic labels, temperatures, or independent validation",
+  "main_input_evidence": [
+    {
+      "path": "C:\\Users\\1\\Documents\\ChatGPT\\Li-metastable-soap\\output\\ni_soap_sweep_20261101\\protocol.json",
+      "sha256": "4af522b38b79e318ef2315889aa8e3f0541bbeb381cfa8671afb795b58f7d8e1"
+    },
+    {
+      "path": "C:\\Users\\1\\Documents\\ChatGPT\\Li-metastable-soap\\output\\ni_soap_sweep_20261101\\population.csv",
+      "sha256": "0f09be3a2f3e2bb8d36d58acafadf5ff1b1c036845851622c1015bd611c591c3"
+    },
+    {
+      "path": "C:\\Users\\1\\Documents\\ChatGPT\\Li-metastable-soap\\output\\ni_soap_sweep_20261101\\fixed_pairs.npz",
+      "sha256": "7d15a36bc11f7467195747f601d333077d131d4b32e8d13b5fd5068c8ef4540e"
+    },
+    {
+      "path": "C:\\Users\\1\\Documents\\ChatGPT\\Li-metastable-soap\\output\\ni_soap_sweep_20261101\\vectors\\r4_s0p3_n6_l10.npz",
+      "sha256": "24fad9bbeba3557077b9ed4068eab29401edc2e403ce9d99987dabf99920f193"
+    },
+    {
+      "path": "C:\\Users\\1\\Documents\\ChatGPT\\Li-metastable-soap\\output\\ni_soap_sweep_20261101\\metrics\\r4_s0p3_n6_l10.npz",
+      "sha256": "4eab4078ed20b02d9acdd1ca6fd22aae223206d969622648591555cc060b1492"
+    },
+    {
+      "path": "C:\\Users\\1\\Documents\\ChatGPT\\Li-metastable-soap\\output\\ni_soap_sweep_20261101\\vectors\\r4_s0p3_n8_l10.npz",
+      "sha256": "b102756f0a7d33eee92f6fba63481689b841b2c34cb7defed74b9728fc3a2375"
+    },
+    {
+      "path": "C:\\Users\\1\\Documents\\ChatGPT\\Li-metastable-soap\\output\\ni_soap_sweep_20261101\\metrics\\r4_s0p3_n8_l10.npz",
+      "sha256": "f9805fe2d7b52cd03af585236b417dc1e50e3a296f0cd820358b8683d7a9f336"
+    },
+    {
+      "path": "C:\\Users\\1\\Documents\\ChatGPT\\Li-metastable-soap\\output\\ni_soap_sweep_20261101\\vectors\\r4_s0p3_n10_l10.npz",
+      "sha256": "0d1f48202bb7c7decfad363c46efdd4a8cbf2656f0aa8807dcec5d0271ccd6d1"
+    },
+    {
+      "path": "C:\\Users\\1\\Documents\\ChatGPT\\Li-metastable-soap\\output\\ni_soap_sweep_20261101\\metrics\\r4_s0p3_n10_l10.npz",
+      "sha256": "93e6439230aca6f201c1d9ef147cc37821bb8c7c442fba3562e3d4e58751a14b"
+    },
+    {
+      "path": "C:\\Users\\1\\Documents\\ChatGPT\\Li-metastable-soap\\output\\ni_soap_sweep_20261101\\vectors\\r5_s0p3_n6_l10.npz",
+      "sha256": "97fdfbc7ee07397b70eaa15961019ab3d59a7803f19a1b73b1377a40e074976d"
+    },
+    {
+      "path": "C:\\Users\\1\\Documents\\ChatGPT\\Li-metastable-soap\\output\\ni_soap_sweep_20261101\\metrics\\r5_s0p3_n6_l10.npz",
+      "sha256": "70723a26c7b110ceb8d98ddc543ad20f731d3ef762b0def90cc3cb4399b656e5"
+    },
+    {
+      "path": "C:\\Users\\1\\Documents\\ChatGPT\\Li-metastable-soap\\output\\ni_soap_sweep_20261101\\vectors\\r5_s0p3_n8_l10.npz",
+      "sha256": "3594cbb43881e48b220b33121d7887920fa0245645469325088c9dd8d5b3487b"
+    },
+    {
+      "path": "C:\\Users\\1\\Documents\\ChatGPT\\Li-metastable-soap\\output\\ni_soap_sweep_20261101\\metrics\\r5_s0p3_n8_l10.npz",
+      "sha256": "c02c3976a9278d76f98b4eaf81c0f908d0c7e0709979de784da50515d97f7f4b"
+    },
+    {
+      "path": "C:\\Users\\1\\Documents\\ChatGPT\\Li-metastable-soap\\output\\ni_soap_sweep_20261101\\vectors\\r5_s0p3_n10_l10.npz",
+      "sha256": "f40cc6d72a2031afb0f57bef91c6ed2a1375443c1b677f0448ae9271731f3bc9"
+    },
+    {
+      "path": "C:\\Users\\1\\Documents\\ChatGPT\\Li-metastable-soap\\output\\ni_soap_sweep_20261101\\metrics\\r5_s0p3_n10_l10.npz",
+      "sha256": "f5e770c51e21338911e15e2af237769598e2c6f687eef4f627417aff6937dafb"
+    }
+  ],
+  "source_sha256": "7f348e7adfdb23de4b8e56eafc7e3208ed30fb77b242b0f60cabc7ee06ae127d"
+}

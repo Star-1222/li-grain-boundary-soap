@@ -4,6 +4,7 @@
 
 | 内容 | 入口 |
 |---|---|
+| 中期进展与方法问答 | [2026年11月进展](docs/MIDTERM_2026-11.md) · [答辩与技术说明](docs/MIDTERM_QA_2026-11.md) |
 | 工作流与版本 | [工作流](docs/WORKFLOWS.md) · [版本关系](docs/VERSIONS.md) |
 | 学习与评估 | [学习路线](docs/STUDY_GUIDE.md) · [项目评估](docs/PROJECT_REVIEW.md) · [研究记录](docs/RESEARCH_STATUS.md) |
 | 文件和缺失数据清单 | [产物台账](records/ARTIFACT_LEDGER.md) · [数据恢复清单](records/DATA_MANIFEST.md) |

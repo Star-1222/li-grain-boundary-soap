@@ -1,0 +1,89 @@
+{
+  "count": 240,
+  "success": 240,
+  "warnings": 3,
+  "total_compute_s": 382.0575870995817,
+  "warning_keys": [
+    "r3.25_s0.3_n12_l12",
+    "r3.25_s0.5_n12_l12",
+    "r3.25_s0.7_n12_l12"
+  ],
+  "convergence": {
+    "raw_n": {
+      "passed": 0,
+      "total": 180,
+      "rho_median": 0.981089959317641,
+      "relative_median": 0.1988519070519651,
+      "overlap_median": 0.7119
+    },
+    "raw_l": {
+      "passed": 179,
+      "total": 192,
+      "rho_median": 0.9999832300655785,
+      "relative_median": 0.0017332349063127572,
+      "overlap_median": 0.9927000000000001
+    },
+    "norm_n": {
+      "passed": 0,
+      "total": 180,
+      "rho_median": 0.984327478857573,
+      "relative_median": 0.10546391036578157,
+      "overlap_median": 0.6877
+    },
+    "norm_l": {
+      "passed": 181,
+      "total": 192,
+      "rho_median": 0.999946735592598,
+      "relative_median": 0.0024591187586309434,
+      "overlap_median": 0.9901500000000001
+    }
+  },
+  "baseline": {
+    "key": "r3.25_s0.5_n12_l12",
+    "r_cut": 3.25,
+    "sigma": 0.5,
+    "n_max": 12,
+    "l_max": 12,
+    "warnings": [
+      "An ill-conditioned matrix detected: slice 0 has rcond = 1.5192613205000558e-16.",
+      "An ill-conditioned matrix detected: slice 0 has rcond = 6.541001081359935e-17."
+    ],
+    "create_s": 1.0054946999880485,
+    "dimension": 1014,
+    "finite": true,
+    "zero_norms": 0,
+    "norm_min": 65.64040694697555,
+    "norm_max": 78.55407939215883,
+    "raw_stable_interface_d10_median": 6.784131765346485,
+    "raw_stable_bulk_d10_median": 0.035906000472617536,
+    "raw_metastable_interface_d10_median": 6.8357672543222865,
+    "raw_metastable_bulk_d10_median": 0.03680271127711646,
+    "norm_stable_interface_d10_median": 0.0537049623458218,
+    "norm_stable_bulk_d10_median": 0.00032619914420165257,
+    "norm_metastable_interface_d10_median": 0.058141515136037186,
+    "norm_metastable_bulk_d10_median": 0.00033055755176492237,
+    "ok": true,
+    "total_s": 2.08383399999002
+  },
+  "baseline_n10_to_12": {
+    "r_cut": 3.25,
+    "sigma": 0.5,
+    "axis": "n",
+    "n_from": 10,
+    "l_from": 12,
+    "n_to": 12,
+    "l_to": 12,
+    "raw": {
+      "rho": 0.9763744665412397,
+      "median_relative_change": 0.2047676369139252,
+      "top10_overlap": 0.7276,
+      "pass": false
+    },
+    "norm": {
+      "rho": 0.9916340199306085,
+      "median_relative_change": 0.07820628300037494,
+      "top10_overlap": 0.7544000000000001,
+      "pass": false
+    }
+  }
+}

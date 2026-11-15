@@ -1,0 +1,19 @@
+{
+  "verified_at": "2026-11-01T11:25:05+08:00",
+  "grid_success": 240,
+  "population": 4659,
+  "heldout": 3659,
+  "paired_raw_norm": true,
+  "max_distance_identity_absolute_residual": 5.529727786779404e-10,
+  "max_distance_identity_relative_residual": 1.088397607227531e-14,
+  "max_full_vs_pilot_vector_difference": 0.0,
+  "invariance": {
+    "relative_tolerance": 1e-08,
+    "max_relative_vector_change": 1.012250049310987e-09,
+    "passed": true
+  },
+  "perturbation_rows": 23040,
+  "representative_files": 48,
+  "figure_count": 15,
+  "all_checks_passed": true
+}

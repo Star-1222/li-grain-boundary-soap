@@ -1,0 +1,116 @@
+{
+  "published_on": "2026-11-15",
+  "scope": "Evidence snapshot for midterm documentation; not a new simulation or stability acceptance.",
+  "historical_animation": {
+    "source_record": "runs/historical_ovito_20261101/exports/manifest.json",
+    "source_sha256": "d4abc9d1ef5df01320d43cb69dc78da7bf1d10e98d61b25698b18b8fcd2ef5ae",
+    "record": {
+      "historical_run": "phase1_2026-09-03",
+      "source_manifest": "C:\\Users\\1\\Documents\\ChatGPT\\Li-metastable-soap\\runs\\historical_ovito_20261101\\source_manifest.json",
+      "ovito_version": "3.15.3",
+      "PTM_RMSD_cutoff": 0.15,
+      "stages": [
+        {
+          "name": "initial",
+          "kind": "static",
+          "frames": 1,
+          "first_timestep": 0,
+          "last_timestep": 0,
+          "fps": null,
+          "usual_frame_interval_ps": null,
+          "note": "",
+          "source": "C:\\Users\\1\\Documents\\ChatGPT\\Li-metastable-soap\\runs\\historical_ovito_20261101\\p1_min0.data",
+          "sha256": "58158ba24053b7deeed41980268d0d30f8f946aabd1e3a34bd7b46c4eb9e6e18",
+          "last_PTM_counts": {
+            "Other": 1440,
+            "FCC": 0,
+            "HCP": 0,
+            "BCC": 12960
+          }
+        },
+        {
+          "name": "anneal",
+          "kind": "trajectory",
+          "frames": 26,
+          "first_timestep": 0,
+          "last_timestep": 25000,
+          "fps": 5,
+          "usual_frame_interval_ps": 1.0,
+          "note": "",
+          "source": "C:\\Users\\1\\Documents\\ChatGPT\\Li-metastable-soap\\runs\\historical_ovito_20261101\\p1_anneal.dump",
+          "sha256": "267d2a85dd8aa74c70fefed8d609b3dcd03f0baf287b9684c627dfda788430fa",
+          "last_PTM_counts": {
+            "Other": 3616,
+            "FCC": 127,
+            "HCP": 602,
+            "BCC": 10055
+          }
+        },
+        {
+          "name": "quench",
+          "kind": "trajectory",
+          "frames": 37,
+          "first_timestep": 0,
+          "last_timestep": 35300,
+          "fps": 5,
+          "usual_frame_interval_ps": 1.0,
+          "note": "last quench frame is the actual 35.3 ps state; previous is 35.0 ps",
+          "source": "C:\\Users\\1\\Documents\\ChatGPT\\Li-metastable-soap\\runs\\historical_ovito_20261101\\exports\\quench_with_final.dump",
+          "sha256": "26ea76fddbff8e285c4fbb69499dd381ba3071b0134a8382f93f6545dd26d587",
+          "last_PTM_counts": {
+            "Other": 1471,
+            "FCC": 33,
+            "HCP": 415,
+            "BCC": 12481
+          }
+        },
+        {
+          "name": "hold_iso",
+          "kind": "trajectory",
+          "frames": 11,
+          "first_timestep": 0,
+          "last_timestep": 5000,
+          "fps": 10,
+          "usual_frame_interval_ps": 0.5,
+          "note": "",
+          "source": "C:\\Users\\1\\Documents\\ChatGPT\\Li-metastable-soap\\runs\\historical_ovito_20261101\\p1_hold.dump",
+          "sha256": "e5a86bae9de6124f55d0d3f56c04197a9c6e51ce9ca035a035c3602d948b8e70",
+          "last_PTM_counts": {
+            "Other": 1482,
+            "FCC": 30,
+            "HCP": 417,
+            "BCC": 12471
+          }
+        }
+      ],
+      "claims": "Historical iso hold, not current aniso trajectory; initial stage is a static end-state."
+    }
+  },
+  "current_workflow_animation_rerun": {
+    "source_record": "runs/li_aniso_animation_20261101/pipeline_status.json",
+    "source_sha256": "031c66c28ec48f8047d37e035ea8043ac051c06b8623203ccb8a7ff09905808b",
+    "record": {
+      "task": "current aniso workflow, OVITO export, presentation assembly",
+      "source": "\\\\wsl.localhost\\Ubuntu\\home\\star_22\\li_aniso_animation_20261101_r2",
+      "stages": {
+        "relax_initial": "OVITO_exported"
+      },
+      "state": "failed",
+      "updated_local": "2026-11-01T14:29:08.388022",
+      "latest_minimization_checkpoint": {
+        "chunk": 23,
+        "fmax_eV_per_A": 0.0010024905255888,
+        "fnorm": 0.0744525699998975
+      },
+      "current_recorded_step_or_iteration": 11900,
+      "error": "Traceback (most recent call last):\n  File \"C:\\Users\\1\\Documents\\ChatGPT\\Li-metastable-soap\\runs\\li_aniso_animation_20261101\\finish_pipeline.py\", line 15, in <module>\n    if 'ERROR:' in txt:raise RuntimeError('LAMMPS error in '+n+': '+txt[txt.rfind('ERROR:'):][:1500])\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: LAMMPS error in anneal: ERROR: Unknown identifier in data file: ?y\nFor more information see https://docs.lammps.org/err0001 (src/read_data.cpp:1519)\nLast input line: read_data ${input}\n\n"
+    }
+  },
+  "stress_comparison_source": "../history/experiments/barostat_2026-10/README.md",
+  "claims": {
+    "historical_iso_movie_is_current_aniso_run": false,
+    "current_animation_rerun_completed_all_stages": false,
+    "new_teacher_2ps_route_confirmed_executed": false,
+    "standard_start_accepted_by_this_update": false
+  }
+}

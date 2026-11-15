@@ -1,5 +1,5 @@
 ﻿项目,相对路径,文件名,扩展名,层次,大小(字节),用途说明,内容分析,SHA256
-主线一：晶界构造,grain_boundary\AGENTS.md,AGENTS.md,.md,文档,1174,Markdown 文档。,,4e40b748990c57164f2e6356610dcd5c0712c8d88bc0747eeaade4dcdb1767af
+主线一：晶界构造,grain_boundary\AGENTS.md,AGENTS.md,.md,文档,1625,Markdown 文档。,,546d5e43013428fe314bc31b9b9daa4b2b62cc1d681a887f9f8cdd3680e359ab
 主线一：晶界构造,grain_boundary\current\checkpoint.py,checkpoint.py,.py,代码,9539,Python 脚本。,,eb75ea3322e6608f67754a5199c0fc73e3d5a99d6d0539dba6c8710627d45e99
 主线一：晶界构造,grain_boundary\current\generator\__init__.py,__init__.py,.py,代码,86,Python 脚本。,,e9fe6ba786f594f8afffc8f84f8814732e756313b2a3666313cc4bb6a4f348b6
 主线一：晶界构造,grain_boundary\current\generator\builder.py,builder.py,.py,代码,8991,Python 脚本。,,4f733f6f1adac26b82f592b02222bf68483e763edad0e8291407dfa019a05bd8
@@ -15,12 +15,14 @@
 主线一：晶界构造,grain_boundary\current\lammps\quench.in,quench.in,.in,文档,908,（未分类）,,b67945e6b7e974a579a15d3bd92ae67057a35ac13f0ae9cc0c671f8120a11350
 主线一：晶界构造,grain_boundary\current\lammps\relax_aniso.in,relax_aniso.in,.in,文档,816,（未分类）,,54e3ca8584a6219eb08c43f5a8edc6df34e31465182312ecdfddc0baca8a6e30
 主线一：晶界构造,grain_boundary\current\lammps\relax_initial.in,relax_initial.in,.in,文档,1388,（未分类）,,621487cee69c30ebe01b158709a3a1a489ca825a47752ea0852fb6bc804779cb
+主线一：晶界构造,grain_boundary\current\MIDTERM_EVIDENCE_2026-11.json,MIDTERM_EVIDENCE_2026-11.json,.json,文档,4933,参数与元数据。,"字段: published_on, scope, historical_animation, current_workflow_animation_rerun, stress_comparison_source, claims",c8cabd9e3378186b82f37c8bc382d925193ee0144424bea41e68cf4836d21bb1
 主线一：晶界构造,grain_boundary\current\model.json,model.json,.json,文档,663,参数与元数据。,K=6 · J=6 · L=20 · a_A=3.506186475312,334f0e789fa9edc42698adc56fb61058ada4385932a8522ca24984403142d227
-主线一：晶界构造,grain_boundary\current\PROTOCOL.md,PROTOCOL.md,.md,文档,4136,Markdown 文档。,,ab433d2704a3311ee2d544315bacf8983c8f2b45b8cf869844f52501850dbc94
-主线一：晶界构造,grain_boundary\current\README.md,README.md,.md,文档,2269,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,45f524220a84c172b154df34f0ee04fd5ba1633ac86ce5817958f262f2c8633b
+主线一：晶界构造,grain_boundary\current\PROTOCOL.md,PROTOCOL.md,.md,文档,4516,Markdown 文档。,,4966cb13a99ee32d403f1de044d632888f16616d6b824832a33b4ac05975e3b3
+主线一：晶界构造,grain_boundary\current\README.md,README.md,.md,文档,2824,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,25634d5959e7675cd54a728442a74b27fe90ee167cf7ba6ba71d0d2ba563fd6f
 主线一：晶界构造,grain_boundary\current\requirements.txt,requirements.txt,.txt,输入,12,Python 依赖清单，用于重建运行环境。,,a83a2a4ed7ab2e022b9b8a83cfa2b8cf52cc243006c597e8b96f90a8365590ac
 主线一：晶界构造,grain_boundary\current\run.py,run.py,.py,代码,6468,Python 脚本。,,22fa92ad07b7a43786da48e66687b562f51b0ffff260f65b1885f41bf8105f64
-主线一：晶界构造,grain_boundary\current\STATUS.json,STATUS.json,.json,文档,227,参数与元数据。,"字段: protocol_status, standard_start_status, standard_start_path, reason",570ddbd52b160addf05f780dcd56a02d7eb7aea1d09801481446bfa55e0c0846
+主线一：晶界构造,grain_boundary\current\STATUS.json,STATUS.json,.json,文档,876,参数与元数据。,"字段: protocol_status, standard_start_status, standard_start_path, reason, updated_on, implemented_protocol_id, latest_research_plan, teacher_plan_status",cde646154da764e4224de1fbd81cc74b9f139526370a89490f60db5873e973d9
+主线一：晶界构造,grain_boundary\current\TEACHER_PLAN_2026-11-05.md,TEACHER_PLAN_2026-11-05.md,.md,文档,3527,Markdown 文档。,,64034b3f10e5d15c560175992f914b09c40e535375f9dc21a70a4dfce8cd0f8e
 主线一：晶界构造,grain_boundary\history\construction_baseline_3600\Sigma5_310_Metastable_GB\v2_production\data\annealed\stage2_annealed.data,stage2_annealed.data,.data,结论,467158,★ Stage 2 退火末态：363 K、0 bar 下 25 ps 后的结构。晶界在此阶段发生热重构。,"3,600 原子 · 盒子 65.95 × 33.26 × 35.06 Å · timestep 20,000",c988b93dec412e010e7dd38d6a1455947a520d8b08698d9e5a92a6ceea269ef2
 主线一：晶界构造,grain_boundary\history\construction_baseline_3600\Sigma5_310_Metastable_GB\v2_production\data\annealed\stage2_annealed.restart,stage2_annealed.restart,.restart,续算,317785,LAMMPS 续算检查点：保存速度场与热力学状态，只能在 LAMMPS 内读取。,,f59422f65a12a3f837073494eadcbd90035ba9858ed7a67c5216eaecba4ba8e5
 主线一：晶界构造,grain_boundary\history\construction_baseline_3600\Sigma5_310_Metastable_GB\v2_production\data\bulk\bulk_Li.cif,bulk_Li.cif,.cif,结论,6937,体相参考结构的晶体学格式。,,5b27eb7c8669ba9094f3a5cfcc7576eb24c765c805e9c3b3b41b21f5578cbe69
@@ -369,7 +371,7 @@
 主线一：晶界构造,grain_boundary\history\reports\Team_Reviews\TEAM_REVIEW_Li_GB_Deliverable_20260823_BI.md,TEAM_REVIEW_Li_GB_Deliverable_20260823_BI.md,.md,文档,14855,双语版报告（中文版与英文版首尾拼接在同一文件内）。,,ddc42715a223bd8389a2865fafe0e03fb779d7538fe4f41c65cd6dc663ae254e
 主线一：晶界构造,grain_boundary\history\reports\Team_Reviews\TEAM_REVIEW_Li_Sigma5_2x2_run_20260830_BI.md,TEAM_REVIEW_Li_Sigma5_2x2_run_20260830_BI.md,.md,文档,11266,双语版报告（中文版与英文版首尾拼接在同一文件内）。,,93c0884294bdaf12f26c7e33e0f1da86e5a20fa8bd855a969a7ecb16115f4fed
 主线一：晶界构造,grain_boundary\history\reports\Team_Reviews\TEAM_REVIEW_Li_Sigma5_310_metastable_2x2_20260901_BI.md,TEAM_REVIEW_Li_Sigma5_310_metastable_2x2_20260901_BI.md,.md,文档,8316,双语版报告（中文版与英文版首尾拼接在同一文件内）。,,1bdaed4785377254ba8ffe6d2073928dd089639fec8182eaba6913aceec45d1d
-主线一：晶界构造,grain_boundary\README.md,README.md,.md,文档,739,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,3b0cd79c3a44aedb47070b4f2dd979896e69cd0ab408de56ee3e4b81ab526213
+主线一：晶界构造,grain_boundary\README.md,README.md,.md,文档,1358,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,d2cce0b38d1a31a7d1c5e9946bacd05d0d707971e50715b5889a73ae1164ea4b
 主线二：SOAP 方法,soap\00_汇总报告\Ni_SOAP_最终报告.md,Ni_SOAP_最终报告.md,.md,文档,6433,★ 方法探索总报告：项目定位、六个 Stage 的结论、十条下一版建议、以及“不能确定”清单。,,d91901f6ce03ed72276883be0907e4e74320cb74f68b9c6ed37148ad00a4147c
 主线二：SOAP 方法,soap\00_汇总报告\SOAP参数确定报告_2026-10-22.md,SOAP参数确定报告_2026-10-22.md,.md,文档,7803,Markdown 文档。,,768a3242875a80152cac5d21bf5350263ebd68a885bfe21f85c3b17d062c7983
 主线二：SOAP 方法,soap\00_汇总报告\项目文件索引_按阶段.csv,项目文件索引_按阶段.csv,.csv,结论,61602,数据表。,"209 行 × 11 列 [Stage, Category, Subcategory, RelativePath, FileName, Extension …]",6f4b6bfa5999584ad792b5d87edbc5d0ef4a8f19144d63cbff478b3d7dde6c33
@@ -389,7 +391,74 @@
 主线二：SOAP 方法,soap\06_环境与实现\verify_soap_env.py,verify_soap_env.py,.py,代码,5385,环境自检脚本，确认 SOAP 依赖可用。,,d43a6f7da73406d73368a12b5ea19c098714df690f86f92f3a0dfe913fe2bb30
 主线二：SOAP 方法,soap\90_历史归档\归档说明.md,归档说明.md,.md,文档,1854,Markdown 文档。,,4fabfc33d9c133aa67af68fd2034343fa4c2c8a8c8153c4d225a1d82fac277a2
 主线二：SOAP 方法,soap\90_历史归档\旧版材料\inspect_structures_v_old.py,inspect_structures_v_old.py,.py,代码,3996,Python 脚本。,,b9469f9ca66706a47966faa850d5a27060d398da87a973a2234fe56cf969a8f9
-主线二：SOAP 方法,soap\README.md,README.md,.md,文档,2276,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,b83c572b1f818cbe4ea504b970b0494d3479152af2064c4496be0f0fa3372620
+主线二：SOAP 方法,soap\experiments\2026-11-01_audit\candidate_decision_table.csv,candidate_decision_table.csv,.csv,结论,2492,数据表。,"12 行 × 15 列 [config_id, metric, r_cut, sigma, n_max, l_max …]",b803157befda7cda5701459140003b1d5d0e43068f1ac1d5ffc1f048bd61ecc8
+主线二：SOAP 方法,soap\experiments\2026-11-01_audit\converged_counts_by_scale.csv,converged_counts_by_scale.csv,.csv,结论,389,数据表。,"24 行 × 4 列 [metric, r_cut, sigma, converged_count]",2828e93dc99377c24d14a7c9639108564a57756ebeba31d33c56e8b8f1d18801
+主线二：SOAP 方法,soap\experiments\2026-11-01_audit\convergence_edges.csv,convergence_edges.csv,.csv,结论,100314,数据表。,"744 行 × 12 列 [axis, lower, upper, metric, r_cut, sigma …]",62d4cf814a3e95a286f4eb2a85de1e72a35a70f79e3fe05ddebbb75db6951f73
+主线二：SOAP 方法,soap\experiments\2026-11-01_audit\convergence_summary.csv,convergence_summary.csv,.csv,结论,51694,数据表。,"480 行 × 14 列 [config_id, r_cut, sigma, n_max, l_max, metric …]",6b207aa6433812c2f3b81f1727a37d2c2f4926f3cfa2d427b4d7aeae651404fe
+主线二：SOAP 方法,soap\experiments\2026-11-01_audit\figures\basis_health.png,basis_health.png,.png,结论,139849,图表，可直接用于报告或论文。,,a796df5643083403318282e65c29880fd494b3ef3beb2d813c2189ece0ddd4c8
+主线二：SOAP 方法,soap\experiments\2026-11-01_audit\figures\convergence_norm.png,convergence_norm.png,.png,结论,92001,图表，可直接用于报告或论文。,,1204a33c7ec427936f5d9fc92f730fce1fd8a18b436bff1a3755bc1cd8e98f89
+主线二：SOAP 方法,soap\experiments\2026-11-01_audit\figures\convergence_raw.png,convergence_raw.png,.png,结论,91427,图表，可直接用于报告或论文。,,db49cff25a2cff393dc5ae403cc168a85c2bd398ce2614bef15abc2a3b41ec3d
+主线二：SOAP 方法,soap\experiments\2026-11-01_audit\figures\distributions_norm.png,distributions_norm.png,.png,结论,230937,图表，可直接用于报告或论文。,,d33a0bd21edcdbfb0e3a2276bb0cec2a85ffd980426e7b65ffb571691c8b345b
+主线二：SOAP 方法,soap\experiments\2026-11-01_audit\figures\distributions_raw.png,distributions_raw.png,.png,结论,230729,图表，可直接用于报告或论文。,,f8828eeeb0fa355a81df3b77e860b3f947fafdc62e69deb063202f3c3b55c759
+主线二：SOAP 方法,soap\experiments\2026-11-01_audit\figures\perturbation_response.png,perturbation_response.png,.png,结论,354498,图表，可直接用于报告或论文。,,783e64406f9143edd191b5416850a8ba67ad9122b584b515dd1cfec7b2155e01
+主线二：SOAP 方法,soap\experiments\2026-11-01_audit\figures\raw_vs_norm.png,raw_vs_norm.png,.png,结论,299320,图表，可直接用于报告或论文。,,7cb3c10a1394afa1039ec7bbc9cc314d2935df0b08c000e321cc5ae968e9af39
+主线二：SOAP 方法,soap\experiments\2026-11-01_audit\figures\spatial_profiles.png,spatial_profiles.png,.png,结论,657628,图表，可直接用于报告或论文。,,68069d360f5e7aec264f5b537f2a5de52bcd9f31459c706cc258f1a095765221
+主线二：SOAP 方法,soap\experiments\2026-11-01_audit\figures\strain_response.png,strain_response.png,.png,结论,268904,图表，可直接用于报告或论文。,,b6cdc76ed6e880adb15cd375d4c8f92bb797162b096b73bc5bde28e509f0ee34
+主线二：SOAP 方法,soap\experiments\2026-11-01_audit\grid.csv,grid.csv,.csv,结论,6946,数据表。,"240 行 × 5 列 [config_id, r_cut, sigma, n_max, l_max]",0dd03c4cfbbf0f603eb56e99d8b006ce36422a0845caf4cccaa72ede4bdeaf71
+主线二：SOAP 方法,soap\experiments\2026-11-01_audit\protocol.json,protocol.json,.json,文档,3004,参数与元数据。,"字段: created_at, seed, grid, count, implementation, distance_definition, reference, evaluation_count",c9641b424b4284fb37388b0750b221b2575b3db43c22adc122ea124e9bac10bf
+主线二：SOAP 方法,soap\experiments\2026-11-01_audit\radial_category_diagnostics.csv,radial_category_diagnostics.csv,.csv,结论,13966,数据表。,"120 行 × 7 列 [lower, upper, metric, category, n, spearman …]",f75e09439af1444ba4356cc7671e9028dd789daefdaa1851847e84fd9ae8c0a2
+主线二：SOAP 方法,soap\experiments\2026-11-01_audit\radial_extension\summary.csv,summary.csv,.csv,结论,12610,数据表。,"12 行 × 15 列 [r_cut, sigma, n_max, l_max, config_id, base_candidate …]",971dfbe4ec70eceaabeccfb724839e471c58fbdbbb9d6ced9978191ad66ee0c4
+主线二：SOAP 方法,soap\experiments\2026-11-01_audit\README.md,README.md,.md,文档,609,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,8476f005ed06e4ff9772a9cd5e87603152dd229a487d436d0318c53038d164eb
+主线二：SOAP 方法,soap\experiments\2026-11-01_audit\reference_k_robustness.csv,reference_k_robustness.csv,.csv,结论,57158,数据表。,"600 行 × 8 列 [config_id, metric, variant, group, subset, n …]",ba0a11da677d1d68f9a4ced9e37b96dbc806512c4db9acfb6baf9897649bd7e8
+主线二：SOAP 方法,soap\experiments\2026-11-01_audit\REPORT.md,REPORT.md,.md,文档,11527,Markdown 文档。,,20d58dc2198a06b0753ce73fd0e207e8863aed0ca2c43a5fea0aa18b30606dc7
+主线二：SOAP 方法,soap\experiments\2026-11-01_audit\source\build_report.py,build_report.py,.py,代码,28689,Python 脚本。,,ff775e4a47ac7a283209fa7942cc0e07cb6fadaf311adb2f867e1bfa6ad7bd1b
+主线二：SOAP 方法,soap\experiments\2026-11-01_audit\source\extend_radial.py,extend_radial.py,.py,代码,5897,Python 脚本。,,956ae9dbb8af57f150e16350085011cd74f455ddefb957f7a42aa0b0445091ad
+主线二：SOAP 方法,soap\experiments\2026-11-01_audit\source\metric_diagnostics.py,metric_diagnostics.py,.py,代码,4136,Python 脚本。,,1bc11c04ed24ab4c9560ba0189a8806a8045a975363864f79b1bf9200ff708ff
+主线二：SOAP 方法,soap\experiments\2026-11-01_audit\source\run_sweep.py,run_sweep.py,.py,代码,22644,Python 脚本。,,996b9f5665cce03ab33446728f8eae2f890e84bbe4a9deac3672eb9d276d1523
+主线二：SOAP 方法,soap\experiments\2026-11-01_audit\source\validate_candidates.py,validate_candidates.py,.py,代码,13855,Python 脚本。,,c9d0d302bee944c5582db40bf45c134818d9866b5d0b22a7c26e816945d4fd93
+主线二：SOAP 方法,soap\experiments\2026-11-01_audit\source\verify_results.py,verify_results.py,.py,代码,3698,Python 脚本。,,4b9369efd09287c18d759f202b0038e8c3d5e010de36e4e407f6d6efa05f172d
+主线二：SOAP 方法,soap\experiments\2026-11-01_audit\status.json,status.json,.json,文档,639,参数与元数据。,"字段: time, event, verified_at, grid_success, population, heldout, paired_raw_norm, max_distance_identity_absolute_residual",1bf235937ed2a76048258e47e40c94b51f824af1a6fa7111be8df38c28d4201d
+主线二：SOAP 方法,soap\experiments\2026-11-01_audit\sweep_summary.csv,sweep_summary.csv,.csv,结论,45426,数据表。,"240 行 × 16 列 [config_id, r_cut, sigma, n_max, l_max, started_at …]",65980029c338e1990a69b9de19f5200e91a263f1afe77fda8d56e550fddd2048
+主线二：SOAP 方法,soap\experiments\2026-11-01_audit\symmetry_weight_diagnostic.csv,symmetry_weight_diagnostic.csv,.csv,结论,1677,数据表。,"16 行 × 11 列 [r_cut, sigma, l_max, lower_n, upper_n, weighting …]",ba2cc52aa427b24a2eb32ceefc8c1b7bbaf40a6e3143a4820640a8625f12ffd8
+主线二：SOAP 方法,soap\experiments\2026-11-01_audit\verification.json,verification.json,.json,文档,564,参数与元数据。,"字段: verified_at, grid_success, population, heldout, paired_raw_norm, max_distance_identity_absolute_residual, max_distance_identity_relative_residual, max_full_vs_pilot_vector_difference",ae630ef12eb485c0d83371fee9d4c5cf3301a2122b75725eb1397a31a6dbf311
+主线二：SOAP 方法,soap\experiments\2026-11-01_midterm\baseline_grouped_radial_audit.json,baseline_grouped_radial_audit.json,.json,文档,1973,参数与元数据。,,3cab71ff04da2de9a4b434547cd813b295ec3b8f7671f3d14241eaffa6d55a8e
+主线二：SOAP 方法,soap\experiments\2026-11-01_midterm\convergence.json,convergence.json,.json,文档,167304,参数与元数据。,,4176b7698fd035674d25bde079031d1884ec6564c150361e82f22d7eea016686
+主线二：SOAP 方法,soap\experiments\2026-11-01_midterm\diagnostics_summary.json,diagnostics_summary.json,.json,文档,24694,参数与元数据。,,907d451c9701108572ec876914f8c63757108f9928d285960349b01b264c43a6
+主线二：SOAP 方法,soap\experiments\2026-11-01_midterm\heldout_spatial.png,heldout_spatial.png,.png,结论,240405,图表，可直接用于报告或论文。,,9bbde94cf01c772362fb2257b6cd165b3f8942a8bd46ce7a105a9c5594d474bd
+主线二：SOAP 方法,soap\experiments\2026-11-01_midterm\manifest.json,manifest.json,.json,文档,91762,参数与元数据。,"字段: seed, created, purpose, grid, descriptor, reference_selection, bulk_margin_A, structures",71273a4f94e47364d3786d5ea808cdc6d8a94e599df5f39b165e6bdce0d6e78d
+主线二：SOAP 方法,soap\experiments\2026-11-01_midterm\perturbation.png,perturbation.png,.png,结论,153504,图表，可直接用于报告或论文。,,b899e406bc00afb4f1711ce75dd95fad986fb67217e7e61009a1fed9fcf0a441
+主线二：SOAP 方法,soap\experiments\2026-11-01_midterm\radial_convergence.png,radial_convergence.png,.png,结论,105505,图表，可直接用于报告或论文。,,c8e74966db027ffa89dfde16fcd1b394d45ec27186fb5a8bac5ea68832c702fd
+主线二：SOAP 方法,soap\experiments\2026-11-01_midterm\README.md,README.md,.md,文档,921,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,bdca3f933e0b976f37b36423b826bd815d393142aef95421c481a81f47f4e175
+主线二：SOAP 方法,soap\experiments\2026-11-01_midterm\REPORT.md,REPORT.md,.md,文档,4284,Markdown 文档。,,cbcc61e429230672986a0554775a2af57f7e4cacfe2b16fa0ac4444233df094d
+主线二：SOAP 方法,soap\experiments\2026-11-01_midterm\results.csv,results.csv,.csv,结论,68989,数据表。,"240 行 × 22 列 [﻿create_s, dimension, finite, key, l_max, n_max …]",332aa0b1f77de985a13c13441569f70bbd86922220048aed049abcc5a53f2ca2
+主线二：SOAP 方法,soap\experiments\2026-11-01_midterm\source\cfg_reader.py,cfg_reader.py,.py,代码,8911,CFG 格式解析脚本。,,98d45d637b64c87c1ee0a047089b782fb9c033f5e0fdf9faa2c5cd33f2803075
+主线二：SOAP 方法,soap\experiments\2026-11-01_midterm\source\diagnostics.py,diagnostics.py,.py,代码,5570,Python 脚本。,,ef6d2cba1e086d8b3cd6cf2ec1a8b0add7ebecee556e4659aa21c4cea336dd0b
+主线二：SOAP 方法,soap\experiments\2026-11-01_midterm\source\scan.py,scan.py,.py,代码,9339,Python 脚本。,,0acb090d0568db48595149a7292160f3f64a00be864f1eea78dd9b59da6ce08f
+主线二：SOAP 方法,soap\experiments\2026-11-01_midterm\summary.json,summary.json,.json,文档,2466,参数与元数据。,"字段: count, success, warnings, total_compute_s, warning_keys, convergence, baseline, baseline_n10_to_12",50967bee76bfbf2d91a82c6fb47b9aeb244eb238b11a527abcf090fbbf30d188
+主线二：SOAP 方法,soap\experiments\2026-11-01_radial_followup\basis_health_comparison.csv,basis_health_comparison.csv,.csv,结论,693,数据表。,"12 行 × 5 列 [rbf, r_cut, n_max, residual, condition]",2b4bfbdc39c7c4d08abf25fd5f29bf0f4e4e93601a39bb928142a242973050ca
+主线二：SOAP 方法,soap\experiments\2026-11-01_radial_followup\distance_comparisons.csv,distance_comparisons.csv,.csv,结论,9480,数据表。,"56 行 × 12 列 [comparison, rbf, r_cut, weighting, lower, upper …]",9d83831f4414656d016c29186305c803db35ad91217c3bb54db98b9f05246060
+主线二：SOAP 方法,soap\experiments\2026-11-01_radial_followup\distance_comparisons_by_category.csv,distance_comparisons_by_category.csv,.csv,结论,91459,数据表。,"560 行 × 10 列 [comparison, rbf, r_cut, weighting, lower, upper …]",a386f5229c474e68d2215dc700135037d70e4ef90723707d84d8a73e064a6153
+主线二：SOAP 方法,soap\experiments\2026-11-01_radial_followup\fcc_decomposition.csv,fcc_decomposition.csv,.csv,结论,99624,数据表。,"528 行 × 15 列 [rbf, config_id, r_cut, n_max, weighting, case_id …]",f5f0a538e2ce97fa8a6ce2852f616f1cf58652d8140e9ccf08dd2950da5634ed
+主线二：SOAP 方法,soap\experiments\2026-11-01_radial_followup\fcc_geometry.csv,fcc_geometry.csv,.csv,结论,2846,数据表。,"22 行 × 12 列 [case_id, kind, amplitude, unit, atoms, center_original_index …]",9496bc01f232d9fc0195e2b20f090c54a6ef6fb146a5cb2b0cc12978176d855e
+主线二：SOAP 方法,soap\experiments\2026-11-01_radial_followup\fcc_responses.csv,fcc_responses.csv,.csv,结论,187828,数据表。,"1,056 行 × 15 列 [rbf, config_id, r_cut, n_max, weighting, metric …]",b997363865df7dcbc751bbbc5c77265fc97a603942f60e9a89451d03802eac7c
+主线二：SOAP 方法,soap\experiments\2026-11-01_radial_followup\figures\basis_health.png,basis_health.png,.png,结论,127878,图表，可直接用于报告或论文。,,5e4f34afc17b749603556267396b9102793208d3884c0a1bb027edfda27f2525
+主线二：SOAP 方法,soap\experiments\2026-11-01_radial_followup\figures\fcc_distance_decomposition.png,fcc_distance_decomposition.png,.png,结论,114539,图表，可直接用于报告或论文。,,9facc848a6d4bc4da14150b7e7352c6a7d67e17858812b7329c88d12262d34c8
+主线二：SOAP 方法,soap\experiments\2026-11-01_radial_followup\figures\fcc_distance_responses.png,fcc_distance_responses.png,.png,结论,405977,图表，可直接用于报告或论文。,,a03d741aac8ad7e465c02a0f03415d1a75a48a55b7a0bc4454080d0a752a0370
+主线二：SOAP 方法,soap\experiments\2026-11-01_radial_followup\figures\fcc_geometry.png,fcc_geometry.png,.png,结论,264200,图表，可直接用于报告或论文。,,17c672ef38135f98aceffc6c87447ca485e760759836eb27f7c204deb0537a6e
+主线二：SOAP 方法,soap\experiments\2026-11-01_radial_followup\figures\fcc_norm_changes.png,fcc_norm_changes.png,.png,结论,295696,图表，可直接用于报告或论文。,,02a9ee6b95f5cd123b6d24af95fe572232327a0a7ab9a8cdfe3c8b67096868a2
+主线二：SOAP 方法,soap\experiments\2026-11-01_radial_followup\figures\radial_convergence.png,radial_convergence.png,.png,结论,334965,图表，可直接用于报告或论文。,,0dfa1589e5bbc8e7c4adc31f53f542f8dded93e454d0aa48ed3645c287f5e91f
+主线二：SOAP 方法,soap\experiments\2026-11-01_radial_followup\polynomial_summary.csv,polynomial_summary.csv,.csv,结论,1644,数据表。,"6 行 × 16 列 [config_id, r_cut, sigma, n_max, l_max, rbf …]",3a4fc85c044044f0facf5f9ee94f468b6d5992387e7dfc4dcba9ca9820d74a31
+主线二：SOAP 方法,soap\experiments\2026-11-01_radial_followup\protocol.json,protocol.json,.json,文档,5803,参数与元数据。,"字段: registered_at, purpose, new_polynomial_configurations, reused_gto_configurations, main_distances, main_weights, supplemental_weights, basis_comparison",8a2afd1de4f3a18d1b5d1aada1f80ffef5dcb634f48e0eb51c100c64147866c5
+主线二：SOAP 方法,soap\experiments\2026-11-01_radial_followup\README.md,README.md,.md,文档,619,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,11170e9c6d7a29b96707b0df7badbf6efc40955d8ae0dd4107724a3599655dd2
+主线二：SOAP 方法,soap\experiments\2026-11-01_radial_followup\REPORT.md,REPORT.md,.md,文档,11371,Markdown 文档。,,3f8d49a1ceac16cf425be64a251fa3f92cf0bb731ba889485e683b8bb99770fd
+主线二：SOAP 方法,soap\experiments\2026-11-01_radial_followup\rotation_audit.csv,rotation_audit.csv,.csv,结论,11540,数据表。,"144 行 × 9 列 [rbf, r_cut, n_max, l_max, periodic, seed …]",44c2b20c8fa51f268928db8ee2a6063206cb81ada53e07bedb655d8d726e5137
+主线二：SOAP 方法,soap\experiments\2026-11-01_radial_followup\rotation_audit_by_l.csv,rotation_audit_by_l.csv,.csv,结论,13360,数据表。,"264 行 × 6 列 [rbf, r_cut, periodic, seed, l, block_difference_over_full_norm]",6d532a29a67ba5a2a814066de54c7c909ea4957565e28356792b4ab6e657116d
+主线二：SOAP 方法,soap\experiments\2026-11-01_radial_followup\source\radial_followup.py,radial_followup.py,.py,代码,47050,Python 脚本。,,673be87d44ef6d5f4173cac0a52adb4c5fb78cc26529e97fb5f311abb891e748
+主线二：SOAP 方法,soap\experiments\2026-11-01_radial_followup\source\run_sweep.py,run_sweep.py,.py,代码,22644,Python 脚本。,,996b9f5665cce03ab33446728f8eae2f890e84bbe4a9deac3672eb9d276d1523
+主线二：SOAP 方法,soap\experiments\2026-11-01_radial_followup\status.json,status.json,.json,文档,818,参数与元数据。,"字段: time, event, verified_at, main_inputs_unchanged, polynomial_success, reused_gto, fcc_cases, response_rows",9c1c2da575b831d82bba0a46da163c20a94a08b9e6afe5f2dff197eedba239f8
+主线二：SOAP 方法,soap\experiments\2026-11-01_radial_followup\verification.json,verification.json,.json,文档,743,参数与元数据。,"字段: verified_at, main_inputs_unchanged, polynomial_success, reused_gto, fcc_cases, response_rows, distance_comparisons, category_rows",766692bd932143c20ee91644c51b53e918c48aa94e05a34756a66b68cb56d7d8
+主线二：SOAP 方法,soap\experiments\PUBLICATION_MANIFEST_2026-11-15.json,PUBLICATION_MANIFEST_2026-11-15.json,.json,文档,183472,参数与元数据。,"字段: published_on, scientific_computation_date, presentation_date, normalization, published_original_artifacts, not_published, scope",d7e5c8af313b702add7bcd87ab82b9a7d4e7d536257f58e17d661ccba3120a57
+主线二：SOAP 方法,soap\README.md,README.md,.md,文档,3508,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,389157b1398363801e6f36f595f794d866fde2217d576f650b79588bfc5fe491
 主线二：SOAP 方法,soap\Stage01_数据准备与SOAP初测\01_报告\Stage01_确定性结论与待讨论.md,Stage01_确定性结论与待讨论.md,.md,文档,3323,Markdown 文档。,,56b00c4d315ad1f2b85a9db9da2aae7d8c9f775e8408ebcae9351da763c07a00
 主线二：SOAP 方法,soap\Stage01_数据准备与SOAP初测\02_脚本\cfg_reader.py,cfg_reader.py,.py,代码,8911,CFG 格式解析脚本。,,98d45d637b64c87c1ee0a047089b782fb9c033f5e0fdf9faa2c5cd33f2803075
 主线二：SOAP 方法,soap\Stage01_数据准备与SOAP初测\02_脚本\inspect_structures.py,inspect_structures.py,.py,代码,4334,结构概览脚本，检查原子数与字段完整性。,,c0ef4bb8a815501160aa6333f78699cd21f9596e057a1b31582538d1ea302713
@@ -569,13 +638,15 @@
 主线二：SOAP 方法,soap\Stage06_最终评估\03_输出\stage6_state_classification.csv,stage6_state_classification.csv,.csv,结论,1083,Stage06 最终评估产物：相关系数、模型对比与稳健性检验。,"10 行 × 8 列 [test_interface, n_train, n_test, roc_auc, balanced_accuracy, f1 …]",ca299960f4cd780434e996bff20453eded7c75de03e2f3360560d546ed92bb98
 主线二：SOAP 方法,soap\Stage06_输入输出检索表.md,Stage06_输入输出检索表.md,.md,文档,10038,Markdown 文档。,,70a2ef9d090a2a88227748da54a45a70888b4cccea745f4ef2a6a5c5eb10e7b8
 仓库维护：文档、工具与记录,maintenance\docs\MAINTENANCE.md,MAINTENANCE.md,.md,文档,2615,Markdown 文档。,,2b319c3f65ae251d57b887dea95114c5d3f29c2c0429bb37984ac3cd1d418f88
+仓库维护：文档、工具与记录,maintenance\docs\MIDTERM_2026-11.md,MIDTERM_2026-11.md,.md,文档,6188,Markdown 文档。,,2c8486971b9af4ed901c44dc187157b23b68e97810cdb3be51fdcba41061e1cb
+仓库维护：文档、工具与记录,maintenance\docs\MIDTERM_QA_2026-11.md,MIDTERM_QA_2026-11.md,.md,文档,6007,Markdown 文档。,,a771b486412469a95565a3fa0c2df3f53217e8d635b2c189251fc4500d6ac301
 仓库维护：文档、工具与记录,maintenance\docs\PATH_MIGRATION.md,PATH_MIGRATION.md,.md,文档,1819,Markdown 文档。,,5fe76bce0b446d38a169c0afe5e085bf665ff462413a64a85794e0187cc02196
 仓库维护：文档、工具与记录,maintenance\docs\PROJECT_REVIEW.md,PROJECT_REVIEW.md,.md,文档,11163,Markdown 文档。,,8f68a36fbfc2ab42f38fb564357e359cc407e6f95badf43d353e6de85ec23034
-仓库维护：文档、工具与记录,maintenance\docs\RESEARCH_STATUS.md,RESEARCH_STATUS.md,.md,文档,2507,Markdown 文档。,,76bef16e556ab82afe1274222172f2a80d3ba20a2f999fc22ffa2aa541bb59eb
+仓库维护：文档、工具与记录,maintenance\docs\RESEARCH_STATUS.md,RESEARCH_STATUS.md,.md,文档,3722,Markdown 文档。,,ef89cf69e4d5e0ddecdf21548dc4b12d9a95014759f2b5de57b1dcedafdd613b
 仓库维护：文档、工具与记录,maintenance\docs\STUDY_GUIDE.md,STUDY_GUIDE.md,.md,文档,11431,Markdown 文档。,,ad25ac30033c570679bad4cc47b78ea2c95adb9de8e59d794fa85254dd468814
 仓库维护：文档、工具与记录,maintenance\docs\VERSIONS.md,VERSIONS.md,.md,文档,2497,Markdown 文档。,,74fbf2116e116ccb8ee0c3da114ec84165711247024e00c86c1e4dbe7e1f8c84
-仓库维护：文档、工具与记录,maintenance\docs\WORKFLOWS.md,WORKFLOWS.md,.md,文档,1439,Markdown 文档。,,a8ec24ff828e6ee03346834505b717dfca8d36a871364cc7315f499800ce9342
-仓库维护：文档、工具与记录,maintenance\README.md,README.md,.md,文档,1047,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,69a6117eda93455cef84cda218a1644f43a52b1e03e927b4edc7e7e21bf2b537
+仓库维护：文档、工具与记录,maintenance\docs\WORKFLOWS.md,WORKFLOWS.md,.md,文档,2012,Markdown 文档。,,3b311477455579243e774d8c38ed907813f82e6ba97416e1476d83befd209096
+仓库维护：文档、工具与记录,maintenance\README.md,README.md,.md,文档,1182,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,3a89f43a6bebdef4f13da7eb198a8b6db28f37a48dc8f150f98938fa85582333
 仓库维护：文档、工具与记录,maintenance\records\DATA_MANIFEST.csv,DATA_MANIFEST.csv,.csv,结论,16186,数据表。,"60 行 × 7 列 [﻿相对路径, 文件名, 扩展名, 层次, 大小(字节), 用途说明 …]",3588a50fef3caffb56d4dbb9d8661c72f0ef9c007f3399d71712958375a53b05
 仓库维护：文档、工具与记录,maintenance\records\DATA_MANIFEST.md,DATA_MANIFEST.md,.md,文档,11651,Markdown 文档。,,7d35da67353c703031f80e5c38797c0cfca1ac018124887fb9906c909c4c5a11
 仓库维护：文档、工具与记录,maintenance\refresh_ledger.cmd,refresh_ledger.cmd,.cmd,输入,657,（未分类）,,b08e57c1262d97f326a4508ce91dc1e0cf3f4f762becf739c17f8563a3e8bc0e
@@ -589,4 +660,4 @@
 仓库维护：文档、工具与记录,maintenance\tools\README.md,README.md,.md,文档,2678,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,9155c6d644249c341dd491796fffc9ef21f77945ab5c1191a4ae326480c8ea06
 仓库首页与其他文件,.gitattributes,.gitattributes,(无),文档,748,（未分类）,,4c0a9ade8fcbcd679ff5b73e003ccbdeb18b5dc6846c0c2f18081013c26c68a3
 仓库首页与其他文件,.gitignore,.gitignore,(无),输入,1587,Git 忽略规则，指定哪些文件不纳入版本控制。,,17420904063f6cff8fa1bc0ff9563291bf10683e36c097d26843d168e2b45690
-仓库首页与其他文件,README.md,README.md,.md,文档,572,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,5aedf8aeeb40610a67dd570cff1937c5ec653d4218fbc57241930887a2dc6b0c
+仓库首页与其他文件,README.md,README.md,.md,文档,2177,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,223a4b59c257f52f2356314829f46f22e42aeee052d73b4db7c91da14e6e90dd

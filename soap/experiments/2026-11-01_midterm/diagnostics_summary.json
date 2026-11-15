@@ -1,0 +1,835 @@
+[
+  {
+    "key": "r3.25_s0.5_n12_l12",
+    "role": "diagnostic representative; not convergence-qualified, not an optimal selection",
+    "r_cut": 3.25,
+    "sigma": 0.5,
+    "n_max": 12,
+    "l_max": 12,
+    "dimension": 1014,
+    "probe_count": 120,
+    "population_count": 4659,
+    "heldout_count": 3659,
+    "perturbation": [
+      {
+        "kind": "translation",
+        "amplitude": null,
+        "seed": null,
+        "raw_median": 1.385429035937577e-08,
+        "raw_max": 5.04240705206287e-08,
+        "norm_median": 1.614025798154233e-10,
+        "norm_max": 6.143555076437012e-10
+      },
+      {
+        "kind": "rotation",
+        "amplitude": null,
+        "seed": null,
+        "raw_median": 1.1955697335099742e-08,
+        "raw_max": 4.8506641230995864e-08,
+        "norm_median": 1.4526664129893452e-10,
+        "norm_max": 6.048909192111376e-10
+      },
+      {
+        "kind": "permutation",
+        "amplitude": null,
+        "seed": null,
+        "raw_median": 7.095837938071504e-09,
+        "raw_max": 2.8685236956529347e-08,
+        "norm_median": 8.12116140090861e-11,
+        "norm_max": 3.5097378588252363e-10
+      },
+      {
+        "kind": "displacement",
+        "amplitude": 0.01,
+        "seed": 7101,
+        "raw_median": 0.202580255593716,
+        "raw_max": 0.45645188511196505,
+        "norm_median": 0.001987828260937705,
+        "norm_max": 0.005301115016410116
+      },
+      {
+        "kind": "displacement",
+        "amplitude": 0.01,
+        "seed": 7102,
+        "raw_median": 0.20236684683648382,
+        "raw_max": 0.627966134676718,
+        "norm_median": 0.0022403684495204083,
+        "norm_max": 0.007873463679246283
+      },
+      {
+        "kind": "displacement",
+        "amplitude": 0.01,
+        "seed": 7103,
+        "raw_median": 0.19721275126761123,
+        "raw_max": 0.5014434366209352,
+        "norm_median": 0.002079592441888693,
+        "norm_max": 0.006032049574402965
+      },
+      {
+        "kind": "displacement",
+        "amplitude": 0.03,
+        "seed": 7101,
+        "raw_median": 0.6050449692242226,
+        "raw_max": 1.2492193671784777,
+        "norm_median": 0.006040929555216461,
+        "norm_max": 0.015833543593436333
+      },
+      {
+        "kind": "displacement",
+        "amplitude": 0.03,
+        "seed": 7102,
+        "raw_median": 0.5958408470619455,
+        "raw_max": 1.8831861323247263,
+        "norm_median": 0.006841841394758167,
+        "norm_max": 0.023693470214664548
+      },
+      {
+        "kind": "displacement",
+        "amplitude": 0.03,
+        "seed": 7103,
+        "raw_median": 0.5870158478800422,
+        "raw_max": 1.3574483313938488,
+        "norm_median": 0.006249772357692383,
+        "norm_max": 0.016551105691647906
+      },
+      {
+        "kind": "displacement",
+        "amplitude": 0.05,
+        "seed": 7101,
+        "raw_median": 1.003844385819427,
+        "raw_max": 2.144468079103501,
+        "norm_median": 0.009997438841817533,
+        "norm_max": 0.027893700153972207
+      },
+      {
+        "kind": "displacement",
+        "amplitude": 0.05,
+        "seed": 7102,
+        "raw_median": 1.0027046556475714,
+        "raw_max": 3.1356801737747495,
+        "norm_median": 0.0114657308109292,
+        "norm_max": 0.03958434674763155
+      },
+      {
+        "kind": "displacement",
+        "amplitude": 0.05,
+        "seed": 7103,
+        "raw_median": 0.9930079608781894,
+        "raw_max": 2.2564851914436703,
+        "norm_median": 0.010545525662452006,
+        "norm_max": 0.027401316171742317
+      },
+      {
+        "kind": "strain",
+        "amplitude": -0.01,
+        "seed": null,
+        "raw_median": 5.263646797361217,
+        "raw_max": 5.501532183610319,
+        "norm_median": 0.027109923156962434,
+        "norm_max": 0.035749536518343325
+      },
+      {
+        "kind": "strain",
+        "amplitude": -0.005,
+        "seed": null,
+        "raw_median": 2.5858885573389907,
+        "raw_max": 2.891940213803464,
+        "norm_median": 0.013680129753396057,
+        "norm_max": 0.018694691926438994
+      },
+      {
+        "kind": "strain",
+        "amplitude": 0.005,
+        "seed": null,
+        "raw_median": 2.501615985931722,
+        "raw_max": 2.724388716524962,
+        "norm_median": 0.013913807735507938,
+        "norm_max": 0.018179242351850353
+      },
+      {
+        "kind": "strain",
+        "amplitude": 0.01,
+        "seed": null,
+        "raw_median": 4.917525168477525,
+        "raw_max": 4.969622972199697,
+        "norm_median": 0.02803921965394536,
+        "norm_max": 0.03293039727926898
+      }
+    ],
+    "reference_sensitivity": {
+      "raw_stable_ref_rho_vs_joint": 0.9995982442265685,
+      "raw_metastable_ref_rho_vs_joint": 0.9996119304328591,
+      "norm_stable_ref_rho_vs_joint": 0.9996796429800138,
+      "norm_metastable_ref_rho_vs_joint": 0.9996804949564414
+    },
+    "warnings": [
+      "An ill-conditioned matrix detected: slice 0 has rcond = 1.5192613205000558e-16.",
+      "An ill-conditioned matrix detected: slice 0 has rcond = 6.541001081359935e-17."
+    ],
+    "total_s": 59.11925300001167
+  },
+  {
+    "key": "r4_s0.3_n10_l8",
+    "role": "diagnostic representative; not convergence-qualified, not an optimal selection",
+    "r_cut": 4,
+    "sigma": 0.3,
+    "n_max": 10,
+    "l_max": 8,
+    "dimension": 495,
+    "probe_count": 120,
+    "population_count": 4659,
+    "heldout_count": 3659,
+    "perturbation": [
+      {
+        "kind": "translation",
+        "amplitude": null,
+        "seed": null,
+        "raw_median": 1.8457370937906558e-11,
+        "raw_max": 6.831517815956504e-11,
+        "norm_median": 2.4642312391192317e-12,
+        "norm_max": 7.942459690494293e-12
+      },
+      {
+        "kind": "rotation",
+        "amplitude": null,
+        "seed": null,
+        "raw_median": 1.7151309038979936e-11,
+        "raw_max": 6.376814465570056e-11,
+        "norm_median": 2.286514421998249e-12,
+        "norm_max": 7.528784079498123e-12
+      },
+      {
+        "kind": "permutation",
+        "amplitude": null,
+        "seed": null,
+        "raw_median": 1.2120895453738553e-11,
+        "raw_max": 4.0958776526141784e-11,
+        "norm_median": 1.5335919442053246e-12,
+        "norm_max": 5.814100541670742e-12
+      },
+      {
+        "kind": "displacement",
+        "amplitude": 0.01,
+        "seed": 7101,
+        "raw_median": 0.0227343291977119,
+        "raw_max": 0.05585158833693329,
+        "norm_median": 0.003318248252648757,
+        "norm_max": 0.00750775743317695
+      },
+      {
+        "kind": "displacement",
+        "amplitude": 0.01,
+        "seed": 7102,
+        "raw_median": 0.023378766868055012,
+        "raw_max": 0.08679673061399878,
+        "norm_median": 0.0034688267124992744,
+        "norm_max": 0.012219011001896627
+      },
+      {
+        "kind": "displacement",
+        "amplitude": 0.01,
+        "seed": 7103,
+        "raw_median": 0.024037966285472265,
+        "raw_max": 0.059014733268508174,
+        "norm_median": 0.0035157552285810826,
+        "norm_max": 0.009460737779646186
+      },
+      {
+        "kind": "displacement",
+        "amplitude": 0.03,
+        "seed": 7101,
+        "raw_median": 0.07357601402089203,
+        "raw_max": 0.16911252783578112,
+        "norm_median": 0.010507004349079441,
+        "norm_max": 0.02357578668389456
+      },
+      {
+        "kind": "displacement",
+        "amplitude": 0.03,
+        "seed": 7102,
+        "raw_median": 0.07249618870892928,
+        "raw_max": 0.26154330939833836,
+        "norm_median": 0.010679945018908683,
+        "norm_max": 0.03682800229379917
+      },
+      {
+        "kind": "displacement",
+        "amplitude": 0.03,
+        "seed": 7103,
+        "raw_median": 0.07252546417145102,
+        "raw_max": 0.17595876344386055,
+        "norm_median": 0.010627784241503426,
+        "norm_max": 0.027971067168215524
+      },
+      {
+        "kind": "displacement",
+        "amplitude": 0.05,
+        "seed": 7101,
+        "raw_median": 0.12892563472464771,
+        "raw_max": 0.3073212936314116,
+        "norm_median": 0.018508643955270472,
+        "norm_max": 0.04259254728516315
+      },
+      {
+        "kind": "displacement",
+        "amplitude": 0.05,
+        "seed": 7102,
+        "raw_median": 0.1272784057793898,
+        "raw_max": 0.4373466958355959,
+        "norm_median": 0.01840530883832766,
+        "norm_max": 0.06162558561933827
+      },
+      {
+        "kind": "displacement",
+        "amplitude": 0.05,
+        "seed": 7103,
+        "raw_median": 0.12950659408564877,
+        "raw_max": 0.2918289514102608,
+        "norm_median": 0.01840250658448123,
+        "norm_max": 0.04580912582918852
+      },
+      {
+        "kind": "strain",
+        "amplitude": -0.01,
+        "seed": null,
+        "raw_median": 0.49831712480003376,
+        "raw_max": 0.5961290858345747,
+        "norm_median": 0.051936023654786355,
+        "norm_max": 0.06491720221943234
+      },
+      {
+        "kind": "strain",
+        "amplitude": -0.005,
+        "seed": null,
+        "raw_median": 0.2469382201109907,
+        "raw_max": 0.2974641887469402,
+        "norm_median": 0.026081572117609454,
+        "norm_max": 0.032257885268618176
+      },
+      {
+        "kind": "strain",
+        "amplitude": 0.005,
+        "seed": null,
+        "raw_median": 0.24265503516262493,
+        "raw_max": 0.282690135184774,
+        "norm_median": 0.026309255828811398,
+        "norm_max": 0.030463101871346147
+      },
+      {
+        "kind": "strain",
+        "amplitude": 0.01,
+        "seed": null,
+        "raw_median": 0.48091178346803076,
+        "raw_max": 0.517666036327096,
+        "norm_median": 0.052837976133004214,
+        "norm_max": 0.05773401649664133
+      }
+    ],
+    "reference_sensitivity": {
+      "raw_stable_ref_rho_vs_joint": 0.9996766419583101,
+      "raw_metastable_ref_rho_vs_joint": 0.999635759193068,
+      "norm_stable_ref_rho_vs_joint": 0.9996847631447566,
+      "norm_metastable_ref_rho_vs_joint": 0.9996363174868136
+    },
+    "warnings": [],
+    "total_s": 56.677013599983184
+  },
+  {
+    "key": "r5_s0.3_n10_l8",
+    "role": "diagnostic representative; not convergence-qualified, not an optimal selection",
+    "r_cut": 5,
+    "sigma": 0.3,
+    "n_max": 10,
+    "l_max": 8,
+    "dimension": 495,
+    "probe_count": 120,
+    "population_count": 4659,
+    "heldout_count": 3659,
+    "perturbation": [
+      {
+        "kind": "translation",
+        "amplitude": null,
+        "seed": null,
+        "raw_median": 1.2927804489852546e-11,
+        "raw_max": 7.578225396735593e-11,
+        "norm_median": 1.2310861390704932e-12,
+        "norm_max": 7.591135279348755e-12
+      },
+      {
+        "kind": "rotation",
+        "amplitude": null,
+        "seed": null,
+        "raw_median": 1.472707020510917e-11,
+        "raw_max": 6.691199625192157e-11,
+        "norm_median": 1.3199619056127856e-12,
+        "norm_max": 5.942246379119863e-12
+      },
+      {
+        "kind": "permutation",
+        "amplitude": null,
+        "seed": null,
+        "raw_median": 7.856113076997994e-12,
+        "raw_max": 3.2501181751452067e-11,
+        "norm_median": 7.282320793909837e-13,
+        "norm_max": 2.9029902747105616e-12
+      },
+      {
+        "kind": "displacement",
+        "amplitude": 0.01,
+        "seed": 7101,
+        "raw_median": 0.031545885061183596,
+        "raw_max": 0.08539745817017773,
+        "norm_median": 0.0030178586854736917,
+        "norm_max": 0.00672940240512857
+      },
+      {
+        "kind": "displacement",
+        "amplitude": 0.01,
+        "seed": 7102,
+        "raw_median": 0.03347788382503997,
+        "raw_max": 0.10179918646544904,
+        "norm_median": 0.003023833328928905,
+        "norm_max": 0.00965634811822256
+      },
+      {
+        "kind": "displacement",
+        "amplitude": 0.01,
+        "seed": 7103,
+        "raw_median": 0.030973729707069318,
+        "raw_max": 0.10120944882681375,
+        "norm_median": 0.0029221433404362563,
+        "norm_max": 0.009555237452129424
+      },
+      {
+        "kind": "displacement",
+        "amplitude": 0.03,
+        "seed": 7101,
+        "raw_median": 0.0932062785871604,
+        "raw_max": 0.19217228648060838,
+        "norm_median": 0.008911539706266146,
+        "norm_max": 0.018788459108050822
+      },
+      {
+        "kind": "displacement",
+        "amplitude": 0.03,
+        "seed": 7102,
+        "raw_median": 0.1021514602452755,
+        "raw_max": 0.306360978260378,
+        "norm_median": 0.009290985693258029,
+        "norm_max": 0.029071832396045282
+      },
+      {
+        "kind": "displacement",
+        "amplitude": 0.03,
+        "seed": 7103,
+        "raw_median": 0.09390135439490341,
+        "raw_max": 0.20463404283154402,
+        "norm_median": 0.00923096792933597,
+        "norm_max": 0.020627466036409713
+      },
+      {
+        "kind": "displacement",
+        "amplitude": 0.05,
+        "seed": 7101,
+        "raw_median": 0.17033296938903117,
+        "raw_max": 0.34982298950998303,
+        "norm_median": 0.015561922979142741,
+        "norm_max": 0.031407102381447415
+      },
+      {
+        "kind": "displacement",
+        "amplitude": 0.05,
+        "seed": 7102,
+        "raw_median": 0.1678295682928611,
+        "raw_max": 0.49721565327065365,
+        "norm_median": 0.01569438824090024,
+        "norm_max": 0.046745020653524025
+      },
+      {
+        "kind": "displacement",
+        "amplitude": 0.05,
+        "seed": 7103,
+        "raw_median": 0.15927300337789196,
+        "raw_max": 0.350753114009231,
+        "norm_median": 0.015111965097010141,
+        "norm_max": 0.0333343340517283
+      },
+      {
+        "kind": "strain",
+        "amplitude": -0.01,
+        "seed": null,
+        "raw_median": 0.6439571298130673,
+        "raw_max": 0.7027779211861979,
+        "norm_median": 0.04659235052890384,
+        "norm_max": 0.04899389410565505
+      },
+      {
+        "kind": "strain",
+        "amplitude": -0.005,
+        "seed": null,
+        "raw_median": 0.31931594943819885,
+        "raw_max": 0.38510229126365253,
+        "norm_median": 0.023357437150407764,
+        "norm_max": 0.024485199016175588
+      },
+      {
+        "kind": "strain",
+        "amplitude": 0.005,
+        "seed": null,
+        "raw_median": 0.3139256060714797,
+        "raw_max": 0.3549127241025757,
+        "norm_median": 0.022451971912793564,
+        "norm_max": 0.026472192775284748
+      },
+      {
+        "kind": "strain",
+        "amplitude": 0.01,
+        "seed": null,
+        "raw_median": 0.6749720867539293,
+        "raw_max": 0.6986788329725185,
+        "norm_median": 0.04055468602141403,
+        "norm_max": 0.05284664625072029
+      }
+    ],
+    "reference_sensitivity": {
+      "raw_stable_ref_rho_vs_joint": 0.9996462268744808,
+      "raw_metastable_ref_rho_vs_joint": 0.9996424072197166,
+      "norm_stable_ref_rho_vs_joint": 0.9996593025767716,
+      "norm_metastable_ref_rho_vs_joint": 0.9996286806691382
+    },
+    "warnings": [],
+    "total_s": 56.90063379998901
+  },
+  {
+    "key": "r6_s0.3_n10_l8",
+    "role": "diagnostic representative; not convergence-qualified, not an optimal selection",
+    "r_cut": 6,
+    "sigma": 0.3,
+    "n_max": 10,
+    "l_max": 8,
+    "dimension": 495,
+    "probe_count": 120,
+    "population_count": 4659,
+    "heldout_count": 3659,
+    "perturbation": [
+      {
+        "kind": "translation",
+        "amplitude": null,
+        "seed": null,
+        "raw_median": 1.8340390568228737e-11,
+        "raw_max": 7.028062579637526e-11,
+        "norm_median": 1.1518555043261778e-12,
+        "norm_max": 4.389527147584827e-12
+      },
+      {
+        "kind": "rotation",
+        "amplitude": null,
+        "seed": null,
+        "raw_median": 1.4943041225232915e-11,
+        "raw_max": 6.269757726423521e-11,
+        "norm_median": 9.775057203025196e-13,
+        "norm_max": 3.967763502957689e-12
+      },
+      {
+        "kind": "permutation",
+        "amplitude": null,
+        "seed": null,
+        "raw_median": 1.0201479254829834e-11,
+        "raw_max": 3.4124352875476625e-11,
+        "norm_median": 6.554900325775008e-13,
+        "norm_max": 2.1402034309560624e-12
+      },
+      {
+        "kind": "displacement",
+        "amplitude": 0.01,
+        "seed": 7101,
+        "raw_median": 0.035310403507900046,
+        "raw_max": 0.06834025675020025,
+        "norm_median": 0.0024079327226158524,
+        "norm_max": 0.004662877428019443
+      },
+      {
+        "kind": "displacement",
+        "amplitude": 0.01,
+        "seed": 7102,
+        "raw_median": 0.036529899128072696,
+        "raw_max": 0.1141569503228221,
+        "norm_median": 0.0024313431447746665,
+        "norm_max": 0.007693050102041874
+      },
+      {
+        "kind": "displacement",
+        "amplitude": 0.01,
+        "seed": 7103,
+        "raw_median": 0.03494641389742939,
+        "raw_max": 0.08328403512136184,
+        "norm_median": 0.002348942656122909,
+        "norm_max": 0.005217479153304432
+      },
+      {
+        "kind": "displacement",
+        "amplitude": 0.03,
+        "seed": 7101,
+        "raw_median": 0.10752847507989927,
+        "raw_max": 0.2158433775015356,
+        "norm_median": 0.007307875903974694,
+        "norm_max": 0.014537526684146861
+      },
+      {
+        "kind": "displacement",
+        "amplitude": 0.03,
+        "seed": 7102,
+        "raw_median": 0.108191348884335,
+        "raw_max": 0.34220453877370194,
+        "norm_median": 0.007279541636413997,
+        "norm_max": 0.0230734852129416
+      },
+      {
+        "kind": "displacement",
+        "amplitude": 0.03,
+        "seed": 7103,
+        "raw_median": 0.10449388250192262,
+        "raw_max": 0.23267089319486628,
+        "norm_median": 0.007073991790424386,
+        "norm_max": 0.015655072917345338
+      },
+      {
+        "kind": "displacement",
+        "amplitude": 0.05,
+        "seed": 7101,
+        "raw_median": 0.1921225096349698,
+        "raw_max": 0.3857630849480902,
+        "norm_median": 0.01284352100069749,
+        "norm_max": 0.025449162727313186
+      },
+      {
+        "kind": "displacement",
+        "amplitude": 0.05,
+        "seed": 7102,
+        "raw_median": 0.187463753095148,
+        "raw_max": 0.5691765512096951,
+        "norm_median": 0.012430876454898728,
+        "norm_max": 0.038398747219978574
+      },
+      {
+        "kind": "displacement",
+        "amplitude": 0.05,
+        "seed": 7103,
+        "raw_median": 0.17817453476394368,
+        "raw_max": 0.3880848405237085,
+        "norm_median": 0.012196685674093401,
+        "norm_max": 0.0261151810078571
+      },
+      {
+        "kind": "strain",
+        "amplitude": -0.01,
+        "seed": null,
+        "raw_median": 0.92996401311095,
+        "raw_max": 0.9890543594431299,
+        "norm_median": 0.036484944349186504,
+        "norm_max": 0.04061727098802632
+      },
+      {
+        "kind": "strain",
+        "amplitude": -0.005,
+        "seed": null,
+        "raw_median": 0.45843736263323787,
+        "raw_max": 0.5087849427785245,
+        "norm_median": 0.01832742739586911,
+        "norm_max": 0.02049178635845279
+      },
+      {
+        "kind": "strain",
+        "amplitude": 0.005,
+        "seed": null,
+        "raw_median": 0.44564393963730087,
+        "raw_max": 0.5128668859461529,
+        "norm_median": 0.018455706510625794,
+        "norm_max": 0.020324215608638868
+      },
+      {
+        "kind": "strain",
+        "amplitude": 0.01,
+        "seed": null,
+        "raw_median": 0.8783336690954617,
+        "raw_max": 1.029144111631644,
+        "norm_median": 0.037003114031062566,
+        "norm_max": 0.03988097161920867
+      }
+    ],
+    "reference_sensitivity": {
+      "raw_stable_ref_rho_vs_joint": 0.9996520293323238,
+      "raw_metastable_ref_rho_vs_joint": 0.9997104416905548,
+      "norm_stable_ref_rho_vs_joint": 0.9997140657941835,
+      "norm_metastable_ref_rho_vs_joint": 0.9996550557471968
+    },
+    "warnings": [],
+    "total_s": 57.43773939998937
+  },
+  {
+    "key": "r6_s0.7_n10_l8",
+    "role": "diagnostic representative; not convergence-qualified, not an optimal selection",
+    "r_cut": 6,
+    "sigma": 0.7,
+    "n_max": 10,
+    "l_max": 8,
+    "dimension": 495,
+    "probe_count": 120,
+    "population_count": 4659,
+    "heldout_count": 3659,
+    "perturbation": [
+      {
+        "kind": "translation",
+        "amplitude": null,
+        "seed": null,
+        "raw_median": 3.6503049111785995e-09,
+        "raw_max": 1.4949798982414498e-08,
+        "norm_median": 1.327326318884874e-12,
+        "norm_max": 5.470239122478253e-12
+      },
+      {
+        "kind": "rotation",
+        "amplitude": null,
+        "seed": null,
+        "raw_median": 3.4328784147856584e-09,
+        "raw_max": 1.3069090085292155e-08,
+        "norm_median": 1.276633143104972e-12,
+        "norm_max": 5.195421446883359e-12
+      },
+      {
+        "kind": "permutation",
+        "amplitude": null,
+        "seed": null,
+        "raw_median": 2.0441909745268304e-09,
+        "raw_max": 7.357568449579938e-09,
+        "norm_median": 7.961986817112358e-13,
+        "norm_max": 2.64415625002837e-12
+      },
+      {
+        "kind": "displacement",
+        "amplitude": 0.01,
+        "seed": 7101,
+        "raw_median": 2.557676887854739,
+        "raw_max": 4.567280089186986,
+        "norm_median": 0.000966584462675971,
+        "norm_max": 0.0017787151323037157
+      },
+      {
+        "kind": "displacement",
+        "amplitude": 0.01,
+        "seed": 7102,
+        "raw_median": 2.5061037370718338,
+        "raw_max": 4.923354982601929,
+        "norm_median": 0.0009460739279507093,
+        "norm_max": 0.0021827754798436137
+      },
+      {
+        "kind": "displacement",
+        "amplitude": 0.01,
+        "seed": 7103,
+        "raw_median": 2.377332349779307,
+        "raw_max": 4.553697939216323,
+        "norm_median": 0.0008257536454994909,
+        "norm_max": 0.001821956427960666
+      },
+      {
+        "kind": "displacement",
+        "amplitude": 0.03,
+        "seed": 7101,
+        "raw_median": 7.438082974979803,
+        "raw_max": 13.893598308361646,
+        "norm_median": 0.0028282348984164955,
+        "norm_max": 0.005578932634692272
+      },
+      {
+        "kind": "displacement",
+        "amplitude": 0.03,
+        "seed": 7102,
+        "raw_median": 7.304210344437976,
+        "raw_max": 14.601974788511903,
+        "norm_median": 0.0027812516081882864,
+        "norm_max": 0.006464021697260195
+      },
+      {
+        "kind": "displacement",
+        "amplitude": 0.03,
+        "seed": 7103,
+        "raw_median": 7.032119537496181,
+        "raw_max": 13.798584024326287,
+        "norm_median": 0.0024986664776965443,
+        "norm_max": 0.0055184802497120905
+      },
+      {
+        "kind": "displacement",
+        "amplitude": 0.05,
+        "seed": 7101,
+        "raw_median": 12.019164982744254,
+        "raw_max": 22.41088821482549,
+        "norm_median": 0.004635970354924319,
+        "norm_max": 0.00905110029694615
+      },
+      {
+        "kind": "displacement",
+        "amplitude": 0.05,
+        "seed": 7102,
+        "raw_median": 11.946710230048687,
+        "raw_max": 24.580712264232822,
+        "norm_median": 0.004466955463618607,
+        "norm_max": 0.010896141303825293
+      },
+      {
+        "kind": "displacement",
+        "amplitude": 0.05,
+        "seed": 7103,
+        "raw_median": 11.50618397392276,
+        "raw_max": 23.80339741718637,
+        "norm_median": 0.004162226236875693,
+        "norm_max": 0.009413294128848585
+      },
+      {
+        "kind": "strain",
+        "amplitude": -0.01,
+        "seed": null,
+        "raw_median": 142.7840887559559,
+        "raw_max": 145.00221599491076,
+        "norm_median": 0.0045288110906423875,
+        "norm_max": 0.005699409686595683
+      },
+      {
+        "kind": "strain",
+        "amplitude": -0.005,
+        "seed": null,
+        "raw_median": 70.18377433986409,
+        "raw_max": 72.18840935743113,
+        "norm_median": 0.0022950362342017707,
+        "norm_max": 0.0032594798742327327
+      },
+      {
+        "kind": "strain",
+        "amplitude": 0.005,
+        "seed": null,
+        "raw_median": 71.46196057317113,
+        "raw_max": 75.73832515918636,
+        "norm_median": 0.003306536295857608,
+        "norm_max": 0.004308934307197975
+      },
+      {
+        "kind": "strain",
+        "amplitude": 0.01,
+        "seed": null,
+        "raw_median": 136.67275724445878,
+        "raw_max": 140.34024965163937,
+        "norm_median": 0.005709228132357312,
+        "norm_max": 0.005906045201236065
+      }
+    ],
+    "reference_sensitivity": {
+      "raw_stable_ref_rho_vs_joint": 0.9996437295630746,
+      "raw_metastable_ref_rho_vs_joint": 0.9996462633029993,
+      "norm_stable_ref_rho_vs_joint": 0.99959447274763,
+      "norm_metastable_ref_rho_vs_joint": 0.9996329329570578
+    },
+    "warnings": [],
+    "total_s": 57.36501030001091
+  }
+]

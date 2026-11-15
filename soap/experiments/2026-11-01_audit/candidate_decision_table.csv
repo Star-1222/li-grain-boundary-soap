@@ -1,0 +1,13 @@
+config_id,metric,r_cut,sigma,n_max,l_max,dimension,basis_converged,warning_count,invariance_pass,noise_001_ratio_median,noise_001_nn_retention,alternate_ref_heldout_rho_min,k5_20_heldout_rho_min,selection_reason
+r3p25_s0p7_n12_l10,raw,3.25,0.7,12,10,858,False,0,True,0.0357438506222883,0.6566666666666667,0.7756677296414404,0.9595582173135256,best convergence evidence at this r_cut; provisional audit candidate
+r3p25_s0p7_n12_l10,norm,3.25,0.7,12,10,858,False,0,True,0.03394245661308765,0.6083333333333333,0.7813944599384437,0.9617124634718164,best convergence evidence at this r_cut; provisional audit candidate
+r4_s0p3_n12_l10,raw,4.0,0.3,12,10,858,False,0,True,0.0236472359931455,0.72,0.8298709985666506,0.9650578339759328,best convergence evidence at this r_cut; provisional audit candidate
+r4_s0p3_n12_l10,norm,4.0,0.3,12,10,858,False,0,True,0.0257373310432345,0.7044444444444445,0.8105170057445082,0.9674849720552452,best convergence evidence at this r_cut; provisional audit candidate
+r5_s0p3_n12_l10,raw,5.0,0.3,12,10,858,False,0,True,0.026566437718550648,0.6994444444444446,0.8592113245702729,0.973253036144846,best convergence evidence at this r_cut; provisional audit candidate
+r5_s0p3_n12_l10,norm,5.0,0.3,12,10,858,False,0,True,0.02742726296419975,0.7027777777777777,0.8636975966399626,0.9684983166479626,best convergence evidence at this r_cut; provisional audit candidate
+r6_s0p3_n12_l8,raw,6.0,0.3,12,8,702,False,0,True,0.02413096672739755,0.7055555555555557,0.8523916932410359,0.9827046967188524,best convergence evidence at this r_cut; provisional audit candidate
+r6_s0p3_n12_l8,norm,6.0,0.3,12,8,702,False,0,True,0.02504338107040875,0.7011111111111112,0.8388590984344271,0.9766512961255124,best convergence evidence at this r_cut; provisional audit candidate
+r5_s0p5_n12_l10,raw,5.0,0.5,12,10,858,False,0,True,0.030815817587884348,0.6966666666666668,0.8448840542672695,0.9791966577406416,alternate smoothing scale
+r5_s0p5_n12_l10,norm,5.0,0.5,12,10,858,False,0,True,0.03111660565776005,0.6855555555555556,0.8383910932343692,0.9733597039967112,alternate smoothing scale
+r3p25_s0p5_n12_l12,raw,3.25,0.5,12,12,1014,False,2,True,0.03071709419140255,0.6794444444444445,0.7674863054033935,0.9564612940143778,"historical baseline, retained for diagnosis even if not converged"
+r3p25_s0p5_n12_l12,norm,3.25,0.5,12,12,1014,False,2,True,0.029346066354349998,0.6627777777777778,0.7683569817442415,0.965050278336426,"historical baseline, retained for diagnosis even if not converged"

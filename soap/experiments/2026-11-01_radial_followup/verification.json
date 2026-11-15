@@ -1,0 +1,22 @@
+{
+  "verified_at": "2026-11-01T11:53:11+08:00",
+  "main_inputs_unchanged": true,
+  "polynomial_success": 6,
+  "reused_gto": 6,
+  "fcc_cases": 22,
+  "response_rows": 1056,
+  "distance_comparisons": 56,
+  "category_rows": 560,
+  "max_invariance_relative_distance": 0.0275177566193398,
+  "max_decomposition_identity_residual": 6.245004513516506e-17,
+  "geometry_checks_passed": true,
+  "main_metric_recomputation_matches": true,
+  "invariance_max_by_rbf": {
+    "gto": 1.3181943450099186e-11,
+    "polynomial": 0.0275177566193398
+  },
+  "artifact_consistency_checks_passed": true,
+  "scientific_invariance_all_passed": false,
+  "all_checks_passed": false,
+  "scientific_acceptance": "failed_rotation_invariance_for_tested_native_polynomial_l10"
+}

@@ -1,0 +1,132 @@
+r_cut,sigma,n_max,l_max,config_id,base_candidate,registered_at,status,error,traceback,seconds,warning_count,basis_condition_max,basis_residual_max,finite
+3.25,0.7,14,10,r3p25_s0p7_n14_l10,r3p25_s0p7_n12_l10,2026-11-01T11:21:06+08:00,failed,ValueError('Could not calculate normalization factors for the radial basis in the domain of real numbers. Lowering the number of radial basis functions (n_max) or increasing the radial cutoff (r_cut) is advised.'),"Traceback (most recent call last):
+  File ""C:\Users\1\Documents\ChatGPT\Li-metastable-soap\work\ni_soap_sweep_20261101\extend_radial.py"", line 39, in main
+    warnings.simplefilter('always');soap=core.make_soap(c)
+                                         ~~~~~~~~~~~~~~^^^
+  File ""C:\Users\1\Documents\ChatGPT\Li-metastable-soap\work\ni_soap_sweep_20261101\run_sweep.py"", line 81, in make_soap
+    return SOAP(species=['Ni'], periodic=True, r_cut=c['r_cut'], sigma=c['sigma'],
+                n_max=int(c['n_max']), l_max=int(c['l_max']), rbf='gto',
+                average='off', sparse=False, dtype='float64', weighting=None,
+                compression={'mode':'off','species_weighting':None})
+  File ""C:\Users\1\AppData\Roaming\Python\Python313\site-packages\dscribe\descriptors\soap.py"", line 289, in __init__
+    self._alphas, self._betas = self.get_basis_gto(r_cut, n_max, l_max)
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\1\AppData\Roaming\Python\Python313\site-packages\dscribe\descriptors\soap.py"", line 1052, in get_basis_gto
+    raise ValueError(
+    ...<4 lines>...
+    )
+ValueError: Could not calculate normalization factors for the radial basis in the domain of real numbers. Lowering the number of radial basis functions (n_max) or increasing the radial cutoff (r_cut) is advised.
+",0.022137799998745322,1,,,
+3.25,0.7,16,10,r3p25_s0p7_n16_l10,r3p25_s0p7_n12_l10,2026-11-01T11:21:06+08:00,failed,ValueError('Could not calculate normalization factors for the radial basis in the domain of real numbers. Lowering the number of radial basis functions (n_max) or increasing the radial cutoff (r_cut) is advised.'),"Traceback (most recent call last):
+  File ""C:\Users\1\Documents\ChatGPT\Li-metastable-soap\work\ni_soap_sweep_20261101\extend_radial.py"", line 39, in main
+    warnings.simplefilter('always');soap=core.make_soap(c)
+                                         ~~~~~~~~~~~~~~^^^
+  File ""C:\Users\1\Documents\ChatGPT\Li-metastable-soap\work\ni_soap_sweep_20261101\run_sweep.py"", line 81, in make_soap
+    return SOAP(species=['Ni'], periodic=True, r_cut=c['r_cut'], sigma=c['sigma'],
+                n_max=int(c['n_max']), l_max=int(c['l_max']), rbf='gto',
+                average='off', sparse=False, dtype='float64', weighting=None,
+                compression={'mode':'off','species_weighting':None})
+  File ""C:\Users\1\AppData\Roaming\Python\Python313\site-packages\dscribe\descriptors\soap.py"", line 289, in __init__
+    self._alphas, self._betas = self.get_basis_gto(r_cut, n_max, l_max)
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\1\AppData\Roaming\Python\Python313\site-packages\dscribe\descriptors\soap.py"", line 1052, in get_basis_gto
+    raise ValueError(
+    ...<4 lines>...
+    )
+ValueError: Could not calculate normalization factors for the radial basis in the domain of real numbers. Lowering the number of radial basis functions (n_max) or increasing the radial cutoff (r_cut) is advised.
+",0.0023210000072140247,1,,,
+4.0,0.3,14,10,r4_s0p3_n14_l10,r4_s0p3_n12_l10,2026-11-01T11:21:06+08:00,ok,,,2.6677974999765866,11,3.53786022483518e+16,0.04782875546215867,True
+4.0,0.3,16,10,r4_s0p3_n16_l10,r4_s0p3_n12_l10,2026-11-01T11:21:06+08:00,failed,ValueError('Could not calculate normalization factors for the radial basis in the domain of real numbers. Lowering the number of radial basis functions (n_max) or increasing the radial cutoff (r_cut) is advised.'),"Traceback (most recent call last):
+  File ""C:\Users\1\Documents\ChatGPT\Li-metastable-soap\work\ni_soap_sweep_20261101\extend_radial.py"", line 39, in main
+    warnings.simplefilter('always');soap=core.make_soap(c)
+                                         ~~~~~~~~~~~~~~^^^
+  File ""C:\Users\1\Documents\ChatGPT\Li-metastable-soap\work\ni_soap_sweep_20261101\run_sweep.py"", line 81, in make_soap
+    return SOAP(species=['Ni'], periodic=True, r_cut=c['r_cut'], sigma=c['sigma'],
+                n_max=int(c['n_max']), l_max=int(c['l_max']), rbf='gto',
+                average='off', sparse=False, dtype='float64', weighting=None,
+                compression={'mode':'off','species_weighting':None})
+  File ""C:\Users\1\AppData\Roaming\Python\Python313\site-packages\dscribe\descriptors\soap.py"", line 289, in __init__
+    self._alphas, self._betas = self.get_basis_gto(r_cut, n_max, l_max)
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\1\AppData\Roaming\Python\Python313\site-packages\dscribe\descriptors\soap.py"", line 1052, in get_basis_gto
+    raise ValueError(
+    ...<4 lines>...
+    )
+ValueError: Could not calculate normalization factors for the radial basis in the domain of real numbers. Lowering the number of radial basis functions (n_max) or increasing the radial cutoff (r_cut) is advised.
+",0.0025342000008095056,2,,,
+5.0,0.3,14,10,r5_s0p3_n14_l10,r5_s0p3_n12_l10,2026-11-01T11:21:06+08:00,ok,,,2.5873034999822266,1,3062359151595728.5,0.002530861445154688,True
+5.0,0.3,16,10,r5_s0p3_n16_l10,r5_s0p3_n12_l10,2026-11-01T11:21:06+08:00,failed,ValueError('Could not calculate normalization factors for the radial basis in the domain of real numbers. Lowering the number of radial basis functions (n_max) or increasing the radial cutoff (r_cut) is advised.'),"Traceback (most recent call last):
+  File ""C:\Users\1\Documents\ChatGPT\Li-metastable-soap\work\ni_soap_sweep_20261101\extend_radial.py"", line 39, in main
+    warnings.simplefilter('always');soap=core.make_soap(c)
+                                         ~~~~~~~~~~~~~~^^^
+  File ""C:\Users\1\Documents\ChatGPT\Li-metastable-soap\work\ni_soap_sweep_20261101\run_sweep.py"", line 81, in make_soap
+    return SOAP(species=['Ni'], periodic=True, r_cut=c['r_cut'], sigma=c['sigma'],
+                n_max=int(c['n_max']), l_max=int(c['l_max']), rbf='gto',
+                average='off', sparse=False, dtype='float64', weighting=None,
+                compression={'mode':'off','species_weighting':None})
+  File ""C:\Users\1\AppData\Roaming\Python\Python313\site-packages\dscribe\descriptors\soap.py"", line 289, in __init__
+    self._alphas, self._betas = self.get_basis_gto(r_cut, n_max, l_max)
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\1\AppData\Roaming\Python\Python313\site-packages\dscribe\descriptors\soap.py"", line 1052, in get_basis_gto
+    raise ValueError(
+    ...<4 lines>...
+    )
+ValueError: Could not calculate normalization factors for the radial basis in the domain of real numbers. Lowering the number of radial basis functions (n_max) or increasing the radial cutoff (r_cut) is advised.
+",0.0022231000184547156,1,,,
+6.0,0.3,14,8,r6_s0p3_n14_l8,r6_s0p3_n12_l8,2026-11-01T11:21:06+08:00,ok,,,2.409701299999142,0,147078843858129.53,0.0022657662836009663,True
+6.0,0.3,16,8,r6_s0p3_n16_l8,r6_s0p3_n12_l8,2026-11-01T11:21:06+08:00,ok,,,2.7609077999950387,9,2.4596404975306908e+16,0.36072565170731663,True
+5.0,0.5,14,10,r5_s0p5_n14_l10,r5_s0p5_n12_l10,2026-11-01T11:21:06+08:00,ok,,,2.69059399998514,1,3062359151595728.5,0.002530861445154688,True
+5.0,0.5,16,10,r5_s0p5_n16_l10,r5_s0p5_n12_l10,2026-11-01T11:21:06+08:00,failed,ValueError('Could not calculate normalization factors for the radial basis in the domain of real numbers. Lowering the number of radial basis functions (n_max) or increasing the radial cutoff (r_cut) is advised.'),"Traceback (most recent call last):
+  File ""C:\Users\1\Documents\ChatGPT\Li-metastable-soap\work\ni_soap_sweep_20261101\extend_radial.py"", line 39, in main
+    warnings.simplefilter('always');soap=core.make_soap(c)
+                                         ~~~~~~~~~~~~~~^^^
+  File ""C:\Users\1\Documents\ChatGPT\Li-metastable-soap\work\ni_soap_sweep_20261101\run_sweep.py"", line 81, in make_soap
+    return SOAP(species=['Ni'], periodic=True, r_cut=c['r_cut'], sigma=c['sigma'],
+                n_max=int(c['n_max']), l_max=int(c['l_max']), rbf='gto',
+                average='off', sparse=False, dtype='float64', weighting=None,
+                compression={'mode':'off','species_weighting':None})
+  File ""C:\Users\1\AppData\Roaming\Python\Python313\site-packages\dscribe\descriptors\soap.py"", line 289, in __init__
+    self._alphas, self._betas = self.get_basis_gto(r_cut, n_max, l_max)
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\1\AppData\Roaming\Python\Python313\site-packages\dscribe\descriptors\soap.py"", line 1052, in get_basis_gto
+    raise ValueError(
+    ...<4 lines>...
+    )
+ValueError: Could not calculate normalization factors for the radial basis in the domain of real numbers. Lowering the number of radial basis functions (n_max) or increasing the radial cutoff (r_cut) is advised.
+",0.002475299988873303,1,,,
+3.25,0.5,14,12,r3p25_s0p5_n14_l12,r3p25_s0p5_n12_l12,2026-11-01T11:21:06+08:00,failed,ValueError('Could not calculate normalization factors for the radial basis in the domain of real numbers. Lowering the number of radial basis functions (n_max) or increasing the radial cutoff (r_cut) is advised.'),"Traceback (most recent call last):
+  File ""C:\Users\1\Documents\ChatGPT\Li-metastable-soap\work\ni_soap_sweep_20261101\extend_radial.py"", line 39, in main
+    warnings.simplefilter('always');soap=core.make_soap(c)
+                                         ~~~~~~~~~~~~~~^^^
+  File ""C:\Users\1\Documents\ChatGPT\Li-metastable-soap\work\ni_soap_sweep_20261101\run_sweep.py"", line 81, in make_soap
+    return SOAP(species=['Ni'], periodic=True, r_cut=c['r_cut'], sigma=c['sigma'],
+                n_max=int(c['n_max']), l_max=int(c['l_max']), rbf='gto',
+                average='off', sparse=False, dtype='float64', weighting=None,
+                compression={'mode':'off','species_weighting':None})
+  File ""C:\Users\1\AppData\Roaming\Python\Python313\site-packages\dscribe\descriptors\soap.py"", line 289, in __init__
+    self._alphas, self._betas = self.get_basis_gto(r_cut, n_max, l_max)
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\1\AppData\Roaming\Python\Python313\site-packages\dscribe\descriptors\soap.py"", line 1052, in get_basis_gto
+    raise ValueError(
+    ...<4 lines>...
+    )
+ValueError: Could not calculate normalization factors for the radial basis in the domain of real numbers. Lowering the number of radial basis functions (n_max) or increasing the radial cutoff (r_cut) is advised.
+",0.0021835000079590827,1,,,
+3.25,0.5,16,12,r3p25_s0p5_n16_l12,r3p25_s0p5_n12_l12,2026-11-01T11:21:06+08:00,failed,ValueError('Could not calculate normalization factors for the radial basis in the domain of real numbers. Lowering the number of radial basis functions (n_max) or increasing the radial cutoff (r_cut) is advised.'),"Traceback (most recent call last):
+  File ""C:\Users\1\Documents\ChatGPT\Li-metastable-soap\work\ni_soap_sweep_20261101\extend_radial.py"", line 39, in main
+    warnings.simplefilter('always');soap=core.make_soap(c)
+                                         ~~~~~~~~~~~~~~^^^
+  File ""C:\Users\1\Documents\ChatGPT\Li-metastable-soap\work\ni_soap_sweep_20261101\run_sweep.py"", line 81, in make_soap
+    return SOAP(species=['Ni'], periodic=True, r_cut=c['r_cut'], sigma=c['sigma'],
+                n_max=int(c['n_max']), l_max=int(c['l_max']), rbf='gto',
+                average='off', sparse=False, dtype='float64', weighting=None,
+                compression={'mode':'off','species_weighting':None})
+  File ""C:\Users\1\AppData\Roaming\Python\Python313\site-packages\dscribe\descriptors\soap.py"", line 289, in __init__
+    self._alphas, self._betas = self.get_basis_gto(r_cut, n_max, l_max)
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\1\AppData\Roaming\Python\Python313\site-packages\dscribe\descriptors\soap.py"", line 1052, in get_basis_gto
+    raise ValueError(
+    ...<4 lines>...
+    )
+ValueError: Could not calculate normalization factors for the radial basis in the domain of real numbers. Lowering the number of radial basis functions (n_max) or increasing the radial cutoff (r_cut) is advised.
+",0.0028568000125233084,1,,,

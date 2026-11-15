@@ -1,0 +1,113 @@
+{
+  "created_at": "2026-11-01T11:11:18+08:00",
+  "seed": 20261101,
+  "grid": {
+    "r_cut": [
+      3.25,
+      4.0,
+      5.0,
+      6.0
+    ],
+    "sigma": [
+      0.3,
+      0.5,
+      0.7
+    ],
+    "n_max": [
+      6,
+      8,
+      10,
+      12
+    ],
+    "l_max": [
+      4,
+      6,
+      8,
+      10,
+      12
+    ]
+  },
+  "count": 240,
+  "implementation": {
+    "rbf": "gto",
+    "species": [
+      "Ni"
+    ],
+    "periodic": true,
+    "average": "off",
+    "weighting": null,
+    "compression": "off",
+    "dtype": "float64",
+    "threads_per_process": 1
+  },
+  "distance_definition": "raw Euclidean and Euclidean on unit DScribe unique-term output, no symmetry reweighting",
+  "reference": "pooled 200 deep bulk per state; no PEATOM filter; alternate independent 200 per state",
+  "evaluation_count": 4659,
+  "pilot_count": 1000,
+  "reference_count": 400,
+  "pair_count": 20000,
+  "masks": "200 bins over observed position range, non-dominant CNA/PTM >0.1 and bin count >=50; historical mask reproduced",
+  "bulk_margin_A": 10.0,
+  "max_neighbor_search_A": 8.601845532194886,
+  "convergence": {
+    "spearman_min": 0.98,
+    "median_relative_change_max": 0.05,
+    "knn10_overlap_min": 0.8,
+    "require_two_successive_edges_per_axis": true
+  },
+  "perturbation": {
+    "random_rms_A": [
+      0.01,
+      0.03,
+      0.05
+    ],
+    "seeds": [
+      20261202,
+      20261203,
+      20261204
+    ],
+    "isotropic_strain": [
+      -0.01,
+      -0.005,
+      0.005,
+      0.01
+    ],
+    "invariance_relative_tolerance": 1e-08,
+    "note": "synthetic probes, not temperatures or MD trajectories"
+  },
+  "selection": "no PEATOM or stable/metastable separation optimization; separate raw/norm convergence evidence; four rc representatives + alternate sigma + historical baseline",
+  "source_repository": "https://github.com/Star-1222/li-grain-boundary-soap",
+  "repository_main_at_start": "b18a6c59d115f29ac33189275a151eca7512bf1b",
+  "input_evidence": [
+    {
+      "file": "cfg_reader.py",
+      "sha256": "98d45d637b64c87c1ee0a047089b782fb9c033f5e0fdf9faa2c5cd33f2803075",
+      "bytes": 8911
+    },
+    {
+      "file": "ni_stable.cfg",
+      "sha256": "1dc438a3bf96964906505a3c1573be9ff6357ae418fc82f6b0aca8e1105d3409",
+      "bytes": 4213391
+    },
+    {
+      "file": "ni_metastable.cfg",
+      "sha256": "5066c9441b8870a2fa5faaa4677dd0fcd3bb6520ef52e567c6c17ca446b7c3ba",
+      "bytes": 4209640
+    }
+  ],
+  "versions": {
+    "numpy": "2.4.4",
+    "scipy": "1.17.1",
+    "ase": "3.29.0",
+    "dscribe": "2.1.2",
+    "pandas": "3.0.3",
+    "matplotlib": "3.10.8"
+  },
+  "python": "3.13.11",
+  "source_sha256": "996b9f5665cce03ab33446728f8eae2f890e84bbe4a9deac3672eb9d276d1523",
+  "limitations": [
+    "Two CFG configurations only; atoms and periodic interfaces are not independent GB replicas.",
+    "CNA/PTM and fixed historical masks provide sampling labels, not truth for all structural differences.",
+    "No universal physical tolerance or unique best length scale is assumed."
+  ]
+}

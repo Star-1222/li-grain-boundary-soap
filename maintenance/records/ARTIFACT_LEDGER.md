@@ -3,24 +3,24 @@
 > 本文件由 `artifact_ledger.py` 自动生成，请勿手工编辑。
 > 每次重新生成都会刷新文件清单、校验和与内容分析。
 
-- 文件总数：**591**
-- 总体积：**55.33 MB**
+- 文件总数：**662**
+- 总体积：**60.96 MB**
 
 ## 层次分布
 
 | 层次 | 文件数 | 体积 | 占总比 | 处置 |
 |---|---:|---:|---:|---|
-| **结论** | 197 | 35.62 MB | 64.4% | 必须保留 |
-| **续算** | 11 | 6.60 MB | 11.9% | 保留至后续阶段完成 |
-| **追溯** | 41 | 1.10 MB | 2.0% | 随代码进版本控制 |
-| **代码** | 157 | 1.01 MB | 1.8% | 进版本控制 |
-| **输入** | 54 | 8.10 MB | 14.6% | 进版本控制 |
-| **文档** | 131 | 2.90 MB | 5.2% | 进版本控制 |
+| **结论** | 235 | 40.56 MB | 66.5% | 必须保留 |
+| **续算** | 11 | 6.60 MB | 10.8% | 保留至后续阶段完成 |
+| **追溯** | 41 | 1.10 MB | 1.8% | 随代码进版本控制 |
+| **代码** | 168 | 1.17 MB | 1.9% | 进版本控制 |
+| **输入** | 54 | 8.10 MB | 13.3% | 进版本控制 |
+| **文档** | 153 | 3.42 MB | 5.6% | 进版本控制 |
 
 ## 自动识别的结构特征
 
-- 结论性产物只有 35.62 MB，占 64.4%。
-- 决定“可复现”的追溯+代码+输入合计仅 10.21 MB（18.4%），是最该保护的一层。
+- 结论性产物只有 40.56 MB，占 66.5%。
+- 决定“可复现”的追溯+代码+输入合计仅 10.37 MB（17.0%），是最该保护的一层。
 - 双语拼接文档 16 份。中英文同处一文件，改动一侧另一侧会静默过期，建议拆分为 `README.md` + `README.en.md`。
 
 ## 交叉核对：报告声称 vs 数据实测
@@ -72,14 +72,14 @@
 | `Sigma5_310_minimized.data` | 3,224 原子 · 盒子 85.98 × 61.20 × 15.30 Å · timestep 277 |
 | `rebuilt_stage2.data` | 3,600 原子 · 盒子 65.95 × 33.26 × 35.06 Å · timestep 20,000 |
 | `Sigma5_310.xyz` | 3,224 原子 |
+| `fcc_responses.csv` | 1,056 行 × 15 列 [rbf, config_id, r_cut, n_max, weighting, metric …] |
+| `PUBLICATION_MANIFEST_2026-11-15.json` | 字段: published_on, scientific_computation_date, presentation_date, normalization, published_original_artifacts, not_published, scope |
 | `Sigma5_310.xyz` | 3,600 原子 · 附加列: Lattice="66.5252109796 0.0 0.0 0.0 33.2626054898 0.0 0.0 0.0 35.0618647531" Properties=species:S:1:pos:R:3:grain_id:I:1 pbc="T T T" |
 | `Sigma5_310_grain_id.xyz` | 3,600 原子 · 附加列: Li x y z grain_id |
-| `Sigma5_310_grainID.xyz` | 3,224 原子 · 附加列: Lattice="-35.1000000000 35.1000000000 70.2000000000 42.1200000000 -42.1200000000 21.0600000000 10.5300000000 10.5300000000 -10.5300000000" Properties=species:S:1:pos:R:3:grain_id:R:1 |
-| `stage4a_metastable_disorder.xyz` | 2,559 原子 · 附加列: Ni D10 continuous SOAP disorder (visualization only) |
 
 ## 主线一：晶界构造
 
-`grain_boundary` — 371 个文件，32.95 MB
+`grain_boundary` — 373 个文件，32.96 MB
 
 ### 结论（46 个，21.98 MB）
 
@@ -375,15 +375,17 @@
 | `history\prototype_2x2\lammps\in.3_quench` | 940 B | Stage 3 输入脚本：以 10 K/ps 从 363 K 淬火到 10 K，把高温无序结构冻结下来。 |
 | `history\prototype_2x2\lammps\in.4_10K_hold` | 863 B | 2×2 实验的 10 K 保持输入脚本（对应 in.4_final 在旧版命名下的同一角色）。 |
 
-### 文档（102 个，2.73 MB）
+### 文档（104 个，2.74 MB）
 
 | 文件 | 大小 | 用途 | 内容分析 |
 |---|---|---|---|
-| `AGENTS.md` | 1.1 KB | Markdown 文档。 |  |
-| `README.md` | 739 B | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |  |
-| `current\PROTOCOL.md` | 4.0 KB | Markdown 文档。 |  |
-| `current\README.md` | 2.2 KB | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |  |
-| `current\STATUS.json` | 227 B | 参数与元数据。 | 字段: protocol_status, standard_start_status, standard_start_path, reason |
+| `AGENTS.md` | 1.6 KB | Markdown 文档。 |  |
+| `README.md` | 1.3 KB | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |  |
+| `current\MIDTERM_EVIDENCE_2026-11.json` | 4.8 KB | 参数与元数据。 | 字段: published_on, scope, historical_animation, current_workflow_animation_rerun, stress_comparison_source, claims |
+| `current\PROTOCOL.md` | 4.4 KB | Markdown 文档。 |  |
+| `current\README.md` | 2.8 KB | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |  |
+| `current\STATUS.json` | 876 B | 参数与元数据。 | 字段: protocol_status, standard_start_status, standard_start_path, reason, updated_on, implemented_protocol_id, latest_research_plan, teacher_plan_status |
+| `current\TEACHER_PLAN_2026-11-05.md` | 3.4 KB | Markdown 文档。 |  |
 | `current\lammps\anneal.in` | 978 B | （未分类） |  |
 | `current\lammps\quench.in` | 908 B | （未分类） |  |
 | `current\lammps\relax_aniso.in` | 816 B | （未分类） |  |
@@ -484,9 +486,9 @@
 
 ## 主线二：SOAP 方法
 
-`soap` — 198 个文件，22.23 MB
+`soap` — 265 个文件，27.84 MB
 
-### 结论（150 个，13.62 MB）
+### 结论（188 个，18.57 MB）
 
 | 文件 | 大小 | 用途 | 内容分析 |
 |---|---|---|---|
@@ -640,8 +642,46 @@
 | `Stage06_最终评估\03_输出\stage6_spatial_direction_residual.png` | 80.3 KB | Stage06 最终评估产物：相关系数、模型对比与稳健性检验。 |  |
 | `Stage06_最终评估\03_输出\stage6_spatial_summary.csv` | 955 B | Stage06 最终评估产物：相关系数、模型对比与稳健性检验。 | 8 行 × 9 列 [state, interface_id, field, n, mean, std …] |
 | `Stage06_最终评估\03_输出\stage6_state_classification.csv` | 1.1 KB | Stage06 最终评估产物：相关系数、模型对比与稳健性检验。 | 10 行 × 8 列 [test_interface, n_train, n_test, roc_auc, balanced_accuracy, f1 …] |
+| `experiments\2026-11-01_audit\candidate_decision_table.csv` | 2.4 KB | 数据表。 | 12 行 × 15 列 [config_id, metric, r_cut, sigma, n_max, l_max …] |
+| `experiments\2026-11-01_audit\converged_counts_by_scale.csv` | 389 B | 数据表。 | 24 行 × 4 列 [metric, r_cut, sigma, converged_count] |
+| `experiments\2026-11-01_audit\convergence_edges.csv` | 98.0 KB | 数据表。 | 744 行 × 12 列 [axis, lower, upper, metric, r_cut, sigma …] |
+| `experiments\2026-11-01_audit\convergence_summary.csv` | 50.5 KB | 数据表。 | 480 行 × 14 列 [config_id, r_cut, sigma, n_max, l_max, metric …] |
+| `experiments\2026-11-01_audit\figures\basis_health.png` | 136.6 KB | 图表，可直接用于报告或论文。 |  |
+| `experiments\2026-11-01_audit\figures\convergence_norm.png` | 89.8 KB | 图表，可直接用于报告或论文。 |  |
+| `experiments\2026-11-01_audit\figures\convergence_raw.png` | 89.3 KB | 图表，可直接用于报告或论文。 |  |
+| `experiments\2026-11-01_audit\figures\distributions_norm.png` | 225.5 KB | 图表，可直接用于报告或论文。 |  |
+| `experiments\2026-11-01_audit\figures\distributions_raw.png` | 225.3 KB | 图表，可直接用于报告或论文。 |  |
+| `experiments\2026-11-01_audit\figures\perturbation_response.png` | 346.2 KB | 图表，可直接用于报告或论文。 |  |
+| `experiments\2026-11-01_audit\figures\raw_vs_norm.png` | 292.3 KB | 图表，可直接用于报告或论文。 |  |
+| `experiments\2026-11-01_audit\figures\spatial_profiles.png` | 642.2 KB | 图表，可直接用于报告或论文。 |  |
+| `experiments\2026-11-01_audit\figures\strain_response.png` | 262.6 KB | 图表，可直接用于报告或论文。 |  |
+| `experiments\2026-11-01_audit\grid.csv` | 6.8 KB | 数据表。 | 240 行 × 5 列 [config_id, r_cut, sigma, n_max, l_max] |
+| `experiments\2026-11-01_audit\radial_category_diagnostics.csv` | 13.6 KB | 数据表。 | 120 行 × 7 列 [lower, upper, metric, category, n, spearman …] |
+| `experiments\2026-11-01_audit\radial_extension\summary.csv` | 12.3 KB | 数据表。 | 12 行 × 15 列 [r_cut, sigma, n_max, l_max, config_id, base_candidate …] |
+| `experiments\2026-11-01_audit\reference_k_robustness.csv` | 55.8 KB | 数据表。 | 600 行 × 8 列 [config_id, metric, variant, group, subset, n …] |
+| `experiments\2026-11-01_audit\sweep_summary.csv` | 44.4 KB | 数据表。 | 240 行 × 16 列 [config_id, r_cut, sigma, n_max, l_max, started_at …] |
+| `experiments\2026-11-01_audit\symmetry_weight_diagnostic.csv` | 1.6 KB | 数据表。 | 16 行 × 11 列 [r_cut, sigma, l_max, lower_n, upper_n, weighting …] |
+| `experiments\2026-11-01_midterm\heldout_spatial.png` | 234.8 KB | 图表，可直接用于报告或论文。 |  |
+| `experiments\2026-11-01_midterm\perturbation.png` | 149.9 KB | 图表，可直接用于报告或论文。 |  |
+| `experiments\2026-11-01_midterm\radial_convergence.png` | 103.0 KB | 图表，可直接用于报告或论文。 |  |
+| `experiments\2026-11-01_midterm\results.csv` | 67.4 KB | 数据表。 | 240 行 × 22 列 [﻿create_s, dimension, finite, key, l_max, n_max …] |
+| `experiments\2026-11-01_radial_followup\basis_health_comparison.csv` | 693 B | 数据表。 | 12 行 × 5 列 [rbf, r_cut, n_max, residual, condition] |
+| `experiments\2026-11-01_radial_followup\distance_comparisons.csv` | 9.3 KB | 数据表。 | 56 行 × 12 列 [comparison, rbf, r_cut, weighting, lower, upper …] |
+| `experiments\2026-11-01_radial_followup\distance_comparisons_by_category.csv` | 89.3 KB | 数据表。 | 560 行 × 10 列 [comparison, rbf, r_cut, weighting, lower, upper …] |
+| `experiments\2026-11-01_radial_followup\fcc_decomposition.csv` | 97.3 KB | 数据表。 | 528 行 × 15 列 [rbf, config_id, r_cut, n_max, weighting, case_id …] |
+| `experiments\2026-11-01_radial_followup\fcc_geometry.csv` | 2.8 KB | 数据表。 | 22 行 × 12 列 [case_id, kind, amplitude, unit, atoms, center_original_index …] |
+| `experiments\2026-11-01_radial_followup\fcc_responses.csv` | 183.4 KB | 数据表。 | 1,056 行 × 15 列 [rbf, config_id, r_cut, n_max, weighting, metric …] |
+| `experiments\2026-11-01_radial_followup\figures\basis_health.png` | 124.9 KB | 图表，可直接用于报告或论文。 |  |
+| `experiments\2026-11-01_radial_followup\figures\fcc_distance_decomposition.png` | 111.9 KB | 图表，可直接用于报告或论文。 |  |
+| `experiments\2026-11-01_radial_followup\figures\fcc_distance_responses.png` | 396.5 KB | 图表，可直接用于报告或论文。 |  |
+| `experiments\2026-11-01_radial_followup\figures\fcc_geometry.png` | 258.0 KB | 图表，可直接用于报告或论文。 |  |
+| `experiments\2026-11-01_radial_followup\figures\fcc_norm_changes.png` | 288.8 KB | 图表，可直接用于报告或论文。 |  |
+| `experiments\2026-11-01_radial_followup\figures\radial_convergence.png` | 327.1 KB | 图表，可直接用于报告或论文。 |  |
+| `experiments\2026-11-01_radial_followup\polynomial_summary.csv` | 1.6 KB | 数据表。 | 6 行 × 16 列 [config_id, r_cut, sigma, n_max, l_max, rbf …] |
+| `experiments\2026-11-01_radial_followup\rotation_audit.csv` | 11.3 KB | 数据表。 | 144 行 × 9 列 [rbf, r_cut, n_max, l_max, periodic, seed …] |
+| `experiments\2026-11-01_radial_followup\rotation_audit_by_l.csv` | 13.0 KB | 数据表。 | 264 行 × 6 列 [rbf, r_cut, periodic, seed, l, block_difference_over_full_norm] |
 
-### 代码（27 个，468.2 KB）
+### 代码（38 个，636.6 KB）
 
 | 文件 | 大小 | 用途 |
 |---|---|---|
@@ -672,6 +712,17 @@
 | `Stage05_物理空间与方向\02_脚本\stage5a_physical_spatial_residual.py` | 49.9 KB | Stage05A 物理描述符与空间分布产物。 |
 | `Stage05_物理空间与方向\02_脚本\stage5b_soap_direction.py` | 46.7 KB | Stage05B SOAP 方向相关产物。 |
 | `Stage06_最终评估\02_脚本\stage6_final_analysis.py` | 37.4 KB | Stage06 最终评估产物：相关系数、模型对比与稳健性检验。 |
+| `experiments\2026-11-01_audit\source\build_report.py` | 28.0 KB | Python 脚本。 |
+| `experiments\2026-11-01_audit\source\extend_radial.py` | 5.8 KB | Python 脚本。 |
+| `experiments\2026-11-01_audit\source\metric_diagnostics.py` | 4.0 KB | Python 脚本。 |
+| `experiments\2026-11-01_audit\source\run_sweep.py` | 22.1 KB | Python 脚本。 |
+| `experiments\2026-11-01_audit\source\validate_candidates.py` | 13.5 KB | Python 脚本。 |
+| `experiments\2026-11-01_audit\source\verify_results.py` | 3.6 KB | Python 脚本。 |
+| `experiments\2026-11-01_midterm\source\cfg_reader.py` | 8.7 KB | CFG 格式解析脚本。 |
+| `experiments\2026-11-01_midterm\source\diagnostics.py` | 5.4 KB | Python 脚本。 |
+| `experiments\2026-11-01_midterm\source\scan.py` | 9.1 KB | Python 脚本。 |
+| `experiments\2026-11-01_radial_followup\source\radial_followup.py` | 45.9 KB | Python 脚本。 |
+| `experiments\2026-11-01_radial_followup\source\run_sweep.py` | 22.1 KB | Python 脚本。 |
 
 ### 输入（4 个，8.03 MB）
 
@@ -682,31 +733,49 @@
 | `Stage01_数据准备与SOAP初测\02_脚本\ni_metastable.cfg` | 4.01 MB | 输入构型之一：亚稳的 Ni 晶界构型（源数据）。 | 47,120 原子 |
 | `Stage01_数据准备与SOAP初测\02_脚本\ni_stable.cfg` | 4.02 MB | 输入构型之一：稳定的 Ni 晶界构型（源数据）。 | 47,120 原子 |
 
-### 文档（17 个，124.6 KB）
+### 文档（35 个，626.4 KB）
 
-| 文件 | 大小 | 用途 |
-|---|---|---|
-| `00_汇总报告\Ni_SOAP_最终报告.md` | 6.3 KB | ★ 方法探索总报告：项目定位、六个 Stage 的结论、十条下一版建议、以及“不能确定”清单。 |
-| `00_汇总报告\SOAP参数确定报告_2026-10-22.md` | 7.6 KB | Markdown 文档。 |
-| `00_汇总报告\项目文件索引_脚本输出报告_按阶段.md` | 3.9 KB | Markdown 文档。 |
-| `90_历史归档\归档说明.md` | 1.8 KB | Markdown 文档。 |
-| `README.md` | 2.2 KB | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |
-| `Stage01_数据准备与SOAP初测\01_报告\Stage01_确定性结论与待讨论.md` | 3.2 KB | Markdown 文档。 |
-| `Stage01_输入输出检索表.md` | 7.4 KB | Markdown 文档。 |
-| `Stage02_SOAP表示与审计\01_报告\Stage02_确定性结论与待讨论.md` | 4.0 KB | Markdown 文档。 |
-| `Stage02_输入输出检索表.md` | 13.1 KB | Markdown 文档。 |
-| `Stage03_LAE阈值与LAE_LER构建\01_报告\Stage03_确定性结论与待讨论.md` | 3.1 KB | Markdown 文档。 |
-| `Stage03_输入输出检索表.md` | 15.1 KB | Markdown 文档。 |
-| `Stage04_无序度与能量关联\01_报告\Stage04_确定性结论与待讨论.md` | 3.7 KB | Markdown 文档。 |
-| `Stage04_输入输出检索表.md` | 16.7 KB | Markdown 文档。 |
-| `Stage05_物理空间与方向\01_报告\Stage05_确定性结论与待讨论.md` | 3.8 KB | Markdown 文档。 |
-| `Stage05_输入输出检索表.md` | 19.5 KB | Markdown 文档。 |
-| `Stage06_最终评估\01_报告\Stage06_确定性结论与待讨论.md` | 3.5 KB | Markdown 文档。 |
-| `Stage06_输入输出检索表.md` | 9.8 KB | Markdown 文档。 |
+| 文件 | 大小 | 用途 | 内容分析 |
+|---|---|---|---|
+| `00_汇总报告\Ni_SOAP_最终报告.md` | 6.3 KB | ★ 方法探索总报告：项目定位、六个 Stage 的结论、十条下一版建议、以及“不能确定”清单。 |  |
+| `00_汇总报告\SOAP参数确定报告_2026-10-22.md` | 7.6 KB | Markdown 文档。 |  |
+| `00_汇总报告\项目文件索引_脚本输出报告_按阶段.md` | 3.9 KB | Markdown 文档。 |  |
+| `90_历史归档\归档说明.md` | 1.8 KB | Markdown 文档。 |  |
+| `README.md` | 3.4 KB | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |  |
+| `Stage01_数据准备与SOAP初测\01_报告\Stage01_确定性结论与待讨论.md` | 3.2 KB | Markdown 文档。 |  |
+| `Stage01_输入输出检索表.md` | 7.4 KB | Markdown 文档。 |  |
+| `Stage02_SOAP表示与审计\01_报告\Stage02_确定性结论与待讨论.md` | 4.0 KB | Markdown 文档。 |  |
+| `Stage02_输入输出检索表.md` | 13.1 KB | Markdown 文档。 |  |
+| `Stage03_LAE阈值与LAE_LER构建\01_报告\Stage03_确定性结论与待讨论.md` | 3.1 KB | Markdown 文档。 |  |
+| `Stage03_输入输出检索表.md` | 15.1 KB | Markdown 文档。 |  |
+| `Stage04_无序度与能量关联\01_报告\Stage04_确定性结论与待讨论.md` | 3.7 KB | Markdown 文档。 |  |
+| `Stage04_输入输出检索表.md` | 16.7 KB | Markdown 文档。 |  |
+| `Stage05_物理空间与方向\01_报告\Stage05_确定性结论与待讨论.md` | 3.8 KB | Markdown 文档。 |  |
+| `Stage05_输入输出检索表.md` | 19.5 KB | Markdown 文档。 |  |
+| `Stage06_最终评估\01_报告\Stage06_确定性结论与待讨论.md` | 3.5 KB | Markdown 文档。 |  |
+| `Stage06_输入输出检索表.md` | 9.8 KB | Markdown 文档。 |  |
+| `experiments\2026-11-01_audit\README.md` | 609 B | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |  |
+| `experiments\2026-11-01_audit\REPORT.md` | 11.3 KB | Markdown 文档。 |  |
+| `experiments\2026-11-01_audit\protocol.json` | 2.9 KB | 参数与元数据。 | 字段: created_at, seed, grid, count, implementation, distance_definition, reference, evaluation_count |
+| `experiments\2026-11-01_audit\status.json` | 639 B | 参数与元数据。 | 字段: time, event, verified_at, grid_success, population, heldout, paired_raw_norm, max_distance_identity_absolute_residual |
+| `experiments\2026-11-01_audit\verification.json` | 564 B | 参数与元数据。 | 字段: verified_at, grid_success, population, heldout, paired_raw_norm, max_distance_identity_absolute_residual, max_distance_identity_relative_residual, max_full_vs_pilot_vector_difference |
+| `experiments\2026-11-01_midterm\README.md` | 921 B | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |  |
+| `experiments\2026-11-01_midterm\REPORT.md` | 4.2 KB | Markdown 文档。 |  |
+| `experiments\2026-11-01_midterm\baseline_grouped_radial_audit.json` | 1.9 KB | 参数与元数据。 |  |
+| `experiments\2026-11-01_midterm\convergence.json` | 163.4 KB | 参数与元数据。 |  |
+| `experiments\2026-11-01_midterm\diagnostics_summary.json` | 24.1 KB | 参数与元数据。 |  |
+| `experiments\2026-11-01_midterm\manifest.json` | 89.6 KB | 参数与元数据。 | 字段: seed, created, purpose, grid, descriptor, reference_selection, bulk_margin_A, structures |
+| `experiments\2026-11-01_midterm\summary.json` | 2.4 KB | 参数与元数据。 | 字段: count, success, warnings, total_compute_s, warning_keys, convergence, baseline, baseline_n10_to_12 |
+| `experiments\2026-11-01_radial_followup\README.md` | 619 B | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |  |
+| `experiments\2026-11-01_radial_followup\REPORT.md` | 11.1 KB | Markdown 文档。 |  |
+| `experiments\2026-11-01_radial_followup\protocol.json` | 5.7 KB | 参数与元数据。 | 字段: registered_at, purpose, new_polynomial_configurations, reused_gto_configurations, main_distances, main_weights, supplemental_weights, basis_comparison |
+| `experiments\2026-11-01_radial_followup\status.json` | 818 B | 参数与元数据。 | 字段: time, event, verified_at, main_inputs_unchanged, polynomial_success, reused_gto, fcc_cases, response_rows |
+| `experiments\2026-11-01_radial_followup\verification.json` | 743 B | 参数与元数据。 | 字段: verified_at, main_inputs_unchanged, polynomial_success, reused_gto, fcc_cases, response_rows, distance_comparisons, category_rows |
+| `experiments\PUBLICATION_MANIFEST_2026-11-15.json` | 179.2 KB | 参数与元数据。 | 字段: published_on, scientific_computation_date, presentation_date, normalization, published_original_artifacts, not_published, scope |
 
 ## 仓库维护：文档、工具与记录
 
-`maintenance` — 19 个文件，151.4 KB
+`maintenance` — 21 个文件，165.1 KB
 
 ### 结论（1 个，15.8 KB）
 
@@ -732,24 +801,26 @@
 |---|---|---|
 | `refresh_ledger.cmd` | 657 B | （未分类） |
 
-### 文档（10 个，47.7 KB）
+### 文档（12 个，61.5 KB）
 
 | 文件 | 大小 | 用途 |
 |---|---|---|
-| `README.md` | 1.0 KB | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |
+| `README.md` | 1.2 KB | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |
 | `docs\MAINTENANCE.md` | 2.6 KB | Markdown 文档。 |
+| `docs\MIDTERM_2026-11.md` | 6.0 KB | Markdown 文档。 |
+| `docs\MIDTERM_QA_2026-11.md` | 5.9 KB | Markdown 文档。 |
 | `docs\PATH_MIGRATION.md` | 1.8 KB | Markdown 文档。 |
 | `docs\PROJECT_REVIEW.md` | 10.9 KB | Markdown 文档。 |
-| `docs\RESEARCH_STATUS.md` | 2.4 KB | Markdown 文档。 |
+| `docs\RESEARCH_STATUS.md` | 3.6 KB | Markdown 文档。 |
 | `docs\STUDY_GUIDE.md` | 11.2 KB | Markdown 文档。 |
 | `docs\VERSIONS.md` | 2.4 KB | Markdown 文档。 |
-| `docs\WORKFLOWS.md` | 1.4 KB | Markdown 文档。 |
+| `docs\WORKFLOWS.md` | 2.0 KB | Markdown 文档。 |
 | `records\DATA_MANIFEST.md` | 11.4 KB | Markdown 文档。 |
 | `tools\README.md` | 2.6 KB | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |
 
 ## 仓库首页与其他文件
 
-仓库根目录、文档、工具与其他项目 — 3 个文件，2.8 KB
+仓库根目录、文档、工具与其他项目 — 3 个文件，4.4 KB
 
 ### 输入（1 个，1.5 KB）
 
@@ -757,9 +828,9 @@
 |---|---|---|
 | `.gitignore` | 1.5 KB | Git 忽略规则，指定哪些文件不纳入版本控制。 |
 
-### 文档（2 个，1.3 KB）
+### 文档（2 个，2.9 KB）
 
 | 文件 | 大小 | 用途 |
 |---|---|---|
 | `.gitattributes` | 748 B | （未分类） |
-| `README.md` | 572 B | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |
+| `README.md` | 2.1 KB | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |

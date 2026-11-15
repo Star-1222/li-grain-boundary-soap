@@ -1,5 +1,18 @@
 # Ni SOAP 方法探索（按 Stage 整理）
 
+## 中期更新（2026-11-15整理）
+
+研究目的：寻找可量化的局域结构无序指标，检验其能否反映晶界亚稳状态，并研究与变形机制、临界剪切强度的关联。目前以相对体相参考的SOAP距离作为候选表征，尚未验证上述物理关联。
+
+- [中期PPT使用的240组扫描](experiments/2026-11-01_midterm/REPORT.md)：径向raw/norm均0/180通过；角向179/192、181/192通过。
+- [独立分层审计与14/16阶补查](experiments/2026-11-01_audit/REPORT.md)：不同抽样和逐类别判据，不能与PPT通过比例混合；径向仍未收敛。
+- [径向基函数与受控FCC对照](experiments/2026-11-01_radial_followup/REPORT.md)：高阶正交化及测试环境中polynomial l=10旋转不变性问题均未解决。
+- [技术说明与问答](../maintenance/docs/MIDTERM_QA_2026-11.md)、[发布来源及未入库数据哈希](experiments/PUBLICATION_MANIFEST_2026-11-15.json)。
+
+所有结果来自既有2026-11-01计算，本次整理没有新增扫描，没有冻结唯一参数、主距离或亚稳程度M。下一步优先处理数值可靠性和径向收敛，再做Li迁移小试。Ni的数值参数不能直接作为BCC Li参数。
+
+## 既有六阶段归档
+
 归档整理日期：2026-09-25
 
 重跑入口：[工作流与执行顺序](../maintenance/docs/WORKFLOWS.md)。先运行 `python maintenance/tools/prepare_soap_workspace.py --dest runs/ni-soap-001`（仓库根目录），准备同目录脚本与共享输出的独立副本。
