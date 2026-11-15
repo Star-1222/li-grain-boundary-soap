@@ -375,17 +375,17 @@
 | `history\prototype_2x2\lammps\in.3_quench` | 940 B | Stage 3 输入脚本：以 10 K/ps 从 363 K 淬火到 10 K，把高温无序结构冻结下来。 |
 | `history\prototype_2x2\lammps\in.4_10K_hold` | 863 B | 2×2 实验的 10 K 保持输入脚本（对应 in.4_final 在旧版命名下的同一角色）。 |
 
-### 文档（104 个，2.74 MB）
+### 文档（104 个，2.75 MB）
 
 | 文件 | 大小 | 用途 | 内容分析 |
 |---|---|---|---|
-| `AGENTS.md` | 1.6 KB | Markdown 文档。 |  |
+| `AGENTS.md` | 1.8 KB | Markdown 文档。 |  |
 | `README.md` | 1.3 KB | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |  |
-| `current\MIDTERM_EVIDENCE_2026-11.json` | 4.8 KB | 参数与元数据。 | 字段: published_on, scope, historical_animation, current_workflow_animation_rerun, stress_comparison_source, claims |
+| `current\MIDTERM_EVIDENCE_2026-11.json` | 5.5 KB | 参数与元数据。 | 字段: published_on, scope, historical_animation, current_workflow_animation_rerun, stress_comparison_source, claims, teacher_objective_completion |
 | `current\PROTOCOL.md` | 4.4 KB | Markdown 文档。 |  |
-| `current\README.md` | 2.8 KB | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |  |
-| `current\STATUS.json` | 876 B | 参数与元数据。 | 字段: protocol_status, standard_start_status, standard_start_path, reason, updated_on, implemented_protocol_id, latest_research_plan, teacher_plan_status |
-| `current\TEACHER_PLAN_2026-11-05.md` | 3.4 KB | Markdown 文档。 |  |
+| `current\README.md` | 2.9 KB | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |  |
+| `current\STATUS.json` | 1.5 KB | 参数与元数据。 | 字段: protocol_status, standard_start_status, standard_start_path, reason, updated_on, implemented_protocol_id, teacher_continue_research_criterion, teacher_requirement_status |
+| `current\TEACHER_PLAN_2026-11-05.md` | 2.6 KB | Markdown 文档。 |  |
 | `current\lammps\anneal.in` | 978 B | （未分类） |  |
 | `current\lammps\quench.in` | 908 B | （未分类） |  |
 | `current\lammps\relax_aniso.in` | 816 B | （未分类） |  |
@@ -775,7 +775,7 @@
 
 ## 仓库维护：文档、工具与记录
 
-`maintenance` — 21 个文件，165.1 KB
+`maintenance` — 21 个文件，167.5 KB
 
 ### 结论（1 个，15.8 KB）
 
@@ -801,17 +801,17 @@
 |---|---|---|
 | `refresh_ledger.cmd` | 657 B | （未分类） |
 
-### 文档（12 个，61.5 KB）
+### 文档（12 个，63.9 KB）
 
 | 文件 | 大小 | 用途 |
 |---|---|---|
 | `README.md` | 1.2 KB | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |
 | `docs\MAINTENANCE.md` | 2.6 KB | Markdown 文档。 |
-| `docs\MIDTERM_2026-11.md` | 6.0 KB | Markdown 文档。 |
-| `docs\MIDTERM_QA_2026-11.md` | 5.9 KB | Markdown 文档。 |
+| `docs\MIDTERM_2026-11.md` | 6.7 KB | Markdown 文档。 |
+| `docs\MIDTERM_QA_2026-11.md` | 6.1 KB | Markdown 文档。 |
 | `docs\PATH_MIGRATION.md` | 1.8 KB | Markdown 文档。 |
 | `docs\PROJECT_REVIEW.md` | 10.9 KB | Markdown 文档。 |
-| `docs\RESEARCH_STATUS.md` | 3.6 KB | Markdown 文档。 |
+| `docs\RESEARCH_STATUS.md` | 5.0 KB | Markdown 文档。 |
 | `docs\STUDY_GUIDE.md` | 11.2 KB | Markdown 文档。 |
 | `docs\VERSIONS.md` | 2.4 KB | Markdown 文档。 |
 | `docs\WORKFLOWS.md` | 2.0 KB | Markdown 文档。 |
@@ -820,7 +820,7 @@
 
 ## 仓库首页与其他文件
 
-仓库根目录、文档、工具与其他项目 — 3 个文件，4.4 KB
+仓库根目录、文档、工具与其他项目 — 3 个文件，3.4 KB
 
 ### 输入（1 个，1.5 KB）
 
@@ -828,9 +828,9 @@
 |---|---|---|
 | `.gitignore` | 1.5 KB | Git 忽略规则，指定哪些文件不纳入版本控制。 |
 
-### 文档（2 个，2.9 KB）
+### 文档（2 个，1.8 KB）
 
 | 文件 | 大小 | 用途 |
 |---|---|---|
 | `.gitattributes` | 748 B | （未分类） |
-| `README.md` | 2.1 KB | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |
+| `README.md` | 1.1 KB | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |

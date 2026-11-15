@@ -1,5 +1,5 @@
 ﻿项目,相对路径,文件名,扩展名,层次,大小(字节),用途说明,内容分析,SHA256
-主线一：晶界构造,grain_boundary\AGENTS.md,AGENTS.md,.md,文档,1625,Markdown 文档。,,546d5e43013428fe314bc31b9b9daa4b2b62cc1d681a887f9f8cdd3680e359ab
+主线一：晶界构造,grain_boundary\AGENTS.md,AGENTS.md,.md,文档,1874,Markdown 文档。,,fdb0ac63f0ff8e3189850b704295aa213e22004f614b1fea7a4a9e7ddd4184eb
 主线一：晶界构造,grain_boundary\current\checkpoint.py,checkpoint.py,.py,代码,9539,Python 脚本。,,eb75ea3322e6608f67754a5199c0fc73e3d5a99d6d0539dba6c8710627d45e99
 主线一：晶界构造,grain_boundary\current\generator\__init__.py,__init__.py,.py,代码,86,Python 脚本。,,e9fe6ba786f594f8afffc8f84f8814732e756313b2a3666313cc4bb6a4f348b6
 主线一：晶界构造,grain_boundary\current\generator\builder.py,builder.py,.py,代码,8991,Python 脚本。,,4f733f6f1adac26b82f592b02222bf68483e763edad0e8291407dfa019a05bd8
@@ -15,14 +15,14 @@
 主线一：晶界构造,grain_boundary\current\lammps\quench.in,quench.in,.in,文档,908,（未分类）,,b67945e6b7e974a579a15d3bd92ae67057a35ac13f0ae9cc0c671f8120a11350
 主线一：晶界构造,grain_boundary\current\lammps\relax_aniso.in,relax_aniso.in,.in,文档,816,（未分类）,,54e3ca8584a6219eb08c43f5a8edc6df34e31465182312ecdfddc0baca8a6e30
 主线一：晶界构造,grain_boundary\current\lammps\relax_initial.in,relax_initial.in,.in,文档,1388,（未分类）,,621487cee69c30ebe01b158709a3a1a489ca825a47752ea0852fb6bc804779cb
-主线一：晶界构造,grain_boundary\current\MIDTERM_EVIDENCE_2026-11.json,MIDTERM_EVIDENCE_2026-11.json,.json,文档,4933,参数与元数据。,"字段: published_on, scope, historical_animation, current_workflow_animation_rerun, stress_comparison_source, claims",c8cabd9e3378186b82f37c8bc382d925193ee0144424bea41e68cf4836d21bb1
+主线一：晶界构造,grain_boundary\current\MIDTERM_EVIDENCE_2026-11.json,MIDTERM_EVIDENCE_2026-11.json,.json,文档,5615,参数与元数据。,"字段: published_on, scope, historical_animation, current_workflow_animation_rerun, stress_comparison_source, claims, teacher_objective_completion",04ade5f319679baaf99fea097951ef8b94f12602016686bef807e9ee1f5f3f93
 主线一：晶界构造,grain_boundary\current\model.json,model.json,.json,文档,663,参数与元数据。,K=6 · J=6 · L=20 · a_A=3.506186475312,334f0e789fa9edc42698adc56fb61058ada4385932a8522ca24984403142d227
-主线一：晶界构造,grain_boundary\current\PROTOCOL.md,PROTOCOL.md,.md,文档,4516,Markdown 文档。,,4966cb13a99ee32d403f1de044d632888f16616d6b824832a33b4ac05975e3b3
-主线一：晶界构造,grain_boundary\current\README.md,README.md,.md,文档,2824,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,25634d5959e7675cd54a728442a74b27fe90ee167cf7ba6ba71d0d2ba563fd6f
+主线一：晶界构造,grain_boundary\current\PROTOCOL.md,PROTOCOL.md,.md,文档,4503,Markdown 文档。,,1c5d37c139f49a933a704effc0fd5fa5ea6012f6b28b92c284a7d55d5b13996e
+主线一：晶界构造,grain_boundary\current\README.md,README.md,.md,文档,2933,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,83a6771ad77a01cbcbe705c561c3f612dd4880051e30f327b7a3c94ef02ff91a
 主线一：晶界构造,grain_boundary\current\requirements.txt,requirements.txt,.txt,输入,12,Python 依赖清单，用于重建运行环境。,,a83a2a4ed7ab2e022b9b8a83cfa2b8cf52cc243006c597e8b96f90a8365590ac
 主线一：晶界构造,grain_boundary\current\run.py,run.py,.py,代码,6468,Python 脚本。,,22fa92ad07b7a43786da48e66687b562f51b0ffff260f65b1885f41bf8105f64
-主线一：晶界构造,grain_boundary\current\STATUS.json,STATUS.json,.json,文档,876,参数与元数据。,"字段: protocol_status, standard_start_status, standard_start_path, reason, updated_on, implemented_protocol_id, latest_research_plan, teacher_plan_status",cde646154da764e4224de1fbd81cc74b9f139526370a89490f60db5873e973d9
-主线一：晶界构造,grain_boundary\current\TEACHER_PLAN_2026-11-05.md,TEACHER_PLAN_2026-11-05.md,.md,文档,3527,Markdown 文档。,,64034b3f10e5d15c560175992f914b09c40e535375f9dc21a70a4dfce8cd0f8e
+主线一：晶界构造,grain_boundary\current\STATUS.json,STATUS.json,.json,文档,1487,参数与元数据。,"字段: protocol_status, standard_start_status, standard_start_path, reason, updated_on, implemented_protocol_id, teacher_continue_research_criterion, teacher_requirement_status",a7b0cd4393eb1109d2aa6e58b64ee2c4c70b9ec6f82618aa6f4607128809632c
+主线一：晶界构造,grain_boundary\current\TEACHER_PLAN_2026-11-05.md,TEACHER_PLAN_2026-11-05.md,.md,文档,2708,Markdown 文档。,,d3b329e45aed44b213531d5a46bd2bed30f85e3efc5b4b3f2377d913b8159059
 主线一：晶界构造,grain_boundary\history\construction_baseline_3600\Sigma5_310_Metastable_GB\v2_production\data\annealed\stage2_annealed.data,stage2_annealed.data,.data,结论,467158,★ Stage 2 退火末态：363 K、0 bar 下 25 ps 后的结构。晶界在此阶段发生热重构。,"3,600 原子 · 盒子 65.95 × 33.26 × 35.06 Å · timestep 20,000",c988b93dec412e010e7dd38d6a1455947a520d8b08698d9e5a92a6ceea269ef2
 主线一：晶界构造,grain_boundary\history\construction_baseline_3600\Sigma5_310_Metastable_GB\v2_production\data\annealed\stage2_annealed.restart,stage2_annealed.restart,.restart,续算,317785,LAMMPS 续算检查点：保存速度场与热力学状态，只能在 LAMMPS 内读取。,,f59422f65a12a3f837073494eadcbd90035ba9858ed7a67c5216eaecba4ba8e5
 主线一：晶界构造,grain_boundary\history\construction_baseline_3600\Sigma5_310_Metastable_GB\v2_production\data\bulk\bulk_Li.cif,bulk_Li.cif,.cif,结论,6937,体相参考结构的晶体学格式。,,5b27eb7c8669ba9094f3a5cfcc7576eb24c765c805e9c3b3b41b21f5578cbe69
@@ -371,7 +371,7 @@
 主线一：晶界构造,grain_boundary\history\reports\Team_Reviews\TEAM_REVIEW_Li_GB_Deliverable_20260823_BI.md,TEAM_REVIEW_Li_GB_Deliverable_20260823_BI.md,.md,文档,14855,双语版报告（中文版与英文版首尾拼接在同一文件内）。,,ddc42715a223bd8389a2865fafe0e03fb779d7538fe4f41c65cd6dc663ae254e
 主线一：晶界构造,grain_boundary\history\reports\Team_Reviews\TEAM_REVIEW_Li_Sigma5_2x2_run_20260830_BI.md,TEAM_REVIEW_Li_Sigma5_2x2_run_20260830_BI.md,.md,文档,11266,双语版报告（中文版与英文版首尾拼接在同一文件内）。,,93c0884294bdaf12f26c7e33e0f1da86e5a20fa8bd855a969a7ecb16115f4fed
 主线一：晶界构造,grain_boundary\history\reports\Team_Reviews\TEAM_REVIEW_Li_Sigma5_310_metastable_2x2_20260901_BI.md,TEAM_REVIEW_Li_Sigma5_310_metastable_2x2_20260901_BI.md,.md,文档,8316,双语版报告（中文版与英文版首尾拼接在同一文件内）。,,1bdaed4785377254ba8ffe6d2073928dd089639fec8182eaba6913aceec45d1d
-主线一：晶界构造,grain_boundary\README.md,README.md,.md,文档,1358,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,d2cce0b38d1a31a7d1c5e9946bacd05d0d707971e50715b5889a73ae1164ea4b
+主线一：晶界构造,grain_boundary\README.md,README.md,.md,文档,1300,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,86eb48e9a962b7212116c183a90665a1ddf64963bb215da7e468c32389da5099
 主线二：SOAP 方法,soap\00_汇总报告\Ni_SOAP_最终报告.md,Ni_SOAP_最终报告.md,.md,文档,6433,★ 方法探索总报告：项目定位、六个 Stage 的结论、十条下一版建议、以及“不能确定”清单。,,d91901f6ce03ed72276883be0907e4e74320cb74f68b9c6ed37148ad00a4147c
 主线二：SOAP 方法,soap\00_汇总报告\SOAP参数确定报告_2026-10-22.md,SOAP参数确定报告_2026-10-22.md,.md,文档,7803,Markdown 文档。,,768a3242875a80152cac5d21bf5350263ebd68a885bfe21f85c3b17d062c7983
 主线二：SOAP 方法,soap\00_汇总报告\项目文件索引_按阶段.csv,项目文件索引_按阶段.csv,.csv,结论,61602,数据表。,"209 行 × 11 列 [Stage, Category, Subcategory, RelativePath, FileName, Extension …]",6f4b6bfa5999584ad792b5d87edbc5d0ef4a8f19144d63cbff478b3d7dde6c33
@@ -638,14 +638,14 @@
 主线二：SOAP 方法,soap\Stage06_最终评估\03_输出\stage6_state_classification.csv,stage6_state_classification.csv,.csv,结论,1083,Stage06 最终评估产物：相关系数、模型对比与稳健性检验。,"10 行 × 8 列 [test_interface, n_train, n_test, roc_auc, balanced_accuracy, f1 …]",ca299960f4cd780434e996bff20453eded7c75de03e2f3360560d546ed92bb98
 主线二：SOAP 方法,soap\Stage06_输入输出检索表.md,Stage06_输入输出检索表.md,.md,文档,10038,Markdown 文档。,,70a2ef9d090a2a88227748da54a45a70888b4cccea745f4ef2a6a5c5eb10e7b8
 仓库维护：文档、工具与记录,maintenance\docs\MAINTENANCE.md,MAINTENANCE.md,.md,文档,2615,Markdown 文档。,,2b319c3f65ae251d57b887dea95114c5d3f29c2c0429bb37984ac3cd1d418f88
-仓库维护：文档、工具与记录,maintenance\docs\MIDTERM_2026-11.md,MIDTERM_2026-11.md,.md,文档,6188,Markdown 文档。,,2c8486971b9af4ed901c44dc187157b23b68e97810cdb3be51fdcba41061e1cb
-仓库维护：文档、工具与记录,maintenance\docs\MIDTERM_QA_2026-11.md,MIDTERM_QA_2026-11.md,.md,文档,6007,Markdown 文档。,,a771b486412469a95565a3fa0c2df3f53217e8d635b2c189251fc4500d6ac301
+仓库维护：文档、工具与记录,maintenance\docs\MIDTERM_2026-11.md,MIDTERM_2026-11.md,.md,文档,6881,Markdown 文档。,,84801f3afc5fe472010ce4163f5ff991c4cf07617637e05fadf0ed87c45a78f0
+仓库维护：文档、工具与记录,maintenance\docs\MIDTERM_QA_2026-11.md,MIDTERM_QA_2026-11.md,.md,文档,6266,Markdown 文档。,,9af9d478d36b40a832a9cb6fe50608971d710fcb1372921011f759daca8f4152
 仓库维护：文档、工具与记录,maintenance\docs\PATH_MIGRATION.md,PATH_MIGRATION.md,.md,文档,1819,Markdown 文档。,,5fe76bce0b446d38a169c0afe5e085bf665ff462413a64a85794e0187cc02196
 仓库维护：文档、工具与记录,maintenance\docs\PROJECT_REVIEW.md,PROJECT_REVIEW.md,.md,文档,11163,Markdown 文档。,,8f68a36fbfc2ab42f38fb564357e359cc407e6f95badf43d353e6de85ec23034
-仓库维护：文档、工具与记录,maintenance\docs\RESEARCH_STATUS.md,RESEARCH_STATUS.md,.md,文档,3722,Markdown 文档。,,ef89cf69e4d5e0ddecdf21548dc4b12d9a95014759f2b5de57b1dcedafdd613b
+仓库维护：文档、工具与记录,maintenance\docs\RESEARCH_STATUS.md,RESEARCH_STATUS.md,.md,文档,5136,Markdown 文档。,,c0ded016cc74972cf0ebf14489f73a9fe960f850b546686e13538cc825f74108
 仓库维护：文档、工具与记录,maintenance\docs\STUDY_GUIDE.md,STUDY_GUIDE.md,.md,文档,11431,Markdown 文档。,,ad25ac30033c570679bad4cc47b78ea2c95adb9de8e59d794fa85254dd468814
 仓库维护：文档、工具与记录,maintenance\docs\VERSIONS.md,VERSIONS.md,.md,文档,2497,Markdown 文档。,,74fbf2116e116ccb8ee0c3da114ec84165711247024e00c86c1e4dbe7e1f8c84
-仓库维护：文档、工具与记录,maintenance\docs\WORKFLOWS.md,WORKFLOWS.md,.md,文档,2012,Markdown 文档。,,3b311477455579243e774d8c38ed907813f82e6ba97416e1476d83befd209096
+仓库维护：文档、工具与记录,maintenance\docs\WORKFLOWS.md,WORKFLOWS.md,.md,文档,2081,Markdown 文档。,,3e1192bdd56b0270d569ada80c50085c92ea58d93813873318cd82dd043fe9d8
 仓库维护：文档、工具与记录,maintenance\README.md,README.md,.md,文档,1182,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,3a89f43a6bebdef4f13da7eb198a8b6db28f37a48dc8f150f98938fa85582333
 仓库维护：文档、工具与记录,maintenance\records\DATA_MANIFEST.csv,DATA_MANIFEST.csv,.csv,结论,16186,数据表。,"60 行 × 7 列 [﻿相对路径, 文件名, 扩展名, 层次, 大小(字节), 用途说明 …]",3588a50fef3caffb56d4dbb9d8661c72f0ef9c007f3399d71712958375a53b05
 仓库维护：文档、工具与记录,maintenance\records\DATA_MANIFEST.md,DATA_MANIFEST.md,.md,文档,11651,Markdown 文档。,,7d35da67353c703031f80e5c38797c0cfca1ac018124887fb9906c909c4c5a11
@@ -660,4 +660,4 @@
 仓库维护：文档、工具与记录,maintenance\tools\README.md,README.md,.md,文档,2678,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,9155c6d644249c341dd491796fffc9ef21f77945ab5c1191a4ae326480c8ea06
 仓库首页与其他文件,.gitattributes,.gitattributes,(无),文档,748,（未分类）,,4c0a9ade8fcbcd679ff5b73e003ccbdeb18b5dc6846c0c2f18081013c26c68a3
 仓库首页与其他文件,.gitignore,.gitignore,(无),输入,1587,Git 忽略规则，指定哪些文件不纳入版本控制。,,17420904063f6cff8fa1bc0ff9563291bf10683e36c097d26843d168e2b45690
-仓库首页与其他文件,README.md,README.md,.md,文档,2177,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,223a4b59c257f52f2356314829f46f22e42aeee052d73b4db7c91da14e6e90dd
+仓库首页与其他文件,README.md,README.md,.md,文档,1106,仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。,,6e4f52317426f2b5799d33ed62793f64f9220e2b6db3d28087dbf7d7521eaea5

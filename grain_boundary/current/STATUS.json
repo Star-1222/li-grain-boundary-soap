@@ -1,17 +1,30 @@
 {
-  "protocol_status": "implemented_2026-10-31_workflow; teacher_2026-11-05_plan_pending_implementation",
+  "protocol_status": "implemented",
   "standard_start_status": "not_yet_accepted",
   "standard_start_path": null,
-  "reason": "No saved standard_start with linked review evidence is published. This archive status is separate from the teacher operational criterion for continuing research.",
+  "reason": "Teacher original preparation objective is completed and historically accepted. No standard_start package saved by the newer archiving tool is published; that archive status does not reverse the historical completion.",
   "updated_on": "2026-11-15",
   "implemented_protocol_id": "li-sigma5-2x2-aniso-10k",
-  "latest_research_plan": "TEACHER_PLAN_2026-11-05.md",
-  "teacher_plan_status": "documented_not_confirmed_executed",
   "teacher_continue_research_criterion": {
     "temperature_K": 10.0,
     "target_pressure_bar": 0.0,
     "stable_duration_ps_strictly_greater_than": 1.0,
     "phase_transition_investigation": "deferred",
     "additional_quench_observation": "grain-boundary disorder retained; grain interiors remain BCC"
-  }
+  },
+  "teacher_requirement_status": "completed",
+  "teacher_completion": {
+    "user_confirmed_on": "2026-11-15",
+    "historical_run_completed_on": "2026-09-03",
+    "historical_acceptance_report_date": "2026-09-04",
+    "source": "../history/experiments/phase1_2026-09/阶段一验收汇报_2026-09-04.md",
+    "high_temperature_K": 363.0,
+    "actual_high_temperature_hold_ps": 25.0,
+    "quench_rate_K_per_ps": 10.0,
+    "quench_duration_ps": 35.3,
+    "actual_low_temperature_hold_ps": 5.0,
+    "pressure_acceptance_scope": "scalar time-averaged pressure approximately 0 bar; component stress optimization tracked separately",
+    "conclusion": "original_objective_accepted"
+  },
+  "teacher_completion_record": "TEACHER_PLAN_2026-11-05.md"
 }
