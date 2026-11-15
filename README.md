@@ -15,6 +15,6 @@
 | 主线 | 入口 |
 |---|---|
 | Li晶界构造、已完成试验与复现代码 | [grain_boundary](grain_boundary/README.md) |
-| Ni SOAP参数、距离与收敛诊断 | [soap](soap/README.md) |
+| Ni SOAP参数、距离与收敛诊断 | [soap/current](soap/current/README.md) |
 
 [中期汇报快照](maintenance/docs/MIDTERM_2026-11.md) · [方法问答](maintenance/docs/MIDTERM_QA_2026-11.md) · [维护与数据台账](maintenance/README.md)

@@ -211,7 +211,7 @@ python maintenance\tools\compute_gb_energy.py
 
 # 第六章　方法线：SOAP 在做什么
 
-**读**：`soap/00_汇总报告/Ni_SOAP_最终报告.md`
+**读**：`soap/history/stages/00_汇总报告/Ni_SOAP_最终报告.md`
 
 **要理解的核心**
 

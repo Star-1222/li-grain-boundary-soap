@@ -16,7 +16,7 @@ from pathlib import Path
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-PROJECT = "soap"
+PROJECT = "soap/history/stages"
 STEPS = (
     ("inspect_structures.py", "soap_test.py", "stage1_qc.py"),
     ("stage2_profiles.py", "stage2_soap.py", "stage2_5_audit.py", "stage2_75_full.py"),

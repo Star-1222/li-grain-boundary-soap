@@ -12,16 +12,16 @@
 
 旧的 3600 原子基准、早期 2×2 脚手架、阶段一 iso 实验和控压对照统一收在 [history](../../grain_boundary/history/README.md)，不作为新运行的默认流程。它们是不同实验记录，不能拼成一次实际运行。
 
-## SOAP 方法
+## SOAP方法
 
-中期扫描及后续径向诊断从[实验结果索引](../../soap/README.md)进入；六阶段脚本归档与2026-11-01参数扫描为不同记录。原始脚本快照保留执行时路径，不等于新增可直接运行的通用入口。
-
-SOAP 方法线仍从 [soap/](../../soap/README.md) 进入，独立于 Li 的阶段编号。
+当前参数研究从[soap/current](../../soap/current/README.md)进入：
 
 ```bash
-python maintenance/tools/prepare_soap_workspace.py --dest runs/ni-soap-001
+python soap/current/prepare.py --dest runs/ni-soap-radial-001
 ```
 
-准备工具把 Stage01–06 的脚本和 CFG 复制到独立目录，生成 `RUN_ORDER.md`，按其中顺序执行。目标目录必须不存在；不复制历史输出、不启动计算。依赖列表位于 `soap/06_环境与实现/requirements_stages.txt`，尚未冻结包版本。
+只准备经输入哈希核对的脚本与结构，按新目录的 `RUN_ORDER.md`逐步执行，不复制旧结果。准备的是20000对分层审计的复现基线，不是PPT的3600对统计。
 
-跨阶段的数据、报告和逐文件索引见 SOAP 项目入口。缺失轨迹及矩阵见[数据恢复清单](../records/DATA_MANIFEST.md)。
+已完成扫描与诊断见[实验索引](../../soap/experiments/README.md)。早期六阶段整体迁入[历史归档](../../soap/history/README.md)，确需复现时才使用 `maintenance/tools/prepare_soap_workspace.py`。
+
+原始轨迹和大矩阵继续按[数据恢复清单](../records/DATA_MANIFEST.md)及实验发布清单追溯；当前结论统一看[研究状态](RESEARCH_STATUS.md)。

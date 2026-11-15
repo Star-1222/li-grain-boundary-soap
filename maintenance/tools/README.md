@@ -4,13 +4,15 @@
 
 | 工具 | 用途 | 依赖 |
 |---|---|---|
-| `prepare_soap_workspace.py` | 将 Ni 六阶段脚本和 CFG 复制到独立运行目录，生成执行顺序与来源清单 | 标准库 |
+| `prepare_soap_workspace.py` | 准备历史Ni六阶段流程的独立副本，生成执行顺序与来源清单 | 标准库 |
 | `artifact_ledger.py` | 生成 `ARTIFACT_LEDGER.md/csv`，记录项目文件、用途、SHA256 与内容分析 | NumPy |
 | `build_artifact_catalog.py` | 台账分类与扫描的底层模块；日常更新使用上面的入口 | 标准库 |
 | `compute_gb_energy.py` | 从历史 LAMMPS 日志复算晶界过剩能 | 标准库 |
 | `install_git_hook.ps1` | 可选：提交前自动刷新并暂存台账 | PowerShell、Git、Python、NumPy |
 
-## 准备 SOAP 运行副本
+## 准备历史SOAP六阶段副本
+
+当前参数研究改用[soap/current](../../soap/current/README.md)中的准备入口。下面命令仅用于复现历史六阶段。
 
 ```bash
 python maintenance/tools/prepare_soap_workspace.py --dest runs/ni-soap-001

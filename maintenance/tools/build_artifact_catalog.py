@@ -111,29 +111,29 @@ PATH_PURPOSE = {
         "★ CNA 结构分析结论：各阶段 BCC 分数（晶界约 38%、晶粒内部 98.7%）。验收判据“晶界真实无序、内部保持 BCC”靠它成立。",
     r"grain_boundary\history\experiments\phase1_2026-09\阶段一验收汇报_2026-09-04.md":
         "★ 阶段一验收结论：原目标通过，可进入阶段二；并记录了 0 bar 口径的保留意见。",
-    r"soap\Stage02_SOAP表示与审计\03_输出\stage2_75_soap_vectors.npy":
+    r"soap\history\stages\Stage02_SOAP表示与审计\03_输出\stage2_75_soap_vectors.npy":
         "★ SOAP 主矩阵（4659 原子 × 1014 维，36 MB）。后续全部分析都建立在这个矩阵上；重算耗时较长。",
-    r"soap\Stage02_SOAP表示与审计\03_输出\stage2_75_pairwise_sample.csv":
+    r"soap\history\stages\Stage02_SOAP表示与审计\03_输出\stage2_75_pairwise_sample.csv":
         "原子对距离样本表（48.8 MB）。支撑“原始距离里 42–46% 来自范数差”这一结论，属中间表。",
-    r"soap\Stage02_SOAP表示与审计\03_输出\stage2_75_distance_decomposition.png":
+    r"soap\history\stages\Stage02_SOAP表示与审计\03_输出\stage2_75_distance_decomposition.png":
         "★ 距离分解图：把 SOAP 距离拆成范数贡献与形状贡献。这是“原始距离含义不纯”的关键证据图。",
-    r"soap\Stage03_LAE阈值与LAE_LER构建\03_输出\stage3a_epsilon_sweep.csv":
+    r"soap\history\stages\Stage03_LAE阈值与LAE_LER构建\03_输出\stage3a_epsilon_sweep.csv":
         "epsilon 阈值扫描结果。证明了阈值轻微变动就会改变分类数——离散 LAE 不稳。",
-    r"soap\Stage03_LAE阈值与LAE_LER构建\03_输出\stage3b_partition_ari.csv":
+    r"soap\history\stages\Stage03_LAE阈值与LAE_LER构建\03_输出\stage3b_partition_ari.csv":
         "★ 不同随机顺序下分区的一致性（ARI）。这是判定贪心 LAE “有顺序依赖、不可作为物理分类”的量化依据。",
-    r"soap\Stage04_无序度与能量关联\03_输出\stage4a_atomwise_disorder.csv":
+    r"soap\history\stages\Stage04_无序度与能量关联\03_输出\stage4a_atomwise_disorder.csv":
         "★ 逐原子无序度 D。本项目提出的连续结构坐标，是后续所有关联分析的自变量。",
-    r"soap\Stage04_无序度与能量关联\03_输出\stage4b_atomwise_energy_disorder.csv":
+    r"soap\history\stages\Stage04_无序度与能量关联\03_输出\stage4b_atomwise_energy_disorder.csv":
         "逐原子的无序度与能量配对表，用于考察 D 与能量的关系。",
-    r"soap\Stage05_物理空间与方向\03_输出\stage5a_atomwise_physical_descriptors.csv":
+    r"soap\history\stages\Stage05_物理空间与方向\03_输出\stage5a_atomwise_physical_descriptors.csv":
         "★ 常规物理描述符（配位数、键应变、体积、CSP）。最终证明“解释力主要来自这些量而非 SOAP 方向”的就是它。",
-    r"soap\Stage05_物理空间与方向\03_输出\stage5b_matched_direction_energy_pairs.csv":
+    r"soap\history\stages\Stage05_物理空间与方向\03_输出\stage5b_matched_direction_energy_pairs.csv":
         "★ 配对重采样中间表（142.9 MB，占本项目近一半体积）。最终结论只用到由它算出的相关系数，本体属可再生的中间产物。",
-    r"soap\Stage06_最终评估\03_输出\stage6_correlations.csv":
+    r"soap\history\stages\Stage06_最终评估\03_输出\stage6_correlations.csv":
         "★ 全项目最终相关系数：原始 0.8317，控制物理描述符后降到 0.2058。这是方法线最重要的产出。",
-    r"soap\Stage06_最终评估\03_输出\stage6_energy_models.csv":
+    r"soap\history\stages\Stage06_最终评估\03_输出\stage6_energy_models.csv":
         "★ 能量模型 R² 对比：仅 D 为 0.0393，加入物理描述符后 0.9869。量化了 SOAP 坐标的增量信息有限。",
-    r"soap\00_汇总报告\Ni_SOAP_最终报告.md":
+    r"soap\history\stages\00_汇总报告\Ni_SOAP_最终报告.md":
         "★ 方法探索总报告：项目定位、六个 Stage 的结论、十条下一版建议、以及“不能确定”清单。",
 
     # --- 锂晶界主项目：热历史各级产物 ---

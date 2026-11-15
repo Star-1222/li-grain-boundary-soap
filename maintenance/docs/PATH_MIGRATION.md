@@ -32,3 +32,17 @@
 | `grain_boundary/Reports` | `grain_boundary/history/reports` |
 | `grain_boundary/07_Documentation` | `grain_boundary/history/presentations` |
 | `grain_boundary/archive` | `grain_boundary/history/legacy` |
+
+## 当前研究与历史归档分离（2026-11-15）
+
+| 原路径 | 当前路径 |
+|---|---|
+| `soap/Stage01_*`至`soap/Stage06_*`及阶段检索表 | `soap/history/stages/`下同名目录与文件 |
+| `soap/00_汇总报告` | `soap/history/stages/00_汇总报告` |
+| `soap/06_环境与实现` | `soap/history/stages/06_环境与实现` |
+| `soap/90_历史归档` | `soap/history/stages/90_历史归档` |
+| 未入库文献原路径`soap/05_文献` | 恢复时使用`soap/history/stages/05_文献` |
+
+当前SOAP研究入口是 `soap/current/`；原 `maintenance/tools/prepare_soap_workspace.py`转为明确的历史六阶段准备入口。科学脚本、输入、数值结果和图像按字节保留；未入库数据清单仅迁移路径，保留大小和SHA256。
+
+逐文件旧路径、新路径和迁移前后哈希见[迁移清单](../records/LAYOUT_MIGRATION_2026-11-15.json)。

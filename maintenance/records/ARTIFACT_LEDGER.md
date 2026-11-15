@@ -3,24 +3,24 @@
 > 本文件由 `artifact_ledger.py` 自动生成，请勿手工编辑。
 > 每次重新生成都会刷新文件清单、校验和与内容分析。
 
-- 文件总数：**662**
-- 总体积：**60.96 MB**
+- 文件总数：**669**
+- 总体积：**61.06 MB**
 
 ## 层次分布
 
 | 层次 | 文件数 | 体积 | 占总比 | 处置 |
 |---|---:|---:|---:|---|
-| **结论** | 235 | 40.56 MB | 66.5% | 必须保留 |
+| **结论** | 235 | 40.56 MB | 66.4% | 必须保留 |
 | **续算** | 11 | 6.60 MB | 10.8% | 保留至后续阶段完成 |
 | **追溯** | 41 | 1.10 MB | 1.8% | 随代码进版本控制 |
-| **代码** | 168 | 1.17 MB | 1.9% | 进版本控制 |
+| **代码** | 170 | 1.18 MB | 1.9% | 进版本控制 |
 | **输入** | 54 | 8.10 MB | 13.3% | 进版本控制 |
-| **文档** | 153 | 3.42 MB | 5.6% | 进版本控制 |
+| **文档** | 158 | 3.51 MB | 5.7% | 进版本控制 |
 
 ## 自动识别的结构特征
 
-- 结论性产物只有 40.56 MB，占 66.5%。
-- 决定“可复现”的追溯+代码+输入合计仅 10.37 MB（17.0%），是最该保护的一层。
+- 结论性产物只有 40.56 MB，占 66.4%。
+- 决定“可复现”的追溯+代码+输入合计仅 10.38 MB（17.0%），是最该保护的一层。
 - 双语拼接文档 16 份。中英文同处一文件，改动一侧另一侧会静默过期，建议拆分为 `README.md` + `README.en.md`。
 
 ## 交叉核对：报告声称 vs 数据实测
@@ -486,162 +486,12 @@
 
 ## 主线二：SOAP 方法
 
-`soap` — 265 个文件，27.84 MB
+`soap` — 269 个文件，27.84 MB
 
 ### 结论（188 个，18.57 MB）
 
 | 文件 | 大小 | 用途 | 内容分析 |
 |---|---|---|---|
-| `00_汇总报告\项目文件索引_按阶段.csv` | 60.2 KB | 数据表。 | 209 行 × 11 列 [Stage, Category, Subcategory, RelativePath, FileName, Extension …] |
-| `Stage01_数据准备与SOAP初测\03_输出\inspection_summary.txt` | 2.8 KB | 纯文本结果或检查报告。 |  |
-| `Stage01_数据准备与SOAP初测\03_输出\soap_test_summary.txt` | 1.4 KB | 纯文本结果或检查报告。 |  |
-| `Stage01_数据准备与SOAP初测\03_输出\stage1_qc_report.txt` | 7.3 KB | Stage01 数据准备与初测产物。 |  |
-| `Stage02_SOAP表示与审计\03_输出\representative_atoms.csv` | 4.8 KB | 数据表。 | 33 行 × 12 列 [structure, atom_index, id, ptm, cna, peatom …] |
-| `Stage02_SOAP表示与审计\03_输出\soap_similarity_heatmap.png` | 181.7 KB | 图表，可直接用于报告或论文。 |  |
-| `Stage02_SOAP表示与审计\03_输出\soap_similarity_matrix.csv` | 11.4 KB | 数据表。 | 33 行 × 34 列 [label, stable|15487|bulk, stable|3157|bulk, stable|2287|bulk, stable|8226|bulk, stable|8836|non_dominant …] |
-| `Stage02_SOAP表示与审计\03_输出\spatial_profile_metastable.png` | 121.9 KB | 图表，可直接用于报告或论文。 |  |
-| `Stage02_SOAP表示与审计\03_输出\spatial_profile_stable.png` | 109.9 KB | 图表，可直接用于报告或论文。 |  |
-| `Stage02_SOAP表示与审计\03_输出\spatial_profile_summary.txt` | 1.3 KB | 纯文本结果或检查报告。 |  |
-| `Stage02_SOAP表示与审计\03_输出\stage2_5_atom_metadata.csv` | 4.4 KB | Stage02.5 表示审计产物。 | 33 行 × 12 列 [row_index, structure, atom_index, atom_id, x, y …] |
-| `Stage02_SOAP表示与审计\03_输出\stage2_5_metric_heatmaps.png` | 218.3 KB | Stage02.5 表示审计产物。 |  |
-| `Stage02_SOAP表示与审计\03_输出\stage2_5_pair_category_summary.csv` | 4.0 KB | Stage02.5 表示审计产物。 | 28 行 × 8 列 [category, metric, n_pairs, min, median, mean …] |
-| `Stage02_SOAP表示与审计\03_输出\stage2_5_pairwise_metrics.csv` | 104.2 KB | Stage02.5 表示审计产物。 | 528 行 × 20 列 [row_i, structure_i, atom_id_i, ptm_i, cna_i, peatom_i …] |
-| `Stage02_SOAP表示与审计\03_输出\stage2_5_parameter_sensitivity.csv` | 254 B | Stage02.5 表示审计产物。 | 4 行 × 7 列 [n_max, l_max, feature_dimension, linalg_warning, warning_count, vectors_finite …] |
-| `Stage02_SOAP表示与审计\03_输出\stage2_75_atom_metadata.csv` | 1.17 MB | Stage02.75 全人口 SOAP 与距离审计产物。 | 4,659 行 × 19 列 [structure, region, atom_id, x, y, z …] |
-| `Stage02_SOAP表示与审计\03_输出\stage2_75_bulk_distance_distributions.png` | 35.4 KB | Stage02.75 全人口 SOAP 与距离审计产物。 |  |
-| `Stage02_SOAP表示与审计\03_输出\stage2_75_distance_decomposition.png` | 161.5 KB | ★ 距离分解图：把 SOAP 距离拆成范数贡献与形状贡献。这是“原始距离含义不纯”的关键证据图。 |  |
-| `Stage02_SOAP表示与审计\03_输出\stage2_75_distance_vs_PEATOM.png` | 149.4 KB | Stage02.75 全人口 SOAP 与距离审计产物。 |  |
-| `Stage02_SOAP表示与审计\03_输出\stage2_75_distance_vs_z.png` | 111.7 KB | Stage02.75 全人口 SOAP 与距离审计产物。 |  |
-| `Stage02_SOAP表示与审计\03_输出\stage2_75_norm_distributions.png` | 29.2 KB | Stage02.75 全人口 SOAP 与距离审计产物。 |  |
-| `Stage02_SOAP表示与审计\03_输出\stage2_75_pairwise_summary.csv` | 4.5 KB | Stage02.75 全人口 SOAP 与距离审计产物。 | 21 行 × 12 列 [category, metric, N, min, p5, p25 …] |
-| `Stage02_SOAP表示与审计\03_输出\stage2_75_population_summary.csv` | 7.7 KB | Stage02.75 全人口 SOAP 与距离审计产物。 | 40 行 × 12 列 [category, metric, N, min, p5, p25 …] |
-| `Stage02_SOAP表示与审计\03_输出\stage2_75_ptm_cna_summary.csv` | 2.8 KB | Stage02.75 全人口 SOAP 与距离审计产物。 | 16 行 × 12 列 [structure, group_type, group_value, N, soap_norm_median, soap_norm_iqr …] |
-| `Stage03_LAE阈值与LAE_LER构建\03_输出\stage3a_bulk_behavior_vs_epsilon.png` | 32.0 KB | Stage03A 阈值扫描产物：衡量 epsilon 取值对结果的影响。 |  |
-| `Stage03_LAE阈值与LAE_LER构建\03_输出\stage3a_class_count_vs_epsilon.png` | 21.0 KB | Stage03A 阈值扫描产物：衡量 epsilon 取值对结果的影响。 |  |
-| `Stage03_LAE阈值与LAE_LER构建\03_输出\stage3a_epsilon_grid.csv` | 5.0 KB | Stage03A 阈值扫描产物：衡量 epsilon 取值对结果的影响。 | 115 行 × 3 列 [index, epsilon, source] |
-| `Stage03_LAE阈值与LAE_LER构建\03_输出\stage3a_epsilon_sweep.csv` | 89.4 KB | epsilon 阈值扫描结果。证明了阈值轻微变动就会改变分类数——离散 LAE 不稳。 | 115 行 × 55 列 [epsilon, n_classes_mean, n_classes_std, singleton_class_fraction_mean, singleton_class_fraction_std, atom_singleton_fraction_mean …] |
-| `Stage03_LAE阈值与LAE_LER构建\03_输出\stage3a_nearest_neighbor_distances.csv` | 331.0 KB | Stage03A 阈值扫描产物：衡量 epsilon 取值对结果的影响。 | 4,659 行 × 9 列 [row_index, structure, region, atom_id, nearest_neighbor_row, nearest_neighbor_structure …] |
-| `Stage03_LAE阈值与LAE_LER构建\03_输出\stage3a_nearest_neighbor_summary.csv` | 2.0 KB | Stage03A 阈值扫描产物：衡量 epsilon 取值对结果的影响。 | 7 行 × 15 列 [group, N, min, p1, p5, p10 …] |
-| `Stage03_LAE阈值与LAE_LER构建\03_输出\stage3a_nn_distributions.png` | 25.1 KB | Stage03A 阈值扫描产物：衡量 epsilon 取值对结果的影响。 |  |
-| `Stage03_LAE阈值与LAE_LER构建\03_输出\stage3a_order_dependence_vs_epsilon.png` | 22.4 KB | Stage03A 阈值扫描产物：衡量 epsilon 取值对结果的影响。 |  |
-| `Stage03_LAE阈值与LAE_LER构建\03_输出\stage3a_partition_stability.csv` | 2.4 KB | Stage03A 阈值扫描产物：衡量 epsilon 取值对结果的影响。 | 15 行 × 11 列 [epsilon, epsilon_index, n_pairs, n_classes_mean, ari_mean, ari_median …] |
-| `Stage03_LAE阈值与LAE_LER构建\03_输出\stage3a_partition_stability_vs_epsilon.png` | 24.8 KB | Stage03A 阈值扫描产物：衡量 epsilon 取值对结果的影响。 |  |
-| `Stage03_LAE阈值与LAE_LER构建\03_输出\stage3a_refined_epsilon_sweep.csv` | 28.1 KB | Stage03A 阈值扫描产物：衡量 epsilon 取值对结果的影响。 | 35 行 × 55 列 [epsilon, n_classes_mean, n_classes_std, singleton_class_fraction_mean, singleton_class_fraction_std, atom_singleton_fraction_mean …] |
-| `Stage03_LAE阈值与LAE_LER构建\03_输出\stage3a_refined_threshold_plot.png` | 25.9 KB | Stage03A 阈值扫描产物：衡量 epsilon 取值对结果的影响。 |  |
-| `Stage03_LAE阈值与LAE_LER构建\03_输出\stage3a_singleton_fraction_vs_epsilon.png` | 19.2 KB | Stage03A 阈值扫描产物：衡量 epsilon 取值对结果的影响。 |  |
-| `Stage03_LAE阈值与LAE_LER构建\03_输出\stage3a_threshold_candidates.csv` | 281 B | Stage03A 阈值扫描产物：衡量 epsilon 取值对结果的影响。 | 1 行 × 10 列 [interval_id, epsilon_min, epsilon_max, n_grid_points, n_classes_median_min, n_classes_median_max …] |
-| `Stage03_LAE阈值与LAE_LER构建\03_输出\stage3b_atomwise_mid_epsilon.csv` | 611.5 KB | Stage03B 类别构建产物：LAE 分类与 LER 人口指纹。 | 4,659 行 × 14 列 [row_index, atom_id, x, y, z, class_id …] |
-| `Stage03_LAE阈值与LAE_LER构建\03_输出\stage3b_canonical_classes.csv` | 2.6 KB | Stage03B 类别构建产物：LAE 分类与 LER 人口指纹。 | 25 行 × 12 列 [epsilon, class_id, representative_atom_id, total, stable_interface, metastable_interface …] |
-| `Stage03_LAE阈值与LAE_LER构建\03_输出\stage3b_class_compactness.csv` | 3.0 KB | Stage03B 类别构建产物：LAE 分类与 LER 人口指纹。 | 25 行 × 9 列 [epsilon, class_id, n_atoms, n_pairs, diameter, median_within_distance …] |
-| `Stage03_LAE阈值与LAE_LER构建\03_输出\stage3b_class_compactness.png` | 18.2 KB | Stage03B 类别构建产物：LAE 分类与 LER 人口指纹。 |  |
-| `Stage03_LAE阈值与LAE_LER构建\03_输出\stage3b_class_population_vs_epsilon.png` | 18.3 KB | Stage03B 类别构建产物：LAE 分类与 LER 人口指纹。 |  |
-| `Stage03_LAE阈值与LAE_LER构建\03_输出\stage3b_class_statistics.csv` | 33.8 KB | Stage03B 类别构建产物：LAE 分类与 LER 人口指纹。 | 821 行 × 5 列 [epsilon, class_id, stat, group, value] |
-| `Stage03_LAE阈值与LAE_LER构建\03_输出\stage3b_epsilon_set.csv` | 544 B | Stage03B 类别构建产物：LAE 分类与 LER 人口指纹。 | 5 行 × 4 列 [epsilon, role, source, rationale] |
-| `Stage03_LAE阈值与LAE_LER构建\03_输出\stage3b_lae_vs_z_metastable.png` | 13.1 KB | Stage03B 类别构建产物：LAE 分类与 LER 人口指纹。 |  |
-| `Stage03_LAE阈值与LAE_LER构建\03_输出\stage3b_lae_vs_z_stable.png` | 13.2 KB | Stage03B 类别构建产物：LAE 分类与 LER 人口指纹。 |  |
-| `Stage03_LAE阈值与LAE_LER构建\03_输出\stage3b_ler_by_run.csv` | 42.1 KB | Stage03B 类别构建产物：LAE 分类与 LER 人口指纹。 | 772 行 × 8 列 [epsilon, run, seed, class_id_in_run, class_ordinal_in_run, occupancy …] |
-| `Stage03_LAE阈值与LAE_LER构建\03_输出\stage3b_ler_comparison.csv` | 13.1 KB | Stage03B 类别构建产物：LAE 分类与 LER 人口指纹。 | 155 行 × 10 列 [epsilon, run, seed, level, l1, jsd …] |
-| `Stage03_LAE阈值与LAE_LER构建\03_输出\stage3b_ler_stable_vs_metastable.png` | 21.6 KB | Stage03B 类别构建产物：LAE 分类与 LER 人口指纹。 |  |
-| `Stage03_LAE阈值与LAE_LER构建\03_输出\stage3b_ler_summary.csv` | 3.5 KB | Stage03B 类别构建产物：LAE 分类与 LER 人口指纹。 | 25 行 × 11 列 [epsilon, class_id, class_rank, n_runs_matched, occupancy_median_medoid, occupancy_mean …] |
-| `Stage03_LAE阈值与LAE_LER构建\03_输出\stage3b_ler_vs_epsilon.png` | 27.1 KB | Stage03B 类别构建产物：LAE 分类与 LER 人口指纹。 |  |
-| `Stage03_LAE阈值与LAE_LER构建\03_输出\stage3b_mid_epsilon_lae.xyz` | 543.2 KB | Stage03B 类别构建产物：LAE 分类与 LER 人口指纹。 | 4,659 原子 · 附加列: Ni LAE_LER representation for epsilon_mid (visual inspection only) |
-| `Stage03_LAE阈值与LAE_LER构建\03_输出\stage3b_partition_ari.csv` | 67.3 KB | ★ 不同随机顺序下分区的一致性（ARI）。这是判定贪心 LAE “有顺序依赖、不可作为物理分类”的量化依据。 | 2,175 行 × 4 列 [epsilon, run_i, run_j, ari] |
-| `Stage03_LAE阈值与LAE_LER构建\03_输出\stage3b_representative_atoms.csv` | 6.5 KB | Stage03B 类别构建产物：LAE 分类与 LER 人口指纹。 | 50 行 × 13 列 [epsilon, class_id, role, atom_id, structure, region …] |
-| `Stage03_LAE阈值与LAE_LER构建\03_输出\stage3b_run_summary.csv` | 7.4 KB | Stage03B 类别构建产物：LAE 分类与 LER 人口指纹。 | 150 行 × 7 列 [epsilon, run, seed, n_classes, mean_ari_to_others, min_ari_to_others …] |
-| `Stage04_无序度与能量关联\03_输出\stage4a_atomwise_disorder.csv` | 997.6 KB | ★ 逐原子无序度 D。本项目提出的连续结构坐标，是后续所有关联分析的自变量。 | 4,659 行 × 17 列 [structure, region, atom_id, x, y, z …] |
-| `Stage04_无序度与能量关联\03_输出\stage4a_bootstrap_summary.csv` | 942 B | Stage04A 连续无序度产物。 | 6 行 × 8 列 [parameter, observed, bootstrap_mean, bootstrap_std, ci_low, ci_high …] |
-| `Stage04_无序度与能量关联\03_输出\stage4a_bulk_disorder_distribution.png` | 19.7 KB | Stage04A 连续无序度产物。 |  |
-| `Stage04_无序度与能量关联\03_输出\stage4a_four_group_disorder.png` | 23.8 KB | Stage04A 连续无序度产物。 |  |
-| `Stage04_无序度与能量关联\03_输出\stage4a_group_statistics.csv` | 3.4 KB | Stage04A 连续无序度产物。 | 16 行 × 13 列 [group, k, n, mean, median, std …] |
-| `Stage04_无序度与能量关联\03_输出\stage4a_interface_disorder_distribution.png` | 22.8 KB | Stage04A 连续无序度产物。 |  |
-| `Stage04_无序度与能量关联\03_输出\stage4a_k_robustness.csv` | 1.5 KB | Stage04A 连续无序度产物。 | 15 行 × 7 列 [scope, k_a, k_b, pearson, spearman, median_abs_diff …] |
-| `Stage04_无序度与能量关联\03_输出\stage4a_k_sensitivity.png` | 17.2 KB | Stage04A 连续无序度产物。 |  |
-| `Stage04_无序度与能量关联\03_输出\stage4a_metastable_disorder.xyz` | 136.2 KB | Stage04A 连续无序度产物。 | 2,559 原子 · 附加列: Ni D10 continuous SOAP disorder (visualization only) |
-| `Stage04_无序度与能量关联\03_输出\stage4a_pca_disorder.png` | 61.5 KB | Stage04A 连续无序度产物。 |  |
-| `Stage04_无序度与能量关联\03_输出\stage4a_pca_groups.png` | 31.8 KB | Stage04A 连续无序度产物。 |  |
-| `Stage04_无序度与能量关联\03_输出\stage4a_pca_peatom.png` | 60.9 KB | Stage04A 连续无序度产物。 |  |
-| `Stage04_无序度与能量关联\03_输出\stage4a_pca_variance.csv` | 459 B | Stage04A 连续无序度产物。 | 10 行 × 3 列 [pc, explained_variance_ratio, cumulative] |
-| `Stage04_无序度与能量关联\03_输出\stage4a_reference_sensitivity.csv` | 1.2 KB | Stage04A 连续无序度产物。 | 10 行 × 7 列 [comparison, k, scope, pearson, spearman, median_abs_diff …] |
-| `Stage04_无序度与能量关联\03_输出\stage4a_stable_disorder.xyz` | 111.7 KB | Stage04A 连续无序度产物。 | 2,100 原子 · 附加列: Ni D10 continuous SOAP disorder (visualization only) |
-| `Stage04_无序度与能量关联\03_输出\stage4b_all_atoms_scatter.png` | 30.6 KB | Stage04B 无序度-能量关联产物。 |  |
-| `Stage04_无序度与能量关联\03_输出\stage4b_atomwise_energy_disorder.csv` | 1.26 MB | 逐原子的无序度与能量配对表，用于考察 D 与能量的关系。 | 4,659 行 × 21 列 [structure, region, atom_id, x, y, z …] |
-| `Stage04_无序度与能量关联\03_输出\stage4b_binned_interface_trend.csv` | 2.6 KB | Stage04B 无序度-能量关联产物。 | 18 行 × 9 列 [bin_id, n, disorder_low, disorder_high, median_disorder, median_dE …] |
-| `Stage04_无序度与能量关联\03_输出\stage4b_binned_metastable_trend.csv` | 1.7 KB | Stage04B 无序度-能量关联产物。 | 12 行 × 9 列 [bin_id, n, disorder_low, disorder_high, median_disorder, median_dE …] |
-| `Stage04_无序度与能量关联\03_输出\stage4b_binned_stable_trend.csv` | 1.7 KB | Stage04B 无序度-能量关联产物。 | 12 行 × 9 列 [bin_id, n, disorder_low, disorder_high, median_disorder, median_dE …] |
-| `Stage04_无序度与能量关联\03_输出\stage4b_bootstrap_summary.csv` | 3.2 KB | Stage04B 无序度-能量关联产物。 | 16 行 × 9 列 [parameter, observed, bootstrap_mean, bootstrap_std, ci_low, ci_high …] |
-| `Stage04_无序度与能量关联\03_输出\stage4b_common_support_comparison.csv` | 1.1 KB | Stage04B 无序度-能量关联产物。 | 8 行 × 9 列 [bin_id, disorder_low, disorder_high, median_disorder, n_stable, n_metastable …] |
-| `Stage04_无序度与能量关联\03_输出\stage4b_conditional_state_difference.png` | 21.3 KB | Stage04B 无序度-能量关联产物。 |  |
-| `Stage04_无序度与能量关联\03_输出\stage4b_correlations.csv` | 1.2 KB | Stage04B 无序度-能量关联产物。 | 18 行 × 5 列 [baseline, scope, n, pearson, spearman] |
-| `Stage04_无序度与能量关联\03_输出\stage4b_energy_baselines.csv` | 90 B | Stage04B 无序度-能量关联产物。 | 3 行 × 3 列 [baseline, n, median_peatom] |
-| `Stage04_无序度与能量关联\03_输出\stage4b_fixed_disorder_energy_spread.csv` | 761 B | Stage04B 无序度-能量关联产物。 | 5 行 × 8 列 [disorder_low, disorder_high, n, mean_dE, median_dE, std_dE …] |
-| `Stage04_无序度与能量关联\03_输出\stage4b_group_energy_statistics.csv` | 877 B | Stage04B 无序度-能量关联产物。 | 4 行 × 11 列 [group, n, mean, median, std, q1 …] |
-| `Stage04_无序度与能量关联\03_输出\stage4b_interface_binned_trend.png` | 22.5 KB | Stage04B 无序度-能量关联产物。 |  |
-| `Stage04_无序度与能量关联\03_输出\stage4b_interface_scatter.png` | 28.8 KB | Stage04B 无序度-能量关联产物。 |  |
-| `Stage04_无序度与能量关联\03_输出\stage4b_k_robustness.csv` | 601 B | Stage04B 无序度-能量关联产物。 | 9 行 × 5 列 [k, scope, n, pearson, spearman] |
-| `Stage04_无序度与能量关联\03_输出\stage4b_metastable_interface_scatter.png` | 27.3 KB | Stage04B 无序度-能量关联产物。 |  |
-| `Stage04_无序度与能量关联\03_输出\stage4b_pca_disorder.png` | 61.5 KB | Stage04B 无序度-能量关联产物。 |  |
-| `Stage04_无序度与能量关联\03_输出\stage4b_pca_energy.png` | 62.3 KB | Stage04B 无序度-能量关联产物。 |  |
-| `Stage04_无序度与能量关联\03_输出\stage4b_pca_interface_energy.png` | 60.4 KB | Stage04B 无序度-能量关联产物。 |  |
-| `Stage04_无序度与能量关联\03_输出\stage4b_stable_interface_scatter.png` | 11.8 KB | Stage04B 无序度-能量关联产物。 |  |
-| `Stage04_无序度与能量关联\03_输出\stage4b_state_binned_trends.png` | 23.8 KB | Stage04B 无序度-能量关联产物。 |  |
-| `Stage05_物理空间与方向\03_输出\stage5a_atomwise_physical_descriptors.csv` | 1.44 MB | ★ 常规物理描述符（配位数、键应变、体积、CSP）。最终证明“解释力主要来自这些量而非 SOAP 方向”的就是它。 | 4,659 行 × 23 列 [state, atom_id, x, y, z, interface_id …] |
-| `Stage05_物理空间与方向\03_输出\stage5a_descriptor_correlations.csv` | 2.3 KB | Stage05A 物理描述符与空间分布产物。 | 30 行 × 5 列 [scope, descriptor, n, pearson, spearman] |
-| `Stage05_物理空间与方向\03_输出\stage5a_descriptor_group_statistics.csv` | 5.2 KB | Stage05A 物理描述符与空间分布产物。 | 40 行 × 8 列 [group, descriptor, n, mean, median, std …] |
-| `Stage05_物理空间与方向\03_输出\stage5a_disorder_bin_conditional_stats.csv` | 1.5 KB | Stage05A 物理描述符与空间分布产物。 | 10 行 × 9 列 [bin_id, disorder_low, disorder_high, n, spearman_cn, spearman_rms_bond_strain …] |
-| `Stage05_物理空间与方向\03_输出\stage5a_matched_neighborhoods.xyz` | 1.64 MB | Stage05A 物理描述符与空间分布产物。 | 63 原子 · 附加列: central=290 state=stable D10=9.768196778712806 dE=0.3807500000000008 Eres=0.003080000000000638 CN=10.0 RMS=0.052540184592867356 CSP=27.686566695884597 dV=-0.11575476290275333 |
-| `Stage05_物理空间与方向\03_输出\stage5a_matched_pair_energy_vs_disorder.png` | 27.2 KB | Stage05A 物理描述符与空间分布产物。 |  |
-| `Stage05_物理空间与方向\03_输出\stage5a_matched_pairs.csv` | 32.7 KB | Stage05A 物理描述符与空间分布产物。 | 72 行 × 32 列 [category, tolerance, atom_i_state, atom_i_id, atom_j_state, atom_j_id …] |
-| `Stage05_物理空间与方向\03_输出\stage5a_metastable_bond_strain_map.png` | 62.3 KB | Stage05A 物理描述符与空间分布产物。 |  |
-| `Stage05_物理空间与方向\03_输出\stage5a_metastable_disorder_map.png` | 62.5 KB | Stage05A 物理描述符与空间分布产物。 |  |
-| `Stage05_物理空间与方向\03_输出\stage5a_metastable_physical_descriptors.png` | 56.3 KB | Stage05A 物理描述符与空间分布产物。 |  |
-| `Stage05_物理空间与方向\03_输出\stage5a_metastable_residual_energy_map.png` | 60.0 KB | Stage05A 物理描述符与空间分布产物。 |  |
-| `Stage05_物理空间与方向\03_输出\stage5a_residual_definition.csv` | 251 B | Stage05A 物理描述符与空间分布产物。 | 4 行 × 5 列 [primary_bins, sensitivity_bins, spearman_with_primary, pearson_with_primary, n_interface] |
-| `Stage05_物理空间与方向\03_输出\stage5a_residual_vs_bond_strain.png` | 27.5 KB | Stage05A 物理描述符与空间分布产物。 |  |
-| `Stage05_物理空间与方向\03_输出\stage5a_residual_vs_cn.png` | 14.9 KB | Stage05A 物理描述符与空间分布产物。 |  |
-| `Stage05_物理空间与方向\03_输出\stage5a_residual_vs_csp.png` | 23.9 KB | Stage05A 物理描述符与空间分布产物。 |  |
-| `Stage05_物理空间与方向\03_输出\stage5a_residual_vs_disorder.png` | 26.7 KB | Stage05A 物理描述符与空间分布产物。 |  |
-| `Stage05_物理空间与方向\03_输出\stage5a_residual_vs_excess_volume.png` | 25.8 KB | Stage05A 物理描述符与空间分布产物。 |  |
-| `Stage05_物理空间与方向\03_输出\stage5a_spatial_autocorrelation.csv` | 16.3 KB | Stage05A 物理描述符与空间分布产物。 | 240 行 × 7 列 [state, interface_id, field, r_mid, n_pairs, autocov …] |
-| `Stage05_物理空间与方向\03_输出\stage5a_spatial_autocorrelation.png` | 59.2 KB | Stage05A 物理描述符与空间分布产物。 |  |
-| `Stage05_物理空间与方向\03_输出\stage5a_spatial_patchiness.csv` | 982 B | Stage05A 物理描述符与空间分布产物。 | 8 行 × 8 列 [state, interface_id, set, n, nearest_neighbor_distance, fraction_within_3.0A …] |
-| `Stage05_物理空间与方向\03_输出\stage5a_stable_bond_strain_map.png` | 49.5 KB | Stage05A 物理描述符与空间分布产物。 |  |
-| `Stage05_物理空间与方向\03_输出\stage5a_stable_disorder_map.png` | 46.7 KB | Stage05A 物理描述符与空间分布产物。 |  |
-| `Stage05_物理空间与方向\03_输出\stage5a_stable_physical_descriptors.png` | 55.1 KB | Stage05A 物理描述符与空间分布产物。 |  |
-| `Stage05_物理空间与方向\03_输出\stage5a_stable_residual_energy_map.png` | 44.9 KB | Stage05A 物理描述符与空间分布产物。 |  |
-| `Stage05_物理空间与方向\03_输出\stage5b_atomwise_soap_direction.csv` | 1.41 MB | Stage05B SOAP 方向相关产物。 | 4,659 行 × 25 列 [structure, atom_id, x, y, z, interface_id …] |
-| `Stage05_物理空间与方向\03_输出\stage5b_direction_autocorrelation.csv` | 2.4 KB | Stage05B SOAP 方向相关产物。 | 60 行 × 5 列 [state, interface_id, r_mid, n_pairs, mean_cosine] |
-| `Stage05_物理空间与方向\03_输出\stage5b_direction_similarity_distributions.png` | 22.0 KB | Stage05B SOAP 方向相关产物。 |  |
-| `Stage05_物理空间与方向\03_输出\stage5b_direction_vs_disorder.png` | 123.3 KB | Stage05B SOAP 方向相关产物。 |  |
-| `Stage05_物理空间与方向\03_输出\stage5b_direction_vs_residual_energy.png` | 60.5 KB | Stage05B SOAP 方向相关产物。 |  |
-| `Stage05_物理空间与方向\03_输出\stage5b_direction_vs_stage5a_descriptors.png` | 49.4 KB | Stage05B SOAP 方向相关产物。 |  |
-| `Stage05_物理空间与方向\03_输出\stage5b_directional_energy_statistics.csv` | 3.4 KB | Stage05B SOAP 方向相关产物。 | 12 行 × 7 列 [tolerance, category, n_pairs, spearman, pearson, median_dE_by_direction_quintile …] |
-| `Stage05_物理空间与方向\03_输出\stage5b_directional_statistics.csv` | 652 B | Stage05B SOAP 方向相关产物。 | 3 行 × 10 列 [category, n_pairs, cosine_mean, cosine_median, cosine_std, cosine_q1 …] |
-| `Stage05_物理空间与方向\03_输出\stage5b_matched_energy_difference_vs_direction.png` | 45.6 KB | Stage05B SOAP 方向相关产物。 |  |
-| `Stage05_物理空间与方向\03_输出\stage5b_metastable_direction_autocorrelation.png` | 25.0 KB | Stage05B SOAP 方向相关产物。 |  |
-| `Stage05_物理空间与方向\03_输出\stage5b_pca_direction.png` | 33.0 KB | Stage05B SOAP 方向相关产物。 |  |
-| `Stage05_物理空间与方向\03_输出\stage5b_pca_displacement.png` | 30.9 KB | Stage05B SOAP 方向相关产物。 |  |
-| `Stage05_物理空间与方向\03_输出\stage5b_pca_displacement_3d.png` | 37.4 KB | Stage05B SOAP 方向相关产物。 |  |
-| `Stage05_物理空间与方向\03_输出\stage5b_pca_summary.csv` | 1.1 KB | Stage05B SOAP 方向相关产物。 | 20 行 × 4 列 [pca_type, pc, explained_variance_ratio, cumulative] |
-| `Stage05_物理空间与方向\03_输出\stage5b_permutation_null.csv` | 227 B | Stage05B SOAP 方向相关产物。 | 1 行 × 8 列 [observed_spearman, null_mean, null_std, null_p5, null_p95, n_permutations …] |
-| `Stage05_物理空间与方向\03_输出\stage5b_representative_cases.csv` | 3.9 KB | Stage05B SOAP 方向相关产物。 | 8 行 × 30 列 [category, tolerance, state_i, atom_i, state_j, atom_j …] |
-| `Stage05_物理空间与方向\03_输出\stage5b_representative_cases.png` | 35.8 KB | Stage05B SOAP 方向相关产物。 |  |
-| `Stage05_物理空间与方向\03_输出\stage5b_representative_direction_cases.xyz` | 117.4 KB | Stage05B SOAP 方向相关产物。 | 59 原子 · 附加列: central=1180 state=stable D=12.14652217671282 dE=-0.0661999999999993 Eres=-0.0015399999999998 CN=13.0 RMS=0.0613492856268347 CSP=9.284815819772238 dV=1.9134011445628063 |
-| `Stage05_物理空间与方向\03_输出\stage5b_stable_direction_autocorrelation.png` | 25.0 KB | Stage05B SOAP 方向相关产物。 |  |
-| `Stage06_最终评估\03_输出\stage6_correlations.csv` | 24.7 KB | ★ 全项目最终相关系数：原始 0.8317，控制物理描述符后降到 0.2058。这是方法线最重要的产出。 | 无序度 D 与位移范数相关 0.99998 · D 与过剩能相关 0.277 |
-| `Stage06_最终评估\03_输出\stage6_direction_by_disorder_bin.csv` | 1.4 KB | Stage06 最终评估产物：相关系数、模型对比与稳健性检验。 | 20 行 × 6 列 [state, bin, n, median_D, mean_within_cosine, median_within_cosine] |
-| `Stage06_最终评估\03_输出\stage6_directional_heterogeneity.png` | 21.7 KB | Stage06 最终评估产物：相关系数、模型对比与稳健性检验。 |  |
-| `Stage06_最终评估\03_输出\stage6_energy_model_improvement.png` | 20.5 KB | Stage06 最终评估产物：相关系数、模型对比与稳健性检验。 |  |
-| `Stage06_最终评估\03_输出\stage6_energy_models.csv` | 732 B | ★ 能量模型 R² 对比：仅 D 为 0.0393，加入物理描述符后 0.9869。量化了 SOAP 坐标的增量信息有限。 | Model0_D: R²=0.0393 · Model1_D_phys: R²=0.9869 · Model2_D_phys_dir: R²=0.9886 · ModelD_D_dir: R²=0.7497 |
-| `Stage06_最终评估\03_输出\stage6_figure_summary.csv` | 536 B | Stage06 最终评估产物：相关系数、模型对比与稳健性检验。 | 6 行 × 2 列 [figure, content] |
-| `Stage06_最终评估\03_输出\stage6_magnitude_matched_direction_energy.png` | 45.2 KB | Stage06 最终评估产物：相关系数、模型对比与稳健性检验。 |  |
-| `Stage06_最终评估\03_输出\stage6_matched_analysis.csv` | 3.4 KB | Stage06 最终评估产物：相关系数、模型对比与稳健性检验。 | 16 行 × 12 列 [tolerance, category, n_pairs, spearman, pearson, bootstrap_ci_low …] |
-| `Stage06_最终评估\03_输出\stage6_representative_cases.png` | 35.7 KB | Stage06 最终评估产物：相关系数、模型对比与稳健性检验。 |  |
-| `Stage06_最终评估\03_输出\stage6_representative_directional_cases.csv` | 7.8 KB | Stage06 最终评估产物：相关系数、模型对比与稳健性检验。 | 12 行 × 42 列 [category, tolerance, state_i, atom_i, state_j, atom_j …] |
-| `Stage06_最终评估\03_输出\stage6_robustness.csv` | 211 B | Stage06 最终评估产物：相关系数、模型对比与稳健性检验。 | 4 行 × 3 列 [condition, n_pairs, spearman] |
-| `Stage06_最终评估\03_输出\stage6_scalar_disorder_vs_energy.png` | 28.5 KB | Stage06 最终评估产物：相关系数、模型对比与稳健性检验。 |  |
-| `Stage06_最终评估\03_输出\stage6_spatial_direction_residual.png` | 80.3 KB | Stage06 最终评估产物：相关系数、模型对比与稳健性检验。 |  |
-| `Stage06_最终评估\03_输出\stage6_spatial_summary.csv` | 955 B | Stage06 最终评估产物：相关系数、模型对比与稳健性检验。 | 8 行 × 9 列 [state, interface_id, field, n, mean, std …] |
-| `Stage06_最终评估\03_输出\stage6_state_classification.csv` | 1.1 KB | Stage06 最终评估产物：相关系数、模型对比与稳健性检验。 | 10 行 × 8 列 [test_interface, n_train, n_test, roc_auc, balanced_accuracy, f1 …] |
 | `experiments\2026-11-01_audit\candidate_decision_table.csv` | 2.4 KB | 数据表。 | 12 行 × 15 列 [config_id, metric, r_cut, sigma, n_max, l_max …] |
 | `experiments\2026-11-01_audit\converged_counts_by_scale.csv` | 389 B | 数据表。 | 24 行 × 4 列 [metric, r_cut, sigma, converged_count] |
 | `experiments\2026-11-01_audit\convergence_edges.csv` | 98.0 KB | 数据表。 | 744 行 × 12 列 [axis, lower, upper, metric, r_cut, sigma …] |
@@ -680,38 +530,162 @@
 | `experiments\2026-11-01_radial_followup\polynomial_summary.csv` | 1.6 KB | 数据表。 | 6 行 × 16 列 [config_id, r_cut, sigma, n_max, l_max, rbf …] |
 | `experiments\2026-11-01_radial_followup\rotation_audit.csv` | 11.3 KB | 数据表。 | 144 行 × 9 列 [rbf, r_cut, n_max, l_max, periodic, seed …] |
 | `experiments\2026-11-01_radial_followup\rotation_audit_by_l.csv` | 13.0 KB | 数据表。 | 264 行 × 6 列 [rbf, r_cut, periodic, seed, l, block_difference_over_full_norm] |
+| `history\stages\00_汇总报告\项目文件索引_按阶段.csv` | 60.2 KB | 数据表。 | 209 行 × 11 列 [Stage, Category, Subcategory, RelativePath, FileName, Extension …] |
+| `history\stages\Stage01_数据准备与SOAP初测\03_输出\inspection_summary.txt` | 2.8 KB | 纯文本结果或检查报告。 |  |
+| `history\stages\Stage01_数据准备与SOAP初测\03_输出\soap_test_summary.txt` | 1.4 KB | 纯文本结果或检查报告。 |  |
+| `history\stages\Stage01_数据准备与SOAP初测\03_输出\stage1_qc_report.txt` | 7.3 KB | Stage01 数据准备与初测产物。 |  |
+| `history\stages\Stage02_SOAP表示与审计\03_输出\representative_atoms.csv` | 4.8 KB | 数据表。 | 33 行 × 12 列 [structure, atom_index, id, ptm, cna, peatom …] |
+| `history\stages\Stage02_SOAP表示与审计\03_输出\soap_similarity_heatmap.png` | 181.7 KB | 图表，可直接用于报告或论文。 |  |
+| `history\stages\Stage02_SOAP表示与审计\03_输出\soap_similarity_matrix.csv` | 11.4 KB | 数据表。 | 33 行 × 34 列 [label, stable|15487|bulk, stable|3157|bulk, stable|2287|bulk, stable|8226|bulk, stable|8836|non_dominant …] |
+| `history\stages\Stage02_SOAP表示与审计\03_输出\spatial_profile_metastable.png` | 121.9 KB | 图表，可直接用于报告或论文。 |  |
+| `history\stages\Stage02_SOAP表示与审计\03_输出\spatial_profile_stable.png` | 109.9 KB | 图表，可直接用于报告或论文。 |  |
+| `history\stages\Stage02_SOAP表示与审计\03_输出\spatial_profile_summary.txt` | 1.3 KB | 纯文本结果或检查报告。 |  |
+| `history\stages\Stage02_SOAP表示与审计\03_输出\stage2_5_atom_metadata.csv` | 4.4 KB | Stage02.5 表示审计产物。 | 33 行 × 12 列 [row_index, structure, atom_index, atom_id, x, y …] |
+| `history\stages\Stage02_SOAP表示与审计\03_输出\stage2_5_metric_heatmaps.png` | 218.3 KB | Stage02.5 表示审计产物。 |  |
+| `history\stages\Stage02_SOAP表示与审计\03_输出\stage2_5_pair_category_summary.csv` | 4.0 KB | Stage02.5 表示审计产物。 | 28 行 × 8 列 [category, metric, n_pairs, min, median, mean …] |
+| `history\stages\Stage02_SOAP表示与审计\03_输出\stage2_5_pairwise_metrics.csv` | 104.2 KB | Stage02.5 表示审计产物。 | 528 行 × 20 列 [row_i, structure_i, atom_id_i, ptm_i, cna_i, peatom_i …] |
+| `history\stages\Stage02_SOAP表示与审计\03_输出\stage2_5_parameter_sensitivity.csv` | 254 B | Stage02.5 表示审计产物。 | 4 行 × 7 列 [n_max, l_max, feature_dimension, linalg_warning, warning_count, vectors_finite …] |
+| `history\stages\Stage02_SOAP表示与审计\03_输出\stage2_75_atom_metadata.csv` | 1.17 MB | Stage02.75 全人口 SOAP 与距离审计产物。 | 4,659 行 × 19 列 [structure, region, atom_id, x, y, z …] |
+| `history\stages\Stage02_SOAP表示与审计\03_输出\stage2_75_bulk_distance_distributions.png` | 35.4 KB | Stage02.75 全人口 SOAP 与距离审计产物。 |  |
+| `history\stages\Stage02_SOAP表示与审计\03_输出\stage2_75_distance_decomposition.png` | 161.5 KB | ★ 距离分解图：把 SOAP 距离拆成范数贡献与形状贡献。这是“原始距离含义不纯”的关键证据图。 |  |
+| `history\stages\Stage02_SOAP表示与审计\03_输出\stage2_75_distance_vs_PEATOM.png` | 149.4 KB | Stage02.75 全人口 SOAP 与距离审计产物。 |  |
+| `history\stages\Stage02_SOAP表示与审计\03_输出\stage2_75_distance_vs_z.png` | 111.7 KB | Stage02.75 全人口 SOAP 与距离审计产物。 |  |
+| `history\stages\Stage02_SOAP表示与审计\03_输出\stage2_75_norm_distributions.png` | 29.2 KB | Stage02.75 全人口 SOAP 与距离审计产物。 |  |
+| `history\stages\Stage02_SOAP表示与审计\03_输出\stage2_75_pairwise_summary.csv` | 4.5 KB | Stage02.75 全人口 SOAP 与距离审计产物。 | 21 行 × 12 列 [category, metric, N, min, p5, p25 …] |
+| `history\stages\Stage02_SOAP表示与审计\03_输出\stage2_75_population_summary.csv` | 7.7 KB | Stage02.75 全人口 SOAP 与距离审计产物。 | 40 行 × 12 列 [category, metric, N, min, p5, p25 …] |
+| `history\stages\Stage02_SOAP表示与审计\03_输出\stage2_75_ptm_cna_summary.csv` | 2.8 KB | Stage02.75 全人口 SOAP 与距离审计产物。 | 16 行 × 12 列 [structure, group_type, group_value, N, soap_norm_median, soap_norm_iqr …] |
+| `history\stages\Stage03_LAE阈值与LAE_LER构建\03_输出\stage3a_bulk_behavior_vs_epsilon.png` | 32.0 KB | Stage03A 阈值扫描产物：衡量 epsilon 取值对结果的影响。 |  |
+| `history\stages\Stage03_LAE阈值与LAE_LER构建\03_输出\stage3a_class_count_vs_epsilon.png` | 21.0 KB | Stage03A 阈值扫描产物：衡量 epsilon 取值对结果的影响。 |  |
+| `history\stages\Stage03_LAE阈值与LAE_LER构建\03_输出\stage3a_epsilon_grid.csv` | 5.0 KB | Stage03A 阈值扫描产物：衡量 epsilon 取值对结果的影响。 | 115 行 × 3 列 [index, epsilon, source] |
+| `history\stages\Stage03_LAE阈值与LAE_LER构建\03_输出\stage3a_epsilon_sweep.csv` | 89.4 KB | epsilon 阈值扫描结果。证明了阈值轻微变动就会改变分类数——离散 LAE 不稳。 | 115 行 × 55 列 [epsilon, n_classes_mean, n_classes_std, singleton_class_fraction_mean, singleton_class_fraction_std, atom_singleton_fraction_mean …] |
+| `history\stages\Stage03_LAE阈值与LAE_LER构建\03_输出\stage3a_nearest_neighbor_distances.csv` | 331.0 KB | Stage03A 阈值扫描产物：衡量 epsilon 取值对结果的影响。 | 4,659 行 × 9 列 [row_index, structure, region, atom_id, nearest_neighbor_row, nearest_neighbor_structure …] |
+| `history\stages\Stage03_LAE阈值与LAE_LER构建\03_输出\stage3a_nearest_neighbor_summary.csv` | 2.0 KB | Stage03A 阈值扫描产物：衡量 epsilon 取值对结果的影响。 | 7 行 × 15 列 [group, N, min, p1, p5, p10 …] |
+| `history\stages\Stage03_LAE阈值与LAE_LER构建\03_输出\stage3a_nn_distributions.png` | 25.1 KB | Stage03A 阈值扫描产物：衡量 epsilon 取值对结果的影响。 |  |
+| `history\stages\Stage03_LAE阈值与LAE_LER构建\03_输出\stage3a_order_dependence_vs_epsilon.png` | 22.4 KB | Stage03A 阈值扫描产物：衡量 epsilon 取值对结果的影响。 |  |
+| `history\stages\Stage03_LAE阈值与LAE_LER构建\03_输出\stage3a_partition_stability.csv` | 2.4 KB | Stage03A 阈值扫描产物：衡量 epsilon 取值对结果的影响。 | 15 行 × 11 列 [epsilon, epsilon_index, n_pairs, n_classes_mean, ari_mean, ari_median …] |
+| `history\stages\Stage03_LAE阈值与LAE_LER构建\03_输出\stage3a_partition_stability_vs_epsilon.png` | 24.8 KB | Stage03A 阈值扫描产物：衡量 epsilon 取值对结果的影响。 |  |
+| `history\stages\Stage03_LAE阈值与LAE_LER构建\03_输出\stage3a_refined_epsilon_sweep.csv` | 28.1 KB | Stage03A 阈值扫描产物：衡量 epsilon 取值对结果的影响。 | 35 行 × 55 列 [epsilon, n_classes_mean, n_classes_std, singleton_class_fraction_mean, singleton_class_fraction_std, atom_singleton_fraction_mean …] |
+| `history\stages\Stage03_LAE阈值与LAE_LER构建\03_输出\stage3a_refined_threshold_plot.png` | 25.9 KB | Stage03A 阈值扫描产物：衡量 epsilon 取值对结果的影响。 |  |
+| `history\stages\Stage03_LAE阈值与LAE_LER构建\03_输出\stage3a_singleton_fraction_vs_epsilon.png` | 19.2 KB | Stage03A 阈值扫描产物：衡量 epsilon 取值对结果的影响。 |  |
+| `history\stages\Stage03_LAE阈值与LAE_LER构建\03_输出\stage3a_threshold_candidates.csv` | 281 B | Stage03A 阈值扫描产物：衡量 epsilon 取值对结果的影响。 | 1 行 × 10 列 [interval_id, epsilon_min, epsilon_max, n_grid_points, n_classes_median_min, n_classes_median_max …] |
+| `history\stages\Stage03_LAE阈值与LAE_LER构建\03_输出\stage3b_atomwise_mid_epsilon.csv` | 611.5 KB | Stage03B 类别构建产物：LAE 分类与 LER 人口指纹。 | 4,659 行 × 14 列 [row_index, atom_id, x, y, z, class_id …] |
+| `history\stages\Stage03_LAE阈值与LAE_LER构建\03_输出\stage3b_canonical_classes.csv` | 2.6 KB | Stage03B 类别构建产物：LAE 分类与 LER 人口指纹。 | 25 行 × 12 列 [epsilon, class_id, representative_atom_id, total, stable_interface, metastable_interface …] |
+| `history\stages\Stage03_LAE阈值与LAE_LER构建\03_输出\stage3b_class_compactness.csv` | 3.0 KB | Stage03B 类别构建产物：LAE 分类与 LER 人口指纹。 | 25 行 × 9 列 [epsilon, class_id, n_atoms, n_pairs, diameter, median_within_distance …] |
+| `history\stages\Stage03_LAE阈值与LAE_LER构建\03_输出\stage3b_class_compactness.png` | 18.2 KB | Stage03B 类别构建产物：LAE 分类与 LER 人口指纹。 |  |
+| `history\stages\Stage03_LAE阈值与LAE_LER构建\03_输出\stage3b_class_population_vs_epsilon.png` | 18.3 KB | Stage03B 类别构建产物：LAE 分类与 LER 人口指纹。 |  |
+| `history\stages\Stage03_LAE阈值与LAE_LER构建\03_输出\stage3b_class_statistics.csv` | 33.8 KB | Stage03B 类别构建产物：LAE 分类与 LER 人口指纹。 | 821 行 × 5 列 [epsilon, class_id, stat, group, value] |
+| `history\stages\Stage03_LAE阈值与LAE_LER构建\03_输出\stage3b_epsilon_set.csv` | 544 B | Stage03B 类别构建产物：LAE 分类与 LER 人口指纹。 | 5 行 × 4 列 [epsilon, role, source, rationale] |
+| `history\stages\Stage03_LAE阈值与LAE_LER构建\03_输出\stage3b_lae_vs_z_metastable.png` | 13.1 KB | Stage03B 类别构建产物：LAE 分类与 LER 人口指纹。 |  |
+| `history\stages\Stage03_LAE阈值与LAE_LER构建\03_输出\stage3b_lae_vs_z_stable.png` | 13.2 KB | Stage03B 类别构建产物：LAE 分类与 LER 人口指纹。 |  |
+| `history\stages\Stage03_LAE阈值与LAE_LER构建\03_输出\stage3b_ler_by_run.csv` | 42.1 KB | Stage03B 类别构建产物：LAE 分类与 LER 人口指纹。 | 772 行 × 8 列 [epsilon, run, seed, class_id_in_run, class_ordinal_in_run, occupancy …] |
+| `history\stages\Stage03_LAE阈值与LAE_LER构建\03_输出\stage3b_ler_comparison.csv` | 13.1 KB | Stage03B 类别构建产物：LAE 分类与 LER 人口指纹。 | 155 行 × 10 列 [epsilon, run, seed, level, l1, jsd …] |
+| `history\stages\Stage03_LAE阈值与LAE_LER构建\03_输出\stage3b_ler_stable_vs_metastable.png` | 21.6 KB | Stage03B 类别构建产物：LAE 分类与 LER 人口指纹。 |  |
+| `history\stages\Stage03_LAE阈值与LAE_LER构建\03_输出\stage3b_ler_summary.csv` | 3.5 KB | Stage03B 类别构建产物：LAE 分类与 LER 人口指纹。 | 25 行 × 11 列 [epsilon, class_id, class_rank, n_runs_matched, occupancy_median_medoid, occupancy_mean …] |
+| `history\stages\Stage03_LAE阈值与LAE_LER构建\03_输出\stage3b_ler_vs_epsilon.png` | 27.1 KB | Stage03B 类别构建产物：LAE 分类与 LER 人口指纹。 |  |
+| `history\stages\Stage03_LAE阈值与LAE_LER构建\03_输出\stage3b_mid_epsilon_lae.xyz` | 543.2 KB | Stage03B 类别构建产物：LAE 分类与 LER 人口指纹。 | 4,659 原子 · 附加列: Ni LAE_LER representation for epsilon_mid (visual inspection only) |
+| `history\stages\Stage03_LAE阈值与LAE_LER构建\03_输出\stage3b_partition_ari.csv` | 67.3 KB | ★ 不同随机顺序下分区的一致性（ARI）。这是判定贪心 LAE “有顺序依赖、不可作为物理分类”的量化依据。 | 2,175 行 × 4 列 [epsilon, run_i, run_j, ari] |
+| `history\stages\Stage03_LAE阈值与LAE_LER构建\03_输出\stage3b_representative_atoms.csv` | 6.5 KB | Stage03B 类别构建产物：LAE 分类与 LER 人口指纹。 | 50 行 × 13 列 [epsilon, class_id, role, atom_id, structure, region …] |
+| `history\stages\Stage03_LAE阈值与LAE_LER构建\03_输出\stage3b_run_summary.csv` | 7.4 KB | Stage03B 类别构建产物：LAE 分类与 LER 人口指纹。 | 150 行 × 7 列 [epsilon, run, seed, n_classes, mean_ari_to_others, min_ari_to_others …] |
+| `history\stages\Stage04_无序度与能量关联\03_输出\stage4a_atomwise_disorder.csv` | 997.6 KB | ★ 逐原子无序度 D。本项目提出的连续结构坐标，是后续所有关联分析的自变量。 | 4,659 行 × 17 列 [structure, region, atom_id, x, y, z …] |
+| `history\stages\Stage04_无序度与能量关联\03_输出\stage4a_bootstrap_summary.csv` | 942 B | Stage04A 连续无序度产物。 | 6 行 × 8 列 [parameter, observed, bootstrap_mean, bootstrap_std, ci_low, ci_high …] |
+| `history\stages\Stage04_无序度与能量关联\03_输出\stage4a_bulk_disorder_distribution.png` | 19.7 KB | Stage04A 连续无序度产物。 |  |
+| `history\stages\Stage04_无序度与能量关联\03_输出\stage4a_four_group_disorder.png` | 23.8 KB | Stage04A 连续无序度产物。 |  |
+| `history\stages\Stage04_无序度与能量关联\03_输出\stage4a_group_statistics.csv` | 3.4 KB | Stage04A 连续无序度产物。 | 16 行 × 13 列 [group, k, n, mean, median, std …] |
+| `history\stages\Stage04_无序度与能量关联\03_输出\stage4a_interface_disorder_distribution.png` | 22.8 KB | Stage04A 连续无序度产物。 |  |
+| `history\stages\Stage04_无序度与能量关联\03_输出\stage4a_k_robustness.csv` | 1.5 KB | Stage04A 连续无序度产物。 | 15 行 × 7 列 [scope, k_a, k_b, pearson, spearman, median_abs_diff …] |
+| `history\stages\Stage04_无序度与能量关联\03_输出\stage4a_k_sensitivity.png` | 17.2 KB | Stage04A 连续无序度产物。 |  |
+| `history\stages\Stage04_无序度与能量关联\03_输出\stage4a_metastable_disorder.xyz` | 136.2 KB | Stage04A 连续无序度产物。 | 2,559 原子 · 附加列: Ni D10 continuous SOAP disorder (visualization only) |
+| `history\stages\Stage04_无序度与能量关联\03_输出\stage4a_pca_disorder.png` | 61.5 KB | Stage04A 连续无序度产物。 |  |
+| `history\stages\Stage04_无序度与能量关联\03_输出\stage4a_pca_groups.png` | 31.8 KB | Stage04A 连续无序度产物。 |  |
+| `history\stages\Stage04_无序度与能量关联\03_输出\stage4a_pca_peatom.png` | 60.9 KB | Stage04A 连续无序度产物。 |  |
+| `history\stages\Stage04_无序度与能量关联\03_输出\stage4a_pca_variance.csv` | 459 B | Stage04A 连续无序度产物。 | 10 行 × 3 列 [pc, explained_variance_ratio, cumulative] |
+| `history\stages\Stage04_无序度与能量关联\03_输出\stage4a_reference_sensitivity.csv` | 1.2 KB | Stage04A 连续无序度产物。 | 10 行 × 7 列 [comparison, k, scope, pearson, spearman, median_abs_diff …] |
+| `history\stages\Stage04_无序度与能量关联\03_输出\stage4a_stable_disorder.xyz` | 111.7 KB | Stage04A 连续无序度产物。 | 2,100 原子 · 附加列: Ni D10 continuous SOAP disorder (visualization only) |
+| `history\stages\Stage04_无序度与能量关联\03_输出\stage4b_all_atoms_scatter.png` | 30.6 KB | Stage04B 无序度-能量关联产物。 |  |
+| `history\stages\Stage04_无序度与能量关联\03_输出\stage4b_atomwise_energy_disorder.csv` | 1.26 MB | 逐原子的无序度与能量配对表，用于考察 D 与能量的关系。 | 4,659 行 × 21 列 [structure, region, atom_id, x, y, z …] |
+| `history\stages\Stage04_无序度与能量关联\03_输出\stage4b_binned_interface_trend.csv` | 2.6 KB | Stage04B 无序度-能量关联产物。 | 18 行 × 9 列 [bin_id, n, disorder_low, disorder_high, median_disorder, median_dE …] |
+| `history\stages\Stage04_无序度与能量关联\03_输出\stage4b_binned_metastable_trend.csv` | 1.7 KB | Stage04B 无序度-能量关联产物。 | 12 行 × 9 列 [bin_id, n, disorder_low, disorder_high, median_disorder, median_dE …] |
+| `history\stages\Stage04_无序度与能量关联\03_输出\stage4b_binned_stable_trend.csv` | 1.7 KB | Stage04B 无序度-能量关联产物。 | 12 行 × 9 列 [bin_id, n, disorder_low, disorder_high, median_disorder, median_dE …] |
+| `history\stages\Stage04_无序度与能量关联\03_输出\stage4b_bootstrap_summary.csv` | 3.2 KB | Stage04B 无序度-能量关联产物。 | 16 行 × 9 列 [parameter, observed, bootstrap_mean, bootstrap_std, ci_low, ci_high …] |
+| `history\stages\Stage04_无序度与能量关联\03_输出\stage4b_common_support_comparison.csv` | 1.1 KB | Stage04B 无序度-能量关联产物。 | 8 行 × 9 列 [bin_id, disorder_low, disorder_high, median_disorder, n_stable, n_metastable …] |
+| `history\stages\Stage04_无序度与能量关联\03_输出\stage4b_conditional_state_difference.png` | 21.3 KB | Stage04B 无序度-能量关联产物。 |  |
+| `history\stages\Stage04_无序度与能量关联\03_输出\stage4b_correlations.csv` | 1.2 KB | Stage04B 无序度-能量关联产物。 | 18 行 × 5 列 [baseline, scope, n, pearson, spearman] |
+| `history\stages\Stage04_无序度与能量关联\03_输出\stage4b_energy_baselines.csv` | 90 B | Stage04B 无序度-能量关联产物。 | 3 行 × 3 列 [baseline, n, median_peatom] |
+| `history\stages\Stage04_无序度与能量关联\03_输出\stage4b_fixed_disorder_energy_spread.csv` | 761 B | Stage04B 无序度-能量关联产物。 | 5 行 × 8 列 [disorder_low, disorder_high, n, mean_dE, median_dE, std_dE …] |
+| `history\stages\Stage04_无序度与能量关联\03_输出\stage4b_group_energy_statistics.csv` | 877 B | Stage04B 无序度-能量关联产物。 | 4 行 × 11 列 [group, n, mean, median, std, q1 …] |
+| `history\stages\Stage04_无序度与能量关联\03_输出\stage4b_interface_binned_trend.png` | 22.5 KB | Stage04B 无序度-能量关联产物。 |  |
+| `history\stages\Stage04_无序度与能量关联\03_输出\stage4b_interface_scatter.png` | 28.8 KB | Stage04B 无序度-能量关联产物。 |  |
+| `history\stages\Stage04_无序度与能量关联\03_输出\stage4b_k_robustness.csv` | 601 B | Stage04B 无序度-能量关联产物。 | 9 行 × 5 列 [k, scope, n, pearson, spearman] |
+| `history\stages\Stage04_无序度与能量关联\03_输出\stage4b_metastable_interface_scatter.png` | 27.3 KB | Stage04B 无序度-能量关联产物。 |  |
+| `history\stages\Stage04_无序度与能量关联\03_输出\stage4b_pca_disorder.png` | 61.5 KB | Stage04B 无序度-能量关联产物。 |  |
+| `history\stages\Stage04_无序度与能量关联\03_输出\stage4b_pca_energy.png` | 62.3 KB | Stage04B 无序度-能量关联产物。 |  |
+| `history\stages\Stage04_无序度与能量关联\03_输出\stage4b_pca_interface_energy.png` | 60.4 KB | Stage04B 无序度-能量关联产物。 |  |
+| `history\stages\Stage04_无序度与能量关联\03_输出\stage4b_stable_interface_scatter.png` | 11.8 KB | Stage04B 无序度-能量关联产物。 |  |
+| `history\stages\Stage04_无序度与能量关联\03_输出\stage4b_state_binned_trends.png` | 23.8 KB | Stage04B 无序度-能量关联产物。 |  |
+| `history\stages\Stage05_物理空间与方向\03_输出\stage5a_atomwise_physical_descriptors.csv` | 1.44 MB | ★ 常规物理描述符（配位数、键应变、体积、CSP）。最终证明“解释力主要来自这些量而非 SOAP 方向”的就是它。 | 4,659 行 × 23 列 [state, atom_id, x, y, z, interface_id …] |
+| `history\stages\Stage05_物理空间与方向\03_输出\stage5a_descriptor_correlations.csv` | 2.3 KB | Stage05A 物理描述符与空间分布产物。 | 30 行 × 5 列 [scope, descriptor, n, pearson, spearman] |
+| `history\stages\Stage05_物理空间与方向\03_输出\stage5a_descriptor_group_statistics.csv` | 5.2 KB | Stage05A 物理描述符与空间分布产物。 | 40 行 × 8 列 [group, descriptor, n, mean, median, std …] |
+| `history\stages\Stage05_物理空间与方向\03_输出\stage5a_disorder_bin_conditional_stats.csv` | 1.5 KB | Stage05A 物理描述符与空间分布产物。 | 10 行 × 9 列 [bin_id, disorder_low, disorder_high, n, spearman_cn, spearman_rms_bond_strain …] |
+| `history\stages\Stage05_物理空间与方向\03_输出\stage5a_matched_neighborhoods.xyz` | 1.64 MB | Stage05A 物理描述符与空间分布产物。 | 63 原子 · 附加列: central=290 state=stable D10=9.768196778712806 dE=0.3807500000000008 Eres=0.003080000000000638 CN=10.0 RMS=0.052540184592867356 CSP=27.686566695884597 dV=-0.11575476290275333 |
+| `history\stages\Stage05_物理空间与方向\03_输出\stage5a_matched_pair_energy_vs_disorder.png` | 27.2 KB | Stage05A 物理描述符与空间分布产物。 |  |
+| `history\stages\Stage05_物理空间与方向\03_输出\stage5a_matched_pairs.csv` | 32.7 KB | Stage05A 物理描述符与空间分布产物。 | 72 行 × 32 列 [category, tolerance, atom_i_state, atom_i_id, atom_j_state, atom_j_id …] |
+| `history\stages\Stage05_物理空间与方向\03_输出\stage5a_metastable_bond_strain_map.png` | 62.3 KB | Stage05A 物理描述符与空间分布产物。 |  |
+| `history\stages\Stage05_物理空间与方向\03_输出\stage5a_metastable_disorder_map.png` | 62.5 KB | Stage05A 物理描述符与空间分布产物。 |  |
+| `history\stages\Stage05_物理空间与方向\03_输出\stage5a_metastable_physical_descriptors.png` | 56.3 KB | Stage05A 物理描述符与空间分布产物。 |  |
+| `history\stages\Stage05_物理空间与方向\03_输出\stage5a_metastable_residual_energy_map.png` | 60.0 KB | Stage05A 物理描述符与空间分布产物。 |  |
+| `history\stages\Stage05_物理空间与方向\03_输出\stage5a_residual_definition.csv` | 251 B | Stage05A 物理描述符与空间分布产物。 | 4 行 × 5 列 [primary_bins, sensitivity_bins, spearman_with_primary, pearson_with_primary, n_interface] |
+| `history\stages\Stage05_物理空间与方向\03_输出\stage5a_residual_vs_bond_strain.png` | 27.5 KB | Stage05A 物理描述符与空间分布产物。 |  |
+| `history\stages\Stage05_物理空间与方向\03_输出\stage5a_residual_vs_cn.png` | 14.9 KB | Stage05A 物理描述符与空间分布产物。 |  |
+| `history\stages\Stage05_物理空间与方向\03_输出\stage5a_residual_vs_csp.png` | 23.9 KB | Stage05A 物理描述符与空间分布产物。 |  |
+| `history\stages\Stage05_物理空间与方向\03_输出\stage5a_residual_vs_disorder.png` | 26.7 KB | Stage05A 物理描述符与空间分布产物。 |  |
+| `history\stages\Stage05_物理空间与方向\03_输出\stage5a_residual_vs_excess_volume.png` | 25.8 KB | Stage05A 物理描述符与空间分布产物。 |  |
+| `history\stages\Stage05_物理空间与方向\03_输出\stage5a_spatial_autocorrelation.csv` | 16.3 KB | Stage05A 物理描述符与空间分布产物。 | 240 行 × 7 列 [state, interface_id, field, r_mid, n_pairs, autocov …] |
+| `history\stages\Stage05_物理空间与方向\03_输出\stage5a_spatial_autocorrelation.png` | 59.2 KB | Stage05A 物理描述符与空间分布产物。 |  |
+| `history\stages\Stage05_物理空间与方向\03_输出\stage5a_spatial_patchiness.csv` | 982 B | Stage05A 物理描述符与空间分布产物。 | 8 行 × 8 列 [state, interface_id, set, n, nearest_neighbor_distance, fraction_within_3.0A …] |
+| `history\stages\Stage05_物理空间与方向\03_输出\stage5a_stable_bond_strain_map.png` | 49.5 KB | Stage05A 物理描述符与空间分布产物。 |  |
+| `history\stages\Stage05_物理空间与方向\03_输出\stage5a_stable_disorder_map.png` | 46.7 KB | Stage05A 物理描述符与空间分布产物。 |  |
+| `history\stages\Stage05_物理空间与方向\03_输出\stage5a_stable_physical_descriptors.png` | 55.1 KB | Stage05A 物理描述符与空间分布产物。 |  |
+| `history\stages\Stage05_物理空间与方向\03_输出\stage5a_stable_residual_energy_map.png` | 44.9 KB | Stage05A 物理描述符与空间分布产物。 |  |
+| `history\stages\Stage05_物理空间与方向\03_输出\stage5b_atomwise_soap_direction.csv` | 1.41 MB | Stage05B SOAP 方向相关产物。 | 4,659 行 × 25 列 [structure, atom_id, x, y, z, interface_id …] |
+| `history\stages\Stage05_物理空间与方向\03_输出\stage5b_direction_autocorrelation.csv` | 2.4 KB | Stage05B SOAP 方向相关产物。 | 60 行 × 5 列 [state, interface_id, r_mid, n_pairs, mean_cosine] |
+| `history\stages\Stage05_物理空间与方向\03_输出\stage5b_direction_similarity_distributions.png` | 22.0 KB | Stage05B SOAP 方向相关产物。 |  |
+| `history\stages\Stage05_物理空间与方向\03_输出\stage5b_direction_vs_disorder.png` | 123.3 KB | Stage05B SOAP 方向相关产物。 |  |
+| `history\stages\Stage05_物理空间与方向\03_输出\stage5b_direction_vs_residual_energy.png` | 60.5 KB | Stage05B SOAP 方向相关产物。 |  |
+| `history\stages\Stage05_物理空间与方向\03_输出\stage5b_direction_vs_stage5a_descriptors.png` | 49.4 KB | Stage05B SOAP 方向相关产物。 |  |
+| `history\stages\Stage05_物理空间与方向\03_输出\stage5b_directional_energy_statistics.csv` | 3.4 KB | Stage05B SOAP 方向相关产物。 | 12 行 × 7 列 [tolerance, category, n_pairs, spearman, pearson, median_dE_by_direction_quintile …] |
+| `history\stages\Stage05_物理空间与方向\03_输出\stage5b_directional_statistics.csv` | 652 B | Stage05B SOAP 方向相关产物。 | 3 行 × 10 列 [category, n_pairs, cosine_mean, cosine_median, cosine_std, cosine_q1 …] |
+| `history\stages\Stage05_物理空间与方向\03_输出\stage5b_matched_energy_difference_vs_direction.png` | 45.6 KB | Stage05B SOAP 方向相关产物。 |  |
+| `history\stages\Stage05_物理空间与方向\03_输出\stage5b_metastable_direction_autocorrelation.png` | 25.0 KB | Stage05B SOAP 方向相关产物。 |  |
+| `history\stages\Stage05_物理空间与方向\03_输出\stage5b_pca_direction.png` | 33.0 KB | Stage05B SOAP 方向相关产物。 |  |
+| `history\stages\Stage05_物理空间与方向\03_输出\stage5b_pca_displacement.png` | 30.9 KB | Stage05B SOAP 方向相关产物。 |  |
+| `history\stages\Stage05_物理空间与方向\03_输出\stage5b_pca_displacement_3d.png` | 37.4 KB | Stage05B SOAP 方向相关产物。 |  |
+| `history\stages\Stage05_物理空间与方向\03_输出\stage5b_pca_summary.csv` | 1.1 KB | Stage05B SOAP 方向相关产物。 | 20 行 × 4 列 [pca_type, pc, explained_variance_ratio, cumulative] |
+| `history\stages\Stage05_物理空间与方向\03_输出\stage5b_permutation_null.csv` | 227 B | Stage05B SOAP 方向相关产物。 | 1 行 × 8 列 [observed_spearman, null_mean, null_std, null_p5, null_p95, n_permutations …] |
+| `history\stages\Stage05_物理空间与方向\03_输出\stage5b_representative_cases.csv` | 3.9 KB | Stage05B SOAP 方向相关产物。 | 8 行 × 30 列 [category, tolerance, state_i, atom_i, state_j, atom_j …] |
+| `history\stages\Stage05_物理空间与方向\03_输出\stage5b_representative_cases.png` | 35.8 KB | Stage05B SOAP 方向相关产物。 |  |
+| `history\stages\Stage05_物理空间与方向\03_输出\stage5b_representative_direction_cases.xyz` | 117.4 KB | Stage05B SOAP 方向相关产物。 | 59 原子 · 附加列: central=1180 state=stable D=12.14652217671282 dE=-0.0661999999999993 Eres=-0.0015399999999998 CN=13.0 RMS=0.0613492856268347 CSP=9.284815819772238 dV=1.9134011445628063 |
+| `history\stages\Stage05_物理空间与方向\03_输出\stage5b_stable_direction_autocorrelation.png` | 25.0 KB | Stage05B SOAP 方向相关产物。 |  |
+| `history\stages\Stage06_最终评估\03_输出\stage6_correlations.csv` | 24.7 KB | ★ 全项目最终相关系数：原始 0.8317，控制物理描述符后降到 0.2058。这是方法线最重要的产出。 | 无序度 D 与位移范数相关 0.99998 · D 与过剩能相关 0.277 |
+| `history\stages\Stage06_最终评估\03_输出\stage6_direction_by_disorder_bin.csv` | 1.4 KB | Stage06 最终评估产物：相关系数、模型对比与稳健性检验。 | 20 行 × 6 列 [state, bin, n, median_D, mean_within_cosine, median_within_cosine] |
+| `history\stages\Stage06_最终评估\03_输出\stage6_directional_heterogeneity.png` | 21.7 KB | Stage06 最终评估产物：相关系数、模型对比与稳健性检验。 |  |
+| `history\stages\Stage06_最终评估\03_输出\stage6_energy_model_improvement.png` | 20.5 KB | Stage06 最终评估产物：相关系数、模型对比与稳健性检验。 |  |
+| `history\stages\Stage06_最终评估\03_输出\stage6_energy_models.csv` | 732 B | ★ 能量模型 R² 对比：仅 D 为 0.0393，加入物理描述符后 0.9869。量化了 SOAP 坐标的增量信息有限。 | Model0_D: R²=0.0393 · Model1_D_phys: R²=0.9869 · Model2_D_phys_dir: R²=0.9886 · ModelD_D_dir: R²=0.7497 |
+| `history\stages\Stage06_最终评估\03_输出\stage6_figure_summary.csv` | 536 B | Stage06 最终评估产物：相关系数、模型对比与稳健性检验。 | 6 行 × 2 列 [figure, content] |
+| `history\stages\Stage06_最终评估\03_输出\stage6_magnitude_matched_direction_energy.png` | 45.2 KB | Stage06 最终评估产物：相关系数、模型对比与稳健性检验。 |  |
+| `history\stages\Stage06_最终评估\03_输出\stage6_matched_analysis.csv` | 3.4 KB | Stage06 最终评估产物：相关系数、模型对比与稳健性检验。 | 16 行 × 12 列 [tolerance, category, n_pairs, spearman, pearson, bootstrap_ci_low …] |
+| `history\stages\Stage06_最终评估\03_输出\stage6_representative_cases.png` | 35.7 KB | Stage06 最终评估产物：相关系数、模型对比与稳健性检验。 |  |
+| `history\stages\Stage06_最终评估\03_输出\stage6_representative_directional_cases.csv` | 7.8 KB | Stage06 最终评估产物：相关系数、模型对比与稳健性检验。 | 12 行 × 42 列 [category, tolerance, state_i, atom_i, state_j, atom_j …] |
+| `history\stages\Stage06_最终评估\03_输出\stage6_robustness.csv` | 211 B | Stage06 最终评估产物：相关系数、模型对比与稳健性检验。 | 4 行 × 3 列 [condition, n_pairs, spearman] |
+| `history\stages\Stage06_最终评估\03_输出\stage6_scalar_disorder_vs_energy.png` | 28.5 KB | Stage06 最终评估产物：相关系数、模型对比与稳健性检验。 |  |
+| `history\stages\Stage06_最终评估\03_输出\stage6_spatial_direction_residual.png` | 80.3 KB | Stage06 最终评估产物：相关系数、模型对比与稳健性检验。 |  |
+| `history\stages\Stage06_最终评估\03_输出\stage6_spatial_summary.csv` | 955 B | Stage06 最终评估产物：相关系数、模型对比与稳健性检验。 | 8 行 × 9 列 [state, interface_id, field, n, mean, std …] |
+| `history\stages\Stage06_最终评估\03_输出\stage6_state_classification.csv` | 1.1 KB | Stage06 最终评估产物：相关系数、模型对比与稳健性检验。 | 10 行 × 8 列 [test_interface, n_train, n_test, roc_auc, balanced_accuracy, f1 …] |
 
-### 代码（38 个，636.6 KB）
+### 代码（39 个，642.6 KB）
 
 | 文件 | 大小 | 用途 |
 |---|---|---|
-| `06_环境与实现\setup_soap_env.sh` | 2.5 KB | SOAP 分析环境的一键配置脚本。 |
-| `06_环境与实现\soap_analysis\__init__.py` | 1.8 KB | Python 脚本。 |
-| `06_环境与实现\soap_analysis\bulk_reference.py` | 1.8 KB | Python 脚本。 |
-| `06_环境与实现\soap_analysis\compare_structures.py` | 3.1 KB | Python 脚本。 |
-| `06_环境与实现\soap_analysis\dedup.py` | 2.8 KB | Python 脚本。 |
-| `06_环境与实现\soap_analysis\disorder_profile.py` | 5.1 KB | Python 脚本。 |
-| `06_环境与实现\soap_analysis\io_lammps.py` | 5.7 KB | Python 脚本。 |
-| `06_环境与实现\soap_analysis\run_analysis.py` | 11.1 KB | Python 脚本。 |
-| `06_环境与实现\soap_analysis\similarity.py` | 2.1 KB | Python 脚本。 |
-| `06_环境与实现\soap_analysis\soap_backend.py` | 12.3 KB | Python 脚本。 |
-| `06_环境与实现\verify_soap_env.py` | 5.3 KB | 环境自检脚本，确认 SOAP 依赖可用。 |
-| `90_历史归档\旧版材料\inspect_structures_v_old.py` | 3.9 KB | Python 脚本。 |
-| `Stage01_数据准备与SOAP初测\02_脚本\cfg_reader.py` | 8.7 KB | CFG 格式解析脚本。 |
-| `Stage01_数据准备与SOAP初测\02_脚本\inspect_structures.py` | 4.2 KB | 结构概览脚本，检查原子数与字段完整性。 |
-| `Stage01_数据准备与SOAP初测\02_脚本\soap_test.py` | 5.0 KB | SOAP 初次可计算性测试脚本。 |
-| `Stage01_数据准备与SOAP初测\02_脚本\stage1_qc.py` | 21.2 KB | Stage01 数据质量检查脚本。 |
-| `Stage02_SOAP表示与审计\02_脚本\stage2_5_audit.py` | 26.4 KB | Stage02.5 表示审计产物。 |
-| `Stage02_SOAP表示与审计\02_脚本\stage2_75_full.py` | 31.4 KB | Stage02.75 全人口 SOAP 与距离审计产物。 |
-| `Stage02_SOAP表示与审计\02_脚本\stage2_profiles.py` | 8.9 KB | Stage02 SOAP 表示产物。 |
-| `Stage02_SOAP表示与审计\02_脚本\stage2_soap.py` | 14.1 KB | Stage02 SOAP 表示产物。 |
-| `Stage03_LAE阈值与LAE_LER构建\02_脚本\stage3a_lae_threshold.py` | 56.6 KB | Stage03A 阈值扫描产物：衡量 epsilon 取值对结果的影响。 |
-| `Stage03_LAE阈值与LAE_LER构建\02_脚本\stage3b_lae_ler.py` | 39.4 KB | Stage03B 类别构建产物：LAE 分类与 LER 人口指纹。 |
-| `Stage04_无序度与能量关联\02_脚本\stage4a_continuous_disorder.py` | 27.6 KB | Stage04A 连续无序度产物。 |
-| `Stage04_无序度与能量关联\02_脚本\stage4b_disorder_energy.py` | 33.2 KB | Stage04B 无序度-能量关联产物。 |
-| `Stage05_物理空间与方向\02_脚本\stage5a_physical_spatial_residual.py` | 49.9 KB | Stage05A 物理描述符与空间分布产物。 |
-| `Stage05_物理空间与方向\02_脚本\stage5b_soap_direction.py` | 46.7 KB | Stage05B SOAP 方向相关产物。 |
-| `Stage06_最终评估\02_脚本\stage6_final_analysis.py` | 37.4 KB | Stage06 最终评估产物：相关系数、模型对比与稳健性检验。 |
+| `current\prepare.py` | 5.9 KB | Python 脚本。 |
 | `experiments\2026-11-01_audit\source\build_report.py` | 28.0 KB | Python 脚本。 |
 | `experiments\2026-11-01_audit\source\extend_radial.py` | 5.8 KB | Python 脚本。 |
 | `experiments\2026-11-01_audit\source\metric_diagnostics.py` | 4.0 KB | Python 脚本。 |
@@ -723,37 +697,49 @@
 | `experiments\2026-11-01_midterm\source\scan.py` | 9.1 KB | Python 脚本。 |
 | `experiments\2026-11-01_radial_followup\source\radial_followup.py` | 45.9 KB | Python 脚本。 |
 | `experiments\2026-11-01_radial_followup\source\run_sweep.py` | 22.1 KB | Python 脚本。 |
+| `history\stages\06_环境与实现\setup_soap_env.sh` | 2.5 KB | SOAP 分析环境的一键配置脚本。 |
+| `history\stages\06_环境与实现\soap_analysis\__init__.py` | 1.8 KB | Python 脚本。 |
+| `history\stages\06_环境与实现\soap_analysis\bulk_reference.py` | 1.8 KB | Python 脚本。 |
+| `history\stages\06_环境与实现\soap_analysis\compare_structures.py` | 3.1 KB | Python 脚本。 |
+| `history\stages\06_环境与实现\soap_analysis\dedup.py` | 2.8 KB | Python 脚本。 |
+| `history\stages\06_环境与实现\soap_analysis\disorder_profile.py` | 5.1 KB | Python 脚本。 |
+| `history\stages\06_环境与实现\soap_analysis\io_lammps.py` | 5.7 KB | Python 脚本。 |
+| `history\stages\06_环境与实现\soap_analysis\run_analysis.py` | 11.1 KB | Python 脚本。 |
+| `history\stages\06_环境与实现\soap_analysis\similarity.py` | 2.1 KB | Python 脚本。 |
+| `history\stages\06_环境与实现\soap_analysis\soap_backend.py` | 12.3 KB | Python 脚本。 |
+| `history\stages\06_环境与实现\verify_soap_env.py` | 5.3 KB | 环境自检脚本，确认 SOAP 依赖可用。 |
+| `history\stages\90_历史归档\旧版材料\inspect_structures_v_old.py` | 3.9 KB | Python 脚本。 |
+| `history\stages\Stage01_数据准备与SOAP初测\02_脚本\cfg_reader.py` | 8.7 KB | CFG 格式解析脚本。 |
+| `history\stages\Stage01_数据准备与SOAP初测\02_脚本\inspect_structures.py` | 4.2 KB | 结构概览脚本，检查原子数与字段完整性。 |
+| `history\stages\Stage01_数据准备与SOAP初测\02_脚本\soap_test.py` | 5.0 KB | SOAP 初次可计算性测试脚本。 |
+| `history\stages\Stage01_数据准备与SOAP初测\02_脚本\stage1_qc.py` | 21.2 KB | Stage01 数据质量检查脚本。 |
+| `history\stages\Stage02_SOAP表示与审计\02_脚本\stage2_5_audit.py` | 26.4 KB | Stage02.5 表示审计产物。 |
+| `history\stages\Stage02_SOAP表示与审计\02_脚本\stage2_75_full.py` | 31.4 KB | Stage02.75 全人口 SOAP 与距离审计产物。 |
+| `history\stages\Stage02_SOAP表示与审计\02_脚本\stage2_profiles.py` | 8.9 KB | Stage02 SOAP 表示产物。 |
+| `history\stages\Stage02_SOAP表示与审计\02_脚本\stage2_soap.py` | 14.1 KB | Stage02 SOAP 表示产物。 |
+| `history\stages\Stage03_LAE阈值与LAE_LER构建\02_脚本\stage3a_lae_threshold.py` | 56.6 KB | Stage03A 阈值扫描产物：衡量 epsilon 取值对结果的影响。 |
+| `history\stages\Stage03_LAE阈值与LAE_LER构建\02_脚本\stage3b_lae_ler.py` | 39.4 KB | Stage03B 类别构建产物：LAE 分类与 LER 人口指纹。 |
+| `history\stages\Stage04_无序度与能量关联\02_脚本\stage4a_continuous_disorder.py` | 27.6 KB | Stage04A 连续无序度产物。 |
+| `history\stages\Stage04_无序度与能量关联\02_脚本\stage4b_disorder_energy.py` | 33.2 KB | Stage04B 无序度-能量关联产物。 |
+| `history\stages\Stage05_物理空间与方向\02_脚本\stage5a_physical_spatial_residual.py` | 49.9 KB | Stage05A 物理描述符与空间分布产物。 |
+| `history\stages\Stage05_物理空间与方向\02_脚本\stage5b_soap_direction.py` | 46.7 KB | Stage05B SOAP 方向相关产物。 |
+| `history\stages\Stage06_最终评估\02_脚本\stage6_final_analysis.py` | 37.4 KB | Stage06 最终评估产物：相关系数、模型对比与稳健性检验。 |
 
 ### 输入（4 个，8.03 MB）
 
 | 文件 | 大小 | 用途 | 内容分析 |
 |---|---|---|---|
-| `06_环境与实现\requirements_soap.txt` | 1.5 KB | SOAP 分析的 Python 依赖清单。 |  |
-| `06_环境与实现\requirements_stages.txt` | 171 B | 纯文本结果或检查报告。 |  |
-| `Stage01_数据准备与SOAP初测\02_脚本\ni_metastable.cfg` | 4.01 MB | 输入构型之一：亚稳的 Ni 晶界构型（源数据）。 | 47,120 原子 |
-| `Stage01_数据准备与SOAP初测\02_脚本\ni_stable.cfg` | 4.02 MB | 输入构型之一：稳定的 Ni 晶界构型（源数据）。 | 47,120 原子 |
+| `history\stages\06_环境与实现\requirements_soap.txt` | 1.5 KB | SOAP 分析的 Python 依赖清单。 |  |
+| `history\stages\06_环境与实现\requirements_stages.txt` | 171 B | 纯文本结果或检查报告。 |  |
+| `history\stages\Stage01_数据准备与SOAP初测\02_脚本\ni_metastable.cfg` | 4.01 MB | 输入构型之一：亚稳的 Ni 晶界构型（源数据）。 | 47,120 原子 |
+| `history\stages\Stage01_数据准备与SOAP初测\02_脚本\ni_stable.cfg` | 4.02 MB | 输入构型之一：稳定的 Ni 晶界构型（源数据）。 | 47,120 原子 |
 
-### 文档（35 个，626.4 KB）
+### 文档（38 个，626.9 KB）
 
 | 文件 | 大小 | 用途 | 内容分析 |
 |---|---|---|---|
-| `00_汇总报告\Ni_SOAP_最终报告.md` | 6.3 KB | ★ 方法探索总报告：项目定位、六个 Stage 的结论、十条下一版建议、以及“不能确定”清单。 |  |
-| `00_汇总报告\SOAP参数确定报告_2026-10-22.md` | 7.6 KB | Markdown 文档。 |  |
-| `00_汇总报告\项目文件索引_脚本输出报告_按阶段.md` | 3.9 KB | Markdown 文档。 |  |
-| `90_历史归档\归档说明.md` | 1.8 KB | Markdown 文档。 |  |
-| `README.md` | 3.4 KB | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |  |
-| `Stage01_数据准备与SOAP初测\01_报告\Stage01_确定性结论与待讨论.md` | 3.2 KB | Markdown 文档。 |  |
-| `Stage01_输入输出检索表.md` | 7.4 KB | Markdown 文档。 |  |
-| `Stage02_SOAP表示与审计\01_报告\Stage02_确定性结论与待讨论.md` | 4.0 KB | Markdown 文档。 |  |
-| `Stage02_输入输出检索表.md` | 13.1 KB | Markdown 文档。 |  |
-| `Stage03_LAE阈值与LAE_LER构建\01_报告\Stage03_确定性结论与待讨论.md` | 3.1 KB | Markdown 文档。 |  |
-| `Stage03_输入输出检索表.md` | 15.1 KB | Markdown 文档。 |  |
-| `Stage04_无序度与能量关联\01_报告\Stage04_确定性结论与待讨论.md` | 3.7 KB | Markdown 文档。 |  |
-| `Stage04_输入输出检索表.md` | 16.7 KB | Markdown 文档。 |  |
-| `Stage05_物理空间与方向\01_报告\Stage05_确定性结论与待讨论.md` | 3.8 KB | Markdown 文档。 |  |
-| `Stage05_输入输出检索表.md` | 19.5 KB | Markdown 文档。 |  |
-| `Stage06_最终评估\01_报告\Stage06_确定性结论与待讨论.md` | 3.5 KB | Markdown 文档。 |  |
-| `Stage06_输入输出检索表.md` | 9.8 KB | Markdown 文档。 |  |
+| `README.md` | 773 B | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |  |
+| `current\README.md` | 1.4 KB | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |  |
 | `experiments\2026-11-01_audit\README.md` | 609 B | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |  |
 | `experiments\2026-11-01_audit\REPORT.md` | 11.3 KB | Markdown 文档。 |  |
 | `experiments\2026-11-01_audit\protocol.json` | 2.9 KB | 参数与元数据。 | 字段: created_at, seed, grid, count, implementation, distance_definition, reference, evaluation_count |
@@ -772,25 +758,44 @@
 | `experiments\2026-11-01_radial_followup\status.json` | 818 B | 参数与元数据。 | 字段: time, event, verified_at, main_inputs_unchanged, polynomial_success, reused_gto, fcc_cases, response_rows |
 | `experiments\2026-11-01_radial_followup\verification.json` | 743 B | 参数与元数据。 | 字段: verified_at, main_inputs_unchanged, polynomial_success, reused_gto, fcc_cases, response_rows, distance_comparisons, category_rows |
 | `experiments\PUBLICATION_MANIFEST_2026-11-15.json` | 179.2 KB | 参数与元数据。 | 字段: published_on, scientific_computation_date, presentation_date, normalization, published_original_artifacts, not_published, scope |
+| `experiments\README.md` | 816 B | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |  |
+| `history\README.md` | 990 B | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |  |
+| `history\stages\00_汇总报告\Ni_SOAP_最终报告.md` | 6.3 KB | ★ 方法探索总报告：项目定位、六个 Stage 的结论、十条下一版建议、以及“不能确定”清单。 |  |
+| `history\stages\00_汇总报告\SOAP参数确定报告_2026-10-22.md` | 7.6 KB | Markdown 文档。 |  |
+| `history\stages\00_汇总报告\项目文件索引_脚本输出报告_按阶段.md` | 3.9 KB | Markdown 文档。 |  |
+| `history\stages\90_历史归档\归档说明.md` | 1.8 KB | Markdown 文档。 |  |
+| `history\stages\Stage01_数据准备与SOAP初测\01_报告\Stage01_确定性结论与待讨论.md` | 3.2 KB | Markdown 文档。 |  |
+| `history\stages\Stage01_输入输出检索表.md` | 7.4 KB | Markdown 文档。 |  |
+| `history\stages\Stage02_SOAP表示与审计\01_报告\Stage02_确定性结论与待讨论.md` | 4.0 KB | Markdown 文档。 |  |
+| `history\stages\Stage02_输入输出检索表.md` | 13.1 KB | Markdown 文档。 |  |
+| `history\stages\Stage03_LAE阈值与LAE_LER构建\01_报告\Stage03_确定性结论与待讨论.md` | 3.1 KB | Markdown 文档。 |  |
+| `history\stages\Stage03_输入输出检索表.md` | 15.1 KB | Markdown 文档。 |  |
+| `history\stages\Stage04_无序度与能量关联\01_报告\Stage04_确定性结论与待讨论.md` | 3.7 KB | Markdown 文档。 |  |
+| `history\stages\Stage04_输入输出检索表.md` | 16.7 KB | Markdown 文档。 |  |
+| `history\stages\Stage05_物理空间与方向\01_报告\Stage05_确定性结论与待讨论.md` | 3.8 KB | Markdown 文档。 |  |
+| `history\stages\Stage05_输入输出检索表.md` | 19.5 KB | Markdown 文档。 |  |
+| `history\stages\Stage06_最终评估\01_报告\Stage06_确定性结论与待讨论.md` | 3.5 KB | Markdown 文档。 |  |
+| `history\stages\Stage06_输入输出检索表.md` | 9.8 KB | Markdown 文档。 |  |
 
 ## 仓库维护：文档、工具与记录
 
-`maintenance` — 21 个文件，167.5 KB
+`maintenance` — 24 个文件，256.4 KB
 
-### 结论（1 个，15.8 KB）
+### 结论（1 个，16.1 KB）
 
 | 文件 | 大小 | 用途 | 内容分析 |
 |---|---|---|---|
-| `records\DATA_MANIFEST.csv` | 15.8 KB | 数据表。 | 60 行 × 7 列 [﻿相对路径, 文件名, 扩展名, 层次, 大小(字节), 用途说明 …] |
+| `records\DATA_MANIFEST.csv` | 16.1 KB | 数据表。 | 60 行 × 7 列 [相对路径, 文件名, 扩展名, 层次, 大小(字节), 用途说明 …] |
 
-### 代码（7 个，87.2 KB）
+### 代码（8 个，89.6 KB）
 
 | 文件 | 大小 | 用途 |
 |---|---|---|
+| `tests\test_current_soap_preparation.py` | 2.2 KB | Python 脚本。 |
 | `tests\test_repository_tools.py` | 7.5 KB | Python 脚本。 |
 | `tests\test_standard_workflow.py` | 7.5 KB | Python 脚本。 |
 | `tools\artifact_ledger.py` | 28.0 KB | Python 脚本。 |
-| `tools\build_artifact_catalog.py` | 30.0 KB | Python 脚本。 |
+| `tools\build_artifact_catalog.py` | 30.1 KB | Python 脚本。 |
 | `tools\compute_gb_energy.py` | 6.2 KB | Python 脚本。 |
 | `tools\install_git_hook.ps1` | 2.8 KB | PowerShell 脚本。 |
 | `tools\prepare_soap_workspace.py` | 5.2 KB | Python 脚本。 |
@@ -801,22 +806,24 @@
 |---|---|---|
 | `refresh_ledger.cmd` | 657 B | （未分类） |
 
-### 文档（12 个，63.9 KB）
+### 文档（14 个，150.0 KB）
 
-| 文件 | 大小 | 用途 |
-|---|---|---|
-| `README.md` | 1.2 KB | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |
-| `docs\MAINTENANCE.md` | 2.6 KB | Markdown 文档。 |
-| `docs\MIDTERM_2026-11.md` | 6.7 KB | Markdown 文档。 |
-| `docs\MIDTERM_QA_2026-11.md` | 6.1 KB | Markdown 文档。 |
-| `docs\PATH_MIGRATION.md` | 1.8 KB | Markdown 文档。 |
-| `docs\PROJECT_REVIEW.md` | 10.9 KB | Markdown 文档。 |
-| `docs\RESEARCH_STATUS.md` | 5.0 KB | Markdown 文档。 |
-| `docs\STUDY_GUIDE.md` | 11.2 KB | Markdown 文档。 |
-| `docs\VERSIONS.md` | 2.4 KB | Markdown 文档。 |
-| `docs\WORKFLOWS.md` | 2.0 KB | Markdown 文档。 |
-| `records\DATA_MANIFEST.md` | 11.4 KB | Markdown 文档。 |
-| `tools\README.md` | 2.6 KB | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |
+| 文件 | 大小 | 用途 | 内容分析 |
+|---|---|---|---|
+| `README.md` | 1.3 KB | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |  |
+| `docs\LOCAL_WORKSPACE.md` | 2.0 KB | Markdown 文档。 |  |
+| `docs\MAINTENANCE.md` | 2.7 KB | Markdown 文档。 |  |
+| `docs\MIDTERM_2026-11.md` | 6.7 KB | Markdown 文档。 |  |
+| `docs\MIDTERM_QA_2026-11.md` | 6.1 KB | Markdown 文档。 |  |
+| `docs\PATH_MIGRATION.md` | 2.6 KB | Markdown 文档。 |  |
+| `docs\PROJECT_REVIEW.md` | 10.9 KB | Markdown 文档。 |  |
+| `docs\RESEARCH_STATUS.md` | 5.0 KB | Markdown 文档。 |  |
+| `docs\STUDY_GUIDE.md` | 11.2 KB | Markdown 文档。 |  |
+| `docs\VERSIONS.md` | 2.4 KB | Markdown 文档。 |  |
+| `docs\WORKFLOWS.md` | 1.9 KB | Markdown 文档。 |  |
+| `records\DATA_MANIFEST.md` | 11.7 KB | Markdown 文档。 |  |
+| `records\LAYOUT_MIGRATION_2026-11-15.json` | 82.7 KB | 参数与元数据。 | 字段: date, purpose, root_moves, files, navigation_links_updated, scope |
+| `tools\README.md` | 2.7 KB | 仓库总入口：项目组成、核心结论、文档索引、环境与日常操作。 |  |
 
 ## 仓库首页与其他文件
 

@@ -1,0 +1,1454 @@
+{
+  "date": "2026-11-15",
+  "purpose": "Separate archived six-stage SOAP work from current parameter research.",
+  "root_moves": [
+    {
+      "old": "soap/00_汇总报告",
+      "new": "soap/history/stages/00_汇总报告"
+    },
+    {
+      "old": "soap/06_环境与实现",
+      "new": "soap/history/stages/06_环境与实现"
+    },
+    {
+      "old": "soap/90_历史归档",
+      "new": "soap/history/stages/90_历史归档"
+    },
+    {
+      "old": "soap/Stage01_数据准备与SOAP初测",
+      "new": "soap/history/stages/Stage01_数据准备与SOAP初测"
+    },
+    {
+      "old": "soap/Stage01_输入输出检索表.md",
+      "new": "soap/history/stages/Stage01_输入输出检索表.md"
+    },
+    {
+      "old": "soap/Stage02_SOAP表示与审计",
+      "new": "soap/history/stages/Stage02_SOAP表示与审计"
+    },
+    {
+      "old": "soap/Stage02_输入输出检索表.md",
+      "new": "soap/history/stages/Stage02_输入输出检索表.md"
+    },
+    {
+      "old": "soap/Stage03_LAE阈值与LAE_LER构建",
+      "new": "soap/history/stages/Stage03_LAE阈值与LAE_LER构建"
+    },
+    {
+      "old": "soap/Stage03_输入输出检索表.md",
+      "new": "soap/history/stages/Stage03_输入输出检索表.md"
+    },
+    {
+      "old": "soap/Stage04_无序度与能量关联",
+      "new": "soap/history/stages/Stage04_无序度与能量关联"
+    },
+    {
+      "old": "soap/Stage04_输入输出检索表.md",
+      "new": "soap/history/stages/Stage04_输入输出检索表.md"
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向",
+      "new": "soap/history/stages/Stage05_物理空间与方向"
+    },
+    {
+      "old": "soap/Stage05_输入输出检索表.md",
+      "new": "soap/history/stages/Stage05_输入输出检索表.md"
+    },
+    {
+      "old": "soap/Stage06_最终评估",
+      "new": "soap/history/stages/Stage06_最终评估"
+    },
+    {
+      "old": "soap/Stage06_输入输出检索表.md",
+      "new": "soap/history/stages/Stage06_输入输出检索表.md"
+    },
+    {
+      "old": "soap/05_文献",
+      "new": "soap/history/stages/05_文献",
+      "scope": "recovery-manifest paths only; no PDFs present in checkout"
+    }
+  ],
+  "files": [
+    {
+      "old": "soap/00_汇总报告/Ni_SOAP_最终报告.md",
+      "new": "soap/history/stages/00_汇总报告/Ni_SOAP_最终报告.md",
+      "sha256_before": "d91901f6ce03ed72276883be0907e4e74320cb74f68b9c6ed37148ad00a4147c",
+      "sha256_after": "d91901f6ce03ed72276883be0907e4e74320cb74f68b9c6ed37148ad00a4147c",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/00_汇总报告/SOAP参数确定报告_2026-10-22.md",
+      "new": "soap/history/stages/00_汇总报告/SOAP参数确定报告_2026-10-22.md",
+      "sha256_before": "768a3242875a80152cac5d21bf5350263ebd68a885bfe21f85c3b17d062c7983",
+      "sha256_after": "768a3242875a80152cac5d21bf5350263ebd68a885bfe21f85c3b17d062c7983",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/00_汇总报告/项目文件索引_按阶段.csv",
+      "new": "soap/history/stages/00_汇总报告/项目文件索引_按阶段.csv",
+      "sha256_before": "6f4b6bfa5999584ad792b5d87edbc5d0ef4a8f19144d63cbff478b3d7dde6c33",
+      "sha256_after": "6f4b6bfa5999584ad792b5d87edbc5d0ef4a8f19144d63cbff478b3d7dde6c33",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/00_汇总报告/项目文件索引_脚本输出报告_按阶段.md",
+      "new": "soap/history/stages/00_汇总报告/项目文件索引_脚本输出报告_按阶段.md",
+      "sha256_before": "395a7f76e4ef5a174b505a34d0a4d20f3166b11261e846e13927c93c839beb9f",
+      "sha256_after": "395a7f76e4ef5a174b505a34d0a4d20f3166b11261e846e13927c93c839beb9f",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/06_环境与实现/requirements_soap.txt",
+      "new": "soap/history/stages/06_环境与实现/requirements_soap.txt",
+      "sha256_before": "1c5b460066e1ef08285f1b53738cc8a535260ada9fcaf401780bba1a8e022c40",
+      "sha256_after": "1c5b460066e1ef08285f1b53738cc8a535260ada9fcaf401780bba1a8e022c40",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/06_环境与实现/requirements_stages.txt",
+      "new": "soap/history/stages/06_环境与实现/requirements_stages.txt",
+      "sha256_before": "59fc5b0cb1a6e661b6d6f8a7b6447362a82e5aab0929cce3c44213afe29fb306",
+      "sha256_after": "59fc5b0cb1a6e661b6d6f8a7b6447362a82e5aab0929cce3c44213afe29fb306",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/06_环境与实现/setup_soap_env.sh",
+      "new": "soap/history/stages/06_环境与实现/setup_soap_env.sh",
+      "sha256_before": "f792e2e280f4d3820aea01fd87c094ab5eabac51afc528de94370f9c6fc2e233",
+      "sha256_after": "f792e2e280f4d3820aea01fd87c094ab5eabac51afc528de94370f9c6fc2e233",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/06_环境与实现/soap_analysis/__init__.py",
+      "new": "soap/history/stages/06_环境与实现/soap_analysis/__init__.py",
+      "sha256_before": "6f8d2b15518fe2b8121feff9ff87b1a521a623a619cb29cb497d6ab2c2d18f32",
+      "sha256_after": "6f8d2b15518fe2b8121feff9ff87b1a521a623a619cb29cb497d6ab2c2d18f32",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/06_环境与实现/soap_analysis/bulk_reference.py",
+      "new": "soap/history/stages/06_环境与实现/soap_analysis/bulk_reference.py",
+      "sha256_before": "f694c283403289a170f63f72e09d81adf77c6477da70750abac1404c2b4d88e0",
+      "sha256_after": "f694c283403289a170f63f72e09d81adf77c6477da70750abac1404c2b4d88e0",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/06_环境与实现/soap_analysis/compare_structures.py",
+      "new": "soap/history/stages/06_环境与实现/soap_analysis/compare_structures.py",
+      "sha256_before": "ed164cae9f130b5c6c98e1ad2f7bdc3aeb4993c7c93e0af72416c67ab67204e2",
+      "sha256_after": "ed164cae9f130b5c6c98e1ad2f7bdc3aeb4993c7c93e0af72416c67ab67204e2",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/06_环境与实现/soap_analysis/dedup.py",
+      "new": "soap/history/stages/06_环境与实现/soap_analysis/dedup.py",
+      "sha256_before": "323ca89ea50e4e25c14582f697af465d2e471e387984b37b606bd0aa4febb250",
+      "sha256_after": "323ca89ea50e4e25c14582f697af465d2e471e387984b37b606bd0aa4febb250",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/06_环境与实现/soap_analysis/disorder_profile.py",
+      "new": "soap/history/stages/06_环境与实现/soap_analysis/disorder_profile.py",
+      "sha256_before": "6d459d1ee6e61d43b00be82ba3d4070f0ab930bbf6c4614cf394e9d204823a85",
+      "sha256_after": "6d459d1ee6e61d43b00be82ba3d4070f0ab930bbf6c4614cf394e9d204823a85",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/06_环境与实现/soap_analysis/io_lammps.py",
+      "new": "soap/history/stages/06_环境与实现/soap_analysis/io_lammps.py",
+      "sha256_before": "83b06f27a5b3bdce8d00e224c6bd9a6b309f82449a7b1b8b65e5e069a9d91322",
+      "sha256_after": "83b06f27a5b3bdce8d00e224c6bd9a6b309f82449a7b1b8b65e5e069a9d91322",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/06_环境与实现/soap_analysis/run_analysis.py",
+      "new": "soap/history/stages/06_环境与实现/soap_analysis/run_analysis.py",
+      "sha256_before": "ea95060fb35d393029ed228bf7b7b7973daa2f369b9dfe797d6bfeace0e04aed",
+      "sha256_after": "ea95060fb35d393029ed228bf7b7b7973daa2f369b9dfe797d6bfeace0e04aed",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/06_环境与实现/soap_analysis/similarity.py",
+      "new": "soap/history/stages/06_环境与实现/soap_analysis/similarity.py",
+      "sha256_before": "4b4f59d2a8d8e912ea673b6bcad9f707b74bc8fc0d5fb96d0730cc553c842372",
+      "sha256_after": "4b4f59d2a8d8e912ea673b6bcad9f707b74bc8fc0d5fb96d0730cc553c842372",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/06_环境与实现/soap_analysis/soap_backend.py",
+      "new": "soap/history/stages/06_环境与实现/soap_analysis/soap_backend.py",
+      "sha256_before": "fade235c5df6c31b849f0a47d20315234be38d3877b412ff9b52d3e3204cb951",
+      "sha256_after": "fade235c5df6c31b849f0a47d20315234be38d3877b412ff9b52d3e3204cb951",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/06_环境与实现/verify_soap_env.py",
+      "new": "soap/history/stages/06_环境与实现/verify_soap_env.py",
+      "sha256_before": "d43a6f7da73406d73368a12b5ea19c098714df690f86f92f3a0dfe913fe2bb30",
+      "sha256_after": "d43a6f7da73406d73368a12b5ea19c098714df690f86f92f3a0dfe913fe2bb30",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/90_历史归档/归档说明.md",
+      "new": "soap/history/stages/90_历史归档/归档说明.md",
+      "sha256_before": "4fabfc33d9c133aa67af68fd2034343fa4c2c8a8c8153c4d225a1d82fac277a2",
+      "sha256_after": "4fabfc33d9c133aa67af68fd2034343fa4c2c8a8c8153c4d225a1d82fac277a2",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/90_历史归档/旧版材料/inspect_structures_v_old.py",
+      "new": "soap/history/stages/90_历史归档/旧版材料/inspect_structures_v_old.py",
+      "sha256_before": "b9469f9ca66706a47966faa850d5a27060d398da87a973a2234fe56cf969a8f9",
+      "sha256_after": "b9469f9ca66706a47966faa850d5a27060d398da87a973a2234fe56cf969a8f9",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage01_数据准备与SOAP初测/01_报告/Stage01_确定性结论与待讨论.md",
+      "new": "soap/history/stages/Stage01_数据准备与SOAP初测/01_报告/Stage01_确定性结论与待讨论.md",
+      "sha256_before": "56b00c4d315ad1f2b85a9db9da2aae7d8c9f775e8408ebcae9351da763c07a00",
+      "sha256_after": "56b00c4d315ad1f2b85a9db9da2aae7d8c9f775e8408ebcae9351da763c07a00",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage01_数据准备与SOAP初测/02_脚本/cfg_reader.py",
+      "new": "soap/history/stages/Stage01_数据准备与SOAP初测/02_脚本/cfg_reader.py",
+      "sha256_before": "98d45d637b64c87c1ee0a047089b782fb9c033f5e0fdf9faa2c5cd33f2803075",
+      "sha256_after": "98d45d637b64c87c1ee0a047089b782fb9c033f5e0fdf9faa2c5cd33f2803075",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage01_数据准备与SOAP初测/02_脚本/inspect_structures.py",
+      "new": "soap/history/stages/Stage01_数据准备与SOAP初测/02_脚本/inspect_structures.py",
+      "sha256_before": "c0ef4bb8a815501160aa6333f78699cd21f9596e057a1b31582538d1ea302713",
+      "sha256_after": "c0ef4bb8a815501160aa6333f78699cd21f9596e057a1b31582538d1ea302713",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage01_数据准备与SOAP初测/02_脚本/ni_metastable.cfg",
+      "new": "soap/history/stages/Stage01_数据准备与SOAP初测/02_脚本/ni_metastable.cfg",
+      "sha256_before": "5066c9441b8870a2fa5faaa4677dd0fcd3bb6520ef52e567c6c17ca446b7c3ba",
+      "sha256_after": "5066c9441b8870a2fa5faaa4677dd0fcd3bb6520ef52e567c6c17ca446b7c3ba",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage01_数据准备与SOAP初测/02_脚本/ni_stable.cfg",
+      "new": "soap/history/stages/Stage01_数据准备与SOAP初测/02_脚本/ni_stable.cfg",
+      "sha256_before": "1dc438a3bf96964906505a3c1573be9ff6357ae418fc82f6b0aca8e1105d3409",
+      "sha256_after": "1dc438a3bf96964906505a3c1573be9ff6357ae418fc82f6b0aca8e1105d3409",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage01_数据准备与SOAP初测/02_脚本/soap_test.py",
+      "new": "soap/history/stages/Stage01_数据准备与SOAP初测/02_脚本/soap_test.py",
+      "sha256_before": "9f26eebac16f352f070616c6bf4d8d40ff9527c6b2360b60653c619b19e10dea",
+      "sha256_after": "9f26eebac16f352f070616c6bf4d8d40ff9527c6b2360b60653c619b19e10dea",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage01_数据准备与SOAP初测/02_脚本/stage1_qc.py",
+      "new": "soap/history/stages/Stage01_数据准备与SOAP初测/02_脚本/stage1_qc.py",
+      "sha256_before": "fe4d25c30a36423ac6c4adf028e938b00d1345334f01c3ee37ec6991eee101c9",
+      "sha256_after": "fe4d25c30a36423ac6c4adf028e938b00d1345334f01c3ee37ec6991eee101c9",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage01_数据准备与SOAP初测/03_输出/inspection_summary.txt",
+      "new": "soap/history/stages/Stage01_数据准备与SOAP初测/03_输出/inspection_summary.txt",
+      "sha256_before": "5073b1f83efa924dc0dc64864ac6669e3ca59dcc82233b3a19da1480117b49c9",
+      "sha256_after": "5073b1f83efa924dc0dc64864ac6669e3ca59dcc82233b3a19da1480117b49c9",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage01_数据准备与SOAP初测/03_输出/soap_test_summary.txt",
+      "new": "soap/history/stages/Stage01_数据准备与SOAP初测/03_输出/soap_test_summary.txt",
+      "sha256_before": "7142f4add6488d33f1f0265ebc21b78d9f8afabbb8d0d7ee62895b55d35c19f8",
+      "sha256_after": "7142f4add6488d33f1f0265ebc21b78d9f8afabbb8d0d7ee62895b55d35c19f8",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage01_数据准备与SOAP初测/03_输出/stage1_qc_report.txt",
+      "new": "soap/history/stages/Stage01_数据准备与SOAP初测/03_输出/stage1_qc_report.txt",
+      "sha256_before": "95f143f8f48adfb6878cb74447d7894f7ac92e1e15a1568d3f4077630b3ed95e",
+      "sha256_after": "95f143f8f48adfb6878cb74447d7894f7ac92e1e15a1568d3f4077630b3ed95e",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage01_输入输出检索表.md",
+      "new": "soap/history/stages/Stage01_输入输出检索表.md",
+      "sha256_before": "de704ef742412d440ae4b536854b74b36f8ceb5138015443c99523ebe5ca56d6",
+      "sha256_after": "de704ef742412d440ae4b536854b74b36f8ceb5138015443c99523ebe5ca56d6",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage02_SOAP表示与审计/01_报告/Stage02_确定性结论与待讨论.md",
+      "new": "soap/history/stages/Stage02_SOAP表示与审计/01_报告/Stage02_确定性结论与待讨论.md",
+      "sha256_before": "808d0e52503d2c33beebab5d142f861d245597e2f59d94a472f2b6f9360c0448",
+      "sha256_after": "808d0e52503d2c33beebab5d142f861d245597e2f59d94a472f2b6f9360c0448",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage02_SOAP表示与审计/02_脚本/stage2_5_audit.py",
+      "new": "soap/history/stages/Stage02_SOAP表示与审计/02_脚本/stage2_5_audit.py",
+      "sha256_before": "71e680a90b28339891d44d155fb53a4833dda02218a964158c8ac0dfc314d220",
+      "sha256_after": "71e680a90b28339891d44d155fb53a4833dda02218a964158c8ac0dfc314d220",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage02_SOAP表示与审计/02_脚本/stage2_75_full.py",
+      "new": "soap/history/stages/Stage02_SOAP表示与审计/02_脚本/stage2_75_full.py",
+      "sha256_before": "ffa25dfab54cf05dd29eb9e74960c221e583b58320307c53e2725d36932962bd",
+      "sha256_after": "ffa25dfab54cf05dd29eb9e74960c221e583b58320307c53e2725d36932962bd",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage02_SOAP表示与审计/02_脚本/stage2_profiles.py",
+      "new": "soap/history/stages/Stage02_SOAP表示与审计/02_脚本/stage2_profiles.py",
+      "sha256_before": "56b567b93915d52f49dc23e8aae101457dedc23523b9cc4916d2ffc8275e956b",
+      "sha256_after": "56b567b93915d52f49dc23e8aae101457dedc23523b9cc4916d2ffc8275e956b",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage02_SOAP表示与审计/02_脚本/stage2_soap.py",
+      "new": "soap/history/stages/Stage02_SOAP表示与审计/02_脚本/stage2_soap.py",
+      "sha256_before": "af03d8b8176bbb7d5d445ed93998fec09b4b7dd508891e93fc58a04dbca44cfc",
+      "sha256_after": "af03d8b8176bbb7d5d445ed93998fec09b4b7dd508891e93fc58a04dbca44cfc",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage02_SOAP表示与审计/03_输出/representative_atoms.csv",
+      "new": "soap/history/stages/Stage02_SOAP表示与审计/03_输出/representative_atoms.csv",
+      "sha256_before": "3ab41acaca1b7fd5129d0e7d623823a8409073893f40fffe169551e2448e4cfc",
+      "sha256_after": "3ab41acaca1b7fd5129d0e7d623823a8409073893f40fffe169551e2448e4cfc",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage02_SOAP表示与审计/03_输出/soap_similarity_heatmap.png",
+      "new": "soap/history/stages/Stage02_SOAP表示与审计/03_输出/soap_similarity_heatmap.png",
+      "sha256_before": "fd92de7406e661f4a016dfa0dc9fe0732a37cdf5c6b20b8fd0b7c71818138594",
+      "sha256_after": "fd92de7406e661f4a016dfa0dc9fe0732a37cdf5c6b20b8fd0b7c71818138594",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage02_SOAP表示与审计/03_输出/soap_similarity_matrix.csv",
+      "new": "soap/history/stages/Stage02_SOAP表示与审计/03_输出/soap_similarity_matrix.csv",
+      "sha256_before": "ad64af2b101b1806d5aada40abe83e0da918d957f5fc73766f6648124404ffab",
+      "sha256_after": "ad64af2b101b1806d5aada40abe83e0da918d957f5fc73766f6648124404ffab",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage02_SOAP表示与审计/03_输出/spatial_profile_metastable.png",
+      "new": "soap/history/stages/Stage02_SOAP表示与审计/03_输出/spatial_profile_metastable.png",
+      "sha256_before": "6f7a64a338ff9c0e55962a373c0ce95902d754d481757897d394b76576d00cd3",
+      "sha256_after": "6f7a64a338ff9c0e55962a373c0ce95902d754d481757897d394b76576d00cd3",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage02_SOAP表示与审计/03_输出/spatial_profile_stable.png",
+      "new": "soap/history/stages/Stage02_SOAP表示与审计/03_输出/spatial_profile_stable.png",
+      "sha256_before": "cdf1667bf4ac52fe0f547c562332377defba742e7b00bfc50e6669b6d583825e",
+      "sha256_after": "cdf1667bf4ac52fe0f547c562332377defba742e7b00bfc50e6669b6d583825e",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage02_SOAP表示与审计/03_输出/spatial_profile_summary.txt",
+      "new": "soap/history/stages/Stage02_SOAP表示与审计/03_输出/spatial_profile_summary.txt",
+      "sha256_before": "4f0220a37ba4d53ae570b9e5ec2a8cdf32b42a51065024931c6fa570c1cb4699",
+      "sha256_after": "4f0220a37ba4d53ae570b9e5ec2a8cdf32b42a51065024931c6fa570c1cb4699",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage02_SOAP表示与审计/03_输出/stage2_5_atom_metadata.csv",
+      "new": "soap/history/stages/Stage02_SOAP表示与审计/03_输出/stage2_5_atom_metadata.csv",
+      "sha256_before": "0db879d16fb52f5dd53d060e429377f9ec19ce2268205e779f82ef66c2969d82",
+      "sha256_after": "0db879d16fb52f5dd53d060e429377f9ec19ce2268205e779f82ef66c2969d82",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage02_SOAP表示与审计/03_输出/stage2_5_metric_heatmaps.png",
+      "new": "soap/history/stages/Stage02_SOAP表示与审计/03_输出/stage2_5_metric_heatmaps.png",
+      "sha256_before": "a4eb2e7179b4f7002b4bd6f0495d716e6facb0f6e23950f743844887fc5b444d",
+      "sha256_after": "a4eb2e7179b4f7002b4bd6f0495d716e6facb0f6e23950f743844887fc5b444d",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage02_SOAP表示与审计/03_输出/stage2_5_pair_category_summary.csv",
+      "new": "soap/history/stages/Stage02_SOAP表示与审计/03_输出/stage2_5_pair_category_summary.csv",
+      "sha256_before": "7049a5414fd4ac2bae570ad3477023b26c7f88a3b70880f09c1282179aa51c63",
+      "sha256_after": "7049a5414fd4ac2bae570ad3477023b26c7f88a3b70880f09c1282179aa51c63",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage02_SOAP表示与审计/03_输出/stage2_5_pairwise_metrics.csv",
+      "new": "soap/history/stages/Stage02_SOAP表示与审计/03_输出/stage2_5_pairwise_metrics.csv",
+      "sha256_before": "fd35f97735f49ea6fc9afac0fd490f90daa53faeadd957eae491ef5b5372465f",
+      "sha256_after": "fd35f97735f49ea6fc9afac0fd490f90daa53faeadd957eae491ef5b5372465f",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage02_SOAP表示与审计/03_输出/stage2_5_parameter_sensitivity.csv",
+      "new": "soap/history/stages/Stage02_SOAP表示与审计/03_输出/stage2_5_parameter_sensitivity.csv",
+      "sha256_before": "f336cc4ac42626f032326916695e82ad439a39f6ea10a3a27c72f497ae8011b5",
+      "sha256_after": "f336cc4ac42626f032326916695e82ad439a39f6ea10a3a27c72f497ae8011b5",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage02_SOAP表示与审计/03_输出/stage2_75_atom_metadata.csv",
+      "new": "soap/history/stages/Stage02_SOAP表示与审计/03_输出/stage2_75_atom_metadata.csv",
+      "sha256_before": "fde15e2d5f9469738b06e4d8c6033469d4bd7723bb99af818e601e8975b69ccf",
+      "sha256_after": "fde15e2d5f9469738b06e4d8c6033469d4bd7723bb99af818e601e8975b69ccf",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage02_SOAP表示与审计/03_输出/stage2_75_bulk_distance_distributions.png",
+      "new": "soap/history/stages/Stage02_SOAP表示与审计/03_输出/stage2_75_bulk_distance_distributions.png",
+      "sha256_before": "aa95298b20ea999283c1c3d0da0804af8e5e00158df5bb9af639230f429d08d1",
+      "sha256_after": "aa95298b20ea999283c1c3d0da0804af8e5e00158df5bb9af639230f429d08d1",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage02_SOAP表示与审计/03_输出/stage2_75_distance_decomposition.png",
+      "new": "soap/history/stages/Stage02_SOAP表示与审计/03_输出/stage2_75_distance_decomposition.png",
+      "sha256_before": "ac45a63bcc5f02e3e0ad13c98a2376007c033ff397ea9715965f0db138ee7064",
+      "sha256_after": "ac45a63bcc5f02e3e0ad13c98a2376007c033ff397ea9715965f0db138ee7064",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage02_SOAP表示与审计/03_输出/stage2_75_distance_vs_PEATOM.png",
+      "new": "soap/history/stages/Stage02_SOAP表示与审计/03_输出/stage2_75_distance_vs_PEATOM.png",
+      "sha256_before": "d84166bb31e524e927dbcb1607ef7b84393fce6f35ea8e3f0f8dc46f791702e9",
+      "sha256_after": "d84166bb31e524e927dbcb1607ef7b84393fce6f35ea8e3f0f8dc46f791702e9",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage02_SOAP表示与审计/03_输出/stage2_75_distance_vs_z.png",
+      "new": "soap/history/stages/Stage02_SOAP表示与审计/03_输出/stage2_75_distance_vs_z.png",
+      "sha256_before": "216b2053acbcf3c8ba21f00e9ff396da152ab7e56e0ced48a9162bcf37df5fc9",
+      "sha256_after": "216b2053acbcf3c8ba21f00e9ff396da152ab7e56e0ced48a9162bcf37df5fc9",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage02_SOAP表示与审计/03_输出/stage2_75_norm_distributions.png",
+      "new": "soap/history/stages/Stage02_SOAP表示与审计/03_输出/stage2_75_norm_distributions.png",
+      "sha256_before": "5e1ac025adbdfefcbb5a6a498d69e206986a6633bc839511607406f5c99820d4",
+      "sha256_after": "5e1ac025adbdfefcbb5a6a498d69e206986a6633bc839511607406f5c99820d4",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage02_SOAP表示与审计/03_输出/stage2_75_pairwise_summary.csv",
+      "new": "soap/history/stages/Stage02_SOAP表示与审计/03_输出/stage2_75_pairwise_summary.csv",
+      "sha256_before": "0be0e0869429981c0304f457369669ff5f384f2a14e15130a85731f2038fafbd",
+      "sha256_after": "0be0e0869429981c0304f457369669ff5f384f2a14e15130a85731f2038fafbd",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage02_SOAP表示与审计/03_输出/stage2_75_population_summary.csv",
+      "new": "soap/history/stages/Stage02_SOAP表示与审计/03_输出/stage2_75_population_summary.csv",
+      "sha256_before": "2ee532e1a87a3e654f7e75bacf963b6990889695503632016c9ee22641d09b00",
+      "sha256_after": "2ee532e1a87a3e654f7e75bacf963b6990889695503632016c9ee22641d09b00",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage02_SOAP表示与审计/03_输出/stage2_75_ptm_cna_summary.csv",
+      "new": "soap/history/stages/Stage02_SOAP表示与审计/03_输出/stage2_75_ptm_cna_summary.csv",
+      "sha256_before": "68334cfa047bfd5905fd44088e4686d0e73375604e129279fe914bf6faca6c51",
+      "sha256_after": "68334cfa047bfd5905fd44088e4686d0e73375604e129279fe914bf6faca6c51",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage02_输入输出检索表.md",
+      "new": "soap/history/stages/Stage02_输入输出检索表.md",
+      "sha256_before": "90c68f8b8fbae1a2ff85171095e713d5d713ebaf1079aeeea44ae59de5aedb92",
+      "sha256_after": "90c68f8b8fbae1a2ff85171095e713d5d713ebaf1079aeeea44ae59de5aedb92",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage03_LAE阈值与LAE_LER构建/01_报告/Stage03_确定性结论与待讨论.md",
+      "new": "soap/history/stages/Stage03_LAE阈值与LAE_LER构建/01_报告/Stage03_确定性结论与待讨论.md",
+      "sha256_before": "e0e93f0256c9dfd2d1cc9b41c34d96830c4222617cc84ba0360d39a46e361c1f",
+      "sha256_after": "e0e93f0256c9dfd2d1cc9b41c34d96830c4222617cc84ba0360d39a46e361c1f",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage03_LAE阈值与LAE_LER构建/02_脚本/stage3a_lae_threshold.py",
+      "new": "soap/history/stages/Stage03_LAE阈值与LAE_LER构建/02_脚本/stage3a_lae_threshold.py",
+      "sha256_before": "4191fd2e89172b978e4284b5400a329fb7a1472ba6158b51d62fb2d0f5b5ebc4",
+      "sha256_after": "4191fd2e89172b978e4284b5400a329fb7a1472ba6158b51d62fb2d0f5b5ebc4",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage03_LAE阈值与LAE_LER构建/02_脚本/stage3b_lae_ler.py",
+      "new": "soap/history/stages/Stage03_LAE阈值与LAE_LER构建/02_脚本/stage3b_lae_ler.py",
+      "sha256_before": "6af088e7150b922b46afd078cdeac296566336f5c927c9db44236109dea74240",
+      "sha256_after": "6af088e7150b922b46afd078cdeac296566336f5c927c9db44236109dea74240",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3a_bulk_behavior_vs_epsilon.png",
+      "new": "soap/history/stages/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3a_bulk_behavior_vs_epsilon.png",
+      "sha256_before": "16e9d63209eb2591f82d60cd6c06fe5a4f9608895a81cb68fdd9f2ca7f95fcd0",
+      "sha256_after": "16e9d63209eb2591f82d60cd6c06fe5a4f9608895a81cb68fdd9f2ca7f95fcd0",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3a_class_count_vs_epsilon.png",
+      "new": "soap/history/stages/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3a_class_count_vs_epsilon.png",
+      "sha256_before": "0ddb417027c0c51e0443d0da0a6aec9bee21a65c088815f0ff524d3282d67182",
+      "sha256_after": "0ddb417027c0c51e0443d0da0a6aec9bee21a65c088815f0ff524d3282d67182",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3a_epsilon_grid.csv",
+      "new": "soap/history/stages/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3a_epsilon_grid.csv",
+      "sha256_before": "8f9c039a4617849de8fdae85f77a7ee7181f697cb1f2eb4d51970384939d37ff",
+      "sha256_after": "8f9c039a4617849de8fdae85f77a7ee7181f697cb1f2eb4d51970384939d37ff",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3a_epsilon_sweep.csv",
+      "new": "soap/history/stages/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3a_epsilon_sweep.csv",
+      "sha256_before": "a60f026049b865fd2c27006e299b2ce67bf01d7a39fc5c6fc57c4d5ea41594bd",
+      "sha256_after": "a60f026049b865fd2c27006e299b2ce67bf01d7a39fc5c6fc57c4d5ea41594bd",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3a_nearest_neighbor_distances.csv",
+      "new": "soap/history/stages/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3a_nearest_neighbor_distances.csv",
+      "sha256_before": "c83ac3b1862b7b7c868c6ba2b56dbcb9541ad9ded80b398a6edb6469378bb29b",
+      "sha256_after": "c83ac3b1862b7b7c868c6ba2b56dbcb9541ad9ded80b398a6edb6469378bb29b",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3a_nearest_neighbor_summary.csv",
+      "new": "soap/history/stages/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3a_nearest_neighbor_summary.csv",
+      "sha256_before": "55c7a48a079591a49011fa2743213f391c766129ec009e6cb491634a7db3b583",
+      "sha256_after": "55c7a48a079591a49011fa2743213f391c766129ec009e6cb491634a7db3b583",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3a_nn_distributions.png",
+      "new": "soap/history/stages/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3a_nn_distributions.png",
+      "sha256_before": "34c45f98e1d5dddecfd9b239ea6ac85b5d86adb69baf8f283ad0dc4e2a843ed4",
+      "sha256_after": "34c45f98e1d5dddecfd9b239ea6ac85b5d86adb69baf8f283ad0dc4e2a843ed4",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3a_order_dependence_vs_epsilon.png",
+      "new": "soap/history/stages/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3a_order_dependence_vs_epsilon.png",
+      "sha256_before": "8596b50a925c724a2f702534a29549d9e1bc7c208104ae5b5b5ebf3dc642d0c6",
+      "sha256_after": "8596b50a925c724a2f702534a29549d9e1bc7c208104ae5b5b5ebf3dc642d0c6",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3a_partition_stability.csv",
+      "new": "soap/history/stages/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3a_partition_stability.csv",
+      "sha256_before": "deafbf81a6450d4161934172bd6625701be4f4895701801f7c1d7df00d709997",
+      "sha256_after": "deafbf81a6450d4161934172bd6625701be4f4895701801f7c1d7df00d709997",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3a_partition_stability_vs_epsilon.png",
+      "new": "soap/history/stages/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3a_partition_stability_vs_epsilon.png",
+      "sha256_before": "898f85899925de1c08253b2f44b2a4d7fa63064fe93212b86471b6d38b879ac5",
+      "sha256_after": "898f85899925de1c08253b2f44b2a4d7fa63064fe93212b86471b6d38b879ac5",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3a_refined_epsilon_sweep.csv",
+      "new": "soap/history/stages/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3a_refined_epsilon_sweep.csv",
+      "sha256_before": "9b20795e52671e41f2d8edfa843a487b40a1530e4b2c0c080355b48fb8cc6016",
+      "sha256_after": "9b20795e52671e41f2d8edfa843a487b40a1530e4b2c0c080355b48fb8cc6016",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3a_refined_threshold_plot.png",
+      "new": "soap/history/stages/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3a_refined_threshold_plot.png",
+      "sha256_before": "818652e636961e9446a4711ef77c572ea9fc6d343ae845755002d1089b5ceb58",
+      "sha256_after": "818652e636961e9446a4711ef77c572ea9fc6d343ae845755002d1089b5ceb58",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3a_singleton_fraction_vs_epsilon.png",
+      "new": "soap/history/stages/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3a_singleton_fraction_vs_epsilon.png",
+      "sha256_before": "42e8788fc7d47ccd79c883983e1263f0838a7b9cba4e66a4b3c858582b088bb7",
+      "sha256_after": "42e8788fc7d47ccd79c883983e1263f0838a7b9cba4e66a4b3c858582b088bb7",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3a_threshold_candidates.csv",
+      "new": "soap/history/stages/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3a_threshold_candidates.csv",
+      "sha256_before": "522b27ac88a87626854a62da64e18e88e0ccaa5ccd3ac6190b3c496004a4b16a",
+      "sha256_after": "522b27ac88a87626854a62da64e18e88e0ccaa5ccd3ac6190b3c496004a4b16a",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3b_atomwise_mid_epsilon.csv",
+      "new": "soap/history/stages/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3b_atomwise_mid_epsilon.csv",
+      "sha256_before": "579b6643c52f899ab46b51a880518d58af09d1c6d3011efe80abcdd16b01844f",
+      "sha256_after": "579b6643c52f899ab46b51a880518d58af09d1c6d3011efe80abcdd16b01844f",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3b_canonical_classes.csv",
+      "new": "soap/history/stages/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3b_canonical_classes.csv",
+      "sha256_before": "2f4e8af15124f582cdaba62a1f9f765737570b0065bd56981077e08d0f0acba1",
+      "sha256_after": "2f4e8af15124f582cdaba62a1f9f765737570b0065bd56981077e08d0f0acba1",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3b_class_compactness.csv",
+      "new": "soap/history/stages/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3b_class_compactness.csv",
+      "sha256_before": "c1c08ce66aabecf176ba7ffe314713678d8224a4c95e4188f7796579f8260994",
+      "sha256_after": "c1c08ce66aabecf176ba7ffe314713678d8224a4c95e4188f7796579f8260994",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3b_class_compactness.png",
+      "new": "soap/history/stages/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3b_class_compactness.png",
+      "sha256_before": "487f957a2908de3326433abcf697cc79b4ec066981bebc64b93bfe2f806c6b43",
+      "sha256_after": "487f957a2908de3326433abcf697cc79b4ec066981bebc64b93bfe2f806c6b43",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3b_class_population_vs_epsilon.png",
+      "new": "soap/history/stages/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3b_class_population_vs_epsilon.png",
+      "sha256_before": "3a4e8ac916b7d61f7649c86d40b0a2d14c6f1788cb72d818444b440c27bea9c8",
+      "sha256_after": "3a4e8ac916b7d61f7649c86d40b0a2d14c6f1788cb72d818444b440c27bea9c8",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3b_class_statistics.csv",
+      "new": "soap/history/stages/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3b_class_statistics.csv",
+      "sha256_before": "41978401db5aae328ecdee8ab835651a5eb255e34e811aeec015c475c7a25602",
+      "sha256_after": "41978401db5aae328ecdee8ab835651a5eb255e34e811aeec015c475c7a25602",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3b_epsilon_set.csv",
+      "new": "soap/history/stages/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3b_epsilon_set.csv",
+      "sha256_before": "e59a3f94eee69d368f39aaeba3c6083490edb02ef69ce1b2c6952fb99ec69afa",
+      "sha256_after": "e59a3f94eee69d368f39aaeba3c6083490edb02ef69ce1b2c6952fb99ec69afa",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3b_lae_vs_z_metastable.png",
+      "new": "soap/history/stages/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3b_lae_vs_z_metastable.png",
+      "sha256_before": "8d79e361acdf8137ec24c3e307c81fcb99c1fb272e56c6537d43182efa09ed15",
+      "sha256_after": "8d79e361acdf8137ec24c3e307c81fcb99c1fb272e56c6537d43182efa09ed15",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3b_lae_vs_z_stable.png",
+      "new": "soap/history/stages/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3b_lae_vs_z_stable.png",
+      "sha256_before": "5033c6d26e41e33456631e9580b754479ac85f90a7a2243f740ba563fdf1eeea",
+      "sha256_after": "5033c6d26e41e33456631e9580b754479ac85f90a7a2243f740ba563fdf1eeea",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3b_ler_by_run.csv",
+      "new": "soap/history/stages/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3b_ler_by_run.csv",
+      "sha256_before": "985785e7a9d1d3b7e6e2f33c239cded688e35e394b7db18d5148d5c1ccfc3c80",
+      "sha256_after": "985785e7a9d1d3b7e6e2f33c239cded688e35e394b7db18d5148d5c1ccfc3c80",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3b_ler_comparison.csv",
+      "new": "soap/history/stages/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3b_ler_comparison.csv",
+      "sha256_before": "19d6345b51c7e7eeed7e356ac55fc411db92ddf2d7faa2df5a390a7ca625a8be",
+      "sha256_after": "19d6345b51c7e7eeed7e356ac55fc411db92ddf2d7faa2df5a390a7ca625a8be",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3b_ler_stable_vs_metastable.png",
+      "new": "soap/history/stages/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3b_ler_stable_vs_metastable.png",
+      "sha256_before": "19ddeed501b8d8122f43dc3958be91ecbcdada03b34a21a03d2acf59cd60ea81",
+      "sha256_after": "19ddeed501b8d8122f43dc3958be91ecbcdada03b34a21a03d2acf59cd60ea81",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3b_ler_summary.csv",
+      "new": "soap/history/stages/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3b_ler_summary.csv",
+      "sha256_before": "762602143393e1c57c128c17e39eaa007ed3bb1f34f547215d021333b83735cc",
+      "sha256_after": "762602143393e1c57c128c17e39eaa007ed3bb1f34f547215d021333b83735cc",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3b_ler_vs_epsilon.png",
+      "new": "soap/history/stages/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3b_ler_vs_epsilon.png",
+      "sha256_before": "c9b38c0bc392e8b9ec6f75b4478fc7eb5999e99a4939fce86b3e4afe419cc10a",
+      "sha256_after": "c9b38c0bc392e8b9ec6f75b4478fc7eb5999e99a4939fce86b3e4afe419cc10a",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3b_mid_epsilon_lae.xyz",
+      "new": "soap/history/stages/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3b_mid_epsilon_lae.xyz",
+      "sha256_before": "1fe664e7f8c2097d79881a6d70f65a318f56586b67a06dddd8ac781bf1a2d0d8",
+      "sha256_after": "1fe664e7f8c2097d79881a6d70f65a318f56586b67a06dddd8ac781bf1a2d0d8",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3b_partition_ari.csv",
+      "new": "soap/history/stages/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3b_partition_ari.csv",
+      "sha256_before": "ce3fae9a51a0afca8590d3cf802993ab48afcdf56975b65715aa41a3aef9b345",
+      "sha256_after": "ce3fae9a51a0afca8590d3cf802993ab48afcdf56975b65715aa41a3aef9b345",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3b_representative_atoms.csv",
+      "new": "soap/history/stages/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3b_representative_atoms.csv",
+      "sha256_before": "1a2f950ad16c31f623ff620dfc8b210d6d4d6058ff287eeb5e721a8cbac649e9",
+      "sha256_after": "1a2f950ad16c31f623ff620dfc8b210d6d4d6058ff287eeb5e721a8cbac649e9",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3b_run_summary.csv",
+      "new": "soap/history/stages/Stage03_LAE阈值与LAE_LER构建/03_输出/stage3b_run_summary.csv",
+      "sha256_before": "6722f1794b7557f17e7cbc38317c7ce167cd6fa5778eca60c62983ebc97e824c",
+      "sha256_after": "6722f1794b7557f17e7cbc38317c7ce167cd6fa5778eca60c62983ebc97e824c",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage03_输入输出检索表.md",
+      "new": "soap/history/stages/Stage03_输入输出检索表.md",
+      "sha256_before": "9222ae48f39146621056decd6d1551c27b57f737e2ed4c2f5768552ab9567ba4",
+      "sha256_after": "9222ae48f39146621056decd6d1551c27b57f737e2ed4c2f5768552ab9567ba4",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage04_无序度与能量关联/01_报告/Stage04_确定性结论与待讨论.md",
+      "new": "soap/history/stages/Stage04_无序度与能量关联/01_报告/Stage04_确定性结论与待讨论.md",
+      "sha256_before": "b588c947db19a78de8ccd4aa96d13e8f322223cd62e0a799815db270a2e7cf43",
+      "sha256_after": "b588c947db19a78de8ccd4aa96d13e8f322223cd62e0a799815db270a2e7cf43",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage04_无序度与能量关联/02_脚本/stage4a_continuous_disorder.py",
+      "new": "soap/history/stages/Stage04_无序度与能量关联/02_脚本/stage4a_continuous_disorder.py",
+      "sha256_before": "e2f4179bd788a3d1e12215c095468c4273480f561476ece097ae737e40bc3a7a",
+      "sha256_after": "e2f4179bd788a3d1e12215c095468c4273480f561476ece097ae737e40bc3a7a",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage04_无序度与能量关联/02_脚本/stage4b_disorder_energy.py",
+      "new": "soap/history/stages/Stage04_无序度与能量关联/02_脚本/stage4b_disorder_energy.py",
+      "sha256_before": "67768ffb0fffa67444eceff4a76c7b851ee63ad0276bb39a52d7f3034399c74b",
+      "sha256_after": "67768ffb0fffa67444eceff4a76c7b851ee63ad0276bb39a52d7f3034399c74b",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage04_无序度与能量关联/03_输出/stage4a_atomwise_disorder.csv",
+      "new": "soap/history/stages/Stage04_无序度与能量关联/03_输出/stage4a_atomwise_disorder.csv",
+      "sha256_before": "d9cf40a9be933cefe1f51f837968dd0bc422c6febc63c5cf8836a3831627edb3",
+      "sha256_after": "d9cf40a9be933cefe1f51f837968dd0bc422c6febc63c5cf8836a3831627edb3",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage04_无序度与能量关联/03_输出/stage4a_bootstrap_summary.csv",
+      "new": "soap/history/stages/Stage04_无序度与能量关联/03_输出/stage4a_bootstrap_summary.csv",
+      "sha256_before": "deff9238e28f27baa0375855a0d83c4ea64ea2244d0c04589ea336b371f0109f",
+      "sha256_after": "deff9238e28f27baa0375855a0d83c4ea64ea2244d0c04589ea336b371f0109f",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage04_无序度与能量关联/03_输出/stage4a_bulk_disorder_distribution.png",
+      "new": "soap/history/stages/Stage04_无序度与能量关联/03_输出/stage4a_bulk_disorder_distribution.png",
+      "sha256_before": "dcf695afa7a1c43c735c6126d0175d5d1badd90d74e89b506b0bcc1f240c5c34",
+      "sha256_after": "dcf695afa7a1c43c735c6126d0175d5d1badd90d74e89b506b0bcc1f240c5c34",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage04_无序度与能量关联/03_输出/stage4a_four_group_disorder.png",
+      "new": "soap/history/stages/Stage04_无序度与能量关联/03_输出/stage4a_four_group_disorder.png",
+      "sha256_before": "7d857aa722dc0e629470eeb456f829eaff3f4a2c4de470cd092c9bf8f8d3a657",
+      "sha256_after": "7d857aa722dc0e629470eeb456f829eaff3f4a2c4de470cd092c9bf8f8d3a657",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage04_无序度与能量关联/03_输出/stage4a_group_statistics.csv",
+      "new": "soap/history/stages/Stage04_无序度与能量关联/03_输出/stage4a_group_statistics.csv",
+      "sha256_before": "4f884e12fe61f191e1b25c38b538f3ada3b74823c7e218ef3b7729fd950ffa21",
+      "sha256_after": "4f884e12fe61f191e1b25c38b538f3ada3b74823c7e218ef3b7729fd950ffa21",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage04_无序度与能量关联/03_输出/stage4a_interface_disorder_distribution.png",
+      "new": "soap/history/stages/Stage04_无序度与能量关联/03_输出/stage4a_interface_disorder_distribution.png",
+      "sha256_before": "5545bc5039233f60e25f82a33f51b0c4274ac60cb382c911aee0393f7fc7d494",
+      "sha256_after": "5545bc5039233f60e25f82a33f51b0c4274ac60cb382c911aee0393f7fc7d494",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage04_无序度与能量关联/03_输出/stage4a_k_robustness.csv",
+      "new": "soap/history/stages/Stage04_无序度与能量关联/03_输出/stage4a_k_robustness.csv",
+      "sha256_before": "e03e50918282bc90c20e1b991deb488b3631b2420924b686bff6439e3ee83c99",
+      "sha256_after": "e03e50918282bc90c20e1b991deb488b3631b2420924b686bff6439e3ee83c99",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage04_无序度与能量关联/03_输出/stage4a_k_sensitivity.png",
+      "new": "soap/history/stages/Stage04_无序度与能量关联/03_输出/stage4a_k_sensitivity.png",
+      "sha256_before": "a3dc549365aa8bd8514cdc4013a0f4a6b542aaedf386ce02ff3b8838a3223a90",
+      "sha256_after": "a3dc549365aa8bd8514cdc4013a0f4a6b542aaedf386ce02ff3b8838a3223a90",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage04_无序度与能量关联/03_输出/stage4a_metastable_disorder.xyz",
+      "new": "soap/history/stages/Stage04_无序度与能量关联/03_输出/stage4a_metastable_disorder.xyz",
+      "sha256_before": "bde0287cc1948b654e061005c417fb3e376c2a0eab250330c02c065352da23d5",
+      "sha256_after": "bde0287cc1948b654e061005c417fb3e376c2a0eab250330c02c065352da23d5",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage04_无序度与能量关联/03_输出/stage4a_pca_disorder.png",
+      "new": "soap/history/stages/Stage04_无序度与能量关联/03_输出/stage4a_pca_disorder.png",
+      "sha256_before": "e9c4b59a74f254e94c04fa31b2c638b2aa585330510d119c12363d80133f90f7",
+      "sha256_after": "e9c4b59a74f254e94c04fa31b2c638b2aa585330510d119c12363d80133f90f7",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage04_无序度与能量关联/03_输出/stage4a_pca_groups.png",
+      "new": "soap/history/stages/Stage04_无序度与能量关联/03_输出/stage4a_pca_groups.png",
+      "sha256_before": "4da5ac5eddb12a6e69be55ba43fddd0df75c28bef9e29c4c14b856d84b6074ee",
+      "sha256_after": "4da5ac5eddb12a6e69be55ba43fddd0df75c28bef9e29c4c14b856d84b6074ee",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage04_无序度与能量关联/03_输出/stage4a_pca_peatom.png",
+      "new": "soap/history/stages/Stage04_无序度与能量关联/03_输出/stage4a_pca_peatom.png",
+      "sha256_before": "268a1b196a5da0d1cb7a175c2e3108cb9b7cc71b4f60f6629e813f9acdf2dd60",
+      "sha256_after": "268a1b196a5da0d1cb7a175c2e3108cb9b7cc71b4f60f6629e813f9acdf2dd60",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage04_无序度与能量关联/03_输出/stage4a_pca_variance.csv",
+      "new": "soap/history/stages/Stage04_无序度与能量关联/03_输出/stage4a_pca_variance.csv",
+      "sha256_before": "34c61495d22cdc962b8d8a053fdd250e69dcf5e1330a503b6516ab32661abc24",
+      "sha256_after": "34c61495d22cdc962b8d8a053fdd250e69dcf5e1330a503b6516ab32661abc24",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage04_无序度与能量关联/03_输出/stage4a_reference_sensitivity.csv",
+      "new": "soap/history/stages/Stage04_无序度与能量关联/03_输出/stage4a_reference_sensitivity.csv",
+      "sha256_before": "5c747468d72b53539a46ab339a5fe13961cf6f3525486947b597c34513649653",
+      "sha256_after": "5c747468d72b53539a46ab339a5fe13961cf6f3525486947b597c34513649653",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage04_无序度与能量关联/03_输出/stage4a_stable_disorder.xyz",
+      "new": "soap/history/stages/Stage04_无序度与能量关联/03_输出/stage4a_stable_disorder.xyz",
+      "sha256_before": "fabc929c34791859926b691dc2638bb28ed79b2c1918e4ee383d9fad2e6c529c",
+      "sha256_after": "fabc929c34791859926b691dc2638bb28ed79b2c1918e4ee383d9fad2e6c529c",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage04_无序度与能量关联/03_输出/stage4b_all_atoms_scatter.png",
+      "new": "soap/history/stages/Stage04_无序度与能量关联/03_输出/stage4b_all_atoms_scatter.png",
+      "sha256_before": "fe963f2c73de9072bba4cfbf85ff8a64b091afd193082c79fe9d2a35b83005e0",
+      "sha256_after": "fe963f2c73de9072bba4cfbf85ff8a64b091afd193082c79fe9d2a35b83005e0",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage04_无序度与能量关联/03_输出/stage4b_atomwise_energy_disorder.csv",
+      "new": "soap/history/stages/Stage04_无序度与能量关联/03_输出/stage4b_atomwise_energy_disorder.csv",
+      "sha256_before": "05ad9d76036743f5a04859584c19a8621c0ea86187718f7637d68667fd708075",
+      "sha256_after": "05ad9d76036743f5a04859584c19a8621c0ea86187718f7637d68667fd708075",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage04_无序度与能量关联/03_输出/stage4b_binned_interface_trend.csv",
+      "new": "soap/history/stages/Stage04_无序度与能量关联/03_输出/stage4b_binned_interface_trend.csv",
+      "sha256_before": "9383d494555f3c1e9fa7421de2ac3501b008c251244aa08b3bb3e70ddade87b6",
+      "sha256_after": "9383d494555f3c1e9fa7421de2ac3501b008c251244aa08b3bb3e70ddade87b6",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage04_无序度与能量关联/03_输出/stage4b_binned_metastable_trend.csv",
+      "new": "soap/history/stages/Stage04_无序度与能量关联/03_输出/stage4b_binned_metastable_trend.csv",
+      "sha256_before": "c14d310850502d1ac9ccad774378c5cba722494201a8fe956995ec3cedd50230",
+      "sha256_after": "c14d310850502d1ac9ccad774378c5cba722494201a8fe956995ec3cedd50230",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage04_无序度与能量关联/03_输出/stage4b_binned_stable_trend.csv",
+      "new": "soap/history/stages/Stage04_无序度与能量关联/03_输出/stage4b_binned_stable_trend.csv",
+      "sha256_before": "861e030bd8e948fa8af7a0aaaa899ae6145560febd4a05fd1bb172be0f58a45f",
+      "sha256_after": "861e030bd8e948fa8af7a0aaaa899ae6145560febd4a05fd1bb172be0f58a45f",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage04_无序度与能量关联/03_输出/stage4b_bootstrap_summary.csv",
+      "new": "soap/history/stages/Stage04_无序度与能量关联/03_输出/stage4b_bootstrap_summary.csv",
+      "sha256_before": "fbf5559e49507dd81c8c4f7358fb5d732f6a9d1f0710c89c169f37681f02595c",
+      "sha256_after": "fbf5559e49507dd81c8c4f7358fb5d732f6a9d1f0710c89c169f37681f02595c",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage04_无序度与能量关联/03_输出/stage4b_common_support_comparison.csv",
+      "new": "soap/history/stages/Stage04_无序度与能量关联/03_输出/stage4b_common_support_comparison.csv",
+      "sha256_before": "f81414a938e97c2b09c0c4a88dd7c42a6555403c90cea35ac2386df8cc6e0582",
+      "sha256_after": "f81414a938e97c2b09c0c4a88dd7c42a6555403c90cea35ac2386df8cc6e0582",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage04_无序度与能量关联/03_输出/stage4b_conditional_state_difference.png",
+      "new": "soap/history/stages/Stage04_无序度与能量关联/03_输出/stage4b_conditional_state_difference.png",
+      "sha256_before": "2beb3b88dc549053367a9fba2469e98875a4425f3dcb7583b15d5db2714ae8cd",
+      "sha256_after": "2beb3b88dc549053367a9fba2469e98875a4425f3dcb7583b15d5db2714ae8cd",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage04_无序度与能量关联/03_输出/stage4b_correlations.csv",
+      "new": "soap/history/stages/Stage04_无序度与能量关联/03_输出/stage4b_correlations.csv",
+      "sha256_before": "924455d90b93f5f74ef67a40fc2e43b2edd6eba511335bcbb9187e65999af758",
+      "sha256_after": "924455d90b93f5f74ef67a40fc2e43b2edd6eba511335bcbb9187e65999af758",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage04_无序度与能量关联/03_输出/stage4b_energy_baselines.csv",
+      "new": "soap/history/stages/Stage04_无序度与能量关联/03_输出/stage4b_energy_baselines.csv",
+      "sha256_before": "f08502c6b8594c0d6771620832e99fa9adec9b5540b247e7237ec6dc5cf39462",
+      "sha256_after": "f08502c6b8594c0d6771620832e99fa9adec9b5540b247e7237ec6dc5cf39462",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage04_无序度与能量关联/03_输出/stage4b_fixed_disorder_energy_spread.csv",
+      "new": "soap/history/stages/Stage04_无序度与能量关联/03_输出/stage4b_fixed_disorder_energy_spread.csv",
+      "sha256_before": "fb26208eed8ea604f40b8d93b87d0def5069045e262b434dad4dda208fa9188a",
+      "sha256_after": "fb26208eed8ea604f40b8d93b87d0def5069045e262b434dad4dda208fa9188a",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage04_无序度与能量关联/03_输出/stage4b_group_energy_statistics.csv",
+      "new": "soap/history/stages/Stage04_无序度与能量关联/03_输出/stage4b_group_energy_statistics.csv",
+      "sha256_before": "0efa194c83c062239b24db21037473e034e4418f371535fc62a31c9aabac80ad",
+      "sha256_after": "0efa194c83c062239b24db21037473e034e4418f371535fc62a31c9aabac80ad",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage04_无序度与能量关联/03_输出/stage4b_interface_binned_trend.png",
+      "new": "soap/history/stages/Stage04_无序度与能量关联/03_输出/stage4b_interface_binned_trend.png",
+      "sha256_before": "10a8502ce2dcbbd00f18ce52d8c86781a4c0748c16cf6d741c260156a5eca732",
+      "sha256_after": "10a8502ce2dcbbd00f18ce52d8c86781a4c0748c16cf6d741c260156a5eca732",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage04_无序度与能量关联/03_输出/stage4b_interface_scatter.png",
+      "new": "soap/history/stages/Stage04_无序度与能量关联/03_输出/stage4b_interface_scatter.png",
+      "sha256_before": "0e7483d5109468391153b4606b7f7243d825a9a4bdfb1a554cd1fdd0c02d7f25",
+      "sha256_after": "0e7483d5109468391153b4606b7f7243d825a9a4bdfb1a554cd1fdd0c02d7f25",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage04_无序度与能量关联/03_输出/stage4b_k_robustness.csv",
+      "new": "soap/history/stages/Stage04_无序度与能量关联/03_输出/stage4b_k_robustness.csv",
+      "sha256_before": "b23721cfcdee4682fcde4857d8924bba07e72567d919eec6424f681eaaa4dafc",
+      "sha256_after": "b23721cfcdee4682fcde4857d8924bba07e72567d919eec6424f681eaaa4dafc",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage04_无序度与能量关联/03_输出/stage4b_metastable_interface_scatter.png",
+      "new": "soap/history/stages/Stage04_无序度与能量关联/03_输出/stage4b_metastable_interface_scatter.png",
+      "sha256_before": "a9a7cbfca6a7417196a35eff7aa0f31ab008027f7dc8f56677b3423437e4eb81",
+      "sha256_after": "a9a7cbfca6a7417196a35eff7aa0f31ab008027f7dc8f56677b3423437e4eb81",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage04_无序度与能量关联/03_输出/stage4b_pca_disorder.png",
+      "new": "soap/history/stages/Stage04_无序度与能量关联/03_输出/stage4b_pca_disorder.png",
+      "sha256_before": "e9c4b59a74f254e94c04fa31b2c638b2aa585330510d119c12363d80133f90f7",
+      "sha256_after": "e9c4b59a74f254e94c04fa31b2c638b2aa585330510d119c12363d80133f90f7",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage04_无序度与能量关联/03_输出/stage4b_pca_energy.png",
+      "new": "soap/history/stages/Stage04_无序度与能量关联/03_输出/stage4b_pca_energy.png",
+      "sha256_before": "37fc9f061e589bc16aba3b6cd2754d0e2acd0b2537d1f608211b10741a502fe1",
+      "sha256_after": "37fc9f061e589bc16aba3b6cd2754d0e2acd0b2537d1f608211b10741a502fe1",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage04_无序度与能量关联/03_输出/stage4b_pca_interface_energy.png",
+      "new": "soap/history/stages/Stage04_无序度与能量关联/03_输出/stage4b_pca_interface_energy.png",
+      "sha256_before": "67656b8124e5db875d743290d859a0aae7f44e8ce3c94960fc38777b6d03c943",
+      "sha256_after": "67656b8124e5db875d743290d859a0aae7f44e8ce3c94960fc38777b6d03c943",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage04_无序度与能量关联/03_输出/stage4b_stable_interface_scatter.png",
+      "new": "soap/history/stages/Stage04_无序度与能量关联/03_输出/stage4b_stable_interface_scatter.png",
+      "sha256_before": "4c5a88d06163bfd4122314d7d2dff46ce603675dc25b9bfee69084b4f7b3bb46",
+      "sha256_after": "4c5a88d06163bfd4122314d7d2dff46ce603675dc25b9bfee69084b4f7b3bb46",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage04_无序度与能量关联/03_输出/stage4b_state_binned_trends.png",
+      "new": "soap/history/stages/Stage04_无序度与能量关联/03_输出/stage4b_state_binned_trends.png",
+      "sha256_before": "05a09693a73a1732fab5bd435b64017c9fe65276857c61ae63cbe50e405034ca",
+      "sha256_after": "05a09693a73a1732fab5bd435b64017c9fe65276857c61ae63cbe50e405034ca",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage04_输入输出检索表.md",
+      "new": "soap/history/stages/Stage04_输入输出检索表.md",
+      "sha256_before": "168e942b0d2a827aeacca608efc18a1963ac4b2f66bbc91cbdf38ba69e45fcc4",
+      "sha256_after": "168e942b0d2a827aeacca608efc18a1963ac4b2f66bbc91cbdf38ba69e45fcc4",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向/01_报告/Stage05_确定性结论与待讨论.md",
+      "new": "soap/history/stages/Stage05_物理空间与方向/01_报告/Stage05_确定性结论与待讨论.md",
+      "sha256_before": "463d419ae1d6f6daebb064c334394af4d043a74e053936f3fecc43e05699503a",
+      "sha256_after": "463d419ae1d6f6daebb064c334394af4d043a74e053936f3fecc43e05699503a",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向/02_脚本/stage5a_physical_spatial_residual.py",
+      "new": "soap/history/stages/Stage05_物理空间与方向/02_脚本/stage5a_physical_spatial_residual.py",
+      "sha256_before": "25e254afdb0951da69837b4be620c4f00d86d39864c4d8a55b12dbce50cc4b26",
+      "sha256_after": "25e254afdb0951da69837b4be620c4f00d86d39864c4d8a55b12dbce50cc4b26",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向/02_脚本/stage5b_soap_direction.py",
+      "new": "soap/history/stages/Stage05_物理空间与方向/02_脚本/stage5b_soap_direction.py",
+      "sha256_before": "4e5e7139a7e5368db8fc95d6fe00286dcd15994f4a39d75495c810bdaa6e6cc9",
+      "sha256_after": "4e5e7139a7e5368db8fc95d6fe00286dcd15994f4a39d75495c810bdaa6e6cc9",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向/03_输出/stage5a_atomwise_physical_descriptors.csv",
+      "new": "soap/history/stages/Stage05_物理空间与方向/03_输出/stage5a_atomwise_physical_descriptors.csv",
+      "sha256_before": "f69f87866e9650e4251f25a5c3af796afbf14dabdb5d4b5cd871310d1a029e85",
+      "sha256_after": "f69f87866e9650e4251f25a5c3af796afbf14dabdb5d4b5cd871310d1a029e85",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向/03_输出/stage5a_descriptor_correlations.csv",
+      "new": "soap/history/stages/Stage05_物理空间与方向/03_输出/stage5a_descriptor_correlations.csv",
+      "sha256_before": "f632c7023fb29b805c5c820142970cc8f39fb0a26fc315e63cbcaadc109daf3a",
+      "sha256_after": "f632c7023fb29b805c5c820142970cc8f39fb0a26fc315e63cbcaadc109daf3a",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向/03_输出/stage5a_descriptor_group_statistics.csv",
+      "new": "soap/history/stages/Stage05_物理空间与方向/03_输出/stage5a_descriptor_group_statistics.csv",
+      "sha256_before": "d7ac7641caae743f06bcbed542346e23d66d0cd2cb3308843eebd2d0006ebfa5",
+      "sha256_after": "d7ac7641caae743f06bcbed542346e23d66d0cd2cb3308843eebd2d0006ebfa5",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向/03_输出/stage5a_disorder_bin_conditional_stats.csv",
+      "new": "soap/history/stages/Stage05_物理空间与方向/03_输出/stage5a_disorder_bin_conditional_stats.csv",
+      "sha256_before": "b93cba3e9cbc2809e5a565e8d9522e683e37abc0082d74bb1c0d803653a5ce85",
+      "sha256_after": "b93cba3e9cbc2809e5a565e8d9522e683e37abc0082d74bb1c0d803653a5ce85",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向/03_输出/stage5a_matched_neighborhoods.xyz",
+      "new": "soap/history/stages/Stage05_物理空间与方向/03_输出/stage5a_matched_neighborhoods.xyz",
+      "sha256_before": "40f32cc7c770cba6e13e9d09006e452fa5b9a279661cecb191681b05430682be",
+      "sha256_after": "40f32cc7c770cba6e13e9d09006e452fa5b9a279661cecb191681b05430682be",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向/03_输出/stage5a_matched_pair_energy_vs_disorder.png",
+      "new": "soap/history/stages/Stage05_物理空间与方向/03_输出/stage5a_matched_pair_energy_vs_disorder.png",
+      "sha256_before": "05251f869fd89687cf7fa025acbcdcf413979a8babdf4a896e16d5e7629a5f5b",
+      "sha256_after": "05251f869fd89687cf7fa025acbcdcf413979a8babdf4a896e16d5e7629a5f5b",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向/03_输出/stage5a_matched_pairs.csv",
+      "new": "soap/history/stages/Stage05_物理空间与方向/03_输出/stage5a_matched_pairs.csv",
+      "sha256_before": "95a39e1ca039459ef9c74c43c702dc799cfeede7bc4c6adbdebe573596af2373",
+      "sha256_after": "95a39e1ca039459ef9c74c43c702dc799cfeede7bc4c6adbdebe573596af2373",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向/03_输出/stage5a_metastable_bond_strain_map.png",
+      "new": "soap/history/stages/Stage05_物理空间与方向/03_输出/stage5a_metastable_bond_strain_map.png",
+      "sha256_before": "adae9ed20c5f28b39ea7397e29307cab04cde81a278378e485325ccc0150bc88",
+      "sha256_after": "adae9ed20c5f28b39ea7397e29307cab04cde81a278378e485325ccc0150bc88",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向/03_输出/stage5a_metastable_disorder_map.png",
+      "new": "soap/history/stages/Stage05_物理空间与方向/03_输出/stage5a_metastable_disorder_map.png",
+      "sha256_before": "bba904af903b9eefaa9d743ef7cb65dbf6086adcfbb1cbb272440af9bae85c94",
+      "sha256_after": "bba904af903b9eefaa9d743ef7cb65dbf6086adcfbb1cbb272440af9bae85c94",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向/03_输出/stage5a_metastable_physical_descriptors.png",
+      "new": "soap/history/stages/Stage05_物理空间与方向/03_输出/stage5a_metastable_physical_descriptors.png",
+      "sha256_before": "eb68cbe1e828eab24dc09960b2da6cab2a63a613ad7540efc3a3cfc339afee19",
+      "sha256_after": "eb68cbe1e828eab24dc09960b2da6cab2a63a613ad7540efc3a3cfc339afee19",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向/03_输出/stage5a_metastable_residual_energy_map.png",
+      "new": "soap/history/stages/Stage05_物理空间与方向/03_输出/stage5a_metastable_residual_energy_map.png",
+      "sha256_before": "0fedb8c17bf030c808d67f37738f735d9863aaee23e15cd9ab1966f3e83c534b",
+      "sha256_after": "0fedb8c17bf030c808d67f37738f735d9863aaee23e15cd9ab1966f3e83c534b",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向/03_输出/stage5a_residual_definition.csv",
+      "new": "soap/history/stages/Stage05_物理空间与方向/03_输出/stage5a_residual_definition.csv",
+      "sha256_before": "11e96981af49af5b8ce785e6ab1525ae376596b8c25b8bc435677a569dd6a1a4",
+      "sha256_after": "11e96981af49af5b8ce785e6ab1525ae376596b8c25b8bc435677a569dd6a1a4",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向/03_输出/stage5a_residual_vs_bond_strain.png",
+      "new": "soap/history/stages/Stage05_物理空间与方向/03_输出/stage5a_residual_vs_bond_strain.png",
+      "sha256_before": "27a81f1bca12525b72c0f4551ca7851bd0e5b5b6243ec62277820f5ed04079a1",
+      "sha256_after": "27a81f1bca12525b72c0f4551ca7851bd0e5b5b6243ec62277820f5ed04079a1",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向/03_输出/stage5a_residual_vs_cn.png",
+      "new": "soap/history/stages/Stage05_物理空间与方向/03_输出/stage5a_residual_vs_cn.png",
+      "sha256_before": "2dc974358df755630ae91a4a29a666b958922304e67226c10ae983bde58ee247",
+      "sha256_after": "2dc974358df755630ae91a4a29a666b958922304e67226c10ae983bde58ee247",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向/03_输出/stage5a_residual_vs_csp.png",
+      "new": "soap/history/stages/Stage05_物理空间与方向/03_输出/stage5a_residual_vs_csp.png",
+      "sha256_before": "e2b691fdf33a825f83f0ca9e8c31bef230980191dc66e657cbe7e83e61e7662a",
+      "sha256_after": "e2b691fdf33a825f83f0ca9e8c31bef230980191dc66e657cbe7e83e61e7662a",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向/03_输出/stage5a_residual_vs_disorder.png",
+      "new": "soap/history/stages/Stage05_物理空间与方向/03_输出/stage5a_residual_vs_disorder.png",
+      "sha256_before": "ab8371daa91a933eddd07c590b507b61ffded3c219bc17ec27696e37bb4c2c5c",
+      "sha256_after": "ab8371daa91a933eddd07c590b507b61ffded3c219bc17ec27696e37bb4c2c5c",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向/03_输出/stage5a_residual_vs_excess_volume.png",
+      "new": "soap/history/stages/Stage05_物理空间与方向/03_输出/stage5a_residual_vs_excess_volume.png",
+      "sha256_before": "5ab014e3c29598e61c5a54378dc7e5bb4cbbd744757691d77751377d2e3c222c",
+      "sha256_after": "5ab014e3c29598e61c5a54378dc7e5bb4cbbd744757691d77751377d2e3c222c",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向/03_输出/stage5a_spatial_autocorrelation.csv",
+      "new": "soap/history/stages/Stage05_物理空间与方向/03_输出/stage5a_spatial_autocorrelation.csv",
+      "sha256_before": "743ad25929ac835d84af1646c481b187877f93bca54d5af78851ab5d8fad6cdf",
+      "sha256_after": "743ad25929ac835d84af1646c481b187877f93bca54d5af78851ab5d8fad6cdf",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向/03_输出/stage5a_spatial_autocorrelation.png",
+      "new": "soap/history/stages/Stage05_物理空间与方向/03_输出/stage5a_spatial_autocorrelation.png",
+      "sha256_before": "b973f3b41da22746ec6b9bea8c2ceab59410d87d61561c408bd2e8191934dada",
+      "sha256_after": "b973f3b41da22746ec6b9bea8c2ceab59410d87d61561c408bd2e8191934dada",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向/03_输出/stage5a_spatial_patchiness.csv",
+      "new": "soap/history/stages/Stage05_物理空间与方向/03_输出/stage5a_spatial_patchiness.csv",
+      "sha256_before": "4387f25aea6325dd56b686e2ef03d0fd3b9b17d65819fc2e4ea65691d2b70d50",
+      "sha256_after": "4387f25aea6325dd56b686e2ef03d0fd3b9b17d65819fc2e4ea65691d2b70d50",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向/03_输出/stage5a_stable_bond_strain_map.png",
+      "new": "soap/history/stages/Stage05_物理空间与方向/03_输出/stage5a_stable_bond_strain_map.png",
+      "sha256_before": "9949fa5af3e09002d832c3e870268825e6d0c27641d4b148d2dd618b58cabb07",
+      "sha256_after": "9949fa5af3e09002d832c3e870268825e6d0c27641d4b148d2dd618b58cabb07",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向/03_输出/stage5a_stable_disorder_map.png",
+      "new": "soap/history/stages/Stage05_物理空间与方向/03_输出/stage5a_stable_disorder_map.png",
+      "sha256_before": "c50f7c5094bca6dc991e5bb100a1d6b7c6efe21f6fae4127c459211d49b50435",
+      "sha256_after": "c50f7c5094bca6dc991e5bb100a1d6b7c6efe21f6fae4127c459211d49b50435",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向/03_输出/stage5a_stable_physical_descriptors.png",
+      "new": "soap/history/stages/Stage05_物理空间与方向/03_输出/stage5a_stable_physical_descriptors.png",
+      "sha256_before": "77356d38697f00276c739161526910e1b73f08eaab191c35d673a998cba147e5",
+      "sha256_after": "77356d38697f00276c739161526910e1b73f08eaab191c35d673a998cba147e5",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向/03_输出/stage5a_stable_residual_energy_map.png",
+      "new": "soap/history/stages/Stage05_物理空间与方向/03_输出/stage5a_stable_residual_energy_map.png",
+      "sha256_before": "6bee28a1dfb326365093f91ceccc99c7351d04e5d2ce73e7ef3258e0bed4d72c",
+      "sha256_after": "6bee28a1dfb326365093f91ceccc99c7351d04e5d2ce73e7ef3258e0bed4d72c",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向/03_输出/stage5b_atomwise_soap_direction.csv",
+      "new": "soap/history/stages/Stage05_物理空间与方向/03_输出/stage5b_atomwise_soap_direction.csv",
+      "sha256_before": "67991534c035ba802cdd4e0642b41dfe234a93372a8ac7c9652541c5aac1a3c3",
+      "sha256_after": "67991534c035ba802cdd4e0642b41dfe234a93372a8ac7c9652541c5aac1a3c3",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向/03_输出/stage5b_direction_autocorrelation.csv",
+      "new": "soap/history/stages/Stage05_物理空间与方向/03_输出/stage5b_direction_autocorrelation.csv",
+      "sha256_before": "c266339674bd415f3aac1f71ce5ffef8a662223b44c5b2edbf564aadc1abaa9e",
+      "sha256_after": "c266339674bd415f3aac1f71ce5ffef8a662223b44c5b2edbf564aadc1abaa9e",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向/03_输出/stage5b_direction_similarity_distributions.png",
+      "new": "soap/history/stages/Stage05_物理空间与方向/03_输出/stage5b_direction_similarity_distributions.png",
+      "sha256_before": "7c432075d294c4f3dc654a8503f78c6ea35c2b76faa1853d3bf44cf8b77445bc",
+      "sha256_after": "7c432075d294c4f3dc654a8503f78c6ea35c2b76faa1853d3bf44cf8b77445bc",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向/03_输出/stage5b_direction_vs_disorder.png",
+      "new": "soap/history/stages/Stage05_物理空间与方向/03_输出/stage5b_direction_vs_disorder.png",
+      "sha256_before": "16ed6ac9e529760208ce95c3bb8d951b672a3db861e5cdd3be3db9ced32f0772",
+      "sha256_after": "16ed6ac9e529760208ce95c3bb8d951b672a3db861e5cdd3be3db9ced32f0772",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向/03_输出/stage5b_direction_vs_residual_energy.png",
+      "new": "soap/history/stages/Stage05_物理空间与方向/03_输出/stage5b_direction_vs_residual_energy.png",
+      "sha256_before": "364d902e0b2839a40453ada11ac0adbd65722b9fa8bb137d7a29c1703e65df73",
+      "sha256_after": "364d902e0b2839a40453ada11ac0adbd65722b9fa8bb137d7a29c1703e65df73",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向/03_输出/stage5b_direction_vs_stage5a_descriptors.png",
+      "new": "soap/history/stages/Stage05_物理空间与方向/03_输出/stage5b_direction_vs_stage5a_descriptors.png",
+      "sha256_before": "c2ffb38d599693fd8dd430a45cf3798ac904719f0d4d1208b220a4ab10ea651a",
+      "sha256_after": "c2ffb38d599693fd8dd430a45cf3798ac904719f0d4d1208b220a4ab10ea651a",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向/03_输出/stage5b_directional_energy_statistics.csv",
+      "new": "soap/history/stages/Stage05_物理空间与方向/03_输出/stage5b_directional_energy_statistics.csv",
+      "sha256_before": "41611160f08703041d35d27a9c6e9f056d02d830e0a736b3174827dca9b31515",
+      "sha256_after": "41611160f08703041d35d27a9c6e9f056d02d830e0a736b3174827dca9b31515",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向/03_输出/stage5b_directional_statistics.csv",
+      "new": "soap/history/stages/Stage05_物理空间与方向/03_输出/stage5b_directional_statistics.csv",
+      "sha256_before": "47ee9fe541a1586f4ad9cf18901102f428708f2b61ab48b036165218d22a32d8",
+      "sha256_after": "47ee9fe541a1586f4ad9cf18901102f428708f2b61ab48b036165218d22a32d8",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向/03_输出/stage5b_matched_energy_difference_vs_direction.png",
+      "new": "soap/history/stages/Stage05_物理空间与方向/03_输出/stage5b_matched_energy_difference_vs_direction.png",
+      "sha256_before": "a70eac9802cd6738db95659d6c2d4c1aeb4641105efe3843882ce2fab01f91f0",
+      "sha256_after": "a70eac9802cd6738db95659d6c2d4c1aeb4641105efe3843882ce2fab01f91f0",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向/03_输出/stage5b_metastable_direction_autocorrelation.png",
+      "new": "soap/history/stages/Stage05_物理空间与方向/03_输出/stage5b_metastable_direction_autocorrelation.png",
+      "sha256_before": "0e1a1d1e63f07b57123d3c69e02a6d1a4916fec434c6671d7fab7446e07613b9",
+      "sha256_after": "0e1a1d1e63f07b57123d3c69e02a6d1a4916fec434c6671d7fab7446e07613b9",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向/03_输出/stage5b_pca_direction.png",
+      "new": "soap/history/stages/Stage05_物理空间与方向/03_输出/stage5b_pca_direction.png",
+      "sha256_before": "76688aa26b7c878bfe58e2e4f4ec3aea25d8ea1e3b62ed204ef301cc45204f83",
+      "sha256_after": "76688aa26b7c878bfe58e2e4f4ec3aea25d8ea1e3b62ed204ef301cc45204f83",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向/03_输出/stage5b_pca_displacement.png",
+      "new": "soap/history/stages/Stage05_物理空间与方向/03_输出/stage5b_pca_displacement.png",
+      "sha256_before": "0af5b072b3fe38078be3e8c860bd16439873ebeb0a97680aaf59fe0ece0b7f03",
+      "sha256_after": "0af5b072b3fe38078be3e8c860bd16439873ebeb0a97680aaf59fe0ece0b7f03",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向/03_输出/stage5b_pca_displacement_3d.png",
+      "new": "soap/history/stages/Stage05_物理空间与方向/03_输出/stage5b_pca_displacement_3d.png",
+      "sha256_before": "77d49b74c7edaf7fa0b2e4294370ecb4031e2c2a78c858957b95946ea7a742a6",
+      "sha256_after": "77d49b74c7edaf7fa0b2e4294370ecb4031e2c2a78c858957b95946ea7a742a6",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向/03_输出/stage5b_pca_summary.csv",
+      "new": "soap/history/stages/Stage05_物理空间与方向/03_输出/stage5b_pca_summary.csv",
+      "sha256_before": "79ab2a21c07a0f57f225c658f92a2b6667700e15d0665230f33449f048e4f14e",
+      "sha256_after": "79ab2a21c07a0f57f225c658f92a2b6667700e15d0665230f33449f048e4f14e",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向/03_输出/stage5b_permutation_null.csv",
+      "new": "soap/history/stages/Stage05_物理空间与方向/03_输出/stage5b_permutation_null.csv",
+      "sha256_before": "1b36b92b58a14a6b614d437ddf0bee9a7803a2f2d98126b1bfe87282c98d4f01",
+      "sha256_after": "1b36b92b58a14a6b614d437ddf0bee9a7803a2f2d98126b1bfe87282c98d4f01",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向/03_输出/stage5b_representative_cases.csv",
+      "new": "soap/history/stages/Stage05_物理空间与方向/03_输出/stage5b_representative_cases.csv",
+      "sha256_before": "5b9814a1585d6434e39c5253a48b39306655acf2c1624af52f9ea09517f615c7",
+      "sha256_after": "5b9814a1585d6434e39c5253a48b39306655acf2c1624af52f9ea09517f615c7",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向/03_输出/stage5b_representative_cases.png",
+      "new": "soap/history/stages/Stage05_物理空间与方向/03_输出/stage5b_representative_cases.png",
+      "sha256_before": "4071dca60b91a3f281c46ea68c9f30a9b0764d59d22a46155fa1cd5834788c19",
+      "sha256_after": "4071dca60b91a3f281c46ea68c9f30a9b0764d59d22a46155fa1cd5834788c19",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向/03_输出/stage5b_representative_direction_cases.xyz",
+      "new": "soap/history/stages/Stage05_物理空间与方向/03_输出/stage5b_representative_direction_cases.xyz",
+      "sha256_before": "3c7182b4e42ef75f353ee8ab9702f01030953b5bc7fc58b6d33f66ab7516b672",
+      "sha256_after": "3c7182b4e42ef75f353ee8ab9702f01030953b5bc7fc58b6d33f66ab7516b672",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_物理空间与方向/03_输出/stage5b_stable_direction_autocorrelation.png",
+      "new": "soap/history/stages/Stage05_物理空间与方向/03_输出/stage5b_stable_direction_autocorrelation.png",
+      "sha256_before": "11e36cee7e45187ec22bec61272dccb9db225cb685019497132c842578f49dd9",
+      "sha256_after": "11e36cee7e45187ec22bec61272dccb9db225cb685019497132c842578f49dd9",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage05_输入输出检索表.md",
+      "new": "soap/history/stages/Stage05_输入输出检索表.md",
+      "sha256_before": "fff59effc29f9f677a12851b3cfa92433ec6e136df72cb182377fa33f848825d",
+      "sha256_after": "fff59effc29f9f677a12851b3cfa92433ec6e136df72cb182377fa33f848825d",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage06_最终评估/01_报告/Stage06_确定性结论与待讨论.md",
+      "new": "soap/history/stages/Stage06_最终评估/01_报告/Stage06_确定性结论与待讨论.md",
+      "sha256_before": "ef9d6c95f5cd7bb71a57ad7488cd5d4dbff39a0c8cf986687c42c1e5af7be044",
+      "sha256_after": "ef9d6c95f5cd7bb71a57ad7488cd5d4dbff39a0c8cf986687c42c1e5af7be044",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage06_最终评估/02_脚本/stage6_final_analysis.py",
+      "new": "soap/history/stages/Stage06_最终评估/02_脚本/stage6_final_analysis.py",
+      "sha256_before": "366aa25d1fbced34b7fda9a03810ed8e3abe3bef142cb9e485883060644fac66",
+      "sha256_after": "366aa25d1fbced34b7fda9a03810ed8e3abe3bef142cb9e485883060644fac66",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage06_最终评估/03_输出/stage6_correlations.csv",
+      "new": "soap/history/stages/Stage06_最终评估/03_输出/stage6_correlations.csv",
+      "sha256_before": "fc191ba890431c7f6defdbfadce2609a3047e775b7a60cef453fa2d7ae69aab0",
+      "sha256_after": "fc191ba890431c7f6defdbfadce2609a3047e775b7a60cef453fa2d7ae69aab0",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage06_最终评估/03_输出/stage6_direction_by_disorder_bin.csv",
+      "new": "soap/history/stages/Stage06_最终评估/03_输出/stage6_direction_by_disorder_bin.csv",
+      "sha256_before": "f9bf738235e0b836477e96837683c5db64df31b93d58bb37ee81c87bc0b78c56",
+      "sha256_after": "f9bf738235e0b836477e96837683c5db64df31b93d58bb37ee81c87bc0b78c56",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage06_最终评估/03_输出/stage6_directional_heterogeneity.png",
+      "new": "soap/history/stages/Stage06_最终评估/03_输出/stage6_directional_heterogeneity.png",
+      "sha256_before": "8a4ada2ab6e3ffd8bee728e822119c3fc6e1a3fb6580962a1f965b8b9f281f2c",
+      "sha256_after": "8a4ada2ab6e3ffd8bee728e822119c3fc6e1a3fb6580962a1f965b8b9f281f2c",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage06_最终评估/03_输出/stage6_energy_model_improvement.png",
+      "new": "soap/history/stages/Stage06_最终评估/03_输出/stage6_energy_model_improvement.png",
+      "sha256_before": "ee101d323e0c7473bd0867dbdbf979753f3042865baff4d583e078be05511d86",
+      "sha256_after": "ee101d323e0c7473bd0867dbdbf979753f3042865baff4d583e078be05511d86",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage06_最终评估/03_输出/stage6_energy_models.csv",
+      "new": "soap/history/stages/Stage06_最终评估/03_输出/stage6_energy_models.csv",
+      "sha256_before": "bbfaa92ea13627ec6cc587efb2b14b858dd40faa9bd6ca97d8334c8ad8dc68f5",
+      "sha256_after": "bbfaa92ea13627ec6cc587efb2b14b858dd40faa9bd6ca97d8334c8ad8dc68f5",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage06_最终评估/03_输出/stage6_figure_summary.csv",
+      "new": "soap/history/stages/Stage06_最终评估/03_输出/stage6_figure_summary.csv",
+      "sha256_before": "39a8aec7b1a74e965805eaa6d10e596ef119ce749ec30920634aec1a3be274f3",
+      "sha256_after": "39a8aec7b1a74e965805eaa6d10e596ef119ce749ec30920634aec1a3be274f3",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage06_最终评估/03_输出/stage6_magnitude_matched_direction_energy.png",
+      "new": "soap/history/stages/Stage06_最终评估/03_输出/stage6_magnitude_matched_direction_energy.png",
+      "sha256_before": "24d871af9d0bb923b94a1c57e8ec7c8b7853aaaf22ea0b5a8bb94a2d001fc441",
+      "sha256_after": "24d871af9d0bb923b94a1c57e8ec7c8b7853aaaf22ea0b5a8bb94a2d001fc441",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage06_最终评估/03_输出/stage6_matched_analysis.csv",
+      "new": "soap/history/stages/Stage06_最终评估/03_输出/stage6_matched_analysis.csv",
+      "sha256_before": "e706c029469e02cd0334fd2de5b5e1097ad346386b9dfeef784b1ef81555cf8a",
+      "sha256_after": "e706c029469e02cd0334fd2de5b5e1097ad346386b9dfeef784b1ef81555cf8a",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage06_最终评估/03_输出/stage6_representative_cases.png",
+      "new": "soap/history/stages/Stage06_最终评估/03_输出/stage6_representative_cases.png",
+      "sha256_before": "2495e460c5686328c055bfba7e8ebfbd06e32aa8551f8a9ca862525ffa873f6b",
+      "sha256_after": "2495e460c5686328c055bfba7e8ebfbd06e32aa8551f8a9ca862525ffa873f6b",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage06_最终评估/03_输出/stage6_representative_directional_cases.csv",
+      "new": "soap/history/stages/Stage06_最终评估/03_输出/stage6_representative_directional_cases.csv",
+      "sha256_before": "dc0760add5850518fe6af979a392f550721168296838a41a039f8751991678a3",
+      "sha256_after": "dc0760add5850518fe6af979a392f550721168296838a41a039f8751991678a3",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage06_最终评估/03_输出/stage6_robustness.csv",
+      "new": "soap/history/stages/Stage06_最终评估/03_输出/stage6_robustness.csv",
+      "sha256_before": "9438e38857b3e7bfc9b1025169902cbc6ef621be4524d8217a53aa39ad7b6b65",
+      "sha256_after": "9438e38857b3e7bfc9b1025169902cbc6ef621be4524d8217a53aa39ad7b6b65",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage06_最终评估/03_输出/stage6_scalar_disorder_vs_energy.png",
+      "new": "soap/history/stages/Stage06_最终评估/03_输出/stage6_scalar_disorder_vs_energy.png",
+      "sha256_before": "09f8e2069c8ddb99a168b5628002567d15df25844dc11816b4a4b58b406e5c91",
+      "sha256_after": "09f8e2069c8ddb99a168b5628002567d15df25844dc11816b4a4b58b406e5c91",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage06_最终评估/03_输出/stage6_spatial_direction_residual.png",
+      "new": "soap/history/stages/Stage06_最终评估/03_输出/stage6_spatial_direction_residual.png",
+      "sha256_before": "1dc3132d78aea6b6c0fa6ccffbea2a20ec99e79c32e705e097fd0e4f27e9ee43",
+      "sha256_after": "1dc3132d78aea6b6c0fa6ccffbea2a20ec99e79c32e705e097fd0e4f27e9ee43",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage06_最终评估/03_输出/stage6_spatial_summary.csv",
+      "new": "soap/history/stages/Stage06_最终评估/03_输出/stage6_spatial_summary.csv",
+      "sha256_before": "3007322be7d61bba5ef8e427888cec3dabcd84cd102e7af659eeb3eee74782b2",
+      "sha256_after": "3007322be7d61bba5ef8e427888cec3dabcd84cd102e7af659eeb3eee74782b2",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage06_最终评估/03_输出/stage6_state_classification.csv",
+      "new": "soap/history/stages/Stage06_最终评估/03_输出/stage6_state_classification.csv",
+      "sha256_before": "ca299960f4cd780434e996bff20453eded7c75de03e2f3360560d546ed92bb98",
+      "sha256_after": "ca299960f4cd780434e996bff20453eded7c75de03e2f3360560d546ed92bb98",
+      "byte_preserved": true
+    },
+    {
+      "old": "soap/Stage06_输入输出检索表.md",
+      "new": "soap/history/stages/Stage06_输入输出检索表.md",
+      "sha256_before": "70a2ef9d090a2a88227748da54a45a70888b4cccea745f4ef2a6a5c5eb10e7b8",
+      "sha256_after": "70a2ef9d090a2a88227748da54a45a70888b4cccea745f4ef2a6a5c5eb10e7b8",
+      "byte_preserved": true
+    }
+  ],
+  "navigation_links_updated": [],
+  "scope": "No scientific calculation, inputs, numerical result or binary evidence changed. Only Markdown relative navigation and active preparation paths repaired."
+}
